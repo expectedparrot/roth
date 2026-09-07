@@ -1,0 +1,93 @@
+{
+  "id": "calibration_s008_calibration",
+  "participant_id": "s008",
+  "questions": [
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_s008_q1_choice",
+      "question_text": "For Harper 8, compare these options.\nA: Design — Fictional Lab 4 [i004]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Remote\",\n  \"mentoring\": \"Daily guidance\",\n  \"pay_per_hour_usd\": 26,\n  \"preferred_skills\": \"Design and user research\",\n  \"work\": \"Design\"\n}\n\nB: Policy research — Fictional Lab 3 [i003]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Boston\",\n  \"mentoring\": \"Weekly guidance\",\n  \"pay_per_hour_usd\": 24,\n  \"preferred_skills\": \"Writing and economics\",\n  \"work\": \"Policy research\"\n}",
+      "question_options": [
+        "Strongly prefer A",
+        "Somewhat prefer A",
+        "Indifferent",
+        "Somewhat prefer B",
+        "Strongly prefer B",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_s008_q1_a",
+      "question_text": "Would you accept option A rather than remain unmatched?",
+      "question_options": [
+        "Acceptable",
+        "Unacceptable",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_s008_q1_b",
+      "question_text": "Would you accept option B rather than remain unmatched?",
+      "question_options": [
+        "Acceptable",
+        "Unacceptable",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "free_text",
+      "question_name": "calibration_s008_q1_why",
+      "question_text": "Explain the tradeoff, or enter 'No explanation'."
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_s008_q3_choice",
+      "question_text": "For Harper 8, compare these options.\nA: Policy research — Fictional Lab 3 [i003]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Boston\",\n  \"mentoring\": \"Weekly guidance\",\n  \"pay_per_hour_usd\": 24,\n  \"preferred_skills\": \"Writing and economics\",\n  \"work\": \"Policy research\"\n}\n\nB: Climate research — Fictional Lab 10 [i010]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Remote\",\n  \"mentoring\": \"Daily guidance\",\n  \"pay_per_hour_usd\": 26,\n  \"preferred_skills\": \"Python and environmental science\",\n  \"work\": \"Climate research\"\n}",
+      "question_options": [
+        "Strongly prefer A",
+        "Somewhat prefer A",
+        "Indifferent",
+        "Somewhat prefer B",
+        "Strongly prefer B",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_s008_q3_a",
+      "question_text": "Would you accept option A rather than remain unmatched?",
+      "question_options": [
+        "Acceptable",
+        "Unacceptable",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_s008_q3_b",
+      "question_text": "Would you accept option B rather than remain unmatched?",
+      "question_options": [
+        "Acceptable",
+        "Unacceptable",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "free_text",
+      "question_name": "calibration_s008_q3_why",
+      "question_text": "Explain the tradeoff, or enter 'No explanation'."
+    }
+  ],
+  "question_ids": [
+    "calibration_s008_q1",
+    "calibration_s008_q3"
+  ],
+  "split": "calibration",
+  "candidates": [
+    "i003",
+    "i004",
+    "i008",
+    "i010"
+  ]
+}

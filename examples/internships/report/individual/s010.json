@@ -1,0 +1,18 @@
+{
+  "participant_id": "s010",
+  "partner": {
+    "id": "i006",
+    "name": "Data analysis — Fictional Lab 6",
+    "profile": {
+      "work": "Data analysis",
+      "preferred_skills": "Python and statistics",
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Remote",
+      "pay_per_hour_usd": 30,
+      "mentoring": "Daily guidance"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

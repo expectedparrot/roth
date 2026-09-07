@@ -1,0 +1,18 @@
+{
+  "participant_id": "s005",
+  "partner": {
+    "id": "i007",
+    "name": "Software development — Fictional Lab 7",
+    "profile": {
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Boston",
+      "mentoring": "Weekly guidance",
+      "pay_per_hour_usd": 20,
+      "preferred_skills": "Python and web development",
+      "work": "Software development"
+    }
+  },
+  "run": "delegated",
+  "reason": null
+}

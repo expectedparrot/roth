@@ -1,0 +1,1119 @@
+{
+  "matches": [
+    [
+      "s001",
+      "i003"
+    ],
+    [
+      "s002",
+      "i008"
+    ],
+    [
+      "s003",
+      "i001"
+    ],
+    [
+      "s004",
+      "i010"
+    ],
+    [
+      "s005",
+      "i005"
+    ],
+    [
+      "s007",
+      "i007"
+    ],
+    [
+      "s008",
+      "i004"
+    ],
+    [
+      "s009",
+      "i002"
+    ],
+    [
+      "s010",
+      "i006"
+    ],
+    [
+      "s011",
+      "i009"
+    ]
+  ],
+  "unmatched": {
+    "s006": "no_partner_in_stable_outcome",
+    "s012": "no_acceptable_candidates"
+  },
+  "proposing_side": "left",
+  "trace": [
+    {
+      "proposer": "s001",
+      "receiver": "i008",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i002",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s003",
+      "receiver": "i008",
+      "accepted": true,
+      "displaced": "s001"
+    },
+    {
+      "proposer": "s004",
+      "receiver": "i008",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s005",
+      "receiver": "i007",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i007",
+      "accepted": true,
+      "displaced": "s005"
+    },
+    {
+      "proposer": "s007",
+      "receiver": "i002",
+      "accepted": true,
+      "displaced": "s002"
+    },
+    {
+      "proposer": "s008",
+      "receiver": "i004",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s009",
+      "receiver": "i005",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s010",
+      "receiver": "i002",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i004",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s001",
+      "receiver": "i004",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s004",
+      "receiver": "i006",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s005",
+      "receiver": "i002",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i006",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s010",
+      "receiver": "i006",
+      "accepted": true,
+      "displaced": "s004"
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i001",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s001",
+      "receiver": "i001",
+      "accepted": true,
+      "displaced": "s011"
+    },
+    {
+      "proposer": "s005",
+      "receiver": "i010",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i001",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s004",
+      "receiver": "i003",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i005",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i010",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i006",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i008",
+      "accepted": true,
+      "displaced": "s003"
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i003",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s003",
+      "receiver": "i001",
+      "accepted": true,
+      "displaced": "s001"
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i009",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s001",
+      "receiver": "i006",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s001",
+      "receiver": "i002",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s001",
+      "receiver": "i010",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s001",
+      "receiver": "i003",
+      "accepted": true,
+      "displaced": "s004"
+    },
+    {
+      "proposer": "s004",
+      "receiver": "i010",
+      "accepted": true,
+      "displaced": "s005"
+    },
+    {
+      "proposer": "s005",
+      "receiver": "i008",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s005",
+      "receiver": "i005",
+      "accepted": true,
+      "displaced": "s009"
+    },
+    {
+      "proposer": "s009",
+      "receiver": "i002",
+      "accepted": true,
+      "displaced": "s007"
+    },
+    {
+      "proposer": "s007",
+      "receiver": "i010",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s007",
+      "receiver": "i005",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s007",
+      "receiver": "i008",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s007",
+      "receiver": "i007",
+      "accepted": true,
+      "displaced": "s006"
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i003",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i009",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i002",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i004",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i010",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i005",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i006",
+      "accepted": false,
+      "displaced": null
+    }
+  ],
+  "verification": {
+    "feasible": true,
+    "stable": true,
+    "errors": [],
+    "blocking_pairs": []
+  },
+  "name": "main",
+  "snapshot": "main",
+  "snapshot_hash": "6e8ddd5a30639270e50ffb89fb48e8e4a183a03f97f79f3bac19dca400d1d7cb",
+  "scope": {
+    "coverage": "complete_for_active_cohort",
+    "cohort_scope": "all_participants",
+    "preference_sources": [
+      "synthetic"
+    ]
+  },
+  "statistics": {
+    "by_side": {
+      "left": {
+        "participants": 12,
+        "completion": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "evaluation_coverage": {
+          "numerator": 120,
+          "denominator": 120,
+          "rate": 1.0
+        },
+        "decision_coverage": {
+          "numerator": 120,
+          "denominator": 120,
+          "rate": 1.0
+        },
+        "unresolved_directions": 0,
+        "explicit_rejections": 32,
+        "list_lengths": {
+          "s001": 8,
+          "s002": 8,
+          "s003": 8,
+          "s004": 8,
+          "s005": 8,
+          "s006": 8,
+          "s007": 8,
+          "s008": 8,
+          "s009": 8,
+          "s010": 8,
+          "s011": 8,
+          "s012": 0
+        },
+        "first_choice_demand": {
+          "i002": 3,
+          "i004": 2,
+          "i005": 1,
+          "i007": 2,
+          "i008": 3
+        },
+        "top_3_demand": {
+          "i001": 4,
+          "i002": 5,
+          "i003": 2,
+          "i004": 3,
+          "i005": 4,
+          "i006": 3,
+          "i007": 2,
+          "i008": 4,
+          "i009": 3,
+          "i010": 3
+        },
+        "evaluated_exposure": {
+          "i001": 12,
+          "i002": 12,
+          "i003": 12,
+          "i004": 12,
+          "i005": 12,
+          "i006": 12,
+          "i007": 12,
+          "i008": 12,
+          "i009": 12,
+          "i010": 12
+        },
+        "top_3_per_evaluation": {
+          "i001": {
+            "numerator": 4,
+            "denominator": 12,
+            "rate": 0.3333333333333333
+          },
+          "i002": {
+            "numerator": 5,
+            "denominator": 12,
+            "rate": 0.4166666666666667
+          },
+          "i003": {
+            "numerator": 2,
+            "denominator": 12,
+            "rate": 0.16666666666666666
+          },
+          "i004": {
+            "numerator": 3,
+            "denominator": 12,
+            "rate": 0.25
+          },
+          "i005": {
+            "numerator": 4,
+            "denominator": 12,
+            "rate": 0.3333333333333333
+          },
+          "i006": {
+            "numerator": 3,
+            "denominator": 12,
+            "rate": 0.25
+          },
+          "i007": {
+            "numerator": 2,
+            "denominator": 12,
+            "rate": 0.16666666666666666
+          },
+          "i008": {
+            "numerator": 4,
+            "denominator": 12,
+            "rate": 0.3333333333333333
+          },
+          "i009": {
+            "numerator": 3,
+            "denominator": 12,
+            "rate": 0.25
+          },
+          "i010": {
+            "numerator": 3,
+            "denominator": 12,
+            "rate": 0.25
+          }
+        },
+        "first_choice_hhi": 0.22314049586776857,
+        "common_candidate_order_agreement": {
+          "numerator": 492,
+          "denominator": 928,
+          "rate": 0.5301724137931034
+        },
+        "match_rate": {
+          "numerator": 10,
+          "denominator": 12,
+          "rate": 0.8333333333333334
+        },
+        "assigned_partner_ranks": {
+          "s001": 7,
+          "s002": 5,
+          "s003": 2,
+          "s004": 4,
+          "s005": 5,
+          "s007": 5,
+          "s008": 1,
+          "s009": 2,
+          "s010": 2,
+          "s011": 6
+        },
+        "mean_assigned_rank_among_matched": 3.9,
+        "top_1_assignment": {
+          "numerator": 1,
+          "denominator": 12,
+          "rate": 0.08333333333333333
+        },
+        "top_3_assignment": {
+          "numerator": 4,
+          "denominator": 12,
+          "rate": 0.3333333333333333
+        },
+        "sources": {
+          "synthetic": 12
+        }
+      },
+      "right": {
+        "participants": 10,
+        "completion": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1.0
+        },
+        "evaluation_coverage": {
+          "numerator": 120,
+          "denominator": 120,
+          "rate": 1.0
+        },
+        "decision_coverage": {
+          "numerator": 120,
+          "denominator": 120,
+          "rate": 1.0
+        },
+        "unresolved_directions": 0,
+        "explicit_rejections": 20,
+        "list_lengths": {
+          "i001": 10,
+          "i002": 10,
+          "i003": 10,
+          "i004": 10,
+          "i005": 10,
+          "i006": 10,
+          "i007": 10,
+          "i008": 10,
+          "i009": 10,
+          "i010": 10
+        },
+        "first_choice_demand": {
+          "s002": 3,
+          "s003": 2,
+          "s004": 1,
+          "s008": 1,
+          "s009": 1,
+          "s010": 1,
+          "s011": 1
+        },
+        "top_3_demand": {
+          "s001": 2,
+          "s002": 3,
+          "s003": 4,
+          "s004": 3,
+          "s005": 2,
+          "s006": 3,
+          "s007": 3,
+          "s008": 3,
+          "s009": 2,
+          "s010": 2,
+          "s011": 2,
+          "s012": 1
+        },
+        "evaluated_exposure": {
+          "s001": 10,
+          "s002": 10,
+          "s003": 10,
+          "s004": 10,
+          "s005": 10,
+          "s006": 10,
+          "s007": 10,
+          "s008": 10,
+          "s009": 10,
+          "s010": 10,
+          "s011": 10,
+          "s012": 10
+        },
+        "top_3_per_evaluation": {
+          "s001": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "s002": {
+            "numerator": 3,
+            "denominator": 10,
+            "rate": 0.3
+          },
+          "s003": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "s004": {
+            "numerator": 3,
+            "denominator": 10,
+            "rate": 0.3
+          },
+          "s005": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "s006": {
+            "numerator": 3,
+            "denominator": 10,
+            "rate": 0.3
+          },
+          "s007": {
+            "numerator": 3,
+            "denominator": 10,
+            "rate": 0.3
+          },
+          "s008": {
+            "numerator": 3,
+            "denominator": 10,
+            "rate": 0.3
+          },
+          "s009": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "s010": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "s011": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "s012": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          }
+        },
+        "first_choice_hhi": 0.18000000000000005,
+        "common_candidate_order_agreement": {
+          "numerator": 674,
+          "denominator": 1389,
+          "rate": 0.48524118070554356
+        },
+        "match_rate": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1.0
+        },
+        "assigned_partner_ranks": {
+          "i001": 1,
+          "i002": 1,
+          "i003": 2,
+          "i004": 2,
+          "i005": 3,
+          "i006": 1,
+          "i007": 2,
+          "i008": 1,
+          "i009": 1,
+          "i010": 2
+        },
+        "mean_assigned_rank_among_matched": 1.6,
+        "top_1_assignment": {
+          "numerator": 5,
+          "denominator": 10,
+          "rate": 0.5
+        },
+        "top_3_assignment": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1.0
+        },
+        "sources": {
+          "synthetic": 10
+        }
+      }
+    },
+    "mutual_top_3": [
+      [
+        "s003",
+        "i001"
+      ],
+      [
+        "s003",
+        "i009"
+      ],
+      [
+        "s006",
+        "i007"
+      ],
+      [
+        "s006",
+        "i009"
+      ],
+      [
+        "s007",
+        "i002"
+      ],
+      [
+        "s008",
+        "i004"
+      ],
+      [
+        "s009",
+        "i002"
+      ],
+      [
+        "s010",
+        "i006"
+      ]
+    ],
+    "rank_scope": "submitted lists within the active cohort; not full-market ranks",
+    "note": "Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views."
+  },
+  "comparison": {
+    "proposing_side": "right",
+    "matches": [
+      [
+        "s001",
+        "i003"
+      ],
+      [
+        "s002",
+        "i008"
+      ],
+      [
+        "s003",
+        "i001"
+      ],
+      [
+        "s004",
+        "i010"
+      ],
+      [
+        "s005",
+        "i005"
+      ],
+      [
+        "s007",
+        "i007"
+      ],
+      [
+        "s008",
+        "i004"
+      ],
+      [
+        "s009",
+        "i002"
+      ],
+      [
+        "s010",
+        "i006"
+      ],
+      [
+        "s011",
+        "i009"
+      ]
+    ],
+    "changed_pairs": [],
+    "statistics": {
+      "by_side": {
+        "left": {
+          "participants": 12,
+          "completion": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "evaluation_coverage": {
+            "numerator": 120,
+            "denominator": 120,
+            "rate": 1.0
+          },
+          "decision_coverage": {
+            "numerator": 120,
+            "denominator": 120,
+            "rate": 1.0
+          },
+          "unresolved_directions": 0,
+          "explicit_rejections": 32,
+          "list_lengths": {
+            "s001": 8,
+            "s002": 8,
+            "s003": 8,
+            "s004": 8,
+            "s005": 8,
+            "s006": 8,
+            "s007": 8,
+            "s008": 8,
+            "s009": 8,
+            "s010": 8,
+            "s011": 8,
+            "s012": 0
+          },
+          "first_choice_demand": {
+            "i002": 3,
+            "i004": 2,
+            "i005": 1,
+            "i007": 2,
+            "i008": 3
+          },
+          "top_3_demand": {
+            "i001": 4,
+            "i002": 5,
+            "i003": 2,
+            "i004": 3,
+            "i005": 4,
+            "i006": 3,
+            "i007": 2,
+            "i008": 4,
+            "i009": 3,
+            "i010": 3
+          },
+          "evaluated_exposure": {
+            "i001": 12,
+            "i002": 12,
+            "i003": 12,
+            "i004": 12,
+            "i005": 12,
+            "i006": 12,
+            "i007": 12,
+            "i008": 12,
+            "i009": 12,
+            "i010": 12
+          },
+          "top_3_per_evaluation": {
+            "i001": {
+              "numerator": 4,
+              "denominator": 12,
+              "rate": 0.3333333333333333
+            },
+            "i002": {
+              "numerator": 5,
+              "denominator": 12,
+              "rate": 0.4166666666666667
+            },
+            "i003": {
+              "numerator": 2,
+              "denominator": 12,
+              "rate": 0.16666666666666666
+            },
+            "i004": {
+              "numerator": 3,
+              "denominator": 12,
+              "rate": 0.25
+            },
+            "i005": {
+              "numerator": 4,
+              "denominator": 12,
+              "rate": 0.3333333333333333
+            },
+            "i006": {
+              "numerator": 3,
+              "denominator": 12,
+              "rate": 0.25
+            },
+            "i007": {
+              "numerator": 2,
+              "denominator": 12,
+              "rate": 0.16666666666666666
+            },
+            "i008": {
+              "numerator": 4,
+              "denominator": 12,
+              "rate": 0.3333333333333333
+            },
+            "i009": {
+              "numerator": 3,
+              "denominator": 12,
+              "rate": 0.25
+            },
+            "i010": {
+              "numerator": 3,
+              "denominator": 12,
+              "rate": 0.25
+            }
+          },
+          "first_choice_hhi": 0.22314049586776857,
+          "common_candidate_order_agreement": {
+            "numerator": 492,
+            "denominator": 928,
+            "rate": 0.5301724137931034
+          },
+          "match_rate": {
+            "numerator": 10,
+            "denominator": 12,
+            "rate": 0.8333333333333334
+          },
+          "assigned_partner_ranks": {
+            "s001": 7,
+            "s002": 5,
+            "s003": 2,
+            "s004": 4,
+            "s005": 5,
+            "s007": 5,
+            "s008": 1,
+            "s009": 2,
+            "s010": 2,
+            "s011": 6
+          },
+          "mean_assigned_rank_among_matched": 3.9,
+          "top_1_assignment": {
+            "numerator": 1,
+            "denominator": 12,
+            "rate": 0.08333333333333333
+          },
+          "top_3_assignment": {
+            "numerator": 4,
+            "denominator": 12,
+            "rate": 0.3333333333333333
+          },
+          "sources": {
+            "synthetic": 12
+          }
+        },
+        "right": {
+          "participants": 10,
+          "completion": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "evaluation_coverage": {
+            "numerator": 120,
+            "denominator": 120,
+            "rate": 1.0
+          },
+          "decision_coverage": {
+            "numerator": 120,
+            "denominator": 120,
+            "rate": 1.0
+          },
+          "unresolved_directions": 0,
+          "explicit_rejections": 20,
+          "list_lengths": {
+            "i001": 10,
+            "i002": 10,
+            "i003": 10,
+            "i004": 10,
+            "i005": 10,
+            "i006": 10,
+            "i007": 10,
+            "i008": 10,
+            "i009": 10,
+            "i010": 10
+          },
+          "first_choice_demand": {
+            "s002": 3,
+            "s003": 2,
+            "s004": 1,
+            "s008": 1,
+            "s009": 1,
+            "s010": 1,
+            "s011": 1
+          },
+          "top_3_demand": {
+            "s001": 2,
+            "s002": 3,
+            "s003": 4,
+            "s004": 3,
+            "s005": 2,
+            "s006": 3,
+            "s007": 3,
+            "s008": 3,
+            "s009": 2,
+            "s010": 2,
+            "s011": 2,
+            "s012": 1
+          },
+          "evaluated_exposure": {
+            "s001": 10,
+            "s002": 10,
+            "s003": 10,
+            "s004": 10,
+            "s005": 10,
+            "s006": 10,
+            "s007": 10,
+            "s008": 10,
+            "s009": 10,
+            "s010": 10,
+            "s011": 10,
+            "s012": 10
+          },
+          "top_3_per_evaluation": {
+            "s001": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "s002": {
+              "numerator": 3,
+              "denominator": 10,
+              "rate": 0.3
+            },
+            "s003": {
+              "numerator": 4,
+              "denominator": 10,
+              "rate": 0.4
+            },
+            "s004": {
+              "numerator": 3,
+              "denominator": 10,
+              "rate": 0.3
+            },
+            "s005": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "s006": {
+              "numerator": 3,
+              "denominator": 10,
+              "rate": 0.3
+            },
+            "s007": {
+              "numerator": 3,
+              "denominator": 10,
+              "rate": 0.3
+            },
+            "s008": {
+              "numerator": 3,
+              "denominator": 10,
+              "rate": 0.3
+            },
+            "s009": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "s010": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "s011": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "s012": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            }
+          },
+          "first_choice_hhi": 0.18000000000000005,
+          "common_candidate_order_agreement": {
+            "numerator": 674,
+            "denominator": 1389,
+            "rate": 0.48524118070554356
+          },
+          "match_rate": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "assigned_partner_ranks": {
+            "i001": 1,
+            "i002": 1,
+            "i003": 2,
+            "i004": 2,
+            "i005": 3,
+            "i006": 1,
+            "i007": 2,
+            "i008": 1,
+            "i009": 1,
+            "i010": 2
+          },
+          "mean_assigned_rank_among_matched": 1.6,
+          "top_1_assignment": {
+            "numerator": 5,
+            "denominator": 10,
+            "rate": 0.5
+          },
+          "top_3_assignment": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "sources": {
+            "synthetic": 10
+          }
+        }
+      },
+      "mutual_top_3": [
+        [
+          "s003",
+          "i001"
+        ],
+        [
+          "s003",
+          "i009"
+        ],
+        [
+          "s006",
+          "i007"
+        ],
+        [
+          "s006",
+          "i009"
+        ],
+        [
+          "s007",
+          "i002"
+        ],
+        [
+          "s008",
+          "i004"
+        ],
+        [
+          "s009",
+          "i002"
+        ],
+        [
+          "s010",
+          "i006"
+        ]
+      ],
+      "rank_scope": "submitted lists within the active cohort; not full-market ranks",
+      "note": "Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views."
+    }
+  }
+}

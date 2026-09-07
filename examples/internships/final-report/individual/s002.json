@@ -1,0 +1,18 @@
+{
+  "participant_id": "s002",
+  "partner": {
+    "id": "i008",
+    "name": "Policy research — Fictional Lab 8",
+    "profile": {
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Remote",
+      "mentoring": "Daily guidance",
+      "pay_per_hour_usd": 22,
+      "preferred_skills": "Writing and economics",
+      "work": "Policy research"
+    }
+  },
+  "run": "final",
+  "reason": null
+}

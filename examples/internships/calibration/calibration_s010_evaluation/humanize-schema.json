@@ -1,0 +1,28 @@
+{
+  "questions": {
+    "calibration_s010_q2_choice": {
+      "optional": false
+    },
+    "calibration_s010_q2_a": {
+      "optional": false
+    },
+    "calibration_s010_q2_b": {
+      "optional": false
+    },
+    "calibration_s010_q2_why": {
+      "optional": false
+    },
+    "calibration_s010_q4_choice": {
+      "optional": false
+    },
+    "calibration_s010_q4_a": {
+      "optional": false
+    },
+    "calibration_s010_q4_b": {
+      "optional": false
+    },
+    "calibration_s010_q4_why": {
+      "optional": false
+    }
+  }
+}

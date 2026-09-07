@@ -1,0 +1,745 @@
+[
+  {
+    "participant_id": "s001",
+    "ranking": [
+      "i008",
+      "i004",
+      "i001",
+      "i006",
+      "i002",
+      "i010",
+      "i003",
+      "i005"
+    ],
+    "unacceptable": [
+      "i007",
+      "i009"
+    ],
+    "evaluated": [
+      "i008",
+      "i004",
+      "i001",
+      "i006",
+      "i002",
+      "i010",
+      "i003",
+      "i005",
+      "i007",
+      "i009"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s002",
+    "ranking": [
+      "i002",
+      "i006",
+      "i001",
+      "i010",
+      "i008",
+      "i005",
+      "i003",
+      "i009"
+    ],
+    "unacceptable": [
+      "i007",
+      "i004"
+    ],
+    "evaluated": [
+      "i002",
+      "i006",
+      "i001",
+      "i010",
+      "i008",
+      "i005",
+      "i003",
+      "i009",
+      "i007",
+      "i004"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s003",
+    "ranking": [
+      "i008",
+      "i001",
+      "i009",
+      "i002",
+      "i007",
+      "i005",
+      "i006",
+      "i010"
+    ],
+    "unacceptable": [
+      "i004",
+      "i003"
+    ],
+    "evaluated": [
+      "i008",
+      "i001",
+      "i009",
+      "i002",
+      "i007",
+      "i005",
+      "i006",
+      "i010",
+      "i004",
+      "i003"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s004",
+    "ranking": [
+      "i008",
+      "i006",
+      "i003",
+      "i010",
+      "i004",
+      "i009",
+      "i001",
+      "i007"
+    ],
+    "unacceptable": [
+      "i005",
+      "i002"
+    ],
+    "evaluated": [
+      "i008",
+      "i006",
+      "i003",
+      "i010",
+      "i004",
+      "i009",
+      "i001",
+      "i007",
+      "i005",
+      "i002"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s005",
+    "ranking": [
+      "i007",
+      "i002",
+      "i010",
+      "i008",
+      "i005",
+      "i003",
+      "i004",
+      "i001"
+    ],
+    "unacceptable": [
+      "i006",
+      "i009"
+    ],
+    "evaluated": [
+      "i007",
+      "i002",
+      "i010",
+      "i008",
+      "i005",
+      "i003",
+      "i004",
+      "i001",
+      "i006",
+      "i009"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s006",
+    "ranking": [
+      "i007",
+      "i003",
+      "i009",
+      "i002",
+      "i004",
+      "i010",
+      "i005",
+      "i006"
+    ],
+    "unacceptable": [
+      "i008",
+      "i001"
+    ],
+    "evaluated": [
+      "i007",
+      "i003",
+      "i009",
+      "i002",
+      "i004",
+      "i010",
+      "i005",
+      "i006",
+      "i008",
+      "i001"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s007",
+    "ranking": [
+      "i002",
+      "i010",
+      "i005",
+      "i008",
+      "i007",
+      "i003",
+      "i001",
+      "i006"
+    ],
+    "unacceptable": [
+      "i009",
+      "i004"
+    ],
+    "evaluated": [
+      "i002",
+      "i010",
+      "i005",
+      "i008",
+      "i007",
+      "i003",
+      "i001",
+      "i006",
+      "i009",
+      "i004"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s008",
+    "ranking": [
+      "i004",
+      "i008",
+      "i009",
+      "i001",
+      "i007",
+      "i002",
+      "i003",
+      "i006"
+    ],
+    "unacceptable": [
+      "i010",
+      "i005"
+    ],
+    "evaluated": [
+      "i004",
+      "i008",
+      "i009",
+      "i001",
+      "i007",
+      "i002",
+      "i003",
+      "i006",
+      "i010",
+      "i005"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s009",
+    "ranking": [
+      "i005",
+      "i002",
+      "i010",
+      "i004",
+      "i008",
+      "i003",
+      "i007",
+      "i009"
+    ],
+    "unacceptable": [
+      "i001",
+      "i006"
+    ],
+    "evaluated": [
+      "i005",
+      "i002",
+      "i010",
+      "i004",
+      "i008",
+      "i003",
+      "i007",
+      "i009",
+      "i001",
+      "i006"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s010",
+    "ranking": [
+      "i002",
+      "i006",
+      "i005",
+      "i010",
+      "i009",
+      "i007",
+      "i003",
+      "i004"
+    ],
+    "unacceptable": [
+      "i001",
+      "i008"
+    ],
+    "evaluated": [
+      "i002",
+      "i006",
+      "i005",
+      "i010",
+      "i009",
+      "i007",
+      "i003",
+      "i004",
+      "i001",
+      "i008"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s011",
+    "ranking": [
+      "i004",
+      "i001",
+      "i005",
+      "i006",
+      "i003",
+      "i009",
+      "i002",
+      "i010"
+    ],
+    "unacceptable": [
+      "i008",
+      "i007"
+    ],
+    "evaluated": [
+      "i004",
+      "i001",
+      "i005",
+      "i006",
+      "i003",
+      "i009",
+      "i002",
+      "i010",
+      "i008",
+      "i007"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "s012",
+    "ranking": [],
+    "unacceptable": [
+      "i008",
+      "i002",
+      "i010",
+      "i009",
+      "i006",
+      "i003",
+      "i007",
+      "i005",
+      "i001",
+      "i004"
+    ],
+    "evaluated": [
+      "i008",
+      "i002",
+      "i010",
+      "i009",
+      "i006",
+      "i003",
+      "i007",
+      "i005",
+      "i001",
+      "i004"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i001",
+    "ranking": [
+      "s003",
+      "s004",
+      "s006",
+      "s012",
+      "s009",
+      "s010",
+      "s001",
+      "s008",
+      "s007",
+      "s011"
+    ],
+    "unacceptable": [
+      "s005",
+      "s002"
+    ],
+    "evaluated": [
+      "s003",
+      "s004",
+      "s006",
+      "s012",
+      "s009",
+      "s010",
+      "s001",
+      "s008",
+      "s007",
+      "s011",
+      "s005",
+      "s002"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i002",
+    "ranking": [
+      "s009",
+      "s007",
+      "s011",
+      "s002",
+      "s006",
+      "s004",
+      "s012",
+      "s008",
+      "s001",
+      "s005"
+    ],
+    "unacceptable": [
+      "s003",
+      "s010"
+    ],
+    "evaluated": [
+      "s009",
+      "s007",
+      "s011",
+      "s002",
+      "s006",
+      "s004",
+      "s012",
+      "s008",
+      "s001",
+      "s005",
+      "s003",
+      "s010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i003",
+    "ranking": [
+      "s003",
+      "s001",
+      "s005",
+      "s004",
+      "s006",
+      "s012",
+      "s007",
+      "s010",
+      "s002",
+      "s008"
+    ],
+    "unacceptable": [
+      "s011",
+      "s009"
+    ],
+    "evaluated": [
+      "s003",
+      "s001",
+      "s005",
+      "s004",
+      "s006",
+      "s012",
+      "s007",
+      "s010",
+      "s002",
+      "s008",
+      "s011",
+      "s009"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i004",
+    "ranking": [
+      "s004",
+      "s008",
+      "s012",
+      "s002",
+      "s005",
+      "s003",
+      "s011",
+      "s007",
+      "s009",
+      "s001"
+    ],
+    "unacceptable": [
+      "s010",
+      "s006"
+    ],
+    "evaluated": [
+      "s004",
+      "s008",
+      "s012",
+      "s002",
+      "s005",
+      "s003",
+      "s011",
+      "s007",
+      "s009",
+      "s001",
+      "s010",
+      "s006"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i005",
+    "ranking": [
+      "s002",
+      "s001",
+      "s005",
+      "s012",
+      "s007",
+      "s008",
+      "s009",
+      "s004",
+      "s003",
+      "s011"
+    ],
+    "unacceptable": [
+      "s006",
+      "s010"
+    ],
+    "evaluated": [
+      "s002",
+      "s001",
+      "s005",
+      "s012",
+      "s007",
+      "s008",
+      "s009",
+      "s004",
+      "s003",
+      "s011",
+      "s006",
+      "s010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i006",
+    "ranking": [
+      "s010",
+      "s003",
+      "s008",
+      "s011",
+      "s007",
+      "s006",
+      "s005",
+      "s004",
+      "s001",
+      "s012"
+    ],
+    "unacceptable": [
+      "s002",
+      "s009"
+    ],
+    "evaluated": [
+      "s010",
+      "s003",
+      "s008",
+      "s011",
+      "s007",
+      "s006",
+      "s005",
+      "s004",
+      "s001",
+      "s012",
+      "s002",
+      "s009"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i007",
+    "ranking": [
+      "s002",
+      "s007",
+      "s006",
+      "s005",
+      "s010",
+      "s001",
+      "s004",
+      "s012",
+      "s011",
+      "s003"
+    ],
+    "unacceptable": [
+      "s009",
+      "s008"
+    ],
+    "evaluated": [
+      "s002",
+      "s007",
+      "s006",
+      "s005",
+      "s010",
+      "s001",
+      "s004",
+      "s012",
+      "s011",
+      "s003",
+      "s009",
+      "s008"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i008",
+    "ranking": [
+      "s002",
+      "s007",
+      "s009",
+      "s010",
+      "s005",
+      "s012",
+      "s003",
+      "s001",
+      "s004",
+      "s011"
+    ],
+    "unacceptable": [
+      "s006",
+      "s008"
+    ],
+    "evaluated": [
+      "s002",
+      "s007",
+      "s009",
+      "s010",
+      "s005",
+      "s012",
+      "s003",
+      "s001",
+      "s004",
+      "s011",
+      "s006",
+      "s008"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i009",
+    "ranking": [
+      "s011",
+      "s006",
+      "s003",
+      "s012",
+      "s009",
+      "s001",
+      "s007",
+      "s002",
+      "s004",
+      "s010"
+    ],
+    "unacceptable": [
+      "s005",
+      "s008"
+    ],
+    "evaluated": [
+      "s011",
+      "s006",
+      "s003",
+      "s012",
+      "s009",
+      "s001",
+      "s007",
+      "s002",
+      "s004",
+      "s010",
+      "s005",
+      "s008"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  },
+  {
+    "participant_id": "i010",
+    "ranking": [
+      "s008",
+      "s004",
+      "s010",
+      "s006",
+      "s003",
+      "s005",
+      "s011",
+      "s009",
+      "s001",
+      "s012"
+    ],
+    "unacceptable": [
+      "s002",
+      "s007"
+    ],
+    "evaluated": [
+      "s008",
+      "s004",
+      "s010",
+      "s006",
+      "s003",
+      "s005",
+      "s011",
+      "s009",
+      "s001",
+      "s012",
+      "s002",
+      "s007"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false
+  }
+]

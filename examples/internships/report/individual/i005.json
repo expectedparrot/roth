@@ -1,0 +1,16 @@
+{
+  "participant_id": "i005",
+  "partner": {
+    "id": "s005",
+    "name": "Emery 5",
+    "profile": {
+      "skills": "Python and environmental science",
+      "coursework": "Climate research",
+      "project": "Completed a climate research team project",
+      "availability": "June–August",
+      "location": "Remote"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

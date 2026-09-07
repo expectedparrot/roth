@@ -1,0 +1,16 @@
+{
+  "participant_id": "i009",
+  "partner": {
+    "id": "s011",
+    "name": "Kai 11",
+    "profile": {
+      "skills": "Python and statistics",
+      "coursework": "Data analysis",
+      "project": "Completed a data analysis team project",
+      "availability": "June–August",
+      "location": "Remote"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

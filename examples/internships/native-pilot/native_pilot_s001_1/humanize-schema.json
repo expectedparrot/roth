@@ -1,0 +1,37 @@
+{
+  "questions": {
+    "ranking": {
+      "optional": false
+    },
+    "known_0": {
+      "optional": false
+    },
+    "known_1": {
+      "optional": false
+    },
+    "known_2": {
+      "optional": false
+    },
+    "known_3": {
+      "optional": false
+    },
+    "known_4": {
+      "optional": false
+    },
+    "known_5": {
+      "optional": false
+    },
+    "known_6": {
+      "optional": false
+    },
+    "known_7": {
+      "optional": false
+    },
+    "known_8": {
+      "optional": false
+    },
+    "known_9": {
+      "optional": false
+    }
+  }
+}

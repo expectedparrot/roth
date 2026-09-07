@@ -1,0 +1,16 @@
+{
+  "participant_id": "i001",
+  "partner": {
+    "id": "s003",
+    "name": "Casey 3",
+    "profile": {
+      "skills": "Writing and economics",
+      "coursework": "Policy research",
+      "project": "Completed a policy research team project",
+      "availability": "June–August",
+      "location": "Remote"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

@@ -1,0 +1,16 @@
+{
+  "participant_id": "i002",
+  "partner": {
+    "id": "s009",
+    "name": "Indigo 9",
+    "profile": {
+      "skills": "Design and user research",
+      "coursework": "Design",
+      "project": "Completed a design team project",
+      "availability": "June–August",
+      "location": "Remote"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

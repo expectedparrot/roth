@@ -1,0 +1,20 @@
+[
+  {
+    "channel": "email",
+    "subtype": "respondent",
+    "delivery_template": {
+      "source": "expected_parrot",
+      "name": "respondent_invitation"
+    },
+    "respondent_filter": {
+      "type": "group",
+      "operator": "and",
+      "conditions": [
+        {
+          "type": "condition",
+          "never_contacted": true
+        }
+      ]
+    }
+  }
+]

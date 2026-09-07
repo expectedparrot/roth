@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roth"
+version = "0.1.0"
+description = "Auditable two-sided preference collection and stable matching"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "John Horton"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/expectedparrot/roth"
+Documentation = "https://expectedparrot.github.io/roth/"
+Issues = "https://github.com/expectedparrot/roth/issues"
+
+[project.optional-dependencies]
+fielding = ["edsl @ git+https://github.com/expectedparrot/edsl.git@75a8ec03474137d1d426d8e0a281920da4a4a012"]
+test = ["pytest>=8"]
+
+[project.scripts]
+roth = "roth.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

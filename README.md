@@ -1,0 +1,262 @@
+# roth — two-sided preference collection and stable matching
+<!-- id: roth/roth -->
+
+<p align="center">
+  <img src="docs/assets/roth-package.png" width="760" alt="Roth package artwork: two green parrots in wedding attire inside expectation brackets">
+</p>
+
+Roth collects preferences on two sides of a market and computes auditable,
+one-to-one stable matches. The included example assigns students to individual
+internship openings. An organizer controls direct ranking, delegated LLM
+preferences, and whether participants must confirm inferred rankings.
+
+The Python matching engine and local example need no network or third-party
+runtime dependencies. Human fielding and model scoring use optional native EDSL
+artifacts, with execution through `ep`.
+
+Roth can:
+
+- collect strict rankings and unacceptable options from both sides through
+  personalized Humanize surveys;
+- prepare LLM scoring jobs from natural-language preference descriptions,
+  with optional participant confirmation;
+- benchmark inferred preferences against an optional A-versus-B survey;
+- compute deferred-acceptance matches from a frozen set of preferences; and
+- report realized ranks, unmatched participants, coverage, and stability checks.
+
+**[Read the illustrated internship walkthrough](https://expectedparrot.github.io/roth/)**
+to see the actual preference inputs, import commands, and a matrix of both sides'
+rankings with the resulting matches. [HTML source](docs/index.html).
+
+## Install and try the example
+
+Requires Python 3.11+.
+
+```bash
+python -m pip install "roth @ git+https://github.com/expectedparrot/roth.git@main"
+roth demo internship-demo
+```
+
+Open `internship-demo/report/index.html` for the organizer report, and
+`internship-demo/surveys/preview.html` for survey previews. The demo uses **explicit
+fictional rankings**, makes no model calls, and sends no emails. It includes 12
+students, 10 single-slot internship openings, unacceptable partners, and unmatched
+participants. A generated [example report](examples/internships/report/index.html)
+and [survey preview](examples/internships/surveys/preview.html) are included here.
+
+For human surveys and delegated scoring, install the optional fielding dependency:
+
+```bash
+python -m pip install "roth[fielding] @ git+https://github.com/expectedparrot/roth.git@main"
+```
+
+For development from a checkout, use `python -m pip install -e '.[test,fielding]'`.
+
+## Copy and paste into a coding agent
+
+```text
+Set up Roth and help me organize a one-to-one matching process between
+students and internship openings.
+
+Install Roth in an isolated Python 3.11+ tool environment. If uv is missing,
+install it with `python -m pip install --upgrade uv` first:
+
+uv tool install --python 3.11 --with-executables-from edsl \
+  "roth[fielding] @ git+https://github.com/expectedparrot/roth.git@main"
+
+Check the available interfaces:
+
+roth version
+roth capabilities
+roth guide
+ep --help
+
+Start with the fictional example and show me its preference inputs before
+matching:
+
+roth example create internship-study
+roth --project internship-study preferences import internship-study/preferences.json
+roth --project internship-study preferences show
+roth --project internship-study preferences freeze --name main
+roth --project internship-study match --snapshot main --name main
+roth --project internship-study report --run main --output internship-study/report
+roth --project internship-study validate
+
+Explain who matched, both sides' ranks of their assigned partner, and why
+anyone remained unmatched. Keep the example visibly labeled as synthetic.
+
+For my own market, help me define participant profiles, eligibility,
+unacceptable choices, the proposing side, and organizer-controlled delegation
+before collecting preferences. Use `roth --project PROJECT next` to guide
+each stage. Preserve preference revisions and frozen matching snapshots.
+
+Review generated surveys and scoring plans with me before sending real
+invitations or making paid model calls. Let ep manage authentication.
+```
+
+## When to use this
+
+Use Roth when two sides need to rank one another and each participant can
+receive at most one partner: students and individual internship openings,
+mentoring pairs, or other one-to-one assignments. Participants may prefer
+remaining unmatched to some options. Many-to-one capacities are planned for
+a later release.
+
+The organizer supplies stable participant IDs, public profiles, eligibility
+rules, and either explicit rankings or natural-language preference instructions.
+Contact information is needed only for human recruitment. Each internship
+opening represents one slot, with its own employer-side ranking.
+
+## Agent workflow
+
+```bash
+roth guide
+roth --project internship-demo next
+roth --project internship-demo status
+roth --project internship-demo validate
+```
+
+Commands emit one versioned JSON envelope with `status`, `data`, `errors`, and
+`next_steps`. Failures exit nonzero. `--human` opts into indented data. Global
+options, including `--project`, precede the command. Artifact paths are relative
+to the current working directory, independently of the project directory.
+
+Roth builds reviewable execution packages. It never automatically runs inference,
+publishes a survey, or sends invitations. `handoff.json` contains explicit `ep`
+argument arrays; inspect the instrument, recipients, and cost before external
+execution. Let EDSL manage authentication.
+
+## Direct preferences and matching
+
+```bash
+roth example create study
+roth --project study preferences import study/preferences.json
+roth --project study preferences freeze --name main
+roth --project study match --snapshot main --name main
+roth --project study report --run main --output study/report
+```
+
+`example create` initializes the project and writes synthetic fixtures; it does
+not import them until requested. For real data, use `roth init market.json`, or
+`roth init --left students.csv --right internships.csv`. Side files may also be
+JSON participant lists or EDSL AgentLists. See [data contracts](docs/contracts.md).
+
+Deferred acceptance uses strict rankings, allows unequal side sizes and empty
+acceptable lists, and never pairs participants without mutual acceptability.
+The organizer sets the proposing side; `match` also computes the reverse
+orientation by default. Each run saves a proposal trace and independently checks
+feasibility and blocking pairs. Many-to-one matching is deferred.
+
+Nonresponse is distinct from rejection. Freeze requires preferences from every
+active participant. `preferences freeze --exclude ID` explicitly removes a
+nonrespondent from that snapshot. Unknown candidates remain unknown in stored
+preferences; they are excluded from the matching graph unless the organizer
+requires complete evaluation. Reports state the cohort, coverage, and preference
+source. Stability refers to this frozen graph and its submitted or inferred
+preferences, not unobserved human preferences.
+
+## Humanize surveys and invitations
+
+```bash
+roth --project study field build --name rankings --output study/rankings
+```
+
+Each participant gets a distinct `survey.ep`, `agent_list.ep`, `jobs.ep`, question
+map, and Humanize schema. Student surveys show internship profiles; internship
+surveys show student profiles. An opening's ID is distinct from its employer
+representative's contact. Candidate profiles omit private instructions and
+contact information.
+
+Participants rank candidates and **Remain unmatched**, then identify candidates
+they could not assess. Assessed candidates below the outside option are rejected;
+unassessed candidates remain unknown. No ties are accepted in direct rankings.
+
+Review `preview.html` and `handoff.json`. Execute the generated Humanize creation
+command externally, then record its returned UUID:
+
+```bash
+roth --project study field register --field rankings \
+  --package rankings_s001_1 --uuid HUMAN_SURVEY_UUID
+```
+
+Registration returns commands to inspect status, create an invitation delivery,
+and retrieve responses. Invitation routes select never-contacted respondents.
+Review existing deliveries before retrying; register returned delivery IDs with
+`--delivery UUID`, and preserve downloaded status JSON with `--status-json FILE`.
+The canned example has no email addresses; real recruitment requires contact
+emails supplied by the organizer.
+
+```bash
+ep humanize responses HUMAN_SURVEY_UUID --output student-results.ep
+roth --project study field import student-results.ep --name rankings --edsl
+roth --project study field status --name rankings
+```
+
+Imports validate the respondent/package mapping and all required answers. Use
+`--replace` for an explicit revised submission; prior records remain in history.
+Native EDSL package and Results round trips are tested locally. Hosted ranking
+presentation, participant binding, and email delivery require a service pilot
+before real recruitment; no live invitations were sent during development.
+The optional fielding dependency is pinned to the EDSL revision used for these checks.
+
+## Handling long lists
+
+The direct-ranking budget defaults to 15 candidates. Roth blocks oversized
+rankings and offers explicit alternatives:
+
+```bash
+roth --project study field build --name screening --kind screening \
+  --batch-size 10 --output study/screening
+# Import completed screening batches, then build a cross-batch ranking:
+roth --project study field build --name final-ranking --output study/final-ranking
+```
+
+Screening collects acceptability without inventing a global order from separate
+batches. After screening, final ranking includes accepted candidates; rejected
+and unknown candidates retain their respective states. If many acceptable options
+remain, explicitly raise `--max-options`, or use `--plan PLAN_NAME` to restrict
+fielding to a retrieved shortlist. Follow-up rounds and larger retrieval plans
+produce new preference revisions and matching snapshots.
+
+## Delegated preferences and the optional benchmark
+
+See the complete [delegation walkthrough](docs/delegation.md) for:
+
+- collecting natural-language instructions through Humanize;
+- bidirectional lexical retrieval, audited expansion, and cached directional scores;
+- external EDSL inference and validation of partial Results;
+- optional A-versus-B calibration and held-out prediction evaluation;
+- participant confirmation when required by the organizer; and
+- synthetic fixtures for exercising the whole pipeline without paid inference.
+
+The [200-student / 150-opening scale example](examples/scale-summary.json) compares
+shortlists and an expansion round with the full fictional preference market.
+Run `python scripts/scale_demo.py --output new-scale-summary.json` to reproduce it.
+Retrieval ties use a participant-specific seed to avoid always showing the same
+low-ID candidates when lexical relevance is equal.
+
+## Provenance and reports
+
+`.roth/` contains locked, append-only events referencing immutable hashed state
+objects. Preference revisions preserve previous submissions. Snapshots and runs
+are immutable; policy changes require new fielding/scoring plans. `validate`
+checks the history chain, snapshot hashes, and saved matching stability.
+
+Organizer exports include HTML, matches CSV/JSON, preference JSON, and separate
+individual JSON summaries containing only the assigned partner's public profile.
+Statistics cover completion and evaluation coverage, demand concentration, mutual
+top-three interest, assigned-partner ranks, unmatched reasons, and proposer
+sensitivity. Scores and rank sums are not presented as cardinal welfare.
+
+Run checks with:
+
+```bash
+python -m compileall -q src
+python -m pytest -q
+python -m build --no-isolation
+```
+
+## License
+
+MIT. See [LICENSE](LICENSE). The bundled internship participants and preferences
+are fictional.

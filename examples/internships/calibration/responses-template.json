@@ -1,0 +1,662 @@
+[
+  {
+    "package_id": "calibration_i001_calibration",
+    "participant_id": "i001",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i001_q1_choice": null,
+      "calibration_i001_q1_a": null,
+      "calibration_i001_q1_b": null,
+      "calibration_i001_q1_why": null,
+      "calibration_i001_q3_choice": null,
+      "calibration_i001_q3_a": null,
+      "calibration_i001_q3_b": null,
+      "calibration_i001_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i001_evaluation",
+    "participant_id": "i001",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i001_q2_choice": null,
+      "calibration_i001_q2_a": null,
+      "calibration_i001_q2_b": null,
+      "calibration_i001_q2_why": null,
+      "calibration_i001_q4_choice": null,
+      "calibration_i001_q4_a": null,
+      "calibration_i001_q4_b": null,
+      "calibration_i001_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i002_calibration",
+    "participant_id": "i002",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i002_q1_choice": null,
+      "calibration_i002_q1_a": null,
+      "calibration_i002_q1_b": null,
+      "calibration_i002_q1_why": null,
+      "calibration_i002_q3_choice": null,
+      "calibration_i002_q3_a": null,
+      "calibration_i002_q3_b": null,
+      "calibration_i002_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i002_evaluation",
+    "participant_id": "i002",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i002_q2_choice": null,
+      "calibration_i002_q2_a": null,
+      "calibration_i002_q2_b": null,
+      "calibration_i002_q2_why": null,
+      "calibration_i002_q4_choice": null,
+      "calibration_i002_q4_a": null,
+      "calibration_i002_q4_b": null,
+      "calibration_i002_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i003_calibration",
+    "participant_id": "i003",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i003_q1_choice": null,
+      "calibration_i003_q1_a": null,
+      "calibration_i003_q1_b": null,
+      "calibration_i003_q1_why": null,
+      "calibration_i003_q3_choice": null,
+      "calibration_i003_q3_a": null,
+      "calibration_i003_q3_b": null,
+      "calibration_i003_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i003_evaluation",
+    "participant_id": "i003",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i003_q2_choice": null,
+      "calibration_i003_q2_a": null,
+      "calibration_i003_q2_b": null,
+      "calibration_i003_q2_why": null,
+      "calibration_i003_q4_choice": null,
+      "calibration_i003_q4_a": null,
+      "calibration_i003_q4_b": null,
+      "calibration_i003_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i004_calibration",
+    "participant_id": "i004",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i004_q1_choice": null,
+      "calibration_i004_q1_a": null,
+      "calibration_i004_q1_b": null,
+      "calibration_i004_q1_why": null,
+      "calibration_i004_q3_choice": null,
+      "calibration_i004_q3_a": null,
+      "calibration_i004_q3_b": null,
+      "calibration_i004_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i004_evaluation",
+    "participant_id": "i004",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i004_q2_choice": null,
+      "calibration_i004_q2_a": null,
+      "calibration_i004_q2_b": null,
+      "calibration_i004_q2_why": null,
+      "calibration_i004_q4_choice": null,
+      "calibration_i004_q4_a": null,
+      "calibration_i004_q4_b": null,
+      "calibration_i004_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i005_calibration",
+    "participant_id": "i005",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i005_q1_choice": null,
+      "calibration_i005_q1_a": null,
+      "calibration_i005_q1_b": null,
+      "calibration_i005_q1_why": null,
+      "calibration_i005_q3_choice": null,
+      "calibration_i005_q3_a": null,
+      "calibration_i005_q3_b": null,
+      "calibration_i005_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i005_evaluation",
+    "participant_id": "i005",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i005_q2_choice": null,
+      "calibration_i005_q2_a": null,
+      "calibration_i005_q2_b": null,
+      "calibration_i005_q2_why": null,
+      "calibration_i005_q4_choice": null,
+      "calibration_i005_q4_a": null,
+      "calibration_i005_q4_b": null,
+      "calibration_i005_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i006_calibration",
+    "participant_id": "i006",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i006_q1_choice": null,
+      "calibration_i006_q1_a": null,
+      "calibration_i006_q1_b": null,
+      "calibration_i006_q1_why": null,
+      "calibration_i006_q3_choice": null,
+      "calibration_i006_q3_a": null,
+      "calibration_i006_q3_b": null,
+      "calibration_i006_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i006_evaluation",
+    "participant_id": "i006",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i006_q2_choice": null,
+      "calibration_i006_q2_a": null,
+      "calibration_i006_q2_b": null,
+      "calibration_i006_q2_why": null,
+      "calibration_i006_q4_choice": null,
+      "calibration_i006_q4_a": null,
+      "calibration_i006_q4_b": null,
+      "calibration_i006_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i007_calibration",
+    "participant_id": "i007",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i007_q1_choice": null,
+      "calibration_i007_q1_a": null,
+      "calibration_i007_q1_b": null,
+      "calibration_i007_q1_why": null,
+      "calibration_i007_q3_choice": null,
+      "calibration_i007_q3_a": null,
+      "calibration_i007_q3_b": null,
+      "calibration_i007_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i007_evaluation",
+    "participant_id": "i007",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i007_q2_choice": null,
+      "calibration_i007_q2_a": null,
+      "calibration_i007_q2_b": null,
+      "calibration_i007_q2_why": null,
+      "calibration_i007_q4_choice": null,
+      "calibration_i007_q4_a": null,
+      "calibration_i007_q4_b": null,
+      "calibration_i007_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i008_calibration",
+    "participant_id": "i008",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i008_q1_choice": null,
+      "calibration_i008_q1_a": null,
+      "calibration_i008_q1_b": null,
+      "calibration_i008_q1_why": null,
+      "calibration_i008_q3_choice": null,
+      "calibration_i008_q3_a": null,
+      "calibration_i008_q3_b": null,
+      "calibration_i008_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i008_evaluation",
+    "participant_id": "i008",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i008_q2_choice": null,
+      "calibration_i008_q2_a": null,
+      "calibration_i008_q2_b": null,
+      "calibration_i008_q2_why": null,
+      "calibration_i008_q4_choice": null,
+      "calibration_i008_q4_a": null,
+      "calibration_i008_q4_b": null,
+      "calibration_i008_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i009_calibration",
+    "participant_id": "i009",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i009_q1_choice": null,
+      "calibration_i009_q1_a": null,
+      "calibration_i009_q1_b": null,
+      "calibration_i009_q1_why": null,
+      "calibration_i009_q3_choice": null,
+      "calibration_i009_q3_a": null,
+      "calibration_i009_q3_b": null,
+      "calibration_i009_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i009_evaluation",
+    "participant_id": "i009",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i009_q2_choice": null,
+      "calibration_i009_q2_a": null,
+      "calibration_i009_q2_b": null,
+      "calibration_i009_q2_why": null,
+      "calibration_i009_q4_choice": null,
+      "calibration_i009_q4_a": null,
+      "calibration_i009_q4_b": null,
+      "calibration_i009_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i010_calibration",
+    "participant_id": "i010",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i010_q1_choice": null,
+      "calibration_i010_q1_a": null,
+      "calibration_i010_q1_b": null,
+      "calibration_i010_q1_why": null,
+      "calibration_i010_q3_choice": null,
+      "calibration_i010_q3_a": null,
+      "calibration_i010_q3_b": null,
+      "calibration_i010_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_i010_evaluation",
+    "participant_id": "i010",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_i010_q2_choice": null,
+      "calibration_i010_q2_a": null,
+      "calibration_i010_q2_b": null,
+      "calibration_i010_q2_why": null,
+      "calibration_i010_q4_choice": null,
+      "calibration_i010_q4_a": null,
+      "calibration_i010_q4_b": null,
+      "calibration_i010_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s001_calibration",
+    "participant_id": "s001",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s001_q1_choice": null,
+      "calibration_s001_q1_a": null,
+      "calibration_s001_q1_b": null,
+      "calibration_s001_q1_why": null,
+      "calibration_s001_q3_choice": null,
+      "calibration_s001_q3_a": null,
+      "calibration_s001_q3_b": null,
+      "calibration_s001_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s001_evaluation",
+    "participant_id": "s001",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s001_q2_choice": null,
+      "calibration_s001_q2_a": null,
+      "calibration_s001_q2_b": null,
+      "calibration_s001_q2_why": null,
+      "calibration_s001_q4_choice": null,
+      "calibration_s001_q4_a": null,
+      "calibration_s001_q4_b": null,
+      "calibration_s001_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s002_calibration",
+    "participant_id": "s002",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s002_q1_choice": null,
+      "calibration_s002_q1_a": null,
+      "calibration_s002_q1_b": null,
+      "calibration_s002_q1_why": null,
+      "calibration_s002_q3_choice": null,
+      "calibration_s002_q3_a": null,
+      "calibration_s002_q3_b": null,
+      "calibration_s002_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s002_evaluation",
+    "participant_id": "s002",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s002_q2_choice": null,
+      "calibration_s002_q2_a": null,
+      "calibration_s002_q2_b": null,
+      "calibration_s002_q2_why": null,
+      "calibration_s002_q4_choice": null,
+      "calibration_s002_q4_a": null,
+      "calibration_s002_q4_b": null,
+      "calibration_s002_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s003_calibration",
+    "participant_id": "s003",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s003_q1_choice": null,
+      "calibration_s003_q1_a": null,
+      "calibration_s003_q1_b": null,
+      "calibration_s003_q1_why": null,
+      "calibration_s003_q3_choice": null,
+      "calibration_s003_q3_a": null,
+      "calibration_s003_q3_b": null,
+      "calibration_s003_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s003_evaluation",
+    "participant_id": "s003",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s003_q2_choice": null,
+      "calibration_s003_q2_a": null,
+      "calibration_s003_q2_b": null,
+      "calibration_s003_q2_why": null,
+      "calibration_s003_q4_choice": null,
+      "calibration_s003_q4_a": null,
+      "calibration_s003_q4_b": null,
+      "calibration_s003_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s004_calibration",
+    "participant_id": "s004",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s004_q1_choice": null,
+      "calibration_s004_q1_a": null,
+      "calibration_s004_q1_b": null,
+      "calibration_s004_q1_why": null,
+      "calibration_s004_q3_choice": null,
+      "calibration_s004_q3_a": null,
+      "calibration_s004_q3_b": null,
+      "calibration_s004_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s004_evaluation",
+    "participant_id": "s004",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s004_q2_choice": null,
+      "calibration_s004_q2_a": null,
+      "calibration_s004_q2_b": null,
+      "calibration_s004_q2_why": null,
+      "calibration_s004_q4_choice": null,
+      "calibration_s004_q4_a": null,
+      "calibration_s004_q4_b": null,
+      "calibration_s004_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s005_calibration",
+    "participant_id": "s005",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s005_q1_choice": null,
+      "calibration_s005_q1_a": null,
+      "calibration_s005_q1_b": null,
+      "calibration_s005_q1_why": null,
+      "calibration_s005_q3_choice": null,
+      "calibration_s005_q3_a": null,
+      "calibration_s005_q3_b": null,
+      "calibration_s005_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s005_evaluation",
+    "participant_id": "s005",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s005_q2_choice": null,
+      "calibration_s005_q2_a": null,
+      "calibration_s005_q2_b": null,
+      "calibration_s005_q2_why": null,
+      "calibration_s005_q4_choice": null,
+      "calibration_s005_q4_a": null,
+      "calibration_s005_q4_b": null,
+      "calibration_s005_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s006_calibration",
+    "participant_id": "s006",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s006_q1_choice": null,
+      "calibration_s006_q1_a": null,
+      "calibration_s006_q1_b": null,
+      "calibration_s006_q1_why": null,
+      "calibration_s006_q3_choice": null,
+      "calibration_s006_q3_a": null,
+      "calibration_s006_q3_b": null,
+      "calibration_s006_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s006_evaluation",
+    "participant_id": "s006",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s006_q2_choice": null,
+      "calibration_s006_q2_a": null,
+      "calibration_s006_q2_b": null,
+      "calibration_s006_q2_why": null,
+      "calibration_s006_q4_choice": null,
+      "calibration_s006_q4_a": null,
+      "calibration_s006_q4_b": null,
+      "calibration_s006_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s007_calibration",
+    "participant_id": "s007",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s007_q1_choice": null,
+      "calibration_s007_q1_a": null,
+      "calibration_s007_q1_b": null,
+      "calibration_s007_q1_why": null,
+      "calibration_s007_q3_choice": null,
+      "calibration_s007_q3_a": null,
+      "calibration_s007_q3_b": null,
+      "calibration_s007_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s007_evaluation",
+    "participant_id": "s007",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s007_q2_choice": null,
+      "calibration_s007_q2_a": null,
+      "calibration_s007_q2_b": null,
+      "calibration_s007_q2_why": null,
+      "calibration_s007_q4_choice": null,
+      "calibration_s007_q4_a": null,
+      "calibration_s007_q4_b": null,
+      "calibration_s007_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s008_calibration",
+    "participant_id": "s008",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s008_q1_choice": null,
+      "calibration_s008_q1_a": null,
+      "calibration_s008_q1_b": null,
+      "calibration_s008_q1_why": null,
+      "calibration_s008_q3_choice": null,
+      "calibration_s008_q3_a": null,
+      "calibration_s008_q3_b": null,
+      "calibration_s008_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s008_evaluation",
+    "participant_id": "s008",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s008_q2_choice": null,
+      "calibration_s008_q2_a": null,
+      "calibration_s008_q2_b": null,
+      "calibration_s008_q2_why": null,
+      "calibration_s008_q4_choice": null,
+      "calibration_s008_q4_a": null,
+      "calibration_s008_q4_b": null,
+      "calibration_s008_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s009_calibration",
+    "participant_id": "s009",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s009_q1_choice": null,
+      "calibration_s009_q1_a": null,
+      "calibration_s009_q1_b": null,
+      "calibration_s009_q1_why": null,
+      "calibration_s009_q3_choice": null,
+      "calibration_s009_q3_a": null,
+      "calibration_s009_q3_b": null,
+      "calibration_s009_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s009_evaluation",
+    "participant_id": "s009",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s009_q2_choice": null,
+      "calibration_s009_q2_a": null,
+      "calibration_s009_q2_b": null,
+      "calibration_s009_q2_why": null,
+      "calibration_s009_q4_choice": null,
+      "calibration_s009_q4_a": null,
+      "calibration_s009_q4_b": null,
+      "calibration_s009_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s010_calibration",
+    "participant_id": "s010",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s010_q1_choice": null,
+      "calibration_s010_q1_a": null,
+      "calibration_s010_q1_b": null,
+      "calibration_s010_q1_why": null,
+      "calibration_s010_q3_choice": null,
+      "calibration_s010_q3_a": null,
+      "calibration_s010_q3_b": null,
+      "calibration_s010_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s010_evaluation",
+    "participant_id": "s010",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s010_q2_choice": null,
+      "calibration_s010_q2_a": null,
+      "calibration_s010_q2_b": null,
+      "calibration_s010_q2_why": null,
+      "calibration_s010_q4_choice": null,
+      "calibration_s010_q4_a": null,
+      "calibration_s010_q4_b": null,
+      "calibration_s010_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s011_calibration",
+    "participant_id": "s011",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s011_q1_choice": null,
+      "calibration_s011_q1_a": null,
+      "calibration_s011_q1_b": null,
+      "calibration_s011_q1_why": null,
+      "calibration_s011_q3_choice": null,
+      "calibration_s011_q3_a": null,
+      "calibration_s011_q3_b": null,
+      "calibration_s011_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s011_evaluation",
+    "participant_id": "s011",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s011_q2_choice": null,
+      "calibration_s011_q2_a": null,
+      "calibration_s011_q2_b": null,
+      "calibration_s011_q2_why": null,
+      "calibration_s011_q4_choice": null,
+      "calibration_s011_q4_a": null,
+      "calibration_s011_q4_b": null,
+      "calibration_s011_q4_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s012_calibration",
+    "participant_id": "s012",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s012_q1_choice": null,
+      "calibration_s012_q1_a": null,
+      "calibration_s012_q1_b": null,
+      "calibration_s012_q1_why": null,
+      "calibration_s012_q3_choice": null,
+      "calibration_s012_q3_a": null,
+      "calibration_s012_q3_b": null,
+      "calibration_s012_q3_why": null
+    }
+  },
+  {
+    "package_id": "calibration_s012_evaluation",
+    "participant_id": "s012",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "calibration_s012_q2_choice": null,
+      "calibration_s012_q2_a": null,
+      "calibration_s012_q2_b": null,
+      "calibration_s012_q2_why": null,
+      "calibration_s012_q4_choice": null,
+      "calibration_s012_q4_a": null,
+      "calibration_s012_q4_b": null,
+      "calibration_s012_q4_why": null
+    }
+  }
+]

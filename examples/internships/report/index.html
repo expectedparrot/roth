@@ -1,0 +1,782 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roth — internship matching report</title><style>body{font:17px system-ui;max-width:1000px;margin:40px auto;padding:0 20px;color:#173239;background:#fafcfb}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:12px;border-bottom:1px solid #ccd}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef4f3;padding:16px}meter{width:100%;height:28px}h1,h2{color:#12675e}</style>
+<h1>Fictional internship placement</h1>
+<p>Run main · Proposing side: left · Verified stable within the frozen candidate graph.</p>
+<p>Coverage: complete_for_active_cohort; cohort: all_participants; preference sources: synthetic.</p>
+<p>Stability is relative to these submitted or inferred preferences. Shortlist ranks are not full-market ranks.</p>
+<p>left: 10 / 12 matched</p><meter min='0' max='12' value='10'></meter><p>right: 10 / 10 matched</p><meter min='0' max='10' value='10'></meter><h2>Matches</h2><table><thead><tr><th>Left side</th><th>Right side</th></tr></thead><tbody><tr><td>Alex 1</td><td>Policy research — Fictional Lab 3</td></tr><tr><td>Blair 2</td><td>Policy research — Fictional Lab 8</td></tr><tr><td>Casey 3</td><td>Data analysis — Fictional Lab 1</td></tr><tr><td>Devon 4</td><td>Climate research — Fictional Lab 10</td></tr><tr><td>Emery 5</td><td>Climate research — Fictional Lab 5</td></tr><tr><td>Gray 7</td><td>Software development — Fictional Lab 7</td></tr><tr><td>Harper 8</td><td>Design — Fictional Lab 4</td></tr><tr><td>Indigo 9</td><td>Software development — Fictional Lab 2</td></tr><tr><td>Jules 10</td><td>Data analysis — Fictional Lab 6</td></tr><tr><td>Kai 11</td><td>Design — Fictional Lab 9</td></tr></tbody></table>
+<h2>Unmatched participants</h2><pre>{
+  &quot;s006&quot;: &quot;no_partner_in_stable_outcome&quot;,
+  &quot;s012&quot;: &quot;no_acceptable_candidates&quot;
+}</pre>
+<h2>Preference and outcome statistics</h2><pre>{
+  &quot;by_side&quot;: {
+    &quot;left&quot;: {
+      &quot;participants&quot;: 12,
+      &quot;completion&quot;: {
+        &quot;numerator&quot;: 12,
+        &quot;denominator&quot;: 12,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;evaluation_coverage&quot;: {
+        &quot;numerator&quot;: 120,
+        &quot;denominator&quot;: 120,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;decision_coverage&quot;: {
+        &quot;numerator&quot;: 120,
+        &quot;denominator&quot;: 120,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;unresolved_directions&quot;: 0,
+      &quot;explicit_rejections&quot;: 32,
+      &quot;list_lengths&quot;: {
+        &quot;s001&quot;: 8,
+        &quot;s002&quot;: 8,
+        &quot;s003&quot;: 8,
+        &quot;s004&quot;: 8,
+        &quot;s005&quot;: 8,
+        &quot;s006&quot;: 8,
+        &quot;s007&quot;: 8,
+        &quot;s008&quot;: 8,
+        &quot;s009&quot;: 8,
+        &quot;s010&quot;: 8,
+        &quot;s011&quot;: 8,
+        &quot;s012&quot;: 0
+      },
+      &quot;first_choice_demand&quot;: {
+        &quot;i002&quot;: 3,
+        &quot;i004&quot;: 2,
+        &quot;i005&quot;: 1,
+        &quot;i007&quot;: 2,
+        &quot;i008&quot;: 3
+      },
+      &quot;top_3_demand&quot;: {
+        &quot;i001&quot;: 4,
+        &quot;i002&quot;: 5,
+        &quot;i003&quot;: 2,
+        &quot;i004&quot;: 3,
+        &quot;i005&quot;: 4,
+        &quot;i006&quot;: 3,
+        &quot;i007&quot;: 2,
+        &quot;i008&quot;: 4,
+        &quot;i009&quot;: 3,
+        &quot;i010&quot;: 3
+      },
+      &quot;evaluated_exposure&quot;: {
+        &quot;i001&quot;: 12,
+        &quot;i002&quot;: 12,
+        &quot;i003&quot;: 12,
+        &quot;i004&quot;: 12,
+        &quot;i005&quot;: 12,
+        &quot;i006&quot;: 12,
+        &quot;i007&quot;: 12,
+        &quot;i008&quot;: 12,
+        &quot;i009&quot;: 12,
+        &quot;i010&quot;: 12
+      },
+      &quot;top_3_per_evaluation&quot;: {
+        &quot;i001&quot;: {
+          &quot;numerator&quot;: 4,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;i002&quot;: {
+          &quot;numerator&quot;: 5,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.4166666666666667
+        },
+        &quot;i003&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.16666666666666666
+        },
+        &quot;i004&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.25
+        },
+        &quot;i005&quot;: {
+          &quot;numerator&quot;: 4,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;i006&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.25
+        },
+        &quot;i007&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.16666666666666666
+        },
+        &quot;i008&quot;: {
+          &quot;numerator&quot;: 4,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;i009&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.25
+        },
+        &quot;i010&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.25
+        }
+      },
+      &quot;first_choice_hhi&quot;: 0.22314049586776857,
+      &quot;common_candidate_order_agreement&quot;: {
+        &quot;numerator&quot;: 492,
+        &quot;denominator&quot;: 928,
+        &quot;rate&quot;: 0.5301724137931034
+      },
+      &quot;match_rate&quot;: {
+        &quot;numerator&quot;: 10,
+        &quot;denominator&quot;: 12,
+        &quot;rate&quot;: 0.8333333333333334
+      },
+      &quot;assigned_partner_ranks&quot;: {
+        &quot;s001&quot;: 7,
+        &quot;s002&quot;: 5,
+        &quot;s003&quot;: 2,
+        &quot;s004&quot;: 4,
+        &quot;s005&quot;: 5,
+        &quot;s007&quot;: 5,
+        &quot;s008&quot;: 1,
+        &quot;s009&quot;: 2,
+        &quot;s010&quot;: 2,
+        &quot;s011&quot;: 6
+      },
+      &quot;mean_assigned_rank_among_matched&quot;: 3.9,
+      &quot;top_1_assignment&quot;: {
+        &quot;numerator&quot;: 1,
+        &quot;denominator&quot;: 12,
+        &quot;rate&quot;: 0.08333333333333333
+      },
+      &quot;top_3_assignment&quot;: {
+        &quot;numerator&quot;: 4,
+        &quot;denominator&quot;: 12,
+        &quot;rate&quot;: 0.3333333333333333
+      },
+      &quot;sources&quot;: {
+        &quot;synthetic&quot;: 12
+      }
+    },
+    &quot;right&quot;: {
+      &quot;participants&quot;: 10,
+      &quot;completion&quot;: {
+        &quot;numerator&quot;: 10,
+        &quot;denominator&quot;: 10,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;evaluation_coverage&quot;: {
+        &quot;numerator&quot;: 120,
+        &quot;denominator&quot;: 120,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;decision_coverage&quot;: {
+        &quot;numerator&quot;: 120,
+        &quot;denominator&quot;: 120,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;unresolved_directions&quot;: 0,
+      &quot;explicit_rejections&quot;: 20,
+      &quot;list_lengths&quot;: {
+        &quot;i001&quot;: 10,
+        &quot;i002&quot;: 10,
+        &quot;i003&quot;: 10,
+        &quot;i004&quot;: 10,
+        &quot;i005&quot;: 10,
+        &quot;i006&quot;: 10,
+        &quot;i007&quot;: 10,
+        &quot;i008&quot;: 10,
+        &quot;i009&quot;: 10,
+        &quot;i010&quot;: 10
+      },
+      &quot;first_choice_demand&quot;: {
+        &quot;s002&quot;: 3,
+        &quot;s003&quot;: 2,
+        &quot;s004&quot;: 1,
+        &quot;s008&quot;: 1,
+        &quot;s009&quot;: 1,
+        &quot;s010&quot;: 1,
+        &quot;s011&quot;: 1
+      },
+      &quot;top_3_demand&quot;: {
+        &quot;s001&quot;: 2,
+        &quot;s002&quot;: 3,
+        &quot;s003&quot;: 4,
+        &quot;s004&quot;: 3,
+        &quot;s005&quot;: 2,
+        &quot;s006&quot;: 3,
+        &quot;s007&quot;: 3,
+        &quot;s008&quot;: 3,
+        &quot;s009&quot;: 2,
+        &quot;s010&quot;: 2,
+        &quot;s011&quot;: 2,
+        &quot;s012&quot;: 1
+      },
+      &quot;evaluated_exposure&quot;: {
+        &quot;s001&quot;: 10,
+        &quot;s002&quot;: 10,
+        &quot;s003&quot;: 10,
+        &quot;s004&quot;: 10,
+        &quot;s005&quot;: 10,
+        &quot;s006&quot;: 10,
+        &quot;s007&quot;: 10,
+        &quot;s008&quot;: 10,
+        &quot;s009&quot;: 10,
+        &quot;s010&quot;: 10,
+        &quot;s011&quot;: 10,
+        &quot;s012&quot;: 10
+      },
+      &quot;top_3_per_evaluation&quot;: {
+        &quot;s001&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.2
+        },
+        &quot;s002&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.3
+        },
+        &quot;s003&quot;: {
+          &quot;numerator&quot;: 4,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.4
+        },
+        &quot;s004&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.3
+        },
+        &quot;s005&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.2
+        },
+        &quot;s006&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.3
+        },
+        &quot;s007&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.3
+        },
+        &quot;s008&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.3
+        },
+        &quot;s009&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.2
+        },
+        &quot;s010&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.2
+        },
+        &quot;s011&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.2
+        },
+        &quot;s012&quot;: {
+          &quot;numerator&quot;: 1,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.1
+        }
+      },
+      &quot;first_choice_hhi&quot;: 0.18000000000000005,
+      &quot;common_candidate_order_agreement&quot;: {
+        &quot;numerator&quot;: 674,
+        &quot;denominator&quot;: 1389,
+        &quot;rate&quot;: 0.48524118070554356
+      },
+      &quot;match_rate&quot;: {
+        &quot;numerator&quot;: 10,
+        &quot;denominator&quot;: 10,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;assigned_partner_ranks&quot;: {
+        &quot;i001&quot;: 1,
+        &quot;i002&quot;: 1,
+        &quot;i003&quot;: 2,
+        &quot;i004&quot;: 2,
+        &quot;i005&quot;: 3,
+        &quot;i006&quot;: 1,
+        &quot;i007&quot;: 2,
+        &quot;i008&quot;: 1,
+        &quot;i009&quot;: 1,
+        &quot;i010&quot;: 2
+      },
+      &quot;mean_assigned_rank_among_matched&quot;: 1.6,
+      &quot;top_1_assignment&quot;: {
+        &quot;numerator&quot;: 5,
+        &quot;denominator&quot;: 10,
+        &quot;rate&quot;: 0.5
+      },
+      &quot;top_3_assignment&quot;: {
+        &quot;numerator&quot;: 10,
+        &quot;denominator&quot;: 10,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;sources&quot;: {
+        &quot;synthetic&quot;: 10
+      }
+    }
+  },
+  &quot;mutual_top_3&quot;: [
+    [
+      &quot;s003&quot;,
+      &quot;i001&quot;
+    ],
+    [
+      &quot;s003&quot;,
+      &quot;i009&quot;
+    ],
+    [
+      &quot;s006&quot;,
+      &quot;i007&quot;
+    ],
+    [
+      &quot;s006&quot;,
+      &quot;i009&quot;
+    ],
+    [
+      &quot;s007&quot;,
+      &quot;i002&quot;
+    ],
+    [
+      &quot;s008&quot;,
+      &quot;i004&quot;
+    ],
+    [
+      &quot;s009&quot;,
+      &quot;i002&quot;
+    ],
+    [
+      &quot;s010&quot;,
+      &quot;i006&quot;
+    ]
+  ],
+  &quot;rank_scope&quot;: &quot;submitted lists within the active cohort; not full-market ranks&quot;,
+  &quot;note&quot;: &quot;Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views.&quot;
+}</pre>
+<h2>Proposer comparison</h2><pre>{
+  &quot;proposing_side&quot;: &quot;right&quot;,
+  &quot;matches&quot;: [
+    [
+      &quot;s001&quot;,
+      &quot;i003&quot;
+    ],
+    [
+      &quot;s002&quot;,
+      &quot;i008&quot;
+    ],
+    [
+      &quot;s003&quot;,
+      &quot;i001&quot;
+    ],
+    [
+      &quot;s004&quot;,
+      &quot;i010&quot;
+    ],
+    [
+      &quot;s005&quot;,
+      &quot;i005&quot;
+    ],
+    [
+      &quot;s007&quot;,
+      &quot;i007&quot;
+    ],
+    [
+      &quot;s008&quot;,
+      &quot;i004&quot;
+    ],
+    [
+      &quot;s009&quot;,
+      &quot;i002&quot;
+    ],
+    [
+      &quot;s010&quot;,
+      &quot;i006&quot;
+    ],
+    [
+      &quot;s011&quot;,
+      &quot;i009&quot;
+    ]
+  ],
+  &quot;changed_pairs&quot;: [],
+  &quot;statistics&quot;: {
+    &quot;by_side&quot;: {
+      &quot;left&quot;: {
+        &quot;participants&quot;: 12,
+        &quot;completion&quot;: {
+          &quot;numerator&quot;: 12,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;evaluation_coverage&quot;: {
+          &quot;numerator&quot;: 120,
+          &quot;denominator&quot;: 120,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;decision_coverage&quot;: {
+          &quot;numerator&quot;: 120,
+          &quot;denominator&quot;: 120,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;unresolved_directions&quot;: 0,
+        &quot;explicit_rejections&quot;: 32,
+        &quot;list_lengths&quot;: {
+          &quot;s001&quot;: 8,
+          &quot;s002&quot;: 8,
+          &quot;s003&quot;: 8,
+          &quot;s004&quot;: 8,
+          &quot;s005&quot;: 8,
+          &quot;s006&quot;: 8,
+          &quot;s007&quot;: 8,
+          &quot;s008&quot;: 8,
+          &quot;s009&quot;: 8,
+          &quot;s010&quot;: 8,
+          &quot;s011&quot;: 8,
+          &quot;s012&quot;: 0
+        },
+        &quot;first_choice_demand&quot;: {
+          &quot;i002&quot;: 3,
+          &quot;i004&quot;: 2,
+          &quot;i005&quot;: 1,
+          &quot;i007&quot;: 2,
+          &quot;i008&quot;: 3
+        },
+        &quot;top_3_demand&quot;: {
+          &quot;i001&quot;: 4,
+          &quot;i002&quot;: 5,
+          &quot;i003&quot;: 2,
+          &quot;i004&quot;: 3,
+          &quot;i005&quot;: 4,
+          &quot;i006&quot;: 3,
+          &quot;i007&quot;: 2,
+          &quot;i008&quot;: 4,
+          &quot;i009&quot;: 3,
+          &quot;i010&quot;: 3
+        },
+        &quot;evaluated_exposure&quot;: {
+          &quot;i001&quot;: 12,
+          &quot;i002&quot;: 12,
+          &quot;i003&quot;: 12,
+          &quot;i004&quot;: 12,
+          &quot;i005&quot;: 12,
+          &quot;i006&quot;: 12,
+          &quot;i007&quot;: 12,
+          &quot;i008&quot;: 12,
+          &quot;i009&quot;: 12,
+          &quot;i010&quot;: 12
+        },
+        &quot;top_3_per_evaluation&quot;: {
+          &quot;i001&quot;: {
+            &quot;numerator&quot;: 4,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.3333333333333333
+          },
+          &quot;i002&quot;: {
+            &quot;numerator&quot;: 5,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.4166666666666667
+          },
+          &quot;i003&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.16666666666666666
+          },
+          &quot;i004&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.25
+          },
+          &quot;i005&quot;: {
+            &quot;numerator&quot;: 4,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.3333333333333333
+          },
+          &quot;i006&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.25
+          },
+          &quot;i007&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.16666666666666666
+          },
+          &quot;i008&quot;: {
+            &quot;numerator&quot;: 4,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.3333333333333333
+          },
+          &quot;i009&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.25
+          },
+          &quot;i010&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.25
+          }
+        },
+        &quot;first_choice_hhi&quot;: 0.22314049586776857,
+        &quot;common_candidate_order_agreement&quot;: {
+          &quot;numerator&quot;: 492,
+          &quot;denominator&quot;: 928,
+          &quot;rate&quot;: 0.5301724137931034
+        },
+        &quot;match_rate&quot;: {
+          &quot;numerator&quot;: 10,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.8333333333333334
+        },
+        &quot;assigned_partner_ranks&quot;: {
+          &quot;s001&quot;: 7,
+          &quot;s002&quot;: 5,
+          &quot;s003&quot;: 2,
+          &quot;s004&quot;: 4,
+          &quot;s005&quot;: 5,
+          &quot;s007&quot;: 5,
+          &quot;s008&quot;: 1,
+          &quot;s009&quot;: 2,
+          &quot;s010&quot;: 2,
+          &quot;s011&quot;: 6
+        },
+        &quot;mean_assigned_rank_among_matched&quot;: 3.9,
+        &quot;top_1_assignment&quot;: {
+          &quot;numerator&quot;: 1,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.08333333333333333
+        },
+        &quot;top_3_assignment&quot;: {
+          &quot;numerator&quot;: 4,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;sources&quot;: {
+          &quot;synthetic&quot;: 12
+        }
+      },
+      &quot;right&quot;: {
+        &quot;participants&quot;: 10,
+        &quot;completion&quot;: {
+          &quot;numerator&quot;: 10,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;evaluation_coverage&quot;: {
+          &quot;numerator&quot;: 120,
+          &quot;denominator&quot;: 120,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;decision_coverage&quot;: {
+          &quot;numerator&quot;: 120,
+          &quot;denominator&quot;: 120,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;unresolved_directions&quot;: 0,
+        &quot;explicit_rejections&quot;: 20,
+        &quot;list_lengths&quot;: {
+          &quot;i001&quot;: 10,
+          &quot;i002&quot;: 10,
+          &quot;i003&quot;: 10,
+          &quot;i004&quot;: 10,
+          &quot;i005&quot;: 10,
+          &quot;i006&quot;: 10,
+          &quot;i007&quot;: 10,
+          &quot;i008&quot;: 10,
+          &quot;i009&quot;: 10,
+          &quot;i010&quot;: 10
+        },
+        &quot;first_choice_demand&quot;: {
+          &quot;s002&quot;: 3,
+          &quot;s003&quot;: 2,
+          &quot;s004&quot;: 1,
+          &quot;s008&quot;: 1,
+          &quot;s009&quot;: 1,
+          &quot;s010&quot;: 1,
+          &quot;s011&quot;: 1
+        },
+        &quot;top_3_demand&quot;: {
+          &quot;s001&quot;: 2,
+          &quot;s002&quot;: 3,
+          &quot;s003&quot;: 4,
+          &quot;s004&quot;: 3,
+          &quot;s005&quot;: 2,
+          &quot;s006&quot;: 3,
+          &quot;s007&quot;: 3,
+          &quot;s008&quot;: 3,
+          &quot;s009&quot;: 2,
+          &quot;s010&quot;: 2,
+          &quot;s011&quot;: 2,
+          &quot;s012&quot;: 1
+        },
+        &quot;evaluated_exposure&quot;: {
+          &quot;s001&quot;: 10,
+          &quot;s002&quot;: 10,
+          &quot;s003&quot;: 10,
+          &quot;s004&quot;: 10,
+          &quot;s005&quot;: 10,
+          &quot;s006&quot;: 10,
+          &quot;s007&quot;: 10,
+          &quot;s008&quot;: 10,
+          &quot;s009&quot;: 10,
+          &quot;s010&quot;: 10,
+          &quot;s011&quot;: 10,
+          &quot;s012&quot;: 10
+        },
+        &quot;top_3_per_evaluation&quot;: {
+          &quot;s001&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.2
+          },
+          &quot;s002&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.3
+          },
+          &quot;s003&quot;: {
+            &quot;numerator&quot;: 4,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.4
+          },
+          &quot;s004&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.3
+          },
+          &quot;s005&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.2
+          },
+          &quot;s006&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.3
+          },
+          &quot;s007&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.3
+          },
+          &quot;s008&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.3
+          },
+          &quot;s009&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.2
+          },
+          &quot;s010&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.2
+          },
+          &quot;s011&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.2
+          },
+          &quot;s012&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.1
+          }
+        },
+        &quot;first_choice_hhi&quot;: 0.18000000000000005,
+        &quot;common_candidate_order_agreement&quot;: {
+          &quot;numerator&quot;: 674,
+          &quot;denominator&quot;: 1389,
+          &quot;rate&quot;: 0.48524118070554356
+        },
+        &quot;match_rate&quot;: {
+          &quot;numerator&quot;: 10,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;assigned_partner_ranks&quot;: {
+          &quot;i001&quot;: 1,
+          &quot;i002&quot;: 1,
+          &quot;i003&quot;: 2,
+          &quot;i004&quot;: 2,
+          &quot;i005&quot;: 3,
+          &quot;i006&quot;: 1,
+          &quot;i007&quot;: 2,
+          &quot;i008&quot;: 1,
+          &quot;i009&quot;: 1,
+          &quot;i010&quot;: 2
+        },
+        &quot;mean_assigned_rank_among_matched&quot;: 1.6,
+        &quot;top_1_assignment&quot;: {
+          &quot;numerator&quot;: 5,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.5
+        },
+        &quot;top_3_assignment&quot;: {
+          &quot;numerator&quot;: 10,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;sources&quot;: {
+          &quot;synthetic&quot;: 10
+        }
+      }
+    },
+    &quot;mutual_top_3&quot;: [
+      [
+        &quot;s003&quot;,
+        &quot;i001&quot;
+      ],
+      [
+        &quot;s003&quot;,
+        &quot;i009&quot;
+      ],
+      [
+        &quot;s006&quot;,
+        &quot;i007&quot;
+      ],
+      [
+        &quot;s006&quot;,
+        &quot;i009&quot;
+      ],
+      [
+        &quot;s007&quot;,
+        &quot;i002&quot;
+      ],
+      [
+        &quot;s008&quot;,
+        &quot;i004&quot;
+      ],
+      [
+        &quot;s009&quot;,
+        &quot;i002&quot;
+      ],
+      [
+        &quot;s010&quot;,
+        &quot;i006&quot;
+      ]
+    ],
+    &quot;rank_scope&quot;: &quot;submitted lists within the active cohort; not full-market ranks&quot;,
+    &quot;note&quot;: &quot;Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views.&quot;
+  }
+}</pre>
+<p>Organizer report: includes aggregate preference information. Individual files contain only the assigned partner's public profile.</p></html>

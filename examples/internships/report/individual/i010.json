@@ -1,0 +1,16 @@
+{
+  "participant_id": "i010",
+  "partner": {
+    "id": "s004",
+    "name": "Devon 4",
+    "profile": {
+      "skills": "Design and user research",
+      "coursework": "Design",
+      "project": "Completed a design team project",
+      "availability": "June–August",
+      "location": "Boston"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

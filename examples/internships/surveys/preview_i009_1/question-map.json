@@ -1,0 +1,204 @@
+{
+  "id": "preview_i009_1",
+  "participant_id": "i009",
+  "candidates": [
+    "s001",
+    "s002",
+    "s003",
+    "s004",
+    "s005",
+    "s006",
+    "s007",
+    "s008",
+    "s009",
+    "s010",
+    "s011",
+    "s012"
+  ],
+  "questions": [
+    {
+      "kind": "rank",
+      "question_name": "ranking",
+      "question_text": "Preference survey for Design — Fictional Lab 9. Organizer policy: delegated.\nBlair 2 [s002]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}\n\nIndigo 9 [s009]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Design\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a design team project\",\n  \"skills\": \"Design and user research\"\n}\n\nFinley 6 [s006]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Data analysis\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a data analysis team project\",\n  \"skills\": \"Python and statistics\"\n}\n\nEmery 5 [s005]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Climate research\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a climate research team project\",\n  \"skills\": \"Python and environmental science\"\n}\n\nLane 12 [s012]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}\n\nHarper 8 [s008]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Policy research\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a policy research team project\",\n  \"skills\": \"Writing and economics\"\n}\n\nAlex 1 [s001]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Data analysis\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a data analysis team project\",\n  \"skills\": \"Python and statistics\"\n}\n\nDevon 4 [s004]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Design\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a design team project\",\n  \"skills\": \"Design and user research\"\n}\n\nCasey 3 [s003]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Policy research\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a policy research team project\",\n  \"skills\": \"Writing and economics\"\n}\n\nGray 7 [s007]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}\n\nJules 10 [s010]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Climate research\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a climate research team project\",\n  \"skills\": \"Python and environmental science\"\n}\n\nKai 11 [s011]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Data analysis\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a data analysis team project\",\n  \"skills\": \"Python and statistics\"\n}\nRank ALL options best first. Place 'Remain unmatched' above every unacceptable partner. For candidates with insufficient information, select that status below; their position will be ignored.",
+      "question_options": [
+        "Blair 2 [s002]",
+        "Indigo 9 [s009]",
+        "Finley 6 [s006]",
+        "Emery 5 [s005]",
+        "Lane 12 [s012]",
+        "Harper 8 [s008]",
+        "Alex 1 [s001]",
+        "Devon 4 [s004]",
+        "Casey 3 [s003]",
+        "Gray 7 [s007]",
+        "Jules 10 [s010]",
+        "Kai 11 [s011]",
+        "Remain unmatched"
+      ],
+      "num_selections": 13,
+      "use_code": false,
+      "mapping": {
+        "Blair 2 [s002]": "s002",
+        "Indigo 9 [s009]": "s009",
+        "Finley 6 [s006]": "s006",
+        "Emery 5 [s005]": "s005",
+        "Lane 12 [s012]": "s012",
+        "Harper 8 [s008]": "s008",
+        "Alex 1 [s001]": "s001",
+        "Devon 4 [s004]": "s004",
+        "Casey 3 [s003]": "s003",
+        "Gray 7 [s007]": "s007",
+        "Jules 10 [s010]": "s010",
+        "Kai 11 [s011]": "s011"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_0",
+      "question_text": "Could you assess Blair 2 [s002]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s002"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_1",
+      "question_text": "Could you assess Indigo 9 [s009]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s009"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_2",
+      "question_text": "Could you assess Finley 6 [s006]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s006"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_3",
+      "question_text": "Could you assess Emery 5 [s005]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s005"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_4",
+      "question_text": "Could you assess Lane 12 [s012]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s012"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_5",
+      "question_text": "Could you assess Harper 8 [s008]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s008"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_6",
+      "question_text": "Could you assess Alex 1 [s001]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s001"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_7",
+      "question_text": "Could you assess Devon 4 [s004]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s004"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_8",
+      "question_text": "Could you assess Casey 3 [s003]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s003"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_9",
+      "question_text": "Could you assess Gray 7 [s007]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s007"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_10",
+      "question_text": "Could you assess Jules 10 [s010]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s010"
+      }
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "known_11",
+      "question_text": "Could you assess Kai 11 [s011]?",
+      "question_options": [
+        "Assessed",
+        "Insufficient information"
+      ],
+      "mapping": {
+        "candidate": "s011"
+      }
+    }
+  ],
+  "screened": {},
+  "preference_hash": "8fb73b082dbbe29f5c7533cf6596135928241987d6f0bfb5bd81c81884cbf05e",
+  "source": "human",
+  "complete": false
+}

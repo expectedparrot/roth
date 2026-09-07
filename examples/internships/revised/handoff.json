@@ -1,0 +1,37 @@
+{
+  "models": [
+    "ep",
+    "models",
+    "create",
+    "--model",
+    "test",
+    "--output",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/revised/models.ep"
+  ],
+  "inspect": [
+    "ep",
+    "inspect",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/revised/edsl/jobs.ep"
+  ],
+  "cost": [
+    "ep",
+    "jobs",
+    "cost",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/revised/edsl/jobs.ep",
+    "--model",
+    "test"
+  ],
+  "run": [
+    "ep",
+    "run",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/revised/edsl/jobs.ep",
+    "--model_list",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/revised/models.ep",
+    "--output",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/revised/results.ep"
+  ],
+  "cost_note": "The estimate uses model defaults; review parameter-specific token budgets before execution.",
+  "native_built": true,
+  "network": true,
+  "requires_authorization": true
+}

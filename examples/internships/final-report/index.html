@@ -1,0 +1,2579 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roth — internship matching report</title><style>body{font:17px system-ui;max-width:1000px;margin:40px auto;padding:0 20px;color:#173239;background:#fafcfb}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:12px;border-bottom:1px solid #ccd}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef4f3;padding:16px}meter{width:100%;height:28px}h1,h2{color:#12675e}</style>
+<h1>Fictional internship placement</h1>
+<p>Run final · Proposing side: left · Verified stable within the frozen candidate graph.</p>
+<p>Coverage: restricted; cohort: all_participants; preference sources: synthetic.</p>
+<p>Stability is relative to these submitted or inferred preferences. Shortlist ranks are not full-market ranks.</p>
+<p>left: 9 / 12 matched</p><meter min='0' max='12' value='9'></meter><p>right: 9 / 10 matched</p><meter min='0' max='10' value='9'></meter><h2>Matches</h2><table><thead><tr><th>Left side</th><th>Right side</th></tr></thead><tbody><tr><td>Alex 1</td><td>Data analysis — Fictional Lab 1</td></tr><tr><td>Blair 2</td><td>Policy research — Fictional Lab 8</td></tr><tr><td>Casey 3</td><td>Design — Fictional Lab 9</td></tr><tr><td>Devon 4</td><td>Climate research — Fictional Lab 10</td></tr><tr><td>Emery 5</td><td>Software development — Fictional Lab 7</td></tr><tr><td>Gray 7</td><td>Climate research — Fictional Lab 5</td></tr><tr><td>Harper 8</td><td>Design — Fictional Lab 4</td></tr><tr><td>Indigo 9</td><td>Software development — Fictional Lab 2</td></tr><tr><td>Jules 10</td><td>Data analysis — Fictional Lab 6</td></tr></tbody></table>
+<h2>Unmatched participants</h2><pre>{
+  &quot;s006&quot;: &quot;no_partner_in_stable_outcome&quot;,
+  &quot;s011&quot;: &quot;no_partner_in_stable_outcome&quot;,
+  &quot;s012&quot;: &quot;no_acceptable_candidates&quot;,
+  &quot;i003&quot;: &quot;no_partner_in_stable_outcome&quot;
+}</pre>
+<h2>Preference and outcome statistics</h2><pre>{
+  &quot;by_side&quot;: {
+    &quot;left&quot;: {
+      &quot;participants&quot;: 12,
+      &quot;completion&quot;: {
+        &quot;numerator&quot;: 12,
+        &quot;denominator&quot;: 12,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;evaluation_coverage&quot;: {
+        &quot;numerator&quot;: 76,
+        &quot;denominator&quot;: 120,
+        &quot;rate&quot;: 0.6333333333333333
+      },
+      &quot;decision_coverage&quot;: {
+        &quot;numerator&quot;: 76,
+        &quot;denominator&quot;: 120,
+        &quot;rate&quot;: 0.6333333333333333
+      },
+      &quot;unresolved_directions&quot;: 44,
+      &quot;explicit_rejections&quot;: 20,
+      &quot;list_lengths&quot;: {
+        &quot;s001&quot;: 8,
+        &quot;s002&quot;: 7,
+        &quot;s003&quot;: 3,
+        &quot;s004&quot;: 5,
+        &quot;s005&quot;: 5,
+        &quot;s006&quot;: 4,
+        &quot;s007&quot;: 6,
+        &quot;s008&quot;: 4,
+        &quot;s009&quot;: 4,
+        &quot;s010&quot;: 6,
+        &quot;s011&quot;: 4,
+        &quot;s012&quot;: 0
+      },
+      &quot;first_choice_demand&quot;: {
+        &quot;i002&quot;: 5,
+        &quot;i004&quot;: 2,
+        &quot;i007&quot;: 1,
+        &quot;i008&quot;: 3
+      },
+      &quot;top_3_demand&quot;: {
+        &quot;i001&quot;: 3,
+        &quot;i002&quot;: 5,
+        &quot;i004&quot;: 5,
+        &quot;i005&quot;: 2,
+        &quot;i006&quot;: 4,
+        &quot;i007&quot;: 1,
+        &quot;i008&quot;: 7,
+        &quot;i009&quot;: 2,
+        &quot;i010&quot;: 4
+      },
+      &quot;evaluated_exposure&quot;: {
+        &quot;i001&quot;: 5,
+        &quot;i002&quot;: 9,
+        &quot;i003&quot;: 5,
+        &quot;i004&quot;: 12,
+        &quot;i005&quot;: 6,
+        &quot;i006&quot;: 9,
+        &quot;i007&quot;: 5,
+        &quot;i008&quot;: 10,
+        &quot;i009&quot;: 6,
+        &quot;i010&quot;: 9
+      },
+      &quot;top_3_per_evaluation&quot;: {
+        &quot;i001&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 5,
+          &quot;rate&quot;: 0.6
+        },
+        &quot;i002&quot;: {
+          &quot;numerator&quot;: 5,
+          &quot;denominator&quot;: 9,
+          &quot;rate&quot;: 0.5555555555555556
+        },
+        &quot;i003&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 5,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;i004&quot;: {
+          &quot;numerator&quot;: 5,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.4166666666666667
+        },
+        &quot;i005&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 6,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;i006&quot;: {
+          &quot;numerator&quot;: 4,
+          &quot;denominator&quot;: 9,
+          &quot;rate&quot;: 0.4444444444444444
+        },
+        &quot;i007&quot;: {
+          &quot;numerator&quot;: 1,
+          &quot;denominator&quot;: 5,
+          &quot;rate&quot;: 0.2
+        },
+        &quot;i008&quot;: {
+          &quot;numerator&quot;: 7,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.7
+        },
+        &quot;i009&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 6,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;i010&quot;: {
+          &quot;numerator&quot;: 4,
+          &quot;denominator&quot;: 9,
+          &quot;rate&quot;: 0.4444444444444444
+        }
+      },
+      &quot;first_choice_hhi&quot;: 0.3223140495867768,
+      &quot;common_candidate_order_agreement&quot;: {
+        &quot;numerator&quot;: 92,
+        &quot;denominator&quot;: 167,
+        &quot;rate&quot;: 0.5508982035928144
+      },
+      &quot;order_agreement_sampling&quot;: {
+        &quot;respondents&quot;: 12,
+        &quot;respondent_population&quot;: 12,
+        &quot;max_shared_candidates_per_pair&quot;: 20,
+        &quot;candidate_sampling_used&quot;: false,
+        &quot;seed&quot;: 17
+      },
+      &quot;match_rate&quot;: {
+        &quot;numerator&quot;: 9,
+        &quot;denominator&quot;: 12,
+        &quot;rate&quot;: 0.75
+      },
+      &quot;assigned_partner_ranks&quot;: {
+        &quot;s001&quot;: 3,
+        &quot;s002&quot;: 5,
+        &quot;s003&quot;: 2,
+        &quot;s004&quot;: 3,
+        &quot;s005&quot;: 1,
+        &quot;s007&quot;: 2,
+        &quot;s008&quot;: 1,
+        &quot;s009&quot;: 1,
+        &quot;s010&quot;: 2
+      },
+      &quot;mean_assigned_rank_among_matched&quot;: 2.2222222222222223,
+      &quot;top_1_assignment&quot;: {
+        &quot;numerator&quot;: 3,
+        &quot;denominator&quot;: 12,
+        &quot;rate&quot;: 0.25
+      },
+      &quot;top_3_assignment&quot;: {
+        &quot;numerator&quot;: 8,
+        &quot;denominator&quot;: 12,
+        &quot;rate&quot;: 0.6666666666666666
+      },
+      &quot;sources&quot;: {
+        &quot;synthetic&quot;: 12
+      }
+    },
+    &quot;right&quot;: {
+      &quot;participants&quot;: 10,
+      &quot;completion&quot;: {
+        &quot;numerator&quot;: 10,
+        &quot;denominator&quot;: 10,
+        &quot;rate&quot;: 1.0
+      },
+      &quot;evaluation_coverage&quot;: {
+        &quot;numerator&quot;: 76,
+        &quot;denominator&quot;: 120,
+        &quot;rate&quot;: 0.6333333333333333
+      },
+      &quot;decision_coverage&quot;: {
+        &quot;numerator&quot;: 76,
+        &quot;denominator&quot;: 120,
+        &quot;rate&quot;: 0.6333333333333333
+      },
+      &quot;unresolved_directions&quot;: 44,
+      &quot;explicit_rejections&quot;: 11,
+      &quot;list_lengths&quot;: {
+        &quot;i001&quot;: 4,
+        &quot;i002&quot;: 8,
+        &quot;i003&quot;: 5,
+        &quot;i004&quot;: 10,
+        &quot;i005&quot;: 5,
+        &quot;i006&quot;: 7,
+        &quot;i007&quot;: 5,
+        &quot;i008&quot;: 9,
+        &quot;i009&quot;: 4,
+        &quot;i010&quot;: 8
+      },
+      &quot;first_choice_demand&quot;: {
+        &quot;s002&quot;: 3,
+        &quot;s003&quot;: 2,
+        &quot;s004&quot;: 1,
+        &quot;s006&quot;: 1,
+        &quot;s008&quot;: 1,
+        &quot;s009&quot;: 1,
+        &quot;s010&quot;: 1
+      },
+      &quot;top_3_demand&quot;: {
+        &quot;s001&quot;: 3,
+        &quot;s002&quot;: 3,
+        &quot;s003&quot;: 2,
+        &quot;s004&quot;: 3,
+        &quot;s005&quot;: 2,
+        &quot;s006&quot;: 1,
+        &quot;s007&quot;: 5,
+        &quot;s008&quot;: 2,
+        &quot;s009&quot;: 3,
+        &quot;s010&quot;: 2,
+        &quot;s011&quot;: 2,
+        &quot;s012&quot;: 2
+      },
+      &quot;evaluated_exposure&quot;: {
+        &quot;s001&quot;: 9,
+        &quot;s002&quot;: 9,
+        &quot;s003&quot;: 5,
+        &quot;s004&quot;: 6,
+        &quot;s005&quot;: 6,
+        &quot;s006&quot;: 5,
+        &quot;s007&quot;: 7,
+        &quot;s008&quot;: 5,
+        &quot;s009&quot;: 5,
+        &quot;s010&quot;: 7,
+        &quot;s011&quot;: 5,
+        &quot;s012&quot;: 7
+      },
+      &quot;top_3_per_evaluation&quot;: {
+        &quot;s001&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 9,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;s002&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 9,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;s003&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 5,
+          &quot;rate&quot;: 0.4
+        },
+        &quot;s004&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 6,
+          &quot;rate&quot;: 0.5
+        },
+        &quot;s005&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 6,
+          &quot;rate&quot;: 0.3333333333333333
+        },
+        &quot;s006&quot;: {
+          &quot;numerator&quot;: 1,
+          &quot;denominator&quot;: 5,
+          &quot;rate&quot;: 0.2
+        },
+        &quot;s007&quot;: {
+          &quot;numerator&quot;: 5,
+          &quot;denominator&quot;: 7,
+          &quot;rate&quot;: 0.7142857142857143
+        },
+        &quot;s008&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 5,
+          &quot;rate&quot;: 0.4
+        },
+        &quot;s009&quot;: {
+          &quot;numerator&quot;: 3,
+          &quot;denominator&quot;: 5,
+          &quot;rate&quot;: 0.6
+        },
+        &quot;s010&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 7,
+          &quot;rate&quot;: 0.2857142857142857
+        },
+        &quot;s011&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 5,
+          &quot;rate&quot;: 0.4
+        },
+        &quot;s012&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 7,
+          &quot;rate&quot;: 0.2857142857142857
+        }
+      },
+      &quot;first_choice_hhi&quot;: 0.18000000000000002,
+      &quot;common_candidate_order_agreement&quot;: {
+        &quot;numerator&quot;: 142,
+        &quot;denominator&quot;: 270,
+        &quot;rate&quot;: 0.5259259259259259
+      },
+      &quot;order_agreement_sampling&quot;: {
+        &quot;respondents&quot;: 10,
+        &quot;respondent_population&quot;: 10,
+        &quot;max_shared_candidates_per_pair&quot;: 20,
+        &quot;candidate_sampling_used&quot;: false,
+        &quot;seed&quot;: 17
+      },
+      &quot;match_rate&quot;: {
+        &quot;numerator&quot;: 9,
+        &quot;denominator&quot;: 10,
+        &quot;rate&quot;: 0.9
+      },
+      &quot;assigned_partner_ranks&quot;: {
+        &quot;i001&quot;: 3,
+        &quot;i002&quot;: 1,
+        &quot;i004&quot;: 2,
+        &quot;i005&quot;: 5,
+        &quot;i006&quot;: 1,
+        &quot;i007&quot;: 3,
+        &quot;i008&quot;: 1,
+        &quot;i009&quot;: 1,
+        &quot;i010&quot;: 2
+      },
+      &quot;mean_assigned_rank_among_matched&quot;: 2.111111111111111,
+      &quot;top_1_assignment&quot;: {
+        &quot;numerator&quot;: 4,
+        &quot;denominator&quot;: 10,
+        &quot;rate&quot;: 0.4
+      },
+      &quot;top_3_assignment&quot;: {
+        &quot;numerator&quot;: 8,
+        &quot;denominator&quot;: 10,
+        &quot;rate&quot;: 0.8
+      },
+      &quot;sources&quot;: {
+        &quot;synthetic&quot;: 10
+      }
+    }
+  },
+  &quot;mutual_top_3&quot;: [
+    [
+      &quot;s001&quot;,
+      &quot;i001&quot;
+    ],
+    [
+      &quot;s003&quot;,
+      &quot;i009&quot;
+    ],
+    [
+      &quot;s004&quot;,
+      &quot;i010&quot;
+    ],
+    [
+      &quot;s005&quot;,
+      &quot;i007&quot;
+    ],
+    [
+      &quot;s007&quot;,
+      &quot;i002&quot;
+    ],
+    [
+      &quot;s007&quot;,
+      &quot;i008&quot;
+    ],
+    [
+      &quot;s008&quot;,
+      &quot;i004&quot;
+    ],
+    [
+      &quot;s009&quot;,
+      &quot;i002&quot;
+    ],
+    [
+      &quot;s009&quot;,
+      &quot;i008&quot;
+    ],
+    [
+      &quot;s010&quot;,
+      &quot;i006&quot;
+    ],
+    [
+      &quot;s011&quot;,
+      &quot;i006&quot;
+    ]
+  ],
+  &quot;rank_scope&quot;: &quot;submitted lists within the active cohort; not full-market ranks&quot;,
+  &quot;note&quot;: &quot;Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views.&quot;
+}</pre>
+<h2>Proposer comparison</h2><pre>{
+  &quot;proposing_side&quot;: &quot;right&quot;,
+  &quot;matches&quot;: [
+    [
+      &quot;s001&quot;,
+      &quot;i001&quot;
+    ],
+    [
+      &quot;s002&quot;,
+      &quot;i008&quot;
+    ],
+    [
+      &quot;s003&quot;,
+      &quot;i009&quot;
+    ],
+    [
+      &quot;s004&quot;,
+      &quot;i010&quot;
+    ],
+    [
+      &quot;s005&quot;,
+      &quot;i005&quot;
+    ],
+    [
+      &quot;s007&quot;,
+      &quot;i007&quot;
+    ],
+    [
+      &quot;s008&quot;,
+      &quot;i004&quot;
+    ],
+    [
+      &quot;s009&quot;,
+      &quot;i002&quot;
+    ],
+    [
+      &quot;s010&quot;,
+      &quot;i006&quot;
+    ]
+  ],
+  &quot;changed_pairs&quot;: [
+    [
+      &quot;s005&quot;,
+      &quot;i005&quot;
+    ],
+    [
+      &quot;s005&quot;,
+      &quot;i007&quot;
+    ],
+    [
+      &quot;s007&quot;,
+      &quot;i005&quot;
+    ],
+    [
+      &quot;s007&quot;,
+      &quot;i007&quot;
+    ]
+  ],
+  &quot;statistics&quot;: {
+    &quot;by_side&quot;: {
+      &quot;left&quot;: {
+        &quot;participants&quot;: 12,
+        &quot;completion&quot;: {
+          &quot;numerator&quot;: 12,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;evaluation_coverage&quot;: {
+          &quot;numerator&quot;: 76,
+          &quot;denominator&quot;: 120,
+          &quot;rate&quot;: 0.6333333333333333
+        },
+        &quot;decision_coverage&quot;: {
+          &quot;numerator&quot;: 76,
+          &quot;denominator&quot;: 120,
+          &quot;rate&quot;: 0.6333333333333333
+        },
+        &quot;unresolved_directions&quot;: 44,
+        &quot;explicit_rejections&quot;: 20,
+        &quot;list_lengths&quot;: {
+          &quot;s001&quot;: 8,
+          &quot;s002&quot;: 7,
+          &quot;s003&quot;: 3,
+          &quot;s004&quot;: 5,
+          &quot;s005&quot;: 5,
+          &quot;s006&quot;: 4,
+          &quot;s007&quot;: 6,
+          &quot;s008&quot;: 4,
+          &quot;s009&quot;: 4,
+          &quot;s010&quot;: 6,
+          &quot;s011&quot;: 4,
+          &quot;s012&quot;: 0
+        },
+        &quot;first_choice_demand&quot;: {
+          &quot;i002&quot;: 5,
+          &quot;i004&quot;: 2,
+          &quot;i007&quot;: 1,
+          &quot;i008&quot;: 3
+        },
+        &quot;top_3_demand&quot;: {
+          &quot;i001&quot;: 3,
+          &quot;i002&quot;: 5,
+          &quot;i004&quot;: 5,
+          &quot;i005&quot;: 2,
+          &quot;i006&quot;: 4,
+          &quot;i007&quot;: 1,
+          &quot;i008&quot;: 7,
+          &quot;i009&quot;: 2,
+          &quot;i010&quot;: 4
+        },
+        &quot;evaluated_exposure&quot;: {
+          &quot;i001&quot;: 5,
+          &quot;i002&quot;: 9,
+          &quot;i003&quot;: 5,
+          &quot;i004&quot;: 12,
+          &quot;i005&quot;: 6,
+          &quot;i006&quot;: 9,
+          &quot;i007&quot;: 5,
+          &quot;i008&quot;: 10,
+          &quot;i009&quot;: 6,
+          &quot;i010&quot;: 9
+        },
+        &quot;top_3_per_evaluation&quot;: {
+          &quot;i001&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 5,
+            &quot;rate&quot;: 0.6
+          },
+          &quot;i002&quot;: {
+            &quot;numerator&quot;: 5,
+            &quot;denominator&quot;: 9,
+            &quot;rate&quot;: 0.5555555555555556
+          },
+          &quot;i003&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 5,
+            &quot;rate&quot;: 0.0
+          },
+          &quot;i004&quot;: {
+            &quot;numerator&quot;: 5,
+            &quot;denominator&quot;: 12,
+            &quot;rate&quot;: 0.4166666666666667
+          },
+          &quot;i005&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 6,
+            &quot;rate&quot;: 0.3333333333333333
+          },
+          &quot;i006&quot;: {
+            &quot;numerator&quot;: 4,
+            &quot;denominator&quot;: 9,
+            &quot;rate&quot;: 0.4444444444444444
+          },
+          &quot;i007&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 5,
+            &quot;rate&quot;: 0.2
+          },
+          &quot;i008&quot;: {
+            &quot;numerator&quot;: 7,
+            &quot;denominator&quot;: 10,
+            &quot;rate&quot;: 0.7
+          },
+          &quot;i009&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 6,
+            &quot;rate&quot;: 0.3333333333333333
+          },
+          &quot;i010&quot;: {
+            &quot;numerator&quot;: 4,
+            &quot;denominator&quot;: 9,
+            &quot;rate&quot;: 0.4444444444444444
+          }
+        },
+        &quot;first_choice_hhi&quot;: 0.3223140495867768,
+        &quot;common_candidate_order_agreement&quot;: {
+          &quot;numerator&quot;: 92,
+          &quot;denominator&quot;: 167,
+          &quot;rate&quot;: 0.5508982035928144
+        },
+        &quot;order_agreement_sampling&quot;: {
+          &quot;respondents&quot;: 12,
+          &quot;respondent_population&quot;: 12,
+          &quot;max_shared_candidates_per_pair&quot;: 20,
+          &quot;candidate_sampling_used&quot;: false,
+          &quot;seed&quot;: 17
+        },
+        &quot;match_rate&quot;: {
+          &quot;numerator&quot;: 9,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.75
+        },
+        &quot;assigned_partner_ranks&quot;: {
+          &quot;s001&quot;: 3,
+          &quot;s002&quot;: 5,
+          &quot;s003&quot;: 2,
+          &quot;s004&quot;: 3,
+          &quot;s005&quot;: 4,
+          &quot;s007&quot;: 4,
+          &quot;s008&quot;: 1,
+          &quot;s009&quot;: 1,
+          &quot;s010&quot;: 2
+        },
+        &quot;mean_assigned_rank_among_matched&quot;: 2.7777777777777777,
+        &quot;top_1_assignment&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.16666666666666666
+        },
+        &quot;top_3_assignment&quot;: {
+          &quot;numerator&quot;: 6,
+          &quot;denominator&quot;: 12,
+          &quot;rate&quot;: 0.5
+        },
+        &quot;sources&quot;: {
+          &quot;synthetic&quot;: 12
+        }
+      },
+      &quot;right&quot;: {
+        &quot;participants&quot;: 10,
+        &quot;completion&quot;: {
+          &quot;numerator&quot;: 10,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;evaluation_coverage&quot;: {
+          &quot;numerator&quot;: 76,
+          &quot;denominator&quot;: 120,
+          &quot;rate&quot;: 0.6333333333333333
+        },
+        &quot;decision_coverage&quot;: {
+          &quot;numerator&quot;: 76,
+          &quot;denominator&quot;: 120,
+          &quot;rate&quot;: 0.6333333333333333
+        },
+        &quot;unresolved_directions&quot;: 44,
+        &quot;explicit_rejections&quot;: 11,
+        &quot;list_lengths&quot;: {
+          &quot;i001&quot;: 4,
+          &quot;i002&quot;: 8,
+          &quot;i003&quot;: 5,
+          &quot;i004&quot;: 10,
+          &quot;i005&quot;: 5,
+          &quot;i006&quot;: 7,
+          &quot;i007&quot;: 5,
+          &quot;i008&quot;: 9,
+          &quot;i009&quot;: 4,
+          &quot;i010&quot;: 8
+        },
+        &quot;first_choice_demand&quot;: {
+          &quot;s002&quot;: 3,
+          &quot;s003&quot;: 2,
+          &quot;s004&quot;: 1,
+          &quot;s006&quot;: 1,
+          &quot;s008&quot;: 1,
+          &quot;s009&quot;: 1,
+          &quot;s010&quot;: 1
+        },
+        &quot;top_3_demand&quot;: {
+          &quot;s001&quot;: 3,
+          &quot;s002&quot;: 3,
+          &quot;s003&quot;: 2,
+          &quot;s004&quot;: 3,
+          &quot;s005&quot;: 2,
+          &quot;s006&quot;: 1,
+          &quot;s007&quot;: 5,
+          &quot;s008&quot;: 2,
+          &quot;s009&quot;: 3,
+          &quot;s010&quot;: 2,
+          &quot;s011&quot;: 2,
+          &quot;s012&quot;: 2
+        },
+        &quot;evaluated_exposure&quot;: {
+          &quot;s001&quot;: 9,
+          &quot;s002&quot;: 9,
+          &quot;s003&quot;: 5,
+          &quot;s004&quot;: 6,
+          &quot;s005&quot;: 6,
+          &quot;s006&quot;: 5,
+          &quot;s007&quot;: 7,
+          &quot;s008&quot;: 5,
+          &quot;s009&quot;: 5,
+          &quot;s010&quot;: 7,
+          &quot;s011&quot;: 5,
+          &quot;s012&quot;: 7
+        },
+        &quot;top_3_per_evaluation&quot;: {
+          &quot;s001&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 9,
+            &quot;rate&quot;: 0.3333333333333333
+          },
+          &quot;s002&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 9,
+            &quot;rate&quot;: 0.3333333333333333
+          },
+          &quot;s003&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 5,
+            &quot;rate&quot;: 0.4
+          },
+          &quot;s004&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 6,
+            &quot;rate&quot;: 0.5
+          },
+          &quot;s005&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 6,
+            &quot;rate&quot;: 0.3333333333333333
+          },
+          &quot;s006&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 5,
+            &quot;rate&quot;: 0.2
+          },
+          &quot;s007&quot;: {
+            &quot;numerator&quot;: 5,
+            &quot;denominator&quot;: 7,
+            &quot;rate&quot;: 0.7142857142857143
+          },
+          &quot;s008&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 5,
+            &quot;rate&quot;: 0.4
+          },
+          &quot;s009&quot;: {
+            &quot;numerator&quot;: 3,
+            &quot;denominator&quot;: 5,
+            &quot;rate&quot;: 0.6
+          },
+          &quot;s010&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 7,
+            &quot;rate&quot;: 0.2857142857142857
+          },
+          &quot;s011&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 5,
+            &quot;rate&quot;: 0.4
+          },
+          &quot;s012&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 7,
+            &quot;rate&quot;: 0.2857142857142857
+          }
+        },
+        &quot;first_choice_hhi&quot;: 0.18000000000000002,
+        &quot;common_candidate_order_agreement&quot;: {
+          &quot;numerator&quot;: 142,
+          &quot;denominator&quot;: 270,
+          &quot;rate&quot;: 0.5259259259259259
+        },
+        &quot;order_agreement_sampling&quot;: {
+          &quot;respondents&quot;: 10,
+          &quot;respondent_population&quot;: 10,
+          &quot;max_shared_candidates_per_pair&quot;: 20,
+          &quot;candidate_sampling_used&quot;: false,
+          &quot;seed&quot;: 17
+        },
+        &quot;match_rate&quot;: {
+          &quot;numerator&quot;: 9,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.9
+        },
+        &quot;assigned_partner_ranks&quot;: {
+          &quot;i001&quot;: 3,
+          &quot;i002&quot;: 1,
+          &quot;i004&quot;: 2,
+          &quot;i005&quot;: 3,
+          &quot;i006&quot;: 1,
+          &quot;i007&quot;: 2,
+          &quot;i008&quot;: 1,
+          &quot;i009&quot;: 1,
+          &quot;i010&quot;: 2
+        },
+        &quot;mean_assigned_rank_among_matched&quot;: 1.7777777777777777,
+        &quot;top_1_assignment&quot;: {
+          &quot;numerator&quot;: 4,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.4
+        },
+        &quot;top_3_assignment&quot;: {
+          &quot;numerator&quot;: 9,
+          &quot;denominator&quot;: 10,
+          &quot;rate&quot;: 0.9
+        },
+        &quot;sources&quot;: {
+          &quot;synthetic&quot;: 10
+        }
+      }
+    },
+    &quot;mutual_top_3&quot;: [
+      [
+        &quot;s001&quot;,
+        &quot;i001&quot;
+      ],
+      [
+        &quot;s003&quot;,
+        &quot;i009&quot;
+      ],
+      [
+        &quot;s004&quot;,
+        &quot;i010&quot;
+      ],
+      [
+        &quot;s005&quot;,
+        &quot;i007&quot;
+      ],
+      [
+        &quot;s007&quot;,
+        &quot;i002&quot;
+      ],
+      [
+        &quot;s007&quot;,
+        &quot;i008&quot;
+      ],
+      [
+        &quot;s008&quot;,
+        &quot;i004&quot;
+      ],
+      [
+        &quot;s009&quot;,
+        &quot;i002&quot;
+      ],
+      [
+        &quot;s009&quot;,
+        &quot;i008&quot;
+      ],
+      [
+        &quot;s010&quot;,
+        &quot;i006&quot;
+      ],
+      [
+        &quot;s011&quot;,
+        &quot;i006&quot;
+      ]
+    ],
+    &quot;rank_scope&quot;: &quot;submitted lists within the active cohort; not full-market ranks&quot;,
+    &quot;note&quot;: &quot;Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views.&quot;
+  }
+}</pre>
+<h2>Preference benchmarks</h2><pre>{
+  &quot;calibration&quot;: {
+    &quot;name&quot;: &quot;calibration&quot;,
+    &quot;source&quot;: &quot;synthetic&quot;,
+    &quot;retired&quot;: false,
+    &quot;models&quot;: {
+      &quot;baseline&quot;: {
+        &quot;score_hash&quot;: &quot;de07bd3ee3c7091e8643f3672426ce3dcf7e119c4ebd780503178fc6712f142e&quot;,
+        &quot;participants&quot;: {
+          &quot;i001&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i002&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i003&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              }
+            }
+          },
+          &quot;i004&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i005&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i006&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i007&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i008&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i009&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i010&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s001&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s002&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 1,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s003&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 1,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s004&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s005&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s006&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s007&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s008&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s009&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s010&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s011&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s012&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 2,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              }
+            }
+          }
+        }
+      },
+      &quot;revised&quot;: {
+        &quot;score_hash&quot;: &quot;2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93&quot;,
+        &quot;participants&quot;: {
+          &quot;i001&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i002&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i003&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              }
+            }
+          },
+          &quot;i004&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i005&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i006&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i007&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i008&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i009&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;i010&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s001&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s002&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 1,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s003&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 1,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s004&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s005&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s006&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s007&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s008&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s009&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s010&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s011&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 0,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 1,
+                &quot;denominator&quot;: 1,
+                &quot;rate&quot;: 1.0
+              }
+            }
+          },
+          &quot;s012&quot;: {
+            &quot;overall&quot;: {
+              &quot;numerator&quot;: 2,
+              &quot;denominator&quot;: 2,
+              &quot;rate&quot;: 1.0
+            },
+            &quot;ties&quot;: 2,
+            &quot;insufficient_information&quot;: 0,
+            &quot;acceptability_errors&quot;: {
+              &quot;numerator&quot;: 0,
+              &quot;denominator&quot;: 4,
+              &quot;rate&quot;: 0.0
+            },
+            &quot;by_selection&quot;: {
+              &quot;representative&quot;: {
+                &quot;numerator&quot;: 2,
+                &quot;denominator&quot;: 2,
+                &quot;rate&quot;: 1.0
+              },
+              &quot;diagnostic&quot;: {
+                &quot;numerator&quot;: 0,
+                &quot;denominator&quot;: 0,
+                &quot;rate&quot;: null
+              }
+            }
+          }
+        }
+      }
+    },
+    &quot;participants&quot;: {
+      &quot;i001&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;i002&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;i003&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          }
+        }
+      },
+      &quot;i004&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;i005&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;i006&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;i007&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;i008&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;i009&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;i010&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s001&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s002&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 1,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s003&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 1,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s004&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s005&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s006&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s007&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s008&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s009&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s010&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s011&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 0,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 1,
+            &quot;denominator&quot;: 1,
+            &quot;rate&quot;: 1.0
+          }
+        }
+      },
+      &quot;s012&quot;: {
+        &quot;overall&quot;: {
+          &quot;numerator&quot;: 2,
+          &quot;denominator&quot;: 2,
+          &quot;rate&quot;: 1.0
+        },
+        &quot;ties&quot;: 2,
+        &quot;insufficient_information&quot;: 0,
+        &quot;acceptability_errors&quot;: {
+          &quot;numerator&quot;: 0,
+          &quot;denominator&quot;: 4,
+          &quot;rate&quot;: 0.0
+        },
+        &quot;by_selection&quot;: {
+          &quot;representative&quot;: {
+            &quot;numerator&quot;: 2,
+            &quot;denominator&quot;: 2,
+            &quot;rate&quot;: 1.0
+          },
+          &quot;diagnostic&quot;: {
+            &quot;numerator&quot;: 0,
+            &quot;denominator&quot;: 0,
+            &quot;rate&quot;: null
+          }
+        }
+      }
+    },
+    &quot;note&quot;: &quot;Held-out directional agreement only; targeted questions and a small sample do not certify full preferences or retrieval coverage.&quot;
+  }
+}</pre>
+<p>Organizer report: includes aggregate preference information. Individual files contain only the assigned partner's public profile.</p></html>

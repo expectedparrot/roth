@@ -1,0 +1,18 @@
+{
+  "participant_id": "s009",
+  "partner": {
+    "id": "i002",
+    "name": "Software development — Fictional Lab 2",
+    "profile": {
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Remote",
+      "mentoring": "Daily guidance",
+      "pay_per_hour_usd": 22,
+      "preferred_skills": "Python and web development",
+      "work": "Software development"
+    }
+  },
+  "run": "delegated",
+  "reason": null
+}

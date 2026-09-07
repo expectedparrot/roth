@@ -1,0 +1,40 @@
+[
+  {
+    "package_id": "native_pilot_i001_1",
+    "participant_id": "i001",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "ranking": null,
+      "known_0": null,
+      "known_1": null,
+      "known_2": null,
+      "known_3": null,
+      "known_4": null,
+      "known_5": null,
+      "known_6": null,
+      "known_7": null,
+      "known_8": null,
+      "known_9": null,
+      "known_10": null,
+      "known_11": null
+    }
+  },
+  {
+    "package_id": "native_pilot_s001_1",
+    "participant_id": "s001",
+    "submission_id": "replace-with-stable-submission-id",
+    "answers": {
+      "ranking": null,
+      "known_0": null,
+      "known_1": null,
+      "known_2": null,
+      "known_3": null,
+      "known_4": null,
+      "known_5": null,
+      "known_6": null,
+      "known_7": null,
+      "known_8": null,
+      "known_9": null
+    }
+  }
+]

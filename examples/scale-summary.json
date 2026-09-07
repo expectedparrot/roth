@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "students": 200,
+  "internships": 150,
+  "exhaustive_directed_evaluations": 60000,
+  "full_fixture_matches": 150,
+  "rounds": [
+    {
+      "k": 5,
+      "directed_evaluations": 3290,
+      "new_evaluations": 3290,
+      "cached": 0,
+      "matches": 150,
+      "stable_on_retrieved_graph": true,
+      "blocking_pairs_under_full_fixture": 3121,
+      "elapsed_seconds": 0.44
+    },
+    {
+      "k": 10,
+      "directed_evaluations": 6044,
+      "new_evaluations": 2754,
+      "cached": 3290,
+      "matches": 150,
+      "stable_on_retrieved_graph": true,
+      "blocking_pairs_under_full_fixture": 1596,
+      "elapsed_seconds": 0.626
+    }
+  ],
+  "interpretation": "Retrieval cuts synthetic evaluation counts. Stability on the retrieved graph does not establish full-market stability; expansion need not eliminate all omitted blocking pairs. Times measure local fixture processing, not LLM latency."
+}

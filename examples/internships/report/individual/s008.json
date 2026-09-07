@@ -1,0 +1,18 @@
+{
+  "participant_id": "s008",
+  "partner": {
+    "id": "i004",
+    "name": "Design — Fictional Lab 4",
+    "profile": {
+      "work": "Design",
+      "preferred_skills": "Design and user research",
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Remote",
+      "pay_per_hour_usd": 26,
+      "mentoring": "Daily guidance"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

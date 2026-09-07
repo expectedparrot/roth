@@ -1,0 +1,62 @@
+[
+  {
+    "package_id": "native_pilot_i001_1",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/native-pilot/native_pilot_i001_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/native-pilot/native_pilot_i001_1/humanize-schema.json",
+      "--name",
+      "native_pilot_i001_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "native_pilot",
+      "--package",
+      "native_pilot_i001_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "native_pilot_s001_1",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/native-pilot/native_pilot_s001_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/native-pilot/native_pilot_s001_1/humanize-schema.json",
+      "--name",
+      "native_pilot_s001_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "native_pilot",
+      "--package",
+      "native_pilot_s001_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  }
+]

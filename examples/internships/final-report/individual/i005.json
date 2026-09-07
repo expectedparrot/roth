@@ -1,0 +1,16 @@
+{
+  "participant_id": "i005",
+  "partner": {
+    "id": "s007",
+    "name": "Gray 7",
+    "profile": {
+      "availability": "June–August",
+      "coursework": "Software development",
+      "location": "Boston",
+      "project": "Completed a software development team project",
+      "skills": "Python and web development"
+    }
+  },
+  "run": "final",
+  "reason": null
+}

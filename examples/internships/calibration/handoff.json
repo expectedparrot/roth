@@ -1,0 +1,1322 @@
+[
+  {
+    "package_id": "calibration_i001_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i001_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i001_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i001_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i001_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i001_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i001_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i001_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i001_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i001_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i002_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i002_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i002_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i002_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i002_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i002_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i002_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i002_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i002_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i002_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i003_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i003_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i003_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i003_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i003_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i003_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i003_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i003_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i003_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i003_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i004_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i004_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i004_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i004_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i004_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i004_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i004_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i004_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i004_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i004_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i005_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i005_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i005_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i005_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i005_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i005_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i005_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i005_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i005_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i005_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i006_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i006_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i006_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i006_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i006_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i006_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i006_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i006_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i006_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i006_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i007_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i007_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i007_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i007_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i007_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i007_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i007_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i007_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i007_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i007_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i008_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i008_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i008_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i008_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i008_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i008_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i008_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i008_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i008_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i008_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i009_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i009_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i009_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i009_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i009_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i009_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i009_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i009_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i009_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i009_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i010_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i010_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i010_calibration/humanize-schema.json",
+      "--name",
+      "calibration_i010_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i010_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_i010_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i010_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_i010_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_i010_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_i010_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s001_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s001_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s001_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s001_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s001_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s001_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s001_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s001_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s001_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s001_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s002_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s002_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s002_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s002_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s002_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s002_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s002_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s002_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s002_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s002_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s003_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s003_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s003_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s003_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s003_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s003_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s003_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s003_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s003_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s003_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s004_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s004_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s004_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s004_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s004_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s004_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s004_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s004_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s004_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s004_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s005_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s005_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s005_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s005_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s005_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s005_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s005_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s005_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s005_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s005_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s006_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s006_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s006_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s006_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s006_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s006_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s006_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s006_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s006_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s006_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s007_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s007_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s007_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s007_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s007_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s007_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s007_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s007_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s007_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s007_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s008_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s008_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s008_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s008_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s008_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s008_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s008_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s008_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s008_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s008_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s009_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s009_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s009_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s009_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s009_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s009_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s009_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s009_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s009_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s009_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s010_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s010_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s010_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s010_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s010_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s010_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s010_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s010_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s010_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s010_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s011_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s011_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s011_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s011_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s011_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s011_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s011_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s011_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s011_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s011_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s012_calibration",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s012_calibration/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s012_calibration/humanize-schema.json",
+      "--name",
+      "calibration_s012_calibration"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s012_calibration",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "calibration_s012_evaluation",
+    "native_built": true,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s012_evaluation/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/calibration/calibration_s012_evaluation/humanize-schema.json",
+      "--name",
+      "calibration_s012_evaluation"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "calibration",
+      "--package",
+      "calibration_s012_evaluation",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  }
+]

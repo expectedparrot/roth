@@ -1,0 +1,9 @@
+include README.md LICENSE SPEC.md AGENTS.md
+recursive-include docs *.md *.html *.json *.png
+recursive-include tests *.py
+recursive-include scripts *.py
+include examples/scale-summary.json
+include examples/internships/market.json
+include examples/internships/preferences.json
+include examples/internships/report/index.html
+include examples/internships/surveys/preview.html

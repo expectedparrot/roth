@@ -1,0 +1,16 @@
+{
+  "participant_id": "i001",
+  "partner": {
+    "id": "s001",
+    "name": "Alex 1",
+    "profile": {
+      "availability": "June–August",
+      "coursework": "Data analysis",
+      "location": "Boston",
+      "project": "Completed a data analysis team project",
+      "skills": "Python and statistics"
+    }
+  },
+  "run": "delegated",
+  "reason": null
+}

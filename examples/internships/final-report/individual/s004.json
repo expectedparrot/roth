@@ -1,0 +1,18 @@
+{
+  "participant_id": "s004",
+  "partner": {
+    "id": "i010",
+    "name": "Climate research — Fictional Lab 10",
+    "profile": {
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Remote",
+      "mentoring": "Daily guidance",
+      "pay_per_hour_usd": 26,
+      "preferred_skills": "Python and environmental science",
+      "work": "Climate research"
+    }
+  },
+  "run": "final",
+  "reason": null
+}

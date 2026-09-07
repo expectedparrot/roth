@@ -1,0 +1,662 @@
+[
+  {
+    "package_id": "preview_i001_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i001_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i001_1/humanize-schema.json",
+      "--name",
+      "preview_i001_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i001_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i002_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i002_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i002_1/humanize-schema.json",
+      "--name",
+      "preview_i002_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i002_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i003_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i003_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i003_1/humanize-schema.json",
+      "--name",
+      "preview_i003_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i003_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i004_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i004_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i004_1/humanize-schema.json",
+      "--name",
+      "preview_i004_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i004_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i005_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i005_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i005_1/humanize-schema.json",
+      "--name",
+      "preview_i005_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i005_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i006_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i006_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i006_1/humanize-schema.json",
+      "--name",
+      "preview_i006_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i006_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i007_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i007_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i007_1/humanize-schema.json",
+      "--name",
+      "preview_i007_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i007_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i008_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i008_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i008_1/humanize-schema.json",
+      "--name",
+      "preview_i008_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i008_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i009_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i009_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i009_1/humanize-schema.json",
+      "--name",
+      "preview_i009_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i009_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_i010_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i010_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_i010_1/humanize-schema.json",
+      "--name",
+      "preview_i010_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_i010_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s001_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s001_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s001_1/humanize-schema.json",
+      "--name",
+      "preview_s001_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s001_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s002_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s002_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s002_1/humanize-schema.json",
+      "--name",
+      "preview_s002_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s002_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s003_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s003_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s003_1/humanize-schema.json",
+      "--name",
+      "preview_s003_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s003_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s004_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s004_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s004_1/humanize-schema.json",
+      "--name",
+      "preview_s004_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s004_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s005_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s005_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s005_1/humanize-schema.json",
+      "--name",
+      "preview_s005_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s005_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s006_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s006_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s006_1/humanize-schema.json",
+      "--name",
+      "preview_s006_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s006_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s007_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s007_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s007_1/humanize-schema.json",
+      "--name",
+      "preview_s007_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s007_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s008_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s008_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s008_1/humanize-schema.json",
+      "--name",
+      "preview_s008_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s008_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s009_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s009_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s009_1/humanize-schema.json",
+      "--name",
+      "preview_s009_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s009_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s010_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s010_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s010_1/humanize-schema.json",
+      "--name",
+      "preview_s010_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s010_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s011_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s011_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s011_1/humanize-schema.json",
+      "--name",
+      "preview_s011_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s011_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  },
+  {
+    "package_id": "preview_s012_1",
+    "native_built": false,
+    "create": [
+      "ep",
+      "humanize",
+      "create",
+      "--jobs",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s012_1/jobs.ep",
+      "--schema",
+      "/Users/johnhorton/tools/ep/roth/examples/internships/surveys/preview_s012_1/humanize-schema.json",
+      "--name",
+      "preview_s012_1"
+    ],
+    "register": [
+      "roth",
+      "field",
+      "register",
+      "--field",
+      "preview",
+      "--package",
+      "preview_s012_1",
+      "--uuid",
+      "<human-survey-uuid>"
+    ],
+    "recipient_configured": false,
+    "mutates": true,
+    "network": true,
+    "requires_authorization": true
+  }
+]

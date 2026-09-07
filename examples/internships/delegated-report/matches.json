@@ -1,0 +1,2798 @@
+{
+  "matches": [
+    [
+      "s001",
+      "i001"
+    ],
+    [
+      "s002",
+      "i008"
+    ],
+    [
+      "s003",
+      "i009"
+    ],
+    [
+      "s004",
+      "i010"
+    ],
+    [
+      "s005",
+      "i007"
+    ],
+    [
+      "s007",
+      "i005"
+    ],
+    [
+      "s008",
+      "i004"
+    ],
+    [
+      "s009",
+      "i002"
+    ],
+    [
+      "s010",
+      "i006"
+    ]
+  ],
+  "unmatched": {
+    "s006": "no_partner_in_stable_outcome",
+    "s011": "no_partner_in_stable_outcome",
+    "s012": "no_acceptable_candidates",
+    "i003": "no_partner_in_stable_outcome"
+  },
+  "proposing_side": "left",
+  "trace": [
+    {
+      "proposer": "s001",
+      "receiver": "i008",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i002",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s003",
+      "receiver": "i008",
+      "accepted": true,
+      "displaced": "s001"
+    },
+    {
+      "proposer": "s004",
+      "receiver": "i008",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s005",
+      "receiver": "i007",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i002",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s007",
+      "receiver": "i002",
+      "accepted": true,
+      "displaced": "s002"
+    },
+    {
+      "proposer": "s008",
+      "receiver": "i004",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s009",
+      "receiver": "i002",
+      "accepted": true,
+      "displaced": "s007"
+    },
+    {
+      "proposer": "s010",
+      "receiver": "i002",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i004",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s001",
+      "receiver": "i004",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s004",
+      "receiver": "i006",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i004",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i006",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s007",
+      "receiver": "i005",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s010",
+      "receiver": "i006",
+      "accepted": true,
+      "displaced": "s004"
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i001",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s001",
+      "receiver": "i001",
+      "accepted": true,
+      "displaced": "s011"
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i010",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i001",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s004",
+      "receiver": "i010",
+      "accepted": true,
+      "displaced": "s006"
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i006",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i010",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s006",
+      "receiver": "i006",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s011",
+      "receiver": "i002",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "s002",
+      "receiver": "i008",
+      "accepted": true,
+      "displaced": "s003"
+    },
+    {
+      "proposer": "s003",
+      "receiver": "i009",
+      "accepted": true,
+      "displaced": null
+    }
+  ],
+  "verification": {
+    "feasible": true,
+    "stable": true,
+    "errors": [],
+    "blocking_pairs": []
+  },
+  "name": "delegated",
+  "snapshot": "delegated",
+  "snapshot_hash": "d9ab92ac9e2fe7f878fb87d0c8c4b154277dd88a761f363ce0759fa45af9de86",
+  "scope": {
+    "coverage": "restricted",
+    "cohort_scope": "all_participants",
+    "preference_sources": [
+      "synthetic"
+    ]
+  },
+  "benchmarks": {
+    "calibration": {
+      "name": "calibration",
+      "source": "synthetic",
+      "retired": false,
+      "models": {
+        "baseline": {
+          "score_hash": "de07bd3ee3c7091e8643f3672426ce3dcf7e119c4ebd780503178fc6712f142e",
+          "participants": {
+            "i001": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i002": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i003": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                }
+              }
+            },
+            "i004": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i005": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i006": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i007": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i008": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i009": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i010": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s001": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s002": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 1,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s003": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 1,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s004": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s005": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s006": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s007": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s008": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s009": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s010": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s011": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s012": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 2,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                }
+              }
+            }
+          }
+        },
+        "revised": {
+          "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+          "participants": {
+            "i001": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i002": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i003": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                }
+              }
+            },
+            "i004": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i005": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i006": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i007": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i008": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i009": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "i010": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s001": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s002": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 1,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s003": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 1,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s004": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s005": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s006": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s007": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s008": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s009": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                },
+                "diagnostic": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s010": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s011": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 0,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "rate": 1.0
+                }
+              }
+            },
+            "s012": {
+              "overall": {
+                "numerator": 2,
+                "denominator": 2,
+                "rate": 1.0
+              },
+              "ties": 2,
+              "insufficient_information": 0,
+              "acceptability_errors": {
+                "numerator": 0,
+                "denominator": 4,
+                "rate": 0.0
+              },
+              "by_selection": {
+                "representative": {
+                  "numerator": 2,
+                  "denominator": 2,
+                  "rate": 1.0
+                },
+                "diagnostic": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "rate": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "participants": {
+        "i001": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            },
+            "diagnostic": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            }
+          }
+        },
+        "i002": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "i003": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            }
+          }
+        },
+        "i004": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "i005": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "i006": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "i007": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "i008": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "i009": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            },
+            "diagnostic": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            }
+          }
+        },
+        "i010": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "s001": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            },
+            "diagnostic": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            }
+          }
+        },
+        "s002": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 1,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            },
+            "diagnostic": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            }
+          }
+        },
+        "s003": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 1,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            },
+            "diagnostic": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            }
+          }
+        },
+        "s004": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "s005": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            },
+            "diagnostic": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            }
+          }
+        },
+        "s006": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "s007": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "s008": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "s009": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            },
+            "diagnostic": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            }
+          }
+        },
+        "s010": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "s011": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 0,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 1,
+              "denominator": 1,
+              "rate": 1.0
+            }
+          }
+        },
+        "s012": {
+          "overall": {
+            "numerator": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "ties": 2,
+          "insufficient_information": 0,
+          "acceptability_errors": {
+            "numerator": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "by_selection": {
+            "representative": {
+              "numerator": 2,
+              "denominator": 2,
+              "rate": 1.0
+            },
+            "diagnostic": {
+              "numerator": 0,
+              "denominator": 0,
+              "rate": null
+            }
+          }
+        }
+      },
+      "note": "Held-out directional agreement only; targeted questions and a small sample do not certify full preferences or retrieval coverage."
+    }
+  },
+  "statistics": {
+    "by_side": {
+      "left": {
+        "participants": 12,
+        "completion": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "evaluation_coverage": {
+          "numerator": 76,
+          "denominator": 120,
+          "rate": 0.6333333333333333
+        },
+        "decision_coverage": {
+          "numerator": 76,
+          "denominator": 120,
+          "rate": 0.6333333333333333
+        },
+        "unresolved_directions": 44,
+        "explicit_rejections": 20,
+        "list_lengths": {
+          "s001": 8,
+          "s002": 7,
+          "s003": 3,
+          "s004": 5,
+          "s005": 5,
+          "s006": 4,
+          "s007": 6,
+          "s008": 4,
+          "s009": 4,
+          "s010": 6,
+          "s011": 4,
+          "s012": 0
+        },
+        "first_choice_demand": {
+          "i002": 5,
+          "i004": 2,
+          "i007": 1,
+          "i008": 3
+        },
+        "top_3_demand": {
+          "i001": 3,
+          "i002": 5,
+          "i004": 5,
+          "i005": 2,
+          "i006": 4,
+          "i007": 1,
+          "i008": 7,
+          "i009": 2,
+          "i010": 4
+        },
+        "evaluated_exposure": {
+          "i001": 5,
+          "i002": 9,
+          "i003": 5,
+          "i004": 12,
+          "i005": 6,
+          "i006": 9,
+          "i007": 5,
+          "i008": 10,
+          "i009": 6,
+          "i010": 9
+        },
+        "top_3_per_evaluation": {
+          "i001": {
+            "numerator": 3,
+            "denominator": 5,
+            "rate": 0.6
+          },
+          "i002": {
+            "numerator": 5,
+            "denominator": 9,
+            "rate": 0.5555555555555556
+          },
+          "i003": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "i004": {
+            "numerator": 5,
+            "denominator": 12,
+            "rate": 0.4166666666666667
+          },
+          "i005": {
+            "numerator": 2,
+            "denominator": 6,
+            "rate": 0.3333333333333333
+          },
+          "i006": {
+            "numerator": 4,
+            "denominator": 9,
+            "rate": 0.4444444444444444
+          },
+          "i007": {
+            "numerator": 1,
+            "denominator": 5,
+            "rate": 0.2
+          },
+          "i008": {
+            "numerator": 7,
+            "denominator": 10,
+            "rate": 0.7
+          },
+          "i009": {
+            "numerator": 2,
+            "denominator": 6,
+            "rate": 0.3333333333333333
+          },
+          "i010": {
+            "numerator": 4,
+            "denominator": 9,
+            "rate": 0.4444444444444444
+          }
+        },
+        "first_choice_hhi": 0.3223140495867768,
+        "common_candidate_order_agreement": {
+          "numerator": 92,
+          "denominator": 167,
+          "rate": 0.5508982035928144
+        },
+        "order_agreement_sampling": {
+          "respondents": 12,
+          "respondent_population": 12,
+          "max_shared_candidates_per_pair": 20,
+          "candidate_sampling_used": false,
+          "seed": 17
+        },
+        "match_rate": {
+          "numerator": 9,
+          "denominator": 12,
+          "rate": 0.75
+        },
+        "assigned_partner_ranks": {
+          "s001": 3,
+          "s002": 5,
+          "s003": 2,
+          "s004": 3,
+          "s005": 1,
+          "s007": 2,
+          "s008": 1,
+          "s009": 1,
+          "s010": 2
+        },
+        "mean_assigned_rank_among_matched": 2.2222222222222223,
+        "top_1_assignment": {
+          "numerator": 3,
+          "denominator": 12,
+          "rate": 0.25
+        },
+        "top_3_assignment": {
+          "numerator": 8,
+          "denominator": 12,
+          "rate": 0.6666666666666666
+        },
+        "sources": {
+          "synthetic": 12
+        }
+      },
+      "right": {
+        "participants": 10,
+        "completion": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1.0
+        },
+        "evaluation_coverage": {
+          "numerator": 76,
+          "denominator": 120,
+          "rate": 0.6333333333333333
+        },
+        "decision_coverage": {
+          "numerator": 76,
+          "denominator": 120,
+          "rate": 0.6333333333333333
+        },
+        "unresolved_directions": 44,
+        "explicit_rejections": 11,
+        "list_lengths": {
+          "i001": 4,
+          "i002": 8,
+          "i003": 5,
+          "i004": 10,
+          "i005": 5,
+          "i006": 7,
+          "i007": 5,
+          "i008": 9,
+          "i009": 4,
+          "i010": 8
+        },
+        "first_choice_demand": {
+          "s002": 3,
+          "s003": 2,
+          "s004": 1,
+          "s006": 1,
+          "s008": 1,
+          "s009": 1,
+          "s010": 1
+        },
+        "top_3_demand": {
+          "s001": 3,
+          "s002": 3,
+          "s003": 2,
+          "s004": 3,
+          "s005": 2,
+          "s006": 1,
+          "s007": 5,
+          "s008": 2,
+          "s009": 3,
+          "s010": 2,
+          "s011": 2,
+          "s012": 2
+        },
+        "evaluated_exposure": {
+          "s001": 9,
+          "s002": 9,
+          "s003": 5,
+          "s004": 6,
+          "s005": 6,
+          "s006": 5,
+          "s007": 7,
+          "s008": 5,
+          "s009": 5,
+          "s010": 7,
+          "s011": 5,
+          "s012": 7
+        },
+        "top_3_per_evaluation": {
+          "s001": {
+            "numerator": 3,
+            "denominator": 9,
+            "rate": 0.3333333333333333
+          },
+          "s002": {
+            "numerator": 3,
+            "denominator": 9,
+            "rate": 0.3333333333333333
+          },
+          "s003": {
+            "numerator": 2,
+            "denominator": 5,
+            "rate": 0.4
+          },
+          "s004": {
+            "numerator": 3,
+            "denominator": 6,
+            "rate": 0.5
+          },
+          "s005": {
+            "numerator": 2,
+            "denominator": 6,
+            "rate": 0.3333333333333333
+          },
+          "s006": {
+            "numerator": 1,
+            "denominator": 5,
+            "rate": 0.2
+          },
+          "s007": {
+            "numerator": 5,
+            "denominator": 7,
+            "rate": 0.7142857142857143
+          },
+          "s008": {
+            "numerator": 2,
+            "denominator": 5,
+            "rate": 0.4
+          },
+          "s009": {
+            "numerator": 3,
+            "denominator": 5,
+            "rate": 0.6
+          },
+          "s010": {
+            "numerator": 2,
+            "denominator": 7,
+            "rate": 0.2857142857142857
+          },
+          "s011": {
+            "numerator": 2,
+            "denominator": 5,
+            "rate": 0.4
+          },
+          "s012": {
+            "numerator": 2,
+            "denominator": 7,
+            "rate": 0.2857142857142857
+          }
+        },
+        "first_choice_hhi": 0.18000000000000002,
+        "common_candidate_order_agreement": {
+          "numerator": 142,
+          "denominator": 270,
+          "rate": 0.5259259259259259
+        },
+        "order_agreement_sampling": {
+          "respondents": 10,
+          "respondent_population": 10,
+          "max_shared_candidates_per_pair": 20,
+          "candidate_sampling_used": false,
+          "seed": 17
+        },
+        "match_rate": {
+          "numerator": 9,
+          "denominator": 10,
+          "rate": 0.9
+        },
+        "assigned_partner_ranks": {
+          "i001": 3,
+          "i002": 1,
+          "i004": 2,
+          "i005": 5,
+          "i006": 1,
+          "i007": 3,
+          "i008": 1,
+          "i009": 1,
+          "i010": 2
+        },
+        "mean_assigned_rank_among_matched": 2.111111111111111,
+        "top_1_assignment": {
+          "numerator": 4,
+          "denominator": 10,
+          "rate": 0.4
+        },
+        "top_3_assignment": {
+          "numerator": 8,
+          "denominator": 10,
+          "rate": 0.8
+        },
+        "sources": {
+          "synthetic": 10
+        }
+      }
+    },
+    "mutual_top_3": [
+      [
+        "s001",
+        "i001"
+      ],
+      [
+        "s003",
+        "i009"
+      ],
+      [
+        "s004",
+        "i010"
+      ],
+      [
+        "s005",
+        "i007"
+      ],
+      [
+        "s007",
+        "i002"
+      ],
+      [
+        "s007",
+        "i008"
+      ],
+      [
+        "s008",
+        "i004"
+      ],
+      [
+        "s009",
+        "i002"
+      ],
+      [
+        "s009",
+        "i008"
+      ],
+      [
+        "s010",
+        "i006"
+      ],
+      [
+        "s011",
+        "i006"
+      ]
+    ],
+    "rank_scope": "submitted lists within the active cohort; not full-market ranks",
+    "note": "Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views."
+  },
+  "comparison": {
+    "proposing_side": "right",
+    "matches": [
+      [
+        "s001",
+        "i001"
+      ],
+      [
+        "s002",
+        "i008"
+      ],
+      [
+        "s003",
+        "i009"
+      ],
+      [
+        "s004",
+        "i010"
+      ],
+      [
+        "s005",
+        "i005"
+      ],
+      [
+        "s007",
+        "i007"
+      ],
+      [
+        "s008",
+        "i004"
+      ],
+      [
+        "s009",
+        "i002"
+      ],
+      [
+        "s010",
+        "i006"
+      ]
+    ],
+    "changed_pairs": [
+      [
+        "s005",
+        "i005"
+      ],
+      [
+        "s005",
+        "i007"
+      ],
+      [
+        "s007",
+        "i005"
+      ],
+      [
+        "s007",
+        "i007"
+      ]
+    ],
+    "statistics": {
+      "by_side": {
+        "left": {
+          "participants": 12,
+          "completion": {
+            "numerator": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "evaluation_coverage": {
+            "numerator": 76,
+            "denominator": 120,
+            "rate": 0.6333333333333333
+          },
+          "decision_coverage": {
+            "numerator": 76,
+            "denominator": 120,
+            "rate": 0.6333333333333333
+          },
+          "unresolved_directions": 44,
+          "explicit_rejections": 20,
+          "list_lengths": {
+            "s001": 8,
+            "s002": 7,
+            "s003": 3,
+            "s004": 5,
+            "s005": 5,
+            "s006": 4,
+            "s007": 6,
+            "s008": 4,
+            "s009": 4,
+            "s010": 6,
+            "s011": 4,
+            "s012": 0
+          },
+          "first_choice_demand": {
+            "i002": 5,
+            "i004": 2,
+            "i007": 1,
+            "i008": 3
+          },
+          "top_3_demand": {
+            "i001": 3,
+            "i002": 5,
+            "i004": 5,
+            "i005": 2,
+            "i006": 4,
+            "i007": 1,
+            "i008": 7,
+            "i009": 2,
+            "i010": 4
+          },
+          "evaluated_exposure": {
+            "i001": 5,
+            "i002": 9,
+            "i003": 5,
+            "i004": 12,
+            "i005": 6,
+            "i006": 9,
+            "i007": 5,
+            "i008": 10,
+            "i009": 6,
+            "i010": 9
+          },
+          "top_3_per_evaluation": {
+            "i001": {
+              "numerator": 3,
+              "denominator": 5,
+              "rate": 0.6
+            },
+            "i002": {
+              "numerator": 5,
+              "denominator": 9,
+              "rate": 0.5555555555555556
+            },
+            "i003": {
+              "numerator": 0,
+              "denominator": 5,
+              "rate": 0.0
+            },
+            "i004": {
+              "numerator": 5,
+              "denominator": 12,
+              "rate": 0.4166666666666667
+            },
+            "i005": {
+              "numerator": 2,
+              "denominator": 6,
+              "rate": 0.3333333333333333
+            },
+            "i006": {
+              "numerator": 4,
+              "denominator": 9,
+              "rate": 0.4444444444444444
+            },
+            "i007": {
+              "numerator": 1,
+              "denominator": 5,
+              "rate": 0.2
+            },
+            "i008": {
+              "numerator": 7,
+              "denominator": 10,
+              "rate": 0.7
+            },
+            "i009": {
+              "numerator": 2,
+              "denominator": 6,
+              "rate": 0.3333333333333333
+            },
+            "i010": {
+              "numerator": 4,
+              "denominator": 9,
+              "rate": 0.4444444444444444
+            }
+          },
+          "first_choice_hhi": 0.3223140495867768,
+          "common_candidate_order_agreement": {
+            "numerator": 92,
+            "denominator": 167,
+            "rate": 0.5508982035928144
+          },
+          "order_agreement_sampling": {
+            "respondents": 12,
+            "respondent_population": 12,
+            "max_shared_candidates_per_pair": 20,
+            "candidate_sampling_used": false,
+            "seed": 17
+          },
+          "match_rate": {
+            "numerator": 9,
+            "denominator": 12,
+            "rate": 0.75
+          },
+          "assigned_partner_ranks": {
+            "s001": 3,
+            "s002": 5,
+            "s003": 2,
+            "s004": 3,
+            "s005": 4,
+            "s007": 4,
+            "s008": 1,
+            "s009": 1,
+            "s010": 2
+          },
+          "mean_assigned_rank_among_matched": 2.7777777777777777,
+          "top_1_assignment": {
+            "numerator": 2,
+            "denominator": 12,
+            "rate": 0.16666666666666666
+          },
+          "top_3_assignment": {
+            "numerator": 6,
+            "denominator": 12,
+            "rate": 0.5
+          },
+          "sources": {
+            "synthetic": 12
+          }
+        },
+        "right": {
+          "participants": 10,
+          "completion": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "evaluation_coverage": {
+            "numerator": 76,
+            "denominator": 120,
+            "rate": 0.6333333333333333
+          },
+          "decision_coverage": {
+            "numerator": 76,
+            "denominator": 120,
+            "rate": 0.6333333333333333
+          },
+          "unresolved_directions": 44,
+          "explicit_rejections": 11,
+          "list_lengths": {
+            "i001": 4,
+            "i002": 8,
+            "i003": 5,
+            "i004": 10,
+            "i005": 5,
+            "i006": 7,
+            "i007": 5,
+            "i008": 9,
+            "i009": 4,
+            "i010": 8
+          },
+          "first_choice_demand": {
+            "s002": 3,
+            "s003": 2,
+            "s004": 1,
+            "s006": 1,
+            "s008": 1,
+            "s009": 1,
+            "s010": 1
+          },
+          "top_3_demand": {
+            "s001": 3,
+            "s002": 3,
+            "s003": 2,
+            "s004": 3,
+            "s005": 2,
+            "s006": 1,
+            "s007": 5,
+            "s008": 2,
+            "s009": 3,
+            "s010": 2,
+            "s011": 2,
+            "s012": 2
+          },
+          "evaluated_exposure": {
+            "s001": 9,
+            "s002": 9,
+            "s003": 5,
+            "s004": 6,
+            "s005": 6,
+            "s006": 5,
+            "s007": 7,
+            "s008": 5,
+            "s009": 5,
+            "s010": 7,
+            "s011": 5,
+            "s012": 7
+          },
+          "top_3_per_evaluation": {
+            "s001": {
+              "numerator": 3,
+              "denominator": 9,
+              "rate": 0.3333333333333333
+            },
+            "s002": {
+              "numerator": 3,
+              "denominator": 9,
+              "rate": 0.3333333333333333
+            },
+            "s003": {
+              "numerator": 2,
+              "denominator": 5,
+              "rate": 0.4
+            },
+            "s004": {
+              "numerator": 3,
+              "denominator": 6,
+              "rate": 0.5
+            },
+            "s005": {
+              "numerator": 2,
+              "denominator": 6,
+              "rate": 0.3333333333333333
+            },
+            "s006": {
+              "numerator": 1,
+              "denominator": 5,
+              "rate": 0.2
+            },
+            "s007": {
+              "numerator": 5,
+              "denominator": 7,
+              "rate": 0.7142857142857143
+            },
+            "s008": {
+              "numerator": 2,
+              "denominator": 5,
+              "rate": 0.4
+            },
+            "s009": {
+              "numerator": 3,
+              "denominator": 5,
+              "rate": 0.6
+            },
+            "s010": {
+              "numerator": 2,
+              "denominator": 7,
+              "rate": 0.2857142857142857
+            },
+            "s011": {
+              "numerator": 2,
+              "denominator": 5,
+              "rate": 0.4
+            },
+            "s012": {
+              "numerator": 2,
+              "denominator": 7,
+              "rate": 0.2857142857142857
+            }
+          },
+          "first_choice_hhi": 0.18000000000000002,
+          "common_candidate_order_agreement": {
+            "numerator": 142,
+            "denominator": 270,
+            "rate": 0.5259259259259259
+          },
+          "order_agreement_sampling": {
+            "respondents": 10,
+            "respondent_population": 10,
+            "max_shared_candidates_per_pair": 20,
+            "candidate_sampling_used": false,
+            "seed": 17
+          },
+          "match_rate": {
+            "numerator": 9,
+            "denominator": 10,
+            "rate": 0.9
+          },
+          "assigned_partner_ranks": {
+            "i001": 3,
+            "i002": 1,
+            "i004": 2,
+            "i005": 3,
+            "i006": 1,
+            "i007": 2,
+            "i008": 1,
+            "i009": 1,
+            "i010": 2
+          },
+          "mean_assigned_rank_among_matched": 1.7777777777777777,
+          "top_1_assignment": {
+            "numerator": 4,
+            "denominator": 10,
+            "rate": 0.4
+          },
+          "top_3_assignment": {
+            "numerator": 9,
+            "denominator": 10,
+            "rate": 0.9
+          },
+          "sources": {
+            "synthetic": 10
+          }
+        }
+      },
+      "mutual_top_3": [
+        [
+          "s001",
+          "i001"
+        ],
+        [
+          "s003",
+          "i009"
+        ],
+        [
+          "s004",
+          "i010"
+        ],
+        [
+          "s005",
+          "i007"
+        ],
+        [
+          "s007",
+          "i002"
+        ],
+        [
+          "s007",
+          "i008"
+        ],
+        [
+          "s008",
+          "i004"
+        ],
+        [
+          "s009",
+          "i002"
+        ],
+        [
+          "s009",
+          "i008"
+        ],
+        [
+          "s010",
+          "i006"
+        ],
+        [
+          "s011",
+          "i006"
+        ]
+      ],
+      "rank_scope": "submitted lists within the active cohort; not full-market ranks",
+      "note": "Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views."
+    }
+  }
+}

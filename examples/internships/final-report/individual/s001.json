@@ -1,0 +1,18 @@
+{
+  "participant_id": "s001",
+  "partner": {
+    "id": "i001",
+    "name": "Data analysis — Fictional Lab 1",
+    "profile": {
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Boston",
+      "mentoring": "Weekly guidance",
+      "pay_per_hour_usd": 20,
+      "preferred_skills": "Python and statistics",
+      "work": "Data analysis"
+    }
+  },
+  "run": "final",
+  "reason": null
+}

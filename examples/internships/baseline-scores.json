@@ -1,0 +1,1118 @@
+[
+  {
+    "task_id": "5f8373ef380a5e6bfd7baf3c7dd606ce13afd187b1771a3ee2c5ccfc601a82cf",
+    "acceptability": "acceptable",
+    "score": 75.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "8fbb2762a36792d9a440390554f1133632f3231f7bd5fd16e0dfdbc765f5adaf",
+    "acceptability": "acceptable",
+    "score": 40.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "5b10b21ff69a5c9043efacb8f978510da2e6cdc87a9f8996ef765bf09da1b6bd",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "8a3b08b4388a77f5146eb52a2a60263a26df58d9f71121ee4d727d01bf95cbb9",
+    "acceptability": "acceptable",
+    "score": 19.999999999999996,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "6a55a6331cb439f2d49f501cbbc43ab5380f5326ad537e22a35c15d5b5aca35c",
+    "acceptability": "acceptable",
+    "score": 25.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "735073109c9ffe23e5405484f78e4ef95c38b006ff74462336655ecf11a57856",
+    "acceptability": "acceptable",
+    "score": 90.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "9c588c8d4a59349b2d1b7ef41c5dcb488dc73ccb730081cfc83e0154b1b72216",
+    "acceptability": "acceptable",
+    "score": 87.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "49d309f0f664e284d0c0914386a9635c5e31ea6184e78385c1dde663f5a25e4a",
+    "acceptability": "acceptable",
+    "score": 9.999999999999998,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "15704b654c606d427e1a0e099d27a5ee307d00c0b5527ca5762c78b59af440ba",
+    "acceptability": "acceptable",
+    "score": 12.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "1de913c89c53f4b97b89ee7f802415e7b00caa911fe806a1217377826cd2b7bd",
+    "acceptability": "acceptable",
+    "score": 90.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "653629f63e58c3a746f53a7143a87b6fb42f581e1853086fcb6a04404c6700f2",
+    "acceptability": "acceptable",
+    "score": 62.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "033a0360804bada5780026544ebd7921764f05758a9e49934014077fb5c2c81b",
+    "acceptability": "acceptable",
+    "score": 19.999999999999996,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "cd6dbcd5e61c5b9b659d490699ba22741caa29c00c8b963ad3a2560350b19e96",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "555c938f62645d6a27c77979d2500f2a51b665a4d13f0abc32eed1fdb1e63559",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "a057e077014a5e7db734bba2943d6e2617662a8045f54e34094d9c64cb0a58b3",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "b0fff43991ebb348131bf217c66e760a438531b2c2197785cf802565fde8a8d7",
+    "acceptability": "acceptable",
+    "score": 30.000000000000004,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "d56e603228258b0ea29e7d8001a09af7c594e9511e810563817b18cf13013139",
+    "acceptability": "acceptable",
+    "score": 37.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "890e40b555d0c2f627a8e201e16091e2867b05f39b3fd89d0bdda60e3b56d7a5",
+    "acceptability": "acceptable",
+    "score": 19.999999999999996,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "301995cf5da7ec71b9c90049ca4392073517a2f8179f5f20071650579e7234a1",
+    "acceptability": "acceptable",
+    "score": 75.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "437f691ea614d34fb481fac1b4ed2ffcb2edf30494df336ad2a16ab64e1c6c6f",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "e42800a14800a02fbc45315244d99ee17f6078eac06a1416878033b3bdd58ad4",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "765f67da8f80014acd39064c10d3cd7fa0d4c3ce2edd22115e1f930faee74c66",
+    "acceptability": "acceptable",
+    "score": 70.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "4ce43a07b0c2cc1938f9d56341a50786a9f4831c1851c96748c183050db12118",
+    "acceptability": "acceptable",
+    "score": 25.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "02eda17d549865da0509d7b9fc565d0ee392abfc5b9d8a17849c619d6558b3c4",
+    "acceptability": "acceptable",
+    "score": 19.999999999999996,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "bf04f0e8620fa687460c3a59633cd55622a673f5da2f3d64f0188e07bd7f4b58",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "cc1cedc33d9b2f14489f24dc2c032d19073583e5a2b283806935c368a9b27f49",
+    "acceptability": "acceptable",
+    "score": 70.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "fb59989fbe5702ffff0e197a0998d8dfb7548bda8a6ec386fc7d4b9a5db289e2",
+    "acceptability": "acceptable",
+    "score": 37.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "cca38d68e08edb901346a25bdc6a47a6b99f5a847afc9b60c89a6b1bc0000040",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "a9322be22a652fa58c067121e6e839b67e5403d5a1221d22e5d03539d34ce9f4",
+    "acceptability": "acceptable",
+    "score": 87.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "32d497ee6009aaf43e14cc32e73c7d3be933a78bcc038f6ad47533716248b0ff",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "99243c6ad6784e9637cad5e4c7c31da94c6d227278c5e1a567b87914685cf74e",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "8da1893480bb884980a2b4886074dce631cd82c8c8ab851f208192c9ea3d09f3",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "faa0c0ff69544b2da43c3fcc488ab34a36b861e6ee92b82599117996b2e9b81d",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "50058c2b5a3acad28a7be78ad4a05dc2477f1dbe94f99d4b4c2332c95e82ea60",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "e80e70e773b270cb70afdfe5a2237862f2c8c7d05c477a01e86038f587cff130",
+    "acceptability": "acceptable",
+    "score": 62.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "53e636f02c06b862c49d5aaaec923cce2aea96031ed3c0f1937f565d8f391d07",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "7c4b6203b7087b1497b5edf01e3512ac7e58cd4b7ed4b95e0699210ded5dcba0",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "f0e503b25bb80779dcbdd7efa053f4226472fa409f62dac60cba970c5d9ff2b3",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "251e89431eda13c927f7995e99d745c8a775f24a94f0a5bfddb5c08a8ee4f177",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "8b9b6290e1bf89d6a6240bc6c3cc384dab323601c3660dfdf95c1b33ac8de974",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "4133b75abdae791b0e4fed49f275ad150b9faa00c80149312e0a98dc0f7fa02d",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "638c1660d11c7d43ec2d34075beb4306d000f5e2d7fce9b895ea3105d5e61d48",
+    "acceptability": "acceptable",
+    "score": 40.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "c27b2b9e1afee5028235ae95392f13b61b4f1a3735575ccec397560e9fef57a5",
+    "acceptability": "acceptable",
+    "score": 75.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "546e47984a1d235b632c6d0672656da719cd73368cbe0803e0552c090533e3d1",
+    "acceptability": "acceptable",
+    "score": 80.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "c18d3a722f5d67aa457a634a065bcf9970fe074ac812883aaf49e34fe9cabbf9",
+    "acceptability": "acceptable",
+    "score": 12.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "6e9c8e7e8e7b75c068d8485533618b1281012bbafe84084407ae65df187dc2c7",
+    "acceptability": "acceptable",
+    "score": 60.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "f854dc66df4aa56155ecdd3b64b369f870eba1d2d5fc9d206b5427d922fa4a9d",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "1e845eb7b7088059b65a89754028c0b87f80a813b3d07d9d0f580cbb7d682f17",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "9f7da8ea9e0ade2a72b8f774723dfb267463abfb6fcd6c3a6b479d74f16ea3a9",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "0c262eb7f46899ff7ce436a497689849e5823a21214d26f6385e7e287828d7f4",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "1c4e1d3c6fd45483855c491af1043269ec7325f7869c086d454744c7bedf3466",
+    "acceptability": "acceptable",
+    "score": 87.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "a9d01aa4939902bfbd068448f98e1a753209169c58d78285ce9cb285d274220f",
+    "acceptability": "acceptable",
+    "score": 30.000000000000004,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "be0058c57e6249377504e9897dba05b9e8a13e4b0215442ef51e935098d03a09",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "0f63acf77a11341612a09762e2361a95d9c91201cf6e47951a765a546173d03b",
+    "acceptability": "acceptable",
+    "score": 19.999999999999996,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "7fa755f40f875db1c66955992187cf78c22e18ac978b98766741bc7b3d617101",
+    "acceptability": "acceptable",
+    "score": 37.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "4db49ceb19dc6351827f1fe509f176b638bd7ec6b435bc207810fd0a81edd38d",
+    "acceptability": "acceptable",
+    "score": 19.999999999999996,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "4f9a70dd28d8438dfb87c904b66f50400e282d49bbc1eb87a7acb3b09def76ab",
+    "acceptability": "acceptable",
+    "score": 25.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "faf7c0eb7704b8822ca82a9a9bba33f0e4ef373fd6e799c39e46e107db427bb8",
+    "acceptability": "acceptable",
+    "score": 60.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "125674b9c349c327175f224c9b3be6e9b56578e5d0445c357e3e6ea7cfc0d72c",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "8b1c9e85d954bd384c6aff110927d1c9c62de6843ddeebe356535c14431a53b8",
+    "acceptability": "acceptable",
+    "score": 80.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "4f6ba459d31daa29ff7b1142104223ff45906fe68373606b4f3d5d89d44ab567",
+    "acceptability": "acceptable",
+    "score": 62.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "143a8cbc477fc082c6e9820dda6a1218ad37bfd3339ab184ebb487722df54cb6",
+    "acceptability": "acceptable",
+    "score": 60.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "a7cff6bb278a66fa6f112bd0e0e340abbf353f9eefd25ec91ac7f7aaa98d2b9d",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "7f6d4e8f2d42d1b3db1ed4227b47b15a7f99c57ae98e0151782663c100df7866",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "4cc2e4ee2f15b7c2b365f7e2456b5f9181214b2258d7969f5a1070ff7ca37314",
+    "acceptability": "acceptable",
+    "score": 75.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "64b902b6ed3a996544ef3ba8de745a10d4e9659f8815dc6d0126e21d998802e2",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "8a9ab1249e96f0021be8fb39b05bc0766d7bc199080c56c7c73089d94c23f4f3",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "8d5eeb864cb34466d585a0cd9e3cab251cce9452f0e02318e77c3ae6beb73f44",
+    "acceptability": "acceptable",
+    "score": 80.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "ede77e55edb536b5d1446c13a51c3b89fbdd6b55d9dda8b687f76827f4a1fe71",
+    "acceptability": "acceptable",
+    "score": 62.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "506e8fbb39deeaadee5b4e07575b1315e896395d65126036c5e02a41abd9ab86",
+    "acceptability": "acceptable",
+    "score": 60.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "5fc352ce53ed4fdd1af43a5af4f999cf1c9862242f246845bafc86cf06aeca51",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "b6d33778dc90e6315cdfcf52ebfc7fc224f013adcca11bbde7e70db47aade5fc",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "206a8b5848671b528d449673284f5f76ed0113b5fbc7ea41ea23c8948c1aeb7d",
+    "acceptability": "acceptable",
+    "score": 12.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "669c20aebfafea6bda40cb99c4b3d3db103eb459264105582b6beb3c2a09ca4d",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "518684afee2830d981a69b114a4889f3ab0facdf012d1ca65ace388d4da7b120",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "753fb1b76a6404db1d5e7d9d9705ed8153036a8dc4d74052a3b1e58b71126675",
+    "acceptability": "acceptable",
+    "score": 90.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "667fa9be7198b32f0ce68324af0d8ac8b71a9c007ed076995c62421f30fdf656",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "198302c0addecf8cd4dd98ecdf63b723ca25822cb4fd18198d539e979dfe499b",
+    "acceptability": "acceptable",
+    "score": 30.000000000000004,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "897ade8865594226d6150d849a833dee059db2ab7356e1606fa942b7d6f1517c",
+    "acceptability": "acceptable",
+    "score": 12.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "a7b9234762e951879c496feb54a7a2f2ba5d56b2eca1f798b5c80fd3c061d5cc",
+    "acceptability": "acceptable",
+    "score": 60.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "ace3f01e8dd0d503464f3f87239947e7092855abdb91df71e09d0adbfdbdf849",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "4145bd7095377eb0c700eb13ab5927df0038c4125fbab6deb149b12434680cd9",
+    "acceptability": "acceptable",
+    "score": 90.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "ab7f3e53cd36b5282069e499587acf1a93133f1de0cf581f33a8d1bb64603a2e",
+    "acceptability": "acceptable",
+    "score": 25.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "05b0f339ae67427489bd93c3c4f1823f8af8a5fb798f99b8ce33e0f8999bed05",
+    "acceptability": "acceptable",
+    "score": 9.999999999999998,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "1a32242f9bd928b5a9bafafb2404f5964ad74dd3903521b60c35b8fc2d79ff6f",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "21223a932334884472b116465309b5a6ae5dbc1bbdc5d6cc4627416a88ad6f62",
+    "acceptability": "acceptable",
+    "score": 90.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "e454e329ef4aafc2b14097c317c64767a1b09c4ec7231d38a98282f66c4f9090",
+    "acceptability": "acceptable",
+    "score": 87.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "6d7f34449a96593b15287174e2c116b34e73f8d31327d8cc30967180296bf458",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "d22ca7f5a4d120ba224ffba8959dd38e48186541fcd3ba8f09e0eff8795175d3",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "71991a249bed0cb6a69058677b6223d4dd306591ac0f99516737b93cc4355ef1",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "51500e76ef8950857a390d0e6197228df761bd4481ece1414d6e29e67810788a",
+    "acceptability": "acceptable",
+    "score": 87.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "5224c5079b928709e892f27f9911d73cff1c14f9d9c7d4ded8cb00979955a951",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "ec6e163be812922d63240e9b6de38769378b80264bb28d500a773369466f0040",
+    "acceptability": "acceptable",
+    "score": 62.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "55d231868eb285dfbf306f84cdcbb3e2f6107d53cf4239a6c7c79706f1bd9ca4",
+    "acceptability": "acceptable",
+    "score": 19.999999999999996,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "235ff868abe76b178baee726abb78204492072e77dae46dfe22ad54fcd799497",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "c0f11f8faff303e7ed88e3f94fb6a1e132d7e01de416b8c3f499be2406a22cae",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "927632e4a2af898074463f30069fb3bafdf0773aac1069ea319bfcf5d5ccab4d",
+    "acceptability": "acceptable",
+    "score": 50.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "7b049c42f0d9b9bf77ab571f84b606bd9c0cc9587a210be306a4716b80bbd888",
+    "acceptability": "acceptable",
+    "score": 80.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "b011ffd262e757effff278095e0d76517852a7be2d9e70c1f3882aa627952490",
+    "acceptability": "acceptable",
+    "score": 12.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "81a287196f59bdd49c95f3cb4e813e1948f703a83685b43f1cfec968764947d5",
+    "acceptability": "acceptable",
+    "score": 60.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "f66cdb9be081b6fcc7e464637e81a35fc1fb6fd88139bfccf8b384ada03f9906",
+    "acceptability": "acceptable",
+    "score": 12.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "5640c8f4e7c998a0e5f1f3dc9decd796fc8bd4df978e4c817c20f150bdd49a74",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "4c5b139a6b3e2a4925bb7db911481a4ba5cd3bc4a1f163c15664b2a9de6f0d8d",
+    "acceptability": "acceptable",
+    "score": 75.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "9a59e186f444d5c46943830b1e5627ef1b6b27ea3b921fc2125c7e7844b06361",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "fdd0b16783e2f367e887ce77686594ce6762ca6879bce29132d5e7640e1357c5",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "b50aaf6e37a944346a738a8fe45e0e625d2332c8ee9e721b9aced689f0a32b9c",
+    "acceptability": "acceptable",
+    "score": 70.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "873c96dfd2ee70bb3f5e2bc838415257903de3abdea82106ab7f5434f672b66b",
+    "acceptability": "acceptable",
+    "score": 62.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "1ee40a9e38535bb3f4ad6fbbbf324aa9227a3502c1e1d79ff8c9f524eafdaaee",
+    "acceptability": "acceptable",
+    "score": 80.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "d92dbf0b8d76f22123ccfc0d36d01a4f11caf1061d64e4cd9ac93c2e61d04760",
+    "acceptability": "acceptable",
+    "score": 87.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "dad748d746d2f6685f7506acd3bd3a0fa0b480733cb1cc4cf061ae1ae3048940",
+    "acceptability": "acceptable",
+    "score": 9.999999999999998,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "9d9c6cfdd598e5ced4c267804d80d9465ef5986b0fa90f8d642a8781a5202c83",
+    "acceptability": "acceptable",
+    "score": 25.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "2f3a680622b6e7d2bad74bdfb5af313add82d080194a8028d9cf0416781d4822",
+    "acceptability": "acceptable",
+    "score": 80.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "0a4ca39139800adac459c4b6b9c6bc0b4b98634e1ebd8fac3a33f4e806f80064",
+    "acceptability": "acceptable",
+    "score": 100.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "d974f6e55da39457dd79defd4605e5fb156498568eddc9161e6d77e1714f6451",
+    "acceptability": "acceptable",
+    "score": 40.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "1bb258f1350d4ac54809944976ccd1097bd5e51025ab0eda96d548f8c6eb6a1e",
+    "acceptability": "acceptable",
+    "score": 62.5,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "9c87956eaaa39cbd32523f971c3fc32b0e696a864bd14d0e8aac44d6fa0dcd35",
+    "acceptability": "acceptable",
+    "score": 70.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "302d88c5178816ab9b00307711800030b76690ffb0162a3b51a325d3dcf215af",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "3c493a7819b5d36fd0e7e4bcbb418583ddd3587963b66cadfa426dfa942d8407",
+    "acceptability": "acceptable",
+    "score": 40.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "b0a98cdf35c7100f0aadc8c8320b58dd83d49d81167375622adba4c3133d5101",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "22b2f4fd722748f3570976d8f22ad62c72793a17d9e7cca7de054627e290664d",
+    "acceptability": "acceptable",
+    "score": 80.0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "bbf756b3c63311bc10bb2faabb5eae4ef010fb267f4da643b7fdf8b6f51de2ba",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "53b8f03b3651ec1ccc62a6ccb4490364448631c97638ac5509176ab9ab49dac9",
+    "acceptability": "acceptable",
+    "score": 9.999999999999998,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "0fc0dcd0f9c486053a232daa47dd60e2495378be6af200d7d164796b26a02ee0",
+    "acceptability": "unacceptable",
+    "score": 0,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  },
+  {
+    "task_id": "2472a26ef57ed1cc811fd3b88b408459469ab3d13541c30ca650d0dba0484ed9",
+    "acceptability": "acceptable",
+    "score": 30.000000000000004,
+    "evidence": [
+      "Fictional fixture ranking; not model output"
+    ],
+    "explanation": "Deterministic synthetic demonstration"
+  }
+]

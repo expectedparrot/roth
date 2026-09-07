@@ -1,0 +1,16 @@
+{
+  "participant_id": "i004",
+  "partner": {
+    "id": "s008",
+    "name": "Harper 8",
+    "profile": {
+      "availability": "June–August",
+      "coursework": "Policy research",
+      "location": "Remote",
+      "project": "Completed a policy research team project",
+      "skills": "Writing and economics"
+    }
+  },
+  "run": "final",
+  "reason": null
+}

@@ -1,0 +1,16 @@
+{
+  "participant_id": "i008",
+  "partner": {
+    "id": "s002",
+    "name": "Blair 2",
+    "profile": {
+      "skills": "Python and web development",
+      "coursework": "Software development",
+      "project": "Completed a software development team project",
+      "availability": "June–August",
+      "location": "Remote"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

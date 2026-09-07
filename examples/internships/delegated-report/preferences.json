@@ -1,0 +1,743 @@
+{
+  "i001": {
+    "participant_id": "i001",
+    "ranking": [
+      "s006",
+      "s012",
+      "s001",
+      "s011"
+    ],
+    "unacceptable": [
+      "s002"
+    ],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s006",
+      "s011",
+      "s012"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i002": {
+    "participant_id": "i002",
+    "ranking": [
+      "s009",
+      "s007",
+      "s011",
+      "s002",
+      "s006",
+      "s004",
+      "s012",
+      "s001"
+    ],
+    "unacceptable": [
+      "s010"
+    ],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s004",
+      "s006",
+      "s007",
+      "s009",
+      "s010",
+      "s011",
+      "s012"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i003": {
+    "participant_id": "i003",
+    "ranking": [
+      "s003",
+      "s001",
+      "s007",
+      "s002",
+      "s008"
+    ],
+    "unacceptable": [],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s003",
+      "s007",
+      "s008"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i004": {
+    "participant_id": "i004",
+    "ranking": [
+      "s004",
+      "s008",
+      "s012",
+      "s002",
+      "s005",
+      "s003",
+      "s011",
+      "s007",
+      "s009",
+      "s001"
+    ],
+    "unacceptable": [
+      "s006",
+      "s010"
+    ],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s003",
+      "s004",
+      "s005",
+      "s006",
+      "s007",
+      "s008",
+      "s009",
+      "s010",
+      "s011",
+      "s012"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i005": {
+    "participant_id": "i005",
+    "ranking": [
+      "s002",
+      "s001",
+      "s005",
+      "s012",
+      "s007"
+    ],
+    "unacceptable": [
+      "s010"
+    ],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s005",
+      "s007",
+      "s010",
+      "s012"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i006": {
+    "participant_id": "i006",
+    "ranking": [
+      "s010",
+      "s011",
+      "s007",
+      "s006",
+      "s004",
+      "s001",
+      "s012"
+    ],
+    "unacceptable": [
+      "s002",
+      "s009"
+    ],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s004",
+      "s006",
+      "s007",
+      "s009",
+      "s010",
+      "s011",
+      "s012"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i007": {
+    "participant_id": "i007",
+    "ranking": [
+      "s002",
+      "s007",
+      "s005",
+      "s001",
+      "s012"
+    ],
+    "unacceptable": [],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s005",
+      "s007",
+      "s012"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i008": {
+    "participant_id": "i008",
+    "ranking": [
+      "s002",
+      "s007",
+      "s009",
+      "s010",
+      "s005",
+      "s003",
+      "s001",
+      "s004",
+      "s011"
+    ],
+    "unacceptable": [
+      "s008"
+    ],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s003",
+      "s004",
+      "s005",
+      "s007",
+      "s008",
+      "s009",
+      "s010",
+      "s011"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i009": {
+    "participant_id": "i009",
+    "ranking": [
+      "s003",
+      "s009",
+      "s004",
+      "s010"
+    ],
+    "unacceptable": [
+      "s005",
+      "s008"
+    ],
+    "evaluated": [
+      "s003",
+      "s004",
+      "s005",
+      "s008",
+      "s009",
+      "s010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "i010": {
+    "participant_id": "i010",
+    "ranking": [
+      "s008",
+      "s004",
+      "s010",
+      "s006",
+      "s003",
+      "s005",
+      "s001",
+      "s012"
+    ],
+    "unacceptable": [
+      "s002"
+    ],
+    "evaluated": [
+      "s001",
+      "s002",
+      "s003",
+      "s004",
+      "s005",
+      "s006",
+      "s008",
+      "s010",
+      "s012"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s001": {
+    "participant_id": "s001",
+    "ranking": [
+      "i008",
+      "i004",
+      "i001",
+      "i006",
+      "i002",
+      "i010",
+      "i003",
+      "i005"
+    ],
+    "unacceptable": [
+      "i007"
+    ],
+    "evaluated": [
+      "i001",
+      "i002",
+      "i003",
+      "i004",
+      "i005",
+      "i006",
+      "i007",
+      "i008",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s002": {
+    "participant_id": "s002",
+    "ranking": [
+      "i002",
+      "i006",
+      "i001",
+      "i010",
+      "i008",
+      "i005",
+      "i003"
+    ],
+    "unacceptable": [
+      "i004",
+      "i007"
+    ],
+    "evaluated": [
+      "i001",
+      "i002",
+      "i003",
+      "i004",
+      "i005",
+      "i006",
+      "i007",
+      "i008",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s003": {
+    "participant_id": "s003",
+    "ranking": [
+      "i008",
+      "i009",
+      "i010"
+    ],
+    "unacceptable": [
+      "i003",
+      "i004"
+    ],
+    "evaluated": [
+      "i003",
+      "i004",
+      "i008",
+      "i009",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s004": {
+    "participant_id": "s004",
+    "ranking": [
+      "i008",
+      "i006",
+      "i010",
+      "i004",
+      "i009"
+    ],
+    "unacceptable": [
+      "i002"
+    ],
+    "evaluated": [
+      "i002",
+      "i004",
+      "i006",
+      "i008",
+      "i009",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s005": {
+    "participant_id": "s005",
+    "ranking": [
+      "i007",
+      "i010",
+      "i008",
+      "i005",
+      "i004"
+    ],
+    "unacceptable": [
+      "i009"
+    ],
+    "evaluated": [
+      "i004",
+      "i005",
+      "i007",
+      "i008",
+      "i009",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s006": {
+    "participant_id": "s006",
+    "ranking": [
+      "i002",
+      "i004",
+      "i010",
+      "i006"
+    ],
+    "unacceptable": [
+      "i001"
+    ],
+    "evaluated": [
+      "i001",
+      "i002",
+      "i004",
+      "i006",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s007": {
+    "participant_id": "s007",
+    "ranking": [
+      "i002",
+      "i005",
+      "i008",
+      "i007",
+      "i003",
+      "i006"
+    ],
+    "unacceptable": [
+      "i004"
+    ],
+    "evaluated": [
+      "i002",
+      "i003",
+      "i004",
+      "i005",
+      "i006",
+      "i007",
+      "i008"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s008": {
+    "participant_id": "s008",
+    "ranking": [
+      "i004",
+      "i008",
+      "i009",
+      "i003"
+    ],
+    "unacceptable": [
+      "i010"
+    ],
+    "evaluated": [
+      "i003",
+      "i004",
+      "i008",
+      "i009",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s009": {
+    "participant_id": "s009",
+    "ranking": [
+      "i002",
+      "i004",
+      "i008",
+      "i009"
+    ],
+    "unacceptable": [
+      "i006"
+    ],
+    "evaluated": [
+      "i002",
+      "i004",
+      "i006",
+      "i008",
+      "i009"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s010": {
+    "participant_id": "s010",
+    "ranking": [
+      "i002",
+      "i006",
+      "i005",
+      "i010",
+      "i009",
+      "i004"
+    ],
+    "unacceptable": [
+      "i008"
+    ],
+    "evaluated": [
+      "i002",
+      "i004",
+      "i005",
+      "i006",
+      "i008",
+      "i009",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s011": {
+    "participant_id": "s011",
+    "ranking": [
+      "i004",
+      "i001",
+      "i006",
+      "i002"
+    ],
+    "unacceptable": [
+      "i008"
+    ],
+    "evaluated": [
+      "i001",
+      "i002",
+      "i004",
+      "i006",
+      "i008"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  },
+  "s012": {
+    "participant_id": "s012",
+    "ranking": [],
+    "unacceptable": [
+      "i001",
+      "i002",
+      "i004",
+      "i005",
+      "i006",
+      "i007",
+      "i010"
+    ],
+    "evaluated": [
+      "i001",
+      "i002",
+      "i004",
+      "i005",
+      "i006",
+      "i007",
+      "i010"
+    ],
+    "complete": true,
+    "source": "synthetic",
+    "confirmed": false,
+    "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+    "score_hash": "2bb4632efca4d05a04ea1c39ff4e0d75adb4b62596d81435d6dce096120d9e93",
+    "score_plan": "revised",
+    "tie_break": {
+      "method": "seeded_candidate_hash",
+      "seed": 17
+    },
+    "outside_option": "unmatched"
+  }
+}

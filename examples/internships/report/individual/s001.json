@@ -1,0 +1,18 @@
+{
+  "participant_id": "s001",
+  "partner": {
+    "id": "i003",
+    "name": "Policy research — Fictional Lab 3",
+    "profile": {
+      "work": "Policy research",
+      "preferred_skills": "Writing and economics",
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Boston",
+      "pay_per_hour_usd": 24,
+      "mentoring": "Weekly guidance"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

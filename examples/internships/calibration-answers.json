@@ -1,0 +1,310 @@
+[
+  {
+    "question_id": "calibration_i001_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i001_q3",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i002_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i002_q3",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i003_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i003_q3",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i004_q1",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i004_q3",
+    "choice": "Indifferent",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i005_q1",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i005_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i006_q1",
+    "choice": "Indifferent",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i006_q3",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i007_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i007_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i008_q1",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i008_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i009_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i009_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i010_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_i010_q3",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s001_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s001_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s002_q1",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s002_q3",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s003_q1",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s003_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s004_q1",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s004_q3",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s005_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s005_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s006_q1",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s006_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s007_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s007_q3",
+    "choice": "Somewhat prefer B",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s008_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s008_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s009_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s009_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s010_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s010_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s011_q1",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s011_q3",
+    "choice": "Somewhat prefer A",
+    "a_acceptable": "Acceptable",
+    "b_acceptable": "Acceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s012_q1",
+    "choice": "Indifferent",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  },
+  {
+    "question_id": "calibration_s012_q3",
+    "choice": "Indifferent",
+    "a_acceptable": "Unacceptable",
+    "b_acceptable": "Unacceptable",
+    "explanation": "Fictional fixture choice"
+  }
+]

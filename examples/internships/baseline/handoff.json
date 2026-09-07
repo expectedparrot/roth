@@ -1,0 +1,27 @@
+{
+  "inspect": [
+    "ep",
+    "inspect",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/baseline/edsl/jobs.ep"
+  ],
+  "cost": [
+    "ep",
+    "jobs",
+    "cost",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/baseline/edsl/jobs.ep",
+    "--model",
+    "test"
+  ],
+  "run": [
+    "ep",
+    "run",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/baseline/edsl/jobs.ep",
+    "--model",
+    "test",
+    "--output",
+    "/Users/johnhorton/tools/ep/roth/examples/internships/baseline/results.ep"
+  ],
+  "native_built": true,
+  "network": true,
+  "requires_authorization": true
+}

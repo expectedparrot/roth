@@ -1,0 +1,18 @@
+{
+  "participant_id": "s011",
+  "partner": {
+    "id": "i009",
+    "name": "Design — Fictional Lab 9",
+    "profile": {
+      "work": "Design",
+      "preferred_skills": "Design and user research",
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Boston",
+      "pay_per_hour_usd": 24,
+      "mentoring": "Weekly guidance"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

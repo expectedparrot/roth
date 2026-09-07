@@ -1,0 +1,18 @@
+{
+  "participant_id": "s005",
+  "partner": {
+    "id": "i005",
+    "name": "Climate research — Fictional Lab 5",
+    "profile": {
+      "work": "Climate research",
+      "preferred_skills": "Python and environmental science",
+      "dates": "June–August",
+      "hours_per_week": 30,
+      "location": "Boston",
+      "pay_per_hour_usd": 28,
+      "mentoring": "Weekly guidance"
+    }
+  },
+  "run": "main",
+  "reason": null
+}

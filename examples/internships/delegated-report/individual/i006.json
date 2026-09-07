@@ -1,0 +1,16 @@
+{
+  "participant_id": "i006",
+  "partner": {
+    "id": "s010",
+    "name": "Jules 10",
+    "profile": {
+      "availability": "June–August",
+      "coursework": "Climate research",
+      "location": "Boston",
+      "project": "Completed a climate research team project",
+      "skills": "Python and environmental science"
+    }
+  },
+  "run": "delegated",
+  "reason": null
+}

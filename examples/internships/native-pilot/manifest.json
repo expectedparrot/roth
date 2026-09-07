@@ -1,0 +1,389 @@
+{
+  "name": "native_pilot",
+  "kind": "ranking",
+  "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+  "packages": {
+    "native_pilot_i001_1": {
+      "id": "native_pilot_i001_1",
+      "participant_id": "i001",
+      "candidates": [
+        "s001",
+        "s002",
+        "s003",
+        "s004",
+        "s005",
+        "s006",
+        "s007",
+        "s008",
+        "s009",
+        "s010",
+        "s011",
+        "s012"
+      ],
+      "questions": [
+        {
+          "kind": "rank",
+          "question_name": "ranking",
+          "question_text": "Preference survey for Data analysis — Fictional Lab 1. Organizer policy: delegated.\nHarper 8 [s008]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Policy research\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a policy research team project\",\n  \"skills\": \"Writing and economics\"\n}\n\nEmery 5 [s005]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Climate research\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a climate research team project\",\n  \"skills\": \"Python and environmental science\"\n}\n\nIndigo 9 [s009]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Design\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a design team project\",\n  \"skills\": \"Design and user research\"\n}\n\nKai 11 [s011]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Data analysis\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a data analysis team project\",\n  \"skills\": \"Python and statistics\"\n}\n\nDevon 4 [s004]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Design\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a design team project\",\n  \"skills\": \"Design and user research\"\n}\n\nFinley 6 [s006]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Data analysis\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a data analysis team project\",\n  \"skills\": \"Python and statistics\"\n}\n\nCasey 3 [s003]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Policy research\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a policy research team project\",\n  \"skills\": \"Writing and economics\"\n}\n\nLane 12 [s012]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}\n\nAlex 1 [s001]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Data analysis\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a data analysis team project\",\n  \"skills\": \"Python and statistics\"\n}\n\nGray 7 [s007]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}\n\nBlair 2 [s002]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}\n\nJules 10 [s010]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Climate research\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a climate research team project\",\n  \"skills\": \"Python and environmental science\"\n}\nRank ALL options best first. Place 'Remain unmatched' above every unacceptable partner. For candidates with insufficient information, select that status below; their position will be ignored.",
+          "question_options": [
+            "Harper 8 [s008]",
+            "Emery 5 [s005]",
+            "Indigo 9 [s009]",
+            "Kai 11 [s011]",
+            "Devon 4 [s004]",
+            "Finley 6 [s006]",
+            "Casey 3 [s003]",
+            "Lane 12 [s012]",
+            "Alex 1 [s001]",
+            "Gray 7 [s007]",
+            "Blair 2 [s002]",
+            "Jules 10 [s010]",
+            "Remain unmatched"
+          ],
+          "num_selections": 13,
+          "use_code": false,
+          "mapping": {
+            "Harper 8 [s008]": "s008",
+            "Emery 5 [s005]": "s005",
+            "Indigo 9 [s009]": "s009",
+            "Kai 11 [s011]": "s011",
+            "Devon 4 [s004]": "s004",
+            "Finley 6 [s006]": "s006",
+            "Casey 3 [s003]": "s003",
+            "Lane 12 [s012]": "s012",
+            "Alex 1 [s001]": "s001",
+            "Gray 7 [s007]": "s007",
+            "Blair 2 [s002]": "s002",
+            "Jules 10 [s010]": "s010"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_0",
+          "question_text": "Could you assess Harper 8 [s008]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s008"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_1",
+          "question_text": "Could you assess Emery 5 [s005]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s005"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_2",
+          "question_text": "Could you assess Indigo 9 [s009]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s009"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_3",
+          "question_text": "Could you assess Kai 11 [s011]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s011"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_4",
+          "question_text": "Could you assess Devon 4 [s004]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s004"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_5",
+          "question_text": "Could you assess Finley 6 [s006]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s006"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_6",
+          "question_text": "Could you assess Casey 3 [s003]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s003"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_7",
+          "question_text": "Could you assess Lane 12 [s012]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s012"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_8",
+          "question_text": "Could you assess Alex 1 [s001]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s001"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_9",
+          "question_text": "Could you assess Gray 7 [s007]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s007"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_10",
+          "question_text": "Could you assess Blair 2 [s002]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s002"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_11",
+          "question_text": "Could you assess Jules 10 [s010]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "s010"
+          }
+        }
+      ],
+      "screened": {},
+      "preference_hash": "3f72eed5be2ff2cbae1042c6a2dcb29a919ce0836febf4c71d949049cd6e6ab3",
+      "source": "human",
+      "complete": false
+    },
+    "native_pilot_s001_1": {
+      "id": "native_pilot_s001_1",
+      "participant_id": "s001",
+      "candidates": [
+        "i001",
+        "i002",
+        "i003",
+        "i004",
+        "i005",
+        "i006",
+        "i007",
+        "i008",
+        "i009",
+        "i010"
+      ],
+      "questions": [
+        {
+          "kind": "rank",
+          "question_name": "ranking",
+          "question_text": "Preference survey for Alex 1. Organizer policy: delegated.\nSoftware development — Fictional Lab 2 [i002]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Remote\",\n  \"mentoring\": \"Daily guidance\",\n  \"pay_per_hour_usd\": 22,\n  \"preferred_skills\": \"Python and web development\",\n  \"work\": \"Software development\"\n}\n\nData analysis — Fictional Lab 6 [i006]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Remote\",\n  \"mentoring\": \"Daily guidance\",\n  \"pay_per_hour_usd\": 30,\n  \"preferred_skills\": \"Python and statistics\",\n  \"work\": \"Data analysis\"\n}\n\nClimate research — Fictional Lab 10 [i010]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Remote\",\n  \"mentoring\": \"Daily guidance\",\n  \"pay_per_hour_usd\": 26,\n  \"preferred_skills\": \"Python and environmental science\",\n  \"work\": \"Climate research\"\n}\n\nDesign — Fictional Lab 9 [i009]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Boston\",\n  \"mentoring\": \"Weekly guidance\",\n  \"pay_per_hour_usd\": 24,\n  \"preferred_skills\": \"Design and user research\",\n  \"work\": \"Design\"\n}\n\nDesign — Fictional Lab 4 [i004]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Remote\",\n  \"mentoring\": \"Daily guidance\",\n  \"pay_per_hour_usd\": 26,\n  \"preferred_skills\": \"Design and user research\",\n  \"work\": \"Design\"\n}\n\nPolicy research — Fictional Lab 3 [i003]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Boston\",\n  \"mentoring\": \"Weekly guidance\",\n  \"pay_per_hour_usd\": 24,\n  \"preferred_skills\": \"Writing and economics\",\n  \"work\": \"Policy research\"\n}\n\nData analysis — Fictional Lab 1 [i001]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Boston\",\n  \"mentoring\": \"Weekly guidance\",\n  \"pay_per_hour_usd\": 20,\n  \"preferred_skills\": \"Python and statistics\",\n  \"work\": \"Data analysis\"\n}\n\nClimate research — Fictional Lab 5 [i005]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Boston\",\n  \"mentoring\": \"Weekly guidance\",\n  \"pay_per_hour_usd\": 28,\n  \"preferred_skills\": \"Python and environmental science\",\n  \"work\": \"Climate research\"\n}\n\nPolicy research — Fictional Lab 8 [i008]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Remote\",\n  \"mentoring\": \"Daily guidance\",\n  \"pay_per_hour_usd\": 22,\n  \"preferred_skills\": \"Writing and economics\",\n  \"work\": \"Policy research\"\n}\n\nSoftware development — Fictional Lab 7 [i007]\n{\n  \"dates\": \"June–August\",\n  \"hours_per_week\": 30,\n  \"location\": \"Boston\",\n  \"mentoring\": \"Weekly guidance\",\n  \"pay_per_hour_usd\": 20,\n  \"preferred_skills\": \"Python and web development\",\n  \"work\": \"Software development\"\n}\nRank ALL options best first. Place 'Remain unmatched' above every unacceptable partner. For candidates with insufficient information, select that status below; their position will be ignored.",
+          "question_options": [
+            "Software development — Fictional Lab 2 [i002]",
+            "Data analysis — Fictional Lab 6 [i006]",
+            "Climate research — Fictional Lab 10 [i010]",
+            "Design — Fictional Lab 9 [i009]",
+            "Design — Fictional Lab 4 [i004]",
+            "Policy research — Fictional Lab 3 [i003]",
+            "Data analysis — Fictional Lab 1 [i001]",
+            "Climate research — Fictional Lab 5 [i005]",
+            "Policy research — Fictional Lab 8 [i008]",
+            "Software development — Fictional Lab 7 [i007]",
+            "Remain unmatched"
+          ],
+          "num_selections": 11,
+          "use_code": false,
+          "mapping": {
+            "Software development — Fictional Lab 2 [i002]": "i002",
+            "Data analysis — Fictional Lab 6 [i006]": "i006",
+            "Climate research — Fictional Lab 10 [i010]": "i010",
+            "Design — Fictional Lab 9 [i009]": "i009",
+            "Design — Fictional Lab 4 [i004]": "i004",
+            "Policy research — Fictional Lab 3 [i003]": "i003",
+            "Data analysis — Fictional Lab 1 [i001]": "i001",
+            "Climate research — Fictional Lab 5 [i005]": "i005",
+            "Policy research — Fictional Lab 8 [i008]": "i008",
+            "Software development — Fictional Lab 7 [i007]": "i007"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_0",
+          "question_text": "Could you assess Software development — Fictional Lab 2 [i002]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i002"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_1",
+          "question_text": "Could you assess Data analysis — Fictional Lab 6 [i006]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i006"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_2",
+          "question_text": "Could you assess Climate research — Fictional Lab 10 [i010]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i010"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_3",
+          "question_text": "Could you assess Design — Fictional Lab 9 [i009]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i009"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_4",
+          "question_text": "Could you assess Design — Fictional Lab 4 [i004]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i004"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_5",
+          "question_text": "Could you assess Policy research — Fictional Lab 3 [i003]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i003"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_6",
+          "question_text": "Could you assess Data analysis — Fictional Lab 1 [i001]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i001"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_7",
+          "question_text": "Could you assess Climate research — Fictional Lab 5 [i005]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i005"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_8",
+          "question_text": "Could you assess Policy research — Fictional Lab 8 [i008]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i008"
+          }
+        },
+        {
+          "kind": "multiple_choice",
+          "question_name": "known_9",
+          "question_text": "Could you assess Software development — Fictional Lab 7 [i007]?",
+          "question_options": [
+            "Assessed",
+            "Insufficient information"
+          ],
+          "mapping": {
+            "candidate": "i007"
+          }
+        }
+      ],
+      "screened": {},
+      "preference_hash": "5f537a71bbef1dd11a2b7de7e4ae591707447f0f8f5461f16c68919ab215edda",
+      "source": "human",
+      "complete": false
+    }
+  },
+  "responses": {},
+  "submissions": {},
+  "candidate_scope": "eligible_market",
+  "output": "/Users/johnhorton/tools/ep/roth/examples/internships/native-pilot"
+}

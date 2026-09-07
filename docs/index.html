@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how Roth collects two-sided preferences, checks delegated choices, and matches students with internships using deferred acceptance.">
+  <title>Roth | Two-sided matching with Expected Parrot</title>
+  <style>
+    :root{--green:#428a5f;--dark:#214d35;--light:#edf7f1;--ink:#17251d;--muted:#59685e;--paper:#f5f7f5;--rule:#dfe7e1;--amber:#9b621c;--sidebar:270px;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.75 var(--sans)}a{color:#2e7549;text-underline-offset:3px}a:hover{color:var(--dark)}a:focus-visible,summary:focus-visible{outline:3px solid #c58f3e;outline-offset:5px;border-radius:2px}.skip{position:absolute;top:-100px;left:16px;background:white;padding:10px 20px;z-index:30}.skip:focus{top:12px}
+    .sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar);padding:30px 24px;overflow-y:auto;background:var(--dark);color:#e9f3ed}.brand{display:block;padding:14px 16px;background:white;color:var(--ink);text-decoration:none;border-radius:7px}.brand strong{display:block;font:700 20px/1.3 var(--serif)}.brand small{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.book{margin:28px 8px 22px;font:24px/1.25 var(--serif)}.book span{display:block;margin-top:9px;font:13px var(--sans);color:#c1dacb}.nav-label{margin:25px 8px 6px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a8d7b9}.sidebar nav a{display:block;padding:6px 8px;color:#e2eee6;text-decoration:none;font-size:13px;line-height:1.5;border-radius:4px}.sidebar nav a:hover{background:#306145;color:white}.sidebar .edition{margin:30px 8px 0;padding-top:18px;border-top:1px solid #52725e;font-size:12px;color:#c1dacb}.mobile-nav{display:none}
+    main{margin-left:var(--sidebar)}article{max-width:1010px;margin:auto;padding:55px 65px 70px;background:#fff;min-height:100vh}.hero{padding:28px 0 42px;border-bottom:3px solid var(--green)}.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:750;color:#36794e}h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.2}h1{font-size:clamp(40px,4.8vw,62px);letter-spacing:-.035em;max-width:740px;margin:15px 0 23px}h2{font-size:32px;letter-spacing:-.015em;margin:0 0 24px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);color:var(--dark)}h2 .chapter{font:11px var(--sans);letter-spacing:.08em;color:var(--green);display:block;margin-bottom:8px}h3{font-size:23px;margin:30px 0 12px}.lede{font-size:20px;line-height:1.6;color:var(--muted);max-width:730px}.hero .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0;color:var(--muted);font-size:12px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:27px 0 0}.button{display:inline-block;text-decoration:none;font-size:14px;font-weight:700;padding:10px 17px;border:1px solid var(--green);border-radius:5px}.button.primary{background:var(--green);color:white}.button.secondary{color:var(--dark);background:white}.button:hover{background:var(--dark);color:white}
+    section{margin-top:64px}p{margin:14px 0 19px}.intro{font-size:18px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:26px 0}.card{padding:22px 24px;border:1px solid var(--rule);border-radius:6px;background:#fcfdfc}.card h3{margin:7px 0 12px;font-size:22px}.card p:last-child{margin-bottom:0}.tag{font:700 10px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#437353}.callout{margin:25px 0;padding:18px 24px;border-left:3px solid var(--green);background:var(--light)}.callout p{margin:0}.callout.warm{background:#fbf7ef;border-color:#c7964e}.muted{color:var(--muted)}.small{font-size:13px}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0;list-style:none;padding:0;counter-reset:flow}.flow li{padding:18px 14px;border-top:2px solid var(--green);background:#f5f8f5;font-size:13px;line-height:1.5;counter-increment:flow}.flow li:before{content:"0" counter(flow);display:block;font:12px var(--mono);color:var(--green);margin-bottom:12px}.flow strong{display:block;margin-bottom:6px;font-size:14px}
+    figure{margin:28px 0}figcaption{font-size:12px;line-height:1.6;color:var(--muted);margin-top:10px}.matching-figure{padding:24px 22px 15px;background:#f6faf7;border:1px solid var(--rule);border-radius:7px}.matching-figure svg{display:block;width:100%;height:auto}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:24px 0}.metric{padding:22px 14px}.metric+.metric{border-left:1px solid var(--rule)}.metric strong{display:block;font:38px/1.2 var(--serif);color:var(--dark)}.metric span{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+    code{font:85% var(--mono);background:#eff3ef;border-radius:3px;padding:2px 5px;overflow-wrap:anywhere}pre{font:13px/1.65 var(--mono);color:#e3eee6;background:#19271f;border-left:3px solid var(--green);border-radius:5px;padding:20px 22px;overflow:auto;margin:22px 0}pre code{padding:0;background:none;color:inherit;font:inherit;overflow-wrap:normal}.comment{color:#adbdaf}.program{color:#a2dfb5}.table-wrap{max-width:100%;overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.55}th,td{text-align:left;padding:12px 13px;border-bottom:1px solid var(--rule);vertical-align:top}thead th{background:#eff5f0;color:var(--dark);font-size:12px}tbody th{font-weight:600}td.num{text-align:right;font-variant-numeric:tabular-nums}.table-wrap caption{text-align:left;font-size:12px;color:var(--muted);caption-side:bottom;padding-top:12px}details{margin:20px 0;border:1px solid var(--rule);border-radius:5px;padding:14px 20px}summary{color:var(--dark);font-weight:650;cursor:pointer;font-size:14px}details[open] summary{margin-bottom:14px}details pre:last-child{margin-bottom:4px}blockquote{margin:22px 0;padding:4px 0 4px 22px;border-left:3px solid #a9cbb5;font:19px/1.65 var(--serif);color:#35583e}blockquote p{margin:8px 0}.survey{padding:25px;border:1px solid #c8dacc;border-radius:7px;background:#fbfdfb}.survey .two-col{gap:14px;margin:18px 0}.survey .card{background:white}.survey .card h3{font-size:20px}.profile-facts{margin:0;padding:0;list-style:none;font-size:14px}.profile-facts li{margin:6px 0}.rating-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:21px}.rating-scale span{padding:10px 6px;background:#edf3ee;border:1px solid #dbe5dd;border-radius:4px;text-align:center;font-size:11px;line-height:1.4}.branches{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.branch{border-top:3px solid var(--green);padding:18px;background:var(--light)}.branch h3{margin:0 0 9px;font-size:20px}.branch p{margin:0;font-size:14px}.branch.holdout{background:#f8f5ee;border-color:#b79154}.timeline{padding-left:24px}.timeline li{margin:13px 0;padding-left:5px}.chart{padding:23px;border:1px solid var(--rule);border-radius:6px}.bar-row{margin:15px 0}.bar-label{display:flex;justify-content:space-between;gap:16px;font-size:13px;margin-bottom:7px}.bar-track{height:15px;background:#f0f3f0;border-radius:2px;overflow:hidden}.bar{height:100%;background:var(--green)}.bar.full{background:#91a197}.bar.expanded{background:#78ad8b}.reference td:first-child{white-space:nowrap}footer{margin-top:65px;padding-top:25px;border-top:3px solid var(--green);color:var(--muted);font-size:12px}footer a{margin-right:16px}
+    .preference-list{padding-left:25px;font-size:14px}.preference-list li{padding:3px 0}.preference-list .chosen{color:var(--dark);font-weight:700}.rank-matrix{min-width:845px;font-size:13px;table-layout:fixed}.rank-matrix th,.rank-matrix td{padding:9px 4px;text-align:center;vertical-align:middle}.rank-matrix th:first-child{width:98px;position:sticky;left:0;background:#f2f6f3;text-align:left;padding-left:10px;z-index:1}.rank-matrix th:last-child{width:82px}.rank-matrix .col-role{display:block;font-size:9px;line-height:1.4;font-weight:400;margin-top:4px}.rank-matrix .rank-pair{white-space:nowrap;font-variant-numeric:tabular-nums}.rank-matrix .matched{background:var(--dark);color:white;box-shadow:inset 0 0 0 2px white}.match-label{display:block;font-size:8px;font-weight:750;letter-spacing:.08em}.rank-matrix .unacceptable{color:#8a776c;background:#faf7f3}.rank-matrix .outcome{font-size:11px}.matrix-scroll:focus-visible{outline:3px solid #c58f3e;outline-offset:3px}.matrix-legend{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:13px}.match-key{background:var(--dark);color:white;padding:3px 7px;border-radius:3px}.file-flow{font-size:14px}.file-flow td:first-child{white-space:nowrap}
+    @media(min-width:1450px){article{padding-left:80px;padding-right:80px}}
+    @media(max-width:1100px){:root{--sidebar:235px}article{padding:40px 38px 65px}.sidebar{padding:25px 18px}}
+    @media(max-width:850px){.sidebar{display:none}.mobile-nav{display:block;margin:0;border:0;border-bottom:1px solid var(--rule);border-radius:0;padding:17px 22px;background:var(--dark);color:white}.mobile-nav summary{color:white}.mobile-nav nav{display:flex;flex-wrap:wrap;gap:9px 18px;padding:10px 0}.mobile-nav a{color:#d9ebdf;font-size:13px}main{margin:0}article{padding:28px 28px 60px}.hero{padding-top:20px}h1{max-width:660px}}
+    @media(max-width:560px){article{padding:20px 20px 50px}h1{font-size:42px}h2{font-size:28px}.lede{font-size:18px}.two-col,.branches{grid-template-columns:1fr;gap:14px}.flow{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.metric{padding:17px 9px}.metric strong{font-size:32px}.metric span{font-size:11px}.matching-figure{padding:16px 8px 12px}.matching-figure figcaption{padding:0 8px}.survey{padding:18px 15px}.rating-scale{grid-template-columns:1fr}.rating-scale span{font-size:12px}.chart{padding:18px}.reference td:first-child{white-space:normal}pre{font-size:12px;padding:17px 15px}th,td{padding:10px}section{margin-top:48px}}
+    .matching-mobile{display:none}@media(max-width:560px){.matching-figure svg{display:none}.matching-mobile{display:block;list-style:none;padding:0 12px;margin:0}.matching-mobile li{padding:13px 0;border-bottom:1px solid var(--rule);font-size:13px}.matching-mobile li:last-child{border-bottom:0}.matching-mobile strong,.matching-mobile span{display:block}.matching-mobile span{color:var(--muted);margin-top:3px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{.sidebar,.mobile-nav,.actions,.skip{display:none}main{margin:0}article{max-width:none;padding:0}body{background:white}section{break-inside:auto}h2,h3{break-after:avoid}figure,.card,pre{break-inside:avoid}pre{white-space:pre-wrap;color:black;background:#f3f3f3}a{color:inherit}details{border:0}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<aside class="sidebar">
+  <a class="brand" href="https://www.expectedparrot.com/"><strong>Expected Parrot</strong><small>Open-source research tools</small></a>
+  <div class="book">Two-sided matching<br>with Roth<span>A guide and worked example</span></div>
+  <nav aria-label="Contents">
+    <div class="nav-label">Understand</div>
+    <a href="#overview">01 · What Roth does</a>
+    <a href="#example">02 · Students and internships</a>
+    <a href="#ranking-matrix">↳ Rankings and matches</a>
+    <a href="#matching">03 · How matching works</a>
+    <div class="nav-label">Use the package</div>
+    <a href="#start">04 · Install and try it</a>
+    <a href="#humans">05 · Collect human rankings</a>
+    <a href="#delegation">06 · Delegate preferences</a>
+    <a href="#benchmark">07 · Check the model's choices</a>
+    <div class="nav-label">Interpret</div>
+    <a href="#large-markets">08 · Handle larger markets</a>
+    <a href="#results">09 · Read the results</a>
+    <a href="#reference">10 · Workflow reference</a>
+  </nav>
+  <div class="edition">Roth 0.1.0 · Python 3.11+<br>One-to-one matching · MIT license</div>
+</aside>
+<details class="mobile-nav">
+  <summary>Roth · Guide contents</summary>
+  <nav aria-label="Mobile contents"><a href="#overview">Overview</a><a href="#example">Example</a><a href="#matching">Matching</a><a href="#start">Get started</a><a href="#humans">Human surveys</a><a href="#delegation">Delegation</a><a href="#benchmark">Benchmark</a><a href="#large-markets">Large markets</a><a href="#results">Results</a><a href="#reference">Reference</a></nav>
+</details>
+<main id="content"><article>
+  <header class="hero">
+    <div class="eyebrow">Expected Parrot · Roth</div>
+    <h1>Matching that listens<br>to both sides.</h1>
+    <p class="lede">Students have preferences over internships. Employers have preferences over students. Roth collects both, then uses deferred acceptance to turn those preferences into a stable set of assignments.</p>
+    <p>Use direct rankings from people, or let an LLM rank candidates from their preference descriptions. An optional A-versus-B survey checks how well the model understands what each person wants.</p>
+    <div class="meta"><span>Human surveys through EDSL Humanize</span><span>Organizer-controlled delegation</span><span>Reproducible matching</span></div>
+    <div class="actions"><a class="button primary" href="#start">Try the internship example →</a><a class="button secondary" href="#overview">Explore the workflow</a></div>
+    <figure class="matching-figure">
+      <svg viewBox="0 0 680 238" role="img" aria-labelledby="matching-title matching-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="matching-title">Students matched with internship openings</title>
+        <desc id="matching-desc">Three assignments from the saved example: Casey 3 to Data analysis at Fictional Lab 1, Harper 8 to Design at Fictional Lab 4, and Indigo 9 to Software development at Fictional Lab 2.</desc>
+        <text x="22" y="21" fill="#477254" font-family="system-ui,sans-serif" font-size="11" letter-spacing="1.8">STUDENTS</text>
+        <text x="406" y="21" fill="#477254" font-family="system-ui,sans-serif" font-size="11" letter-spacing="1.8">INTERNSHIP OPENINGS</text>
+        <g fill="none" stroke="#94b9a1" stroke-width="2"><path d="M228 66 C300 66 335 134 400 134"/><path d="M228 134 C301 134 328 202 400 202"/><path d="M228 202 C299 202 330 66 400 66"/></g>
+        <g fill="white" stroke="#cedfd3"><rect x="12" y="40" width="216" height="52" rx="6"/><rect x="12" y="108" width="216" height="52" rx="6"/><rect x="12" y="176" width="216" height="52" rx="6"/><rect x="400" y="40" width="268" height="52" rx="6"/><rect x="400" y="108" width="268" height="52" rx="6"/><rect x="400" y="176" width="268" height="52" rx="6"/></g>
+        <g fill="#244e35" font-family="system-ui,sans-serif" font-size="16"><text x="29" y="72">Casey 3</text><text x="29" y="140">Harper 8</text><text x="29" y="208">Indigo 9</text><text x="417" y="62">Software development</text><text x="417" y="130">Data analysis</text><text x="417" y="198">Design</text></g>
+        <g fill="#5b7162" font-family="system-ui,sans-serif" font-size="11"><text x="417" y="80">Fictional Lab 2</text><text x="417" y="148">Fictional Lab 1</text><text x="417" y="216">Fictional Lab 4</text></g>
+      </svg>
+      <ul class="matching-mobile"><li><strong>Casey 3</strong><span>→ Data analysis · Fictional Lab 1</span></li><li><strong>Harper 8</strong><span>→ Design · Fictional Lab 4</span></li><li><strong>Indigo 9</strong><span>→ Software development · Fictional Lab 2</span></li></ul>
+      <figcaption>Three of the ten assignments in the bundled example. All participants and preference lists in this example are fictional.</figcaption>
+    </figure>
+  </header>
+
+  <section id="overview">
+    <h2><span class="chapter">01 · The idea</span>One market. Two sets of preferences.</h2>
+    <p class="intro">Roth is a Python package and command-line tool for organizing a two-sided matching process—from participant lists to assignments you can inspect and reproduce.</p>
+    <p>The organizer supplies two lists, the profiles each side will see, and the market's rules. Roth helps collect preferences, records which candidates are acceptable, and computes one-to-one matches. Each internship opening has one place; each student can receive one internship.</p>
+    <ol class="flow" aria-label="The four stages of a matching project">
+      <li><strong>Define the market</strong>Add students, openings, profiles, and eligibility rules.</li>
+      <li><strong>Collect preferences</strong>Ask people to rank, or score candidates on their behalf.</li>
+      <li><strong>Freeze and match</strong>Close the active cohort and run deferred acceptance.</li>
+      <li><strong>Inspect the outcome</strong>Read assignments, preference statistics, and coverage.</li>
+    </ol>
+    <div class="two-col">
+      <div class="card"><span class="tag">Direct preferences</span><h3>People rank their options.</h3><p>Students review internship profiles. Employer representatives review students. Personalized Humanize surveys collect rankings and explicit rejections from both sides.</p><a href="#humans">See the human workflow →</a></div>
+      <div class="card"><span class="tag">Delegated preferences</span><h3>People describe what matters.</h3><p>An LLM evaluates candidates using each participant's instructions. The organizer decides whether those rankings can be used directly or require confirmation.</p><a href="#delegation">See the delegated workflow →</a></div>
+    </div>
+    <p>The two sides can use different collection methods. They still meet at the same matching engine, with a saved record of where each preference came from.</p>
+  </section>
+
+  <section id="example">
+    <h2><span class="chapter">02 · The worked example</span>A summer internship program</h2>
+    <p>Imagine a university placing students into openings across ten fictional labs. Some students value close mentoring; others care more about the work itself, compensation, or remote arrangements. Employers consider skills, project experience, interests, and availability.</p>
+    <div class="metrics" aria-label="Example market size and result">
+      <div class="metric"><strong>12</strong><span>students</span></div><div class="metric"><strong>10</strong><span>single-slot openings</span></div><div class="metric"><strong>10</strong><span>matches in the saved run</span></div>
+    </div>
+    <div class="table-wrap"><table><thead><tr><th scope="col">What you provide</th><th scope="col">Student side</th><th scope="col">Internship side</th></tr></thead><tbody>
+      <tr><th scope="row">A public profile</th><td>Skills, coursework, projects, and availability</td><td>Work, dates, location, compensation, and mentoring</td></tr>
+      <tr><th scope="row">Private preferences</th><td>What the student wants to learn and which tradeoffs they will make</td><td>What the employer values in a candidate for this opening</td></tr>
+      <tr><th scope="row">Who responds</th><td>The student</td><td>An employer representative for the opening</td></tr>
+    </tbody></table></div>
+    <p>A profile describes <em>what someone offers</em>. Preference instructions describe <em>what they seek</em>. Roth keeps those separate, along with contact information and private rankings.</p>
+    <p class="callout"><strong>Where do these rankings come from?</strong> The example generator shuffles candidate IDs with a fixed random seed (17) and marks some options unacceptable. These are synthetic inputs, independent of the profile descriptions above. No person or LLM produced them. Importing these same lists reproduces the assignments below.</p>
+    <!-- BEGIN GENERATED PREFERENCES -->
+    <h3 id="preference-inputs">The actual input: two ordered lists</h3>
+    <p>Each participant supplies a list from best to worst, plus explicit unacceptable options. Here are two of the 22 records used in this run. Lab numbers identify distinct single-slot openings.</p>
+    <div class="two-col">
+    <div class="card"><span class="tag">s001 · Synthetic input</span><h3>Alex 1 ranks internships</h3><ol class="preference-list">
+    <li class="option">Lab 8 · Policy research</li>
+    <li class="option">Lab 4 · Design</li>
+    <li class="option">Lab 1 · Data analysis</li>
+    <li class="option">Lab 6 · Data analysis</li>
+    <li class="option">Lab 2 · Software development</li>
+    <li class="option">Lab 10 · Climate research</li>
+    <li class="chosen">Lab 3 · Policy research ← realized match</li>
+    <li class="option">Lab 5 · Climate research</li>
+    </ol><p class="small"><strong>Would rather remain unmatched than accept:</strong> Software development — Fictional Lab 7, Design — Fictional Lab 9.</p></div>
+    <div class="card"><span class="tag">i003 · Synthetic input</span><h3>Lab 3 ranks students</h3><ol class="preference-list">
+    <li class="option">Casey 3</li>
+    <li class="chosen">Alex 1 ← realized match</li>
+    <li class="option">Emery 5</li>
+    <li class="option">Devon 4</li>
+    <li class="option">Finley 6</li>
+    <li class="option">Lane 12</li>
+    <li class="option">Gray 7</li>
+    <li class="option">Jules 10</li>
+    <li class="option">Blair 2</li>
+    <li class="option">Harper 8</li>
+    </ol><p class="small"><strong>Would rather remain unmatched than accept:</strong> Kai 11, Indigo 9.</p></div>
+    </div>
+    <p>Alex ranks Lab 3 seventh; Lab 3 ranks Alex second. Those two positions become <strong>7 / 2</strong> in the matrix. The lists are the inputs; the highlighted assignment is the computed outcome.</p>
+    <details><summary>See the exact JSON for these two participants</summary>
+    <p>This excerpt contains two complete records from <a href="assets/internship-preferences.json" download>the full 22-record preference file</a>. IDs refer to participants in <a href="assets/internship-market.json">market.json</a>.</p>
+    <pre><code>[
+  {
+    &quot;participant_id&quot;: &quot;s001&quot;,
+    &quot;ranking&quot;: [&quot;i008&quot;, &quot;i004&quot;, &quot;i001&quot;, &quot;i006&quot;, &quot;i002&quot;, &quot;i010&quot;, &quot;i003&quot;, &quot;i005&quot;],
+    &quot;unacceptable&quot;: [&quot;i007&quot;, &quot;i009&quot;],
+    &quot;evaluated&quot;: [&quot;i008&quot;, &quot;i004&quot;, &quot;i001&quot;, &quot;i006&quot;, &quot;i002&quot;, &quot;i010&quot;, &quot;i003&quot;, &quot;i005&quot;, &quot;i007&quot;, &quot;i009&quot;],
+    &quot;complete&quot;: true,
+    &quot;source&quot;: &quot;synthetic&quot;,
+    &quot;confirmed&quot;: false
+  },
+  {
+    &quot;participant_id&quot;: &quot;i003&quot;,
+    &quot;ranking&quot;: [&quot;s003&quot;, &quot;s001&quot;, &quot;s005&quot;, &quot;s004&quot;, &quot;s006&quot;, &quot;s012&quot;, &quot;s007&quot;, &quot;s010&quot;, &quot;s002&quot;, &quot;s008&quot;],
+    &quot;unacceptable&quot;: [&quot;s011&quot;, &quot;s009&quot;],
+    &quot;evaluated&quot;: [&quot;s003&quot;, &quot;s001&quot;, &quot;s005&quot;, &quot;s004&quot;, &quot;s006&quot;, &quot;s012&quot;, &quot;s007&quot;, &quot;s010&quot;, &quot;s002&quot;, &quot;s008&quot;, &quot;s011&quot;, &quot;s009&quot;],
+    &quot;complete&quot;: true,
+    &quot;source&quot;: &quot;synthetic&quot;,
+    &quot;confirmed&quot;: false
+  }
+]</code></pre>
+    <p><code>ranking</code> contains acceptable options in order. <code>unacceptable</code> lists explicit rejections. <code>evaluated</code> records which candidates were reviewed; <code>complete</code> marks a finished submission, which can have an empty ranking. The source is labeled <code>synthetic</code>.</p></details>
+    <h3 id="ranking-matrix">All rankings, with realized matches</h3>
+    <p>Read a row to see a student’s preferences across openings. Read a column to see how an employer ranks each student. Each cell is <strong>student rank / employer rank</strong>; 1 is best on either side.</p>
+    <div class="matrix-legend" id="matrix-legend"><span><span class="match-key">7 / 2 · MATCH</span> Realized assignment</span><span><strong>×</strong> Unacceptable to that side</span><span><strong>?</strong> Unresolved (none in this example)</span></div>
+    <div class="table-wrap matrix-scroll" tabindex="0" role="region" aria-label="Student and internship ranking matrix; scroll horizontally on small screens" aria-describedby="matrix-legend"><table class="rank-matrix">
+    <caption>All 120 possible pairs from the bundled synthetic preferences. Students propose. Only mutually acceptable pairs can match. Scroll horizontally on a narrow screen; student names stay visible.</caption>
+    <thead><tr><th scope="col">Student ↓<br>Opening →</th>
+    <th scope="col" title="Data analysis — Fictional Lab 1">Lab 1<span class="col-role">Data analysis</span></th>
+    <th scope="col" title="Software development — Fictional Lab 2">Lab 2<span class="col-role">Software development</span></th>
+    <th scope="col" title="Policy research — Fictional Lab 3">Lab 3<span class="col-role">Policy research</span></th>
+    <th scope="col" title="Design — Fictional Lab 4">Lab 4<span class="col-role">Design</span></th>
+    <th scope="col" title="Climate research — Fictional Lab 5">Lab 5<span class="col-role">Climate research</span></th>
+    <th scope="col" title="Data analysis — Fictional Lab 6">Lab 6<span class="col-role">Data analysis</span></th>
+    <th scope="col" title="Software development — Fictional Lab 7">Lab 7<span class="col-role">Software development</span></th>
+    <th scope="col" title="Policy research — Fictional Lab 8">Lab 8<span class="col-role">Policy research</span></th>
+    <th scope="col" title="Design — Fictional Lab 9">Lab 9<span class="col-role">Design</span></th>
+    <th scope="col" title="Climate research — Fictional Lab 10">Lab 10<span class="col-role">Climate research</span></th>
+    <th scope="col">Outcome</th></tr></thead><tbody>
+    <tr><th scope="row">Alex 1</th>
+    <td class="ranked" data-student="s001" data-opening="i001" aria-label="Alex 1 / Data analysis — Fictional Lab 1: student rank 3; employer rank 7; not matched" title="Alex 1 / Data analysis — Fictional Lab 1: student rank 3; employer rank 7; not matched"><span class="rank-pair">3 / 7</span></td>
+    <td class="ranked" data-student="s001" data-opening="i002" aria-label="Alex 1 / Software development — Fictional Lab 2: student rank 5; employer rank 9; not matched" title="Alex 1 / Software development — Fictional Lab 2: student rank 5; employer rank 9; not matched"><span class="rank-pair">5 / 9</span></td>
+    <td class="matched" data-student="s001" data-opening="i003" aria-label="Alex 1 / Policy research — Fictional Lab 3: student rank 7; employer rank 2; realized match" title="Alex 1 / Policy research — Fictional Lab 3: student rank 7; employer rank 2; realized match"><span class="rank-pair">7 / 2</span><span class="match-label">MATCH</span></td>
+    <td class="ranked" data-student="s001" data-opening="i004" aria-label="Alex 1 / Design — Fictional Lab 4: student rank 2; employer rank 10; not matched" title="Alex 1 / Design — Fictional Lab 4: student rank 2; employer rank 10; not matched"><span class="rank-pair">2 / 10</span></td>
+    <td class="ranked" data-student="s001" data-opening="i005" aria-label="Alex 1 / Climate research — Fictional Lab 5: student rank 8; employer rank 2; not matched" title="Alex 1 / Climate research — Fictional Lab 5: student rank 8; employer rank 2; not matched"><span class="rank-pair">8 / 2</span></td>
+    <td class="ranked" data-student="s001" data-opening="i006" aria-label="Alex 1 / Data analysis — Fictional Lab 6: student rank 4; employer rank 9; not matched" title="Alex 1 / Data analysis — Fictional Lab 6: student rank 4; employer rank 9; not matched"><span class="rank-pair">4 / 9</span></td>
+    <td class="unacceptable" data-student="s001" data-opening="i007" aria-label="Alex 1 / Software development — Fictional Lab 7: student rank ×; employer rank 6; not matched" title="Alex 1 / Software development — Fictional Lab 7: student rank ×; employer rank 6; not matched"><span class="rank-pair">× / 6</span></td>
+    <td class="ranked" data-student="s001" data-opening="i008" aria-label="Alex 1 / Policy research — Fictional Lab 8: student rank 1; employer rank 8; not matched" title="Alex 1 / Policy research — Fictional Lab 8: student rank 1; employer rank 8; not matched"><span class="rank-pair">1 / 8</span></td>
+    <td class="unacceptable" data-student="s001" data-opening="i009" aria-label="Alex 1 / Design — Fictional Lab 9: student rank ×; employer rank 6; not matched" title="Alex 1 / Design — Fictional Lab 9: student rank ×; employer rank 6; not matched"><span class="rank-pair">× / 6</span></td>
+    <td class="ranked" data-student="s001" data-opening="i010" aria-label="Alex 1 / Climate research — Fictional Lab 10: student rank 6; employer rank 9; not matched" title="Alex 1 / Climate research — Fictional Lab 10: student rank 6; employer rank 9; not matched"><span class="rank-pair">6 / 9</span></td>
+    <td class="outcome">Lab 3</td></tr>
+    <tr><th scope="row">Blair 2</th>
+    <td class="unacceptable" data-student="s002" data-opening="i001" aria-label="Blair 2 / Data analysis — Fictional Lab 1: student rank 3; employer rank ×; not matched" title="Blair 2 / Data analysis — Fictional Lab 1: student rank 3; employer rank ×; not matched"><span class="rank-pair">3 / ×</span></td>
+    <td class="ranked" data-student="s002" data-opening="i002" aria-label="Blair 2 / Software development — Fictional Lab 2: student rank 1; employer rank 4; not matched" title="Blair 2 / Software development — Fictional Lab 2: student rank 1; employer rank 4; not matched"><span class="rank-pair">1 / 4</span></td>
+    <td class="ranked" data-student="s002" data-opening="i003" aria-label="Blair 2 / Policy research — Fictional Lab 3: student rank 7; employer rank 9; not matched" title="Blair 2 / Policy research — Fictional Lab 3: student rank 7; employer rank 9; not matched"><span class="rank-pair">7 / 9</span></td>
+    <td class="unacceptable" data-student="s002" data-opening="i004" aria-label="Blair 2 / Design — Fictional Lab 4: student rank ×; employer rank 4; not matched" title="Blair 2 / Design — Fictional Lab 4: student rank ×; employer rank 4; not matched"><span class="rank-pair">× / 4</span></td>
+    <td class="ranked" data-student="s002" data-opening="i005" aria-label="Blair 2 / Climate research — Fictional Lab 5: student rank 6; employer rank 1; not matched" title="Blair 2 / Climate research — Fictional Lab 5: student rank 6; employer rank 1; not matched"><span class="rank-pair">6 / 1</span></td>
+    <td class="unacceptable" data-student="s002" data-opening="i006" aria-label="Blair 2 / Data analysis — Fictional Lab 6: student rank 2; employer rank ×; not matched" title="Blair 2 / Data analysis — Fictional Lab 6: student rank 2; employer rank ×; not matched"><span class="rank-pair">2 / ×</span></td>
+    <td class="unacceptable" data-student="s002" data-opening="i007" aria-label="Blair 2 / Software development — Fictional Lab 7: student rank ×; employer rank 1; not matched" title="Blair 2 / Software development — Fictional Lab 7: student rank ×; employer rank 1; not matched"><span class="rank-pair">× / 1</span></td>
+    <td class="matched" data-student="s002" data-opening="i008" aria-label="Blair 2 / Policy research — Fictional Lab 8: student rank 5; employer rank 1; realized match" title="Blair 2 / Policy research — Fictional Lab 8: student rank 5; employer rank 1; realized match"><span class="rank-pair">5 / 1</span><span class="match-label">MATCH</span></td>
+    <td class="ranked" data-student="s002" data-opening="i009" aria-label="Blair 2 / Design — Fictional Lab 9: student rank 8; employer rank 8; not matched" title="Blair 2 / Design — Fictional Lab 9: student rank 8; employer rank 8; not matched"><span class="rank-pair">8 / 8</span></td>
+    <td class="unacceptable" data-student="s002" data-opening="i010" aria-label="Blair 2 / Climate research — Fictional Lab 10: student rank 4; employer rank ×; not matched" title="Blair 2 / Climate research — Fictional Lab 10: student rank 4; employer rank ×; not matched"><span class="rank-pair">4 / ×</span></td>
+    <td class="outcome">Lab 8</td></tr>
+    <tr><th scope="row">Casey 3</th>
+    <td class="matched" data-student="s003" data-opening="i001" aria-label="Casey 3 / Data analysis — Fictional Lab 1: student rank 2; employer rank 1; realized match" title="Casey 3 / Data analysis — Fictional Lab 1: student rank 2; employer rank 1; realized match"><span class="rank-pair">2 / 1</span><span class="match-label">MATCH</span></td>
+    <td class="unacceptable" data-student="s003" data-opening="i002" aria-label="Casey 3 / Software development — Fictional Lab 2: student rank 4; employer rank ×; not matched" title="Casey 3 / Software development — Fictional Lab 2: student rank 4; employer rank ×; not matched"><span class="rank-pair">4 / ×</span></td>
+    <td class="unacceptable" data-student="s003" data-opening="i003" aria-label="Casey 3 / Policy research — Fictional Lab 3: student rank ×; employer rank 1; not matched" title="Casey 3 / Policy research — Fictional Lab 3: student rank ×; employer rank 1; not matched"><span class="rank-pair">× / 1</span></td>
+    <td class="unacceptable" data-student="s003" data-opening="i004" aria-label="Casey 3 / Design — Fictional Lab 4: student rank ×; employer rank 6; not matched" title="Casey 3 / Design — Fictional Lab 4: student rank ×; employer rank 6; not matched"><span class="rank-pair">× / 6</span></td>
+    <td class="ranked" data-student="s003" data-opening="i005" aria-label="Casey 3 / Climate research — Fictional Lab 5: student rank 6; employer rank 9; not matched" title="Casey 3 / Climate research — Fictional Lab 5: student rank 6; employer rank 9; not matched"><span class="rank-pair">6 / 9</span></td>
+    <td class="ranked" data-student="s003" data-opening="i006" aria-label="Casey 3 / Data analysis — Fictional Lab 6: student rank 7; employer rank 2; not matched" title="Casey 3 / Data analysis — Fictional Lab 6: student rank 7; employer rank 2; not matched"><span class="rank-pair">7 / 2</span></td>
+    <td class="ranked" data-student="s003" data-opening="i007" aria-label="Casey 3 / Software development — Fictional Lab 7: student rank 5; employer rank 10; not matched" title="Casey 3 / Software development — Fictional Lab 7: student rank 5; employer rank 10; not matched"><span class="rank-pair">5 / 10</span></td>
+    <td class="ranked" data-student="s003" data-opening="i008" aria-label="Casey 3 / Policy research — Fictional Lab 8: student rank 1; employer rank 7; not matched" title="Casey 3 / Policy research — Fictional Lab 8: student rank 1; employer rank 7; not matched"><span class="rank-pair">1 / 7</span></td>
+    <td class="ranked" data-student="s003" data-opening="i009" aria-label="Casey 3 / Design — Fictional Lab 9: student rank 3; employer rank 3; not matched" title="Casey 3 / Design — Fictional Lab 9: student rank 3; employer rank 3; not matched"><span class="rank-pair">3 / 3</span></td>
+    <td class="ranked" data-student="s003" data-opening="i010" aria-label="Casey 3 / Climate research — Fictional Lab 10: student rank 8; employer rank 5; not matched" title="Casey 3 / Climate research — Fictional Lab 10: student rank 8; employer rank 5; not matched"><span class="rank-pair">8 / 5</span></td>
+    <td class="outcome">Lab 1</td></tr>
+    <tr><th scope="row">Devon 4</th>
+    <td class="ranked" data-student="s004" data-opening="i001" aria-label="Devon 4 / Data analysis — Fictional Lab 1: student rank 7; employer rank 2; not matched" title="Devon 4 / Data analysis — Fictional Lab 1: student rank 7; employer rank 2; not matched"><span class="rank-pair">7 / 2</span></td>
+    <td class="unacceptable" data-student="s004" data-opening="i002" aria-label="Devon 4 / Software development — Fictional Lab 2: student rank ×; employer rank 6; not matched" title="Devon 4 / Software development — Fictional Lab 2: student rank ×; employer rank 6; not matched"><span class="rank-pair">× / 6</span></td>
+    <td class="ranked" data-student="s004" data-opening="i003" aria-label="Devon 4 / Policy research — Fictional Lab 3: student rank 3; employer rank 4; not matched" title="Devon 4 / Policy research — Fictional Lab 3: student rank 3; employer rank 4; not matched"><span class="rank-pair">3 / 4</span></td>
+    <td class="ranked" data-student="s004" data-opening="i004" aria-label="Devon 4 / Design — Fictional Lab 4: student rank 5; employer rank 1; not matched" title="Devon 4 / Design — Fictional Lab 4: student rank 5; employer rank 1; not matched"><span class="rank-pair">5 / 1</span></td>
+    <td class="unacceptable" data-student="s004" data-opening="i005" aria-label="Devon 4 / Climate research — Fictional Lab 5: student rank ×; employer rank 8; not matched" title="Devon 4 / Climate research — Fictional Lab 5: student rank ×; employer rank 8; not matched"><span class="rank-pair">× / 8</span></td>
+    <td class="ranked" data-student="s004" data-opening="i006" aria-label="Devon 4 / Data analysis — Fictional Lab 6: student rank 2; employer rank 8; not matched" title="Devon 4 / Data analysis — Fictional Lab 6: student rank 2; employer rank 8; not matched"><span class="rank-pair">2 / 8</span></td>
+    <td class="ranked" data-student="s004" data-opening="i007" aria-label="Devon 4 / Software development — Fictional Lab 7: student rank 8; employer rank 7; not matched" title="Devon 4 / Software development — Fictional Lab 7: student rank 8; employer rank 7; not matched"><span class="rank-pair">8 / 7</span></td>
+    <td class="ranked" data-student="s004" data-opening="i008" aria-label="Devon 4 / Policy research — Fictional Lab 8: student rank 1; employer rank 9; not matched" title="Devon 4 / Policy research — Fictional Lab 8: student rank 1; employer rank 9; not matched"><span class="rank-pair">1 / 9</span></td>
+    <td class="ranked" data-student="s004" data-opening="i009" aria-label="Devon 4 / Design — Fictional Lab 9: student rank 6; employer rank 9; not matched" title="Devon 4 / Design — Fictional Lab 9: student rank 6; employer rank 9; not matched"><span class="rank-pair">6 / 9</span></td>
+    <td class="matched" data-student="s004" data-opening="i010" aria-label="Devon 4 / Climate research — Fictional Lab 10: student rank 4; employer rank 2; realized match" title="Devon 4 / Climate research — Fictional Lab 10: student rank 4; employer rank 2; realized match"><span class="rank-pair">4 / 2</span><span class="match-label">MATCH</span></td>
+    <td class="outcome">Lab 10</td></tr>
+    <tr><th scope="row">Emery 5</th>
+    <td class="unacceptable" data-student="s005" data-opening="i001" aria-label="Emery 5 / Data analysis — Fictional Lab 1: student rank 8; employer rank ×; not matched" title="Emery 5 / Data analysis — Fictional Lab 1: student rank 8; employer rank ×; not matched"><span class="rank-pair">8 / ×</span></td>
+    <td class="ranked" data-student="s005" data-opening="i002" aria-label="Emery 5 / Software development — Fictional Lab 2: student rank 2; employer rank 10; not matched" title="Emery 5 / Software development — Fictional Lab 2: student rank 2; employer rank 10; not matched"><span class="rank-pair">2 / 10</span></td>
+    <td class="ranked" data-student="s005" data-opening="i003" aria-label="Emery 5 / Policy research — Fictional Lab 3: student rank 6; employer rank 3; not matched" title="Emery 5 / Policy research — Fictional Lab 3: student rank 6; employer rank 3; not matched"><span class="rank-pair">6 / 3</span></td>
+    <td class="ranked" data-student="s005" data-opening="i004" aria-label="Emery 5 / Design — Fictional Lab 4: student rank 7; employer rank 5; not matched" title="Emery 5 / Design — Fictional Lab 4: student rank 7; employer rank 5; not matched"><span class="rank-pair">7 / 5</span></td>
+    <td class="matched" data-student="s005" data-opening="i005" aria-label="Emery 5 / Climate research — Fictional Lab 5: student rank 5; employer rank 3; realized match" title="Emery 5 / Climate research — Fictional Lab 5: student rank 5; employer rank 3; realized match"><span class="rank-pair">5 / 3</span><span class="match-label">MATCH</span></td>
+    <td class="unacceptable" data-student="s005" data-opening="i006" aria-label="Emery 5 / Data analysis — Fictional Lab 6: student rank ×; employer rank 7; not matched" title="Emery 5 / Data analysis — Fictional Lab 6: student rank ×; employer rank 7; not matched"><span class="rank-pair">× / 7</span></td>
+    <td class="ranked" data-student="s005" data-opening="i007" aria-label="Emery 5 / Software development — Fictional Lab 7: student rank 1; employer rank 4; not matched" title="Emery 5 / Software development — Fictional Lab 7: student rank 1; employer rank 4; not matched"><span class="rank-pair">1 / 4</span></td>
+    <td class="ranked" data-student="s005" data-opening="i008" aria-label="Emery 5 / Policy research — Fictional Lab 8: student rank 4; employer rank 5; not matched" title="Emery 5 / Policy research — Fictional Lab 8: student rank 4; employer rank 5; not matched"><span class="rank-pair">4 / 5</span></td>
+    <td class="unacceptable" data-student="s005" data-opening="i009" aria-label="Emery 5 / Design — Fictional Lab 9: student rank ×; employer rank ×; not matched" title="Emery 5 / Design — Fictional Lab 9: student rank ×; employer rank ×; not matched"><span class="rank-pair">× / ×</span></td>
+    <td class="ranked" data-student="s005" data-opening="i010" aria-label="Emery 5 / Climate research — Fictional Lab 10: student rank 3; employer rank 6; not matched" title="Emery 5 / Climate research — Fictional Lab 10: student rank 3; employer rank 6; not matched"><span class="rank-pair">3 / 6</span></td>
+    <td class="outcome">Lab 5</td></tr>
+    <tr><th scope="row">Finley 6</th>
+    <td class="unacceptable" data-student="s006" data-opening="i001" aria-label="Finley 6 / Data analysis — Fictional Lab 1: student rank ×; employer rank 3; not matched" title="Finley 6 / Data analysis — Fictional Lab 1: student rank ×; employer rank 3; not matched"><span class="rank-pair">× / 3</span></td>
+    <td class="ranked" data-student="s006" data-opening="i002" aria-label="Finley 6 / Software development — Fictional Lab 2: student rank 4; employer rank 5; not matched" title="Finley 6 / Software development — Fictional Lab 2: student rank 4; employer rank 5; not matched"><span class="rank-pair">4 / 5</span></td>
+    <td class="ranked" data-student="s006" data-opening="i003" aria-label="Finley 6 / Policy research — Fictional Lab 3: student rank 2; employer rank 5; not matched" title="Finley 6 / Policy research — Fictional Lab 3: student rank 2; employer rank 5; not matched"><span class="rank-pair">2 / 5</span></td>
+    <td class="unacceptable" data-student="s006" data-opening="i004" aria-label="Finley 6 / Design — Fictional Lab 4: student rank 5; employer rank ×; not matched" title="Finley 6 / Design — Fictional Lab 4: student rank 5; employer rank ×; not matched"><span class="rank-pair">5 / ×</span></td>
+    <td class="unacceptable" data-student="s006" data-opening="i005" aria-label="Finley 6 / Climate research — Fictional Lab 5: student rank 7; employer rank ×; not matched" title="Finley 6 / Climate research — Fictional Lab 5: student rank 7; employer rank ×; not matched"><span class="rank-pair">7 / ×</span></td>
+    <td class="ranked" data-student="s006" data-opening="i006" aria-label="Finley 6 / Data analysis — Fictional Lab 6: student rank 8; employer rank 6; not matched" title="Finley 6 / Data analysis — Fictional Lab 6: student rank 8; employer rank 6; not matched"><span class="rank-pair">8 / 6</span></td>
+    <td class="ranked" data-student="s006" data-opening="i007" aria-label="Finley 6 / Software development — Fictional Lab 7: student rank 1; employer rank 3; not matched" title="Finley 6 / Software development — Fictional Lab 7: student rank 1; employer rank 3; not matched"><span class="rank-pair">1 / 3</span></td>
+    <td class="unacceptable" data-student="s006" data-opening="i008" aria-label="Finley 6 / Policy research — Fictional Lab 8: student rank ×; employer rank ×; not matched" title="Finley 6 / Policy research — Fictional Lab 8: student rank ×; employer rank ×; not matched"><span class="rank-pair">× / ×</span></td>
+    <td class="ranked" data-student="s006" data-opening="i009" aria-label="Finley 6 / Design — Fictional Lab 9: student rank 3; employer rank 2; not matched" title="Finley 6 / Design — Fictional Lab 9: student rank 3; employer rank 2; not matched"><span class="rank-pair">3 / 2</span></td>
+    <td class="ranked" data-student="s006" data-opening="i010" aria-label="Finley 6 / Climate research — Fictional Lab 10: student rank 6; employer rank 4; not matched" title="Finley 6 / Climate research — Fictional Lab 10: student rank 6; employer rank 4; not matched"><span class="rank-pair">6 / 4</span></td>
+    <td class="outcome">Unmatched</td></tr>
+    <tr><th scope="row">Gray 7</th>
+    <td class="ranked" data-student="s007" data-opening="i001" aria-label="Gray 7 / Data analysis — Fictional Lab 1: student rank 7; employer rank 9; not matched" title="Gray 7 / Data analysis — Fictional Lab 1: student rank 7; employer rank 9; not matched"><span class="rank-pair">7 / 9</span></td>
+    <td class="ranked" data-student="s007" data-opening="i002" aria-label="Gray 7 / Software development — Fictional Lab 2: student rank 1; employer rank 2; not matched" title="Gray 7 / Software development — Fictional Lab 2: student rank 1; employer rank 2; not matched"><span class="rank-pair">1 / 2</span></td>
+    <td class="ranked" data-student="s007" data-opening="i003" aria-label="Gray 7 / Policy research — Fictional Lab 3: student rank 6; employer rank 7; not matched" title="Gray 7 / Policy research — Fictional Lab 3: student rank 6; employer rank 7; not matched"><span class="rank-pair">6 / 7</span></td>
+    <td class="unacceptable" data-student="s007" data-opening="i004" aria-label="Gray 7 / Design — Fictional Lab 4: student rank ×; employer rank 8; not matched" title="Gray 7 / Design — Fictional Lab 4: student rank ×; employer rank 8; not matched"><span class="rank-pair">× / 8</span></td>
+    <td class="ranked" data-student="s007" data-opening="i005" aria-label="Gray 7 / Climate research — Fictional Lab 5: student rank 3; employer rank 5; not matched" title="Gray 7 / Climate research — Fictional Lab 5: student rank 3; employer rank 5; not matched"><span class="rank-pair">3 / 5</span></td>
+    <td class="ranked" data-student="s007" data-opening="i006" aria-label="Gray 7 / Data analysis — Fictional Lab 6: student rank 8; employer rank 5; not matched" title="Gray 7 / Data analysis — Fictional Lab 6: student rank 8; employer rank 5; not matched"><span class="rank-pair">8 / 5</span></td>
+    <td class="matched" data-student="s007" data-opening="i007" aria-label="Gray 7 / Software development — Fictional Lab 7: student rank 5; employer rank 2; realized match" title="Gray 7 / Software development — Fictional Lab 7: student rank 5; employer rank 2; realized match"><span class="rank-pair">5 / 2</span><span class="match-label">MATCH</span></td>
+    <td class="ranked" data-student="s007" data-opening="i008" aria-label="Gray 7 / Policy research — Fictional Lab 8: student rank 4; employer rank 2; not matched" title="Gray 7 / Policy research — Fictional Lab 8: student rank 4; employer rank 2; not matched"><span class="rank-pair">4 / 2</span></td>
+    <td class="unacceptable" data-student="s007" data-opening="i009" aria-label="Gray 7 / Design — Fictional Lab 9: student rank ×; employer rank 7; not matched" title="Gray 7 / Design — Fictional Lab 9: student rank ×; employer rank 7; not matched"><span class="rank-pair">× / 7</span></td>
+    <td class="unacceptable" data-student="s007" data-opening="i010" aria-label="Gray 7 / Climate research — Fictional Lab 10: student rank 2; employer rank ×; not matched" title="Gray 7 / Climate research — Fictional Lab 10: student rank 2; employer rank ×; not matched"><span class="rank-pair">2 / ×</span></td>
+    <td class="outcome">Lab 7</td></tr>
+    <tr><th scope="row">Harper 8</th>
+    <td class="ranked" data-student="s008" data-opening="i001" aria-label="Harper 8 / Data analysis — Fictional Lab 1: student rank 4; employer rank 8; not matched" title="Harper 8 / Data analysis — Fictional Lab 1: student rank 4; employer rank 8; not matched"><span class="rank-pair">4 / 8</span></td>
+    <td class="ranked" data-student="s008" data-opening="i002" aria-label="Harper 8 / Software development — Fictional Lab 2: student rank 6; employer rank 8; not matched" title="Harper 8 / Software development — Fictional Lab 2: student rank 6; employer rank 8; not matched"><span class="rank-pair">6 / 8</span></td>
+    <td class="ranked" data-student="s008" data-opening="i003" aria-label="Harper 8 / Policy research — Fictional Lab 3: student rank 7; employer rank 10; not matched" title="Harper 8 / Policy research — Fictional Lab 3: student rank 7; employer rank 10; not matched"><span class="rank-pair">7 / 10</span></td>
+    <td class="matched" data-student="s008" data-opening="i004" aria-label="Harper 8 / Design — Fictional Lab 4: student rank 1; employer rank 2; realized match" title="Harper 8 / Design — Fictional Lab 4: student rank 1; employer rank 2; realized match"><span class="rank-pair">1 / 2</span><span class="match-label">MATCH</span></td>
+    <td class="unacceptable" data-student="s008" data-opening="i005" aria-label="Harper 8 / Climate research — Fictional Lab 5: student rank ×; employer rank 6; not matched" title="Harper 8 / Climate research — Fictional Lab 5: student rank ×; employer rank 6; not matched"><span class="rank-pair">× / 6</span></td>
+    <td class="ranked" data-student="s008" data-opening="i006" aria-label="Harper 8 / Data analysis — Fictional Lab 6: student rank 8; employer rank 3; not matched" title="Harper 8 / Data analysis — Fictional Lab 6: student rank 8; employer rank 3; not matched"><span class="rank-pair">8 / 3</span></td>
+    <td class="unacceptable" data-student="s008" data-opening="i007" aria-label="Harper 8 / Software development — Fictional Lab 7: student rank 5; employer rank ×; not matched" title="Harper 8 / Software development — Fictional Lab 7: student rank 5; employer rank ×; not matched"><span class="rank-pair">5 / ×</span></td>
+    <td class="unacceptable" data-student="s008" data-opening="i008" aria-label="Harper 8 / Policy research — Fictional Lab 8: student rank 2; employer rank ×; not matched" title="Harper 8 / Policy research — Fictional Lab 8: student rank 2; employer rank ×; not matched"><span class="rank-pair">2 / ×</span></td>
+    <td class="unacceptable" data-student="s008" data-opening="i009" aria-label="Harper 8 / Design — Fictional Lab 9: student rank 3; employer rank ×; not matched" title="Harper 8 / Design — Fictional Lab 9: student rank 3; employer rank ×; not matched"><span class="rank-pair">3 / ×</span></td>
+    <td class="unacceptable" data-student="s008" data-opening="i010" aria-label="Harper 8 / Climate research — Fictional Lab 10: student rank ×; employer rank 1; not matched" title="Harper 8 / Climate research — Fictional Lab 10: student rank ×; employer rank 1; not matched"><span class="rank-pair">× / 1</span></td>
+    <td class="outcome">Lab 4</td></tr>
+    <tr><th scope="row">Indigo 9</th>
+    <td class="unacceptable" data-student="s009" data-opening="i001" aria-label="Indigo 9 / Data analysis — Fictional Lab 1: student rank ×; employer rank 5; not matched" title="Indigo 9 / Data analysis — Fictional Lab 1: student rank ×; employer rank 5; not matched"><span class="rank-pair">× / 5</span></td>
+    <td class="matched" data-student="s009" data-opening="i002" aria-label="Indigo 9 / Software development — Fictional Lab 2: student rank 2; employer rank 1; realized match" title="Indigo 9 / Software development — Fictional Lab 2: student rank 2; employer rank 1; realized match"><span class="rank-pair">2 / 1</span><span class="match-label">MATCH</span></td>
+    <td class="unacceptable" data-student="s009" data-opening="i003" aria-label="Indigo 9 / Policy research — Fictional Lab 3: student rank 6; employer rank ×; not matched" title="Indigo 9 / Policy research — Fictional Lab 3: student rank 6; employer rank ×; not matched"><span class="rank-pair">6 / ×</span></td>
+    <td class="ranked" data-student="s009" data-opening="i004" aria-label="Indigo 9 / Design — Fictional Lab 4: student rank 4; employer rank 9; not matched" title="Indigo 9 / Design — Fictional Lab 4: student rank 4; employer rank 9; not matched"><span class="rank-pair">4 / 9</span></td>
+    <td class="ranked" data-student="s009" data-opening="i005" aria-label="Indigo 9 / Climate research — Fictional Lab 5: student rank 1; employer rank 7; not matched" title="Indigo 9 / Climate research — Fictional Lab 5: student rank 1; employer rank 7; not matched"><span class="rank-pair">1 / 7</span></td>
+    <td class="unacceptable" data-student="s009" data-opening="i006" aria-label="Indigo 9 / Data analysis — Fictional Lab 6: student rank ×; employer rank ×; not matched" title="Indigo 9 / Data analysis — Fictional Lab 6: student rank ×; employer rank ×; not matched"><span class="rank-pair">× / ×</span></td>
+    <td class="unacceptable" data-student="s009" data-opening="i007" aria-label="Indigo 9 / Software development — Fictional Lab 7: student rank 7; employer rank ×; not matched" title="Indigo 9 / Software development — Fictional Lab 7: student rank 7; employer rank ×; not matched"><span class="rank-pair">7 / ×</span></td>
+    <td class="ranked" data-student="s009" data-opening="i008" aria-label="Indigo 9 / Policy research — Fictional Lab 8: student rank 5; employer rank 3; not matched" title="Indigo 9 / Policy research — Fictional Lab 8: student rank 5; employer rank 3; not matched"><span class="rank-pair">5 / 3</span></td>
+    <td class="ranked" data-student="s009" data-opening="i009" aria-label="Indigo 9 / Design — Fictional Lab 9: student rank 8; employer rank 5; not matched" title="Indigo 9 / Design — Fictional Lab 9: student rank 8; employer rank 5; not matched"><span class="rank-pair">8 / 5</span></td>
+    <td class="ranked" data-student="s009" data-opening="i010" aria-label="Indigo 9 / Climate research — Fictional Lab 10: student rank 3; employer rank 8; not matched" title="Indigo 9 / Climate research — Fictional Lab 10: student rank 3; employer rank 8; not matched"><span class="rank-pair">3 / 8</span></td>
+    <td class="outcome">Lab 2</td></tr>
+    <tr><th scope="row">Jules 10</th>
+    <td class="unacceptable" data-student="s010" data-opening="i001" aria-label="Jules 10 / Data analysis — Fictional Lab 1: student rank ×; employer rank 6; not matched" title="Jules 10 / Data analysis — Fictional Lab 1: student rank ×; employer rank 6; not matched"><span class="rank-pair">× / 6</span></td>
+    <td class="unacceptable" data-student="s010" data-opening="i002" aria-label="Jules 10 / Software development — Fictional Lab 2: student rank 1; employer rank ×; not matched" title="Jules 10 / Software development — Fictional Lab 2: student rank 1; employer rank ×; not matched"><span class="rank-pair">1 / ×</span></td>
+    <td class="ranked" data-student="s010" data-opening="i003" aria-label="Jules 10 / Policy research — Fictional Lab 3: student rank 7; employer rank 8; not matched" title="Jules 10 / Policy research — Fictional Lab 3: student rank 7; employer rank 8; not matched"><span class="rank-pair">7 / 8</span></td>
+    <td class="unacceptable" data-student="s010" data-opening="i004" aria-label="Jules 10 / Design — Fictional Lab 4: student rank 8; employer rank ×; not matched" title="Jules 10 / Design — Fictional Lab 4: student rank 8; employer rank ×; not matched"><span class="rank-pair">8 / ×</span></td>
+    <td class="unacceptable" data-student="s010" data-opening="i005" aria-label="Jules 10 / Climate research — Fictional Lab 5: student rank 3; employer rank ×; not matched" title="Jules 10 / Climate research — Fictional Lab 5: student rank 3; employer rank ×; not matched"><span class="rank-pair">3 / ×</span></td>
+    <td class="matched" data-student="s010" data-opening="i006" aria-label="Jules 10 / Data analysis — Fictional Lab 6: student rank 2; employer rank 1; realized match" title="Jules 10 / Data analysis — Fictional Lab 6: student rank 2; employer rank 1; realized match"><span class="rank-pair">2 / 1</span><span class="match-label">MATCH</span></td>
+    <td class="ranked" data-student="s010" data-opening="i007" aria-label="Jules 10 / Software development — Fictional Lab 7: student rank 6; employer rank 5; not matched" title="Jules 10 / Software development — Fictional Lab 7: student rank 6; employer rank 5; not matched"><span class="rank-pair">6 / 5</span></td>
+    <td class="unacceptable" data-student="s010" data-opening="i008" aria-label="Jules 10 / Policy research — Fictional Lab 8: student rank ×; employer rank 4; not matched" title="Jules 10 / Policy research — Fictional Lab 8: student rank ×; employer rank 4; not matched"><span class="rank-pair">× / 4</span></td>
+    <td class="ranked" data-student="s010" data-opening="i009" aria-label="Jules 10 / Design — Fictional Lab 9: student rank 5; employer rank 10; not matched" title="Jules 10 / Design — Fictional Lab 9: student rank 5; employer rank 10; not matched"><span class="rank-pair">5 / 10</span></td>
+    <td class="ranked" data-student="s010" data-opening="i010" aria-label="Jules 10 / Climate research — Fictional Lab 10: student rank 4; employer rank 3; not matched" title="Jules 10 / Climate research — Fictional Lab 10: student rank 4; employer rank 3; not matched"><span class="rank-pair">4 / 3</span></td>
+    <td class="outcome">Lab 6</td></tr>
+    <tr><th scope="row">Kai 11</th>
+    <td class="ranked" data-student="s011" data-opening="i001" aria-label="Kai 11 / Data analysis — Fictional Lab 1: student rank 2; employer rank 10; not matched" title="Kai 11 / Data analysis — Fictional Lab 1: student rank 2; employer rank 10; not matched"><span class="rank-pair">2 / 10</span></td>
+    <td class="ranked" data-student="s011" data-opening="i002" aria-label="Kai 11 / Software development — Fictional Lab 2: student rank 7; employer rank 3; not matched" title="Kai 11 / Software development — Fictional Lab 2: student rank 7; employer rank 3; not matched"><span class="rank-pair">7 / 3</span></td>
+    <td class="unacceptable" data-student="s011" data-opening="i003" aria-label="Kai 11 / Policy research — Fictional Lab 3: student rank 5; employer rank ×; not matched" title="Kai 11 / Policy research — Fictional Lab 3: student rank 5; employer rank ×; not matched"><span class="rank-pair">5 / ×</span></td>
+    <td class="ranked" data-student="s011" data-opening="i004" aria-label="Kai 11 / Design — Fictional Lab 4: student rank 1; employer rank 7; not matched" title="Kai 11 / Design — Fictional Lab 4: student rank 1; employer rank 7; not matched"><span class="rank-pair">1 / 7</span></td>
+    <td class="ranked" data-student="s011" data-opening="i005" aria-label="Kai 11 / Climate research — Fictional Lab 5: student rank 3; employer rank 10; not matched" title="Kai 11 / Climate research — Fictional Lab 5: student rank 3; employer rank 10; not matched"><span class="rank-pair">3 / 10</span></td>
+    <td class="ranked" data-student="s011" data-opening="i006" aria-label="Kai 11 / Data analysis — Fictional Lab 6: student rank 4; employer rank 4; not matched" title="Kai 11 / Data analysis — Fictional Lab 6: student rank 4; employer rank 4; not matched"><span class="rank-pair">4 / 4</span></td>
+    <td class="unacceptable" data-student="s011" data-opening="i007" aria-label="Kai 11 / Software development — Fictional Lab 7: student rank ×; employer rank 9; not matched" title="Kai 11 / Software development — Fictional Lab 7: student rank ×; employer rank 9; not matched"><span class="rank-pair">× / 9</span></td>
+    <td class="unacceptable" data-student="s011" data-opening="i008" aria-label="Kai 11 / Policy research — Fictional Lab 8: student rank ×; employer rank 10; not matched" title="Kai 11 / Policy research — Fictional Lab 8: student rank ×; employer rank 10; not matched"><span class="rank-pair">× / 10</span></td>
+    <td class="matched" data-student="s011" data-opening="i009" aria-label="Kai 11 / Design — Fictional Lab 9: student rank 6; employer rank 1; realized match" title="Kai 11 / Design — Fictional Lab 9: student rank 6; employer rank 1; realized match"><span class="rank-pair">6 / 1</span><span class="match-label">MATCH</span></td>
+    <td class="ranked" data-student="s011" data-opening="i010" aria-label="Kai 11 / Climate research — Fictional Lab 10: student rank 8; employer rank 7; not matched" title="Kai 11 / Climate research — Fictional Lab 10: student rank 8; employer rank 7; not matched"><span class="rank-pair">8 / 7</span></td>
+    <td class="outcome">Lab 9</td></tr>
+    <tr><th scope="row">Lane 12</th>
+    <td class="unacceptable" data-student="s012" data-opening="i001" aria-label="Lane 12 / Data analysis — Fictional Lab 1: student rank ×; employer rank 4; not matched" title="Lane 12 / Data analysis — Fictional Lab 1: student rank ×; employer rank 4; not matched"><span class="rank-pair">× / 4</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i002" aria-label="Lane 12 / Software development — Fictional Lab 2: student rank ×; employer rank 7; not matched" title="Lane 12 / Software development — Fictional Lab 2: student rank ×; employer rank 7; not matched"><span class="rank-pair">× / 7</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i003" aria-label="Lane 12 / Policy research — Fictional Lab 3: student rank ×; employer rank 6; not matched" title="Lane 12 / Policy research — Fictional Lab 3: student rank ×; employer rank 6; not matched"><span class="rank-pair">× / 6</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i004" aria-label="Lane 12 / Design — Fictional Lab 4: student rank ×; employer rank 3; not matched" title="Lane 12 / Design — Fictional Lab 4: student rank ×; employer rank 3; not matched"><span class="rank-pair">× / 3</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i005" aria-label="Lane 12 / Climate research — Fictional Lab 5: student rank ×; employer rank 4; not matched" title="Lane 12 / Climate research — Fictional Lab 5: student rank ×; employer rank 4; not matched"><span class="rank-pair">× / 4</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i006" aria-label="Lane 12 / Data analysis — Fictional Lab 6: student rank ×; employer rank 10; not matched" title="Lane 12 / Data analysis — Fictional Lab 6: student rank ×; employer rank 10; not matched"><span class="rank-pair">× / 10</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i007" aria-label="Lane 12 / Software development — Fictional Lab 7: student rank ×; employer rank 8; not matched" title="Lane 12 / Software development — Fictional Lab 7: student rank ×; employer rank 8; not matched"><span class="rank-pair">× / 8</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i008" aria-label="Lane 12 / Policy research — Fictional Lab 8: student rank ×; employer rank 6; not matched" title="Lane 12 / Policy research — Fictional Lab 8: student rank ×; employer rank 6; not matched"><span class="rank-pair">× / 6</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i009" aria-label="Lane 12 / Design — Fictional Lab 9: student rank ×; employer rank 4; not matched" title="Lane 12 / Design — Fictional Lab 9: student rank ×; employer rank 4; not matched"><span class="rank-pair">× / 4</span></td>
+    <td class="unacceptable" data-student="s012" data-opening="i010" aria-label="Lane 12 / Climate research — Fictional Lab 10: student rank ×; employer rank 10; not matched" title="Lane 12 / Climate research — Fictional Lab 10: student rank ×; employer rank 10; not matched"><span class="rank-pair">× / 10</span></td>
+    <td class="outcome">Unmatched</td></tr>
+    </tbody></table></div>
+    <p><strong>Why doesn’t Alex get Lab 8, their first choice?</strong> Lab 8 ranks Alex eighth and Blair first. The stable outcome assigns Blair to Lab 8 and Alex to Lab 3. A high ranking from one side alone does not secure a match.</p>
+    <details><summary>Follow Alex’s proposals through this run</summary><p>Alex approaches Labs 8, 4, 1, 6, 2, 10, and 3 in that order. Labs 8 and 1 initially hold Alex, then replace Alex with applicants they prefer. Labs 4, 6, 2, and 10 reject Alex when approached. Lab 3 holds Alex through the end, producing the 7 / 2 match.</p></details>
+    <p><strong>Two students remain unmatched.</strong> Finley 6 exhausts their acceptable options during matching. Lane 12 explicitly rejects all ten openings—the × entries across Lane’s row are submitted choices, not missing answers.</p>
+    <p class="small muted">This matrix is computed from the downloadable preference file using student-proposing deferred acceptance. The <a href="#start">commands below</a> reproduce it without model calls or survey invitations.</p>
+    <!-- END GENERATED PREFERENCES -->
+  </section>
+
+  <section id="matching">
+    <h2><span class="chapter">03 · The method</span>What makes a match stable?</h2>
+    <p>A <strong>blocking pair</strong> is a student and an internship that would both prefer to be matched with one another rather than keep their current assignments. A stable matching has no such pair, relative to the preferences and candidates considered.</p>
+    <p>With students proposing, deferred acceptance works like this:</p>
+    <ol class="timeline">
+      <li><strong>Students apply in preference order.</strong> Each unmatched student approaches their most-preferred opening that has not yet rejected them.</li>
+      <li><strong>Openings hold their preferred acceptable applicant.</strong> An employer can replace a tentative hold with an applicant it ranks higher. Other applicants are rejected.</li>
+      <li><strong>Rejected students try their next option.</strong> The process continues until nobody has another proposal to make. Tentative holds then become final assignments.</li>
+    </ol>
+    <p>Someone can remain unmatched because they ran out of acceptable partners. An opening can also remain empty. Roth never forces a match that either side rejected.</p>
+    <div class="callout"><p><strong>The proposing side matters.</strong> In the standard strict one-to-one model, proposers receive their best outcome among stable matchings. The organizer selects that side before fielding; Roth also computes the reverse orientation by default so the difference is visible.</p></div>
+    <p class="small muted">For the economic background, see <a href="https://www.nobelprize.org/uploads/2018/06/roth-lecture.pdf">Alvin Roth's Nobel lecture on market design</a>. Roth 0.1.0 supports strict one-to-one rankings; many-to-one matching with capacities is planned for a later release.</p>
+  </section>
+
+  <section id="start">
+    <h2><span class="chapter">04 · Get started</span>Run the example locally</h2>
+    <p>From a checkout of this package, install Roth with Python 3.11 or newer. The core demo runs locally and needs no EDSL account.</p>
+    <pre><code><span class="comment"># From the Roth source directory</span>
+python -m pip install -e .</code></pre>
+    <h3>1. Create the market and inspect the input files</h3>
+    <pre><code><span class="program">roth</span> example create internship-study
+<span class="program">roth</span> --project internship-study status</code></pre>
+    <p>This initializes 22 participants and writes two files. The status still reports <code>completed: 0</code>: the preference file exists, but its rows have not yet been imported.</p>
+    <div class="table-wrap"><table class="file-flow"><thead><tr><th scope="col">File in internship-study/</th><th scope="col">What it contains</th></tr></thead><tbody>
+      <tr><td><code>market.json</code></td><td>The 12 students and 10 openings: IDs, profiles, preference descriptions, and organizer rules. <a href="assets/internship-market.json">View the example market</a>.</td></tr>
+      <tr><td><code>preferences.json</code></td><td>22 explicit ranking records, one per participant. These are the inputs shown in the <a href="#ranking-matrix">matrix above</a>. <a href="assets/internship-preferences.json" download>Download all 22 records</a>.</td></tr>
+    </tbody></table></div>
+    <h3>2. Import the rankings</h3>
+    <pre><code><span class="program">roth</span> --project internship-study preferences import \
+  internship-study/preferences.json
+<span class="program">roth</span> --project internship-study status
+<span class="program">roth</span> --project internship-study preferences show</code></pre>
+    <p>The import reads the JSON array, checks participant and candidate IDs, checks for duplicate or contradictory choices, and records each participant's ordered list. It preserves the submitted order. The import reports <code>imported: 22</code> and <code>unchanged: 0</code>; status now shows <code>completed: 22</code> and an empty <code>missing</code> list. <code>preferences show</code> prints the active records for inspection.</p>
+    <p>This step imports explicit rankings from the file. Natural-language descriptions in <code>market.json</code> are only used to infer rankings when you separately run the <a href="#delegation">delegated scoring workflow</a>. With people, the <a href="#humans">survey response importer</a> produces these preference records instead.</p>
+    <h3>3. Freeze those inputs and compute the assignments</h3>
+    <pre><code><span class="program">roth</span> --project internship-study preferences freeze --name main
+<span class="program">roth</span> --project internship-study match --snapshot main --name main
+<span class="program">roth</span> --project internship-study report --run main \
+  --output internship-study/report</code></pre>
+    <p><strong>Freeze</strong> records the exact cohort and preference lists used for a run. The matching command runs student-proposing deferred acceptance on that snapshot, producing the ten highlighted assignments in the matrix. Later answers or revisions produce a new snapshot, so you can reproduce the earlier assignments.</p>
+    <details><summary>Shortcut: run all of these steps together</summary><pre><code><span class="program">roth</span> demo internship-demo</code></pre><p>This creates a separate project, imports the fictional rankings, freezes them, computes matches, and exports results and survey previews. In the development workspace, the installed executable is <code>.venv/bin/roth</code>.</p></details>
+    <details><summary>Bring your own participants</summary>
+      <p>Import a complete market definition, or supply one file per side. Participant IDs must be unique. CSV and JSON side files can include profiles, natural-language preferences, and separate contact information.</p>
+      <pre><code><span class="program">roth</span> --project my-study init --left students.csv --right internships.csv
+<span class="comment"># Or import the full definition, including organizer policies:</span>
+<span class="program">roth</span> --project another-study init market.json</code></pre>
+      <p>EDSL AgentLists are also accepted. The <a href="contracts.md">data contract reference</a> describes the fields, policies, and response formats.</p>
+    </details>
+  </section>
+
+  <section id="humans">
+    <h2><span class="chapter">05 · Human preferences</span>Ask both sides to rank</h2>
+    <p>For human participation, install the fielding extra and generate personalized surveys. Each student sees internship profiles; each employer representative sees students for their opening.</p>
+    <pre><code>python -m pip install -e '.[fielding]'
+<span class="program">roth</span> --project internship-study field build --name rankings \
+  --output internship-study/rankings</code></pre>
+    <p>The participant ranks the displayed options alongside <strong>Remain unmatched</strong>. Candidates placed below that outside option are unacceptable, unless the participant separately marks them as impossible to assess.</p>
+    <div class="table-wrap"><table><thead><tr><th scope="col">Participant response</th><th scope="col">What Roth records</th></tr></thead><tbody>
+      <tr><td>“I would accept this option.”</td><td>An acceptable candidate in the participant's ranking</td></tr>
+      <tr><td>“I would rather remain unmatched.”</td><td>An explicit rejection</td></tr>
+      <tr><td>“I do not have enough information.”</td><td>An unresolved candidate, not a rejection</td></tr>
+      <tr><td>No completed survey</td><td>A nonrespondent, not an empty preference list</td></tr>
+    </tbody></table></div>
+    <h3>From preview to email invitation</h3>
+    <p>Review the generated <code>preview.html</code>, then use the commands in <code>handoff.json</code> to create the surveys through EDSL Humanize. Register the returned survey identifiers in Roth. Registration provides the next commands for email invitations, delivery status, and response retrieval.</p>
+    <p>The organizer supplies real email addresses for recruitment. Roth prepares the survey and recipient mapping; external <code>ep</code> commands publish it and send the invitations. The fictional example contains no deliverable email addresses.</p>
+    <details><summary>Register a survey and import its answers</summary>
+      <pre><code><span class="comment"># Replace HUMAN_SURVEY_UUID with the identifier returned by Humanize.</span>
+<span class="program">roth</span> --project internship-study field register --field rankings \
+  --package rankings_s001_1 --uuid HUMAN_SURVEY_UUID
+
+<span class="program">ep</span> humanize responses HUMAN_SURVEY_UUID --output student-results.ep
+<span class="program">roth</span> --project internship-study field import student-results.ep \
+  --name rankings --edsl
+<span class="program">roth</span> --project internship-study field status --name rankings</code></pre>
+      <p>The importer checks participant identity, question wording, option order, and required answers against the saved survey package. Use <code>--replace</code> for an explicit revised submission; earlier answers remain in the project history.</p>
+      <p class="small muted">If replacing the example's already-imported fictional rankings, use a new human-fielding project or explicitly replace those fixtures during import.</p>
+    </details>
+    <h3>Close the cohort deliberately</h3>
+    <p>Final matching requires completed preferences for everyone in the active cohort. At the deadline, the organizer can explicitly exclude nonrespondents from a new snapshot. Roth records that reduced cohort so the result cannot be confused with a run covering every invitee.</p>
+    <p class="small muted">Native EDSL package and response round trips have been tested locally. Hosted survey presentation and email delivery still need a live pilot before recruitment.</p>
+  </section>
+
+  <section id="delegation">
+    <h2><span class="chapter">06 · Delegated preferences</span>Describe the tradeoffs. Let the model rank.</h2>
+    <p>Reviewing every possible partner becomes burdensome as a market grows. In delegated mode, participants explain their preferences in natural language and the model evaluates candidate profiles on their behalf.</p>
+    <blockquote><p>“I want hands-on data analysis experience and strong mentoring. Remote work would help, but I would consider an on-site role if the learning opportunity were better. Pay matters less to me than the work.”</p></blockquote>
+    <p>An employer provides its own instructions for an opening. Roth retrieves promising candidates, scores them against the relevant instructions, and records an explanation and acceptability judgment for each evaluation.</p>
+    <div class="table-wrap"><table><thead><tr><th scope="col">Organizer setting</th><th scope="col">How preferences become final</th></tr></thead><tbody>
+      <tr><th scope="row">Direct</th><td>People supply their rankings.</td></tr><tr><th scope="row">Delegated</th><td>The organizer permits inferred rankings to be used directly.</td></tr><tr><th scope="row">Confirmation required</th><td>Participants must confirm the inferred ranking before it can be used.</td></tr>
+    </tbody></table></div>
+    <p>The organizer can choose a different policy for each side. Explicit human rankings are preserved when model scores are applied.</p>
+    <h3>Separate evaluation from matching</h3>
+    <p>The model produces preferences first. Deferred acceptance then runs on a fixed ordering. This prevents a candidate's position from changing because the model gave a different answer halfway through matching.</p>
+    <details><summary>Prepare and apply a scoring run</summary>
+      <p>The canned example enables delegation and includes preference descriptions. <code>YOUR_MODEL</code> is a placeholder for the model selected by the organizer.</p>
+      <pre><code><span class="program">roth</span> example create delegated-study
+<span class="program">roth</span> --project delegated-study score plan --name baseline \
+  --model YOUR_MODEL --k 4 --budget 200 --output delegated-study/baseline
+
+<span class="comment"># Inspect the plan and cost; execute the generated EDSL handoff.</span>
+<span class="program">roth</span> --project delegated-study score import delegated-study/results.ep \
+  --name baseline --edsl
+<span class="program">roth</span> --project delegated-study score apply --name baseline</code></pre>
+      <p>Run the optional benchmark before applying final scores if you want to incorporate its answers. The <a href="delegation.md">complete delegation walkthrough</a> includes that sequence, score retries, confirmation, and an offline path using clearly labeled synthetic answers.</p>
+    </details>
+  </section>
+
+  <section id="benchmark">
+    <h2><span class="chapter">07 · Optional preference check</span>Would the model choose what you would?</h2>
+    <p>A plausible explanation does not establish that the model understood someone's preferences. Roth can generate a short A-versus-B survey and compare the participant's choices with predictions saved in advance.</p>
+    <figure class="survey">
+      <div class="tag">An illustrative student question</div>
+      <h3>Which internship would you prefer?</h3>
+      <div class="two-col">
+        <div class="card"><span class="tag">Option A</span><h3>More mentoring</h3><ul class="profile-facts"><li>Data analysis · remote</li><li>Daily guidance from a mentor</li><li>$22 per hour</li></ul></div>
+        <div class="card"><span class="tag">Option B</span><h3>Higher compensation</h3><ul class="profile-facts"><li>Data analysis · remote</li><li>Weekly guidance from a mentor</li><li>$28 per hour</li></ul></div>
+      </div>
+      <div class="rating-scale" aria-label="Five preference responses"><span>Strongly<br>prefer A</span><span>Somewhat<br>prefer A</span><span>Indifferent</span><span>Somewhat<br>prefer B</span><span>Strongly<br>prefer B</span></div>
+      <p class="small">The survey also asks whether each option is acceptable at all, allows “Insufficient information,” and provides space to explain the tradeoff.</p>
+      <figcaption>Illustrative profiles to explain the question format. Actual benchmark questions use candidates from the participant's scored pool. This diagram is not a live survey or a model result.</figcaption>
+    </figure>
+    <p>Questions combine representative pairs with revealing comparisons, such as options the model scores similarly. The displayed A/B order is randomized, and participants do not see the model's prediction while answering.</p>
+    <div class="branches">
+      <div class="branch"><h3>Calibration questions</h3><p>The model can use these answers and explanations to refine its interpretation of the participant's preferences.</p></div>
+      <div class="branch holdout"><h3>Held-out questions</h3><p>Predictions are frozen before these answers are imported. Their agreement measures how well the model predicted choices it had not seen.</p></div>
+    </div>
+    <p>The organizer can treat the benchmark as advisory or require a minimum level of agreement before using delegated preferences. Reports show answer counts, disagreements, ties, and acceptability errors for each participant, with targeted and representative questions kept separate.</p>
+    <p class="callout"><strong>Refining and evaluating are different steps.</strong> Answers used to improve the model cannot also serve as fresh evidence of its accuracy. Once held-out answers are revealed, another prediction round needs a new benchmark.</p>
+    <p>Explicit human choices also constrain the final inferred ranking. Preferring A to B does not make either acceptable: a participant can reject both. Conflicting comparisons are flagged for clarification.</p>
+  </section>
+
+  <section id="large-markets">
+    <h2><span class="chapter">08 · When there are too many options</span>Budget attention as well as model calls</h2>
+    <h3>For people: screen, then rank across batches</h3>
+    <p>The default direct-ranking budget is 15 candidates. For larger lists, generate manageable screening batches, collect acceptability judgments, then ask for a single ranking across the accepted candidates. Separate batch rankings alone would leave their relative order unresolved.</p>
+    <pre><code><span class="program">roth</span> --project internship-study field build --kind screening \
+  --name screening --batch-size 10 --output internship-study/screening
+<span class="comment"># Import the screening responses, then build the final ranking.</span>
+<span class="program">roth</span> --project internship-study field build --name final-ranking \
+  --output internship-study/final-ranking</code></pre>
+    <p>If too many acceptable candidates remain, the organizer can raise the ranking budget explicitly or field a retrieved shortlist. Follow-up rounds can expand the candidates considered.</p>
+    <h3>For models: retrieve, score, and expand</h3>
+    <p>Roth's initial retrieval method matches words in preference descriptions to candidate profiles. It retrieves from both directions and combines the proposed pairs. When both sides delegate, each retained pair receives two evaluations: how the student values the opening, and how the employer values the student.</p>
+    <p>Matching instructions, profiles, model settings, and calibration evidence allow a previous score to be reused. Expansion adds candidates while retaining earlier work. Sampling omitted candidates provides an additional check on what retrieval may have missed.</p>
+    <figure class="chart">
+      <div class="tag">Synthetic scale example · 200 students × 150 openings</div>
+      <div class="bar-row"><div class="bar-label"><span>Evaluate every pair in both directions</span><strong>60,000</strong></div><div class="bar-track"><div class="bar full" style="width:100%"></div></div></div>
+      <div class="bar-row"><div class="bar-label"><span>Initial shortlists · k = 5</span><strong>3,290</strong></div><div class="bar-track"><div class="bar" style="width:5.483333%"></div></div></div>
+      <div class="bar-row"><div class="bar-label"><span>Expanded shortlists · k = 10</span><strong>6,044 total</strong></div><div class="bar-track"><div class="bar expanded" style="width:10.073333%"></div></div></div>
+      <figcaption>Counts are directional candidate evaluations, not API requests. Expansion reused all 3,290 earlier scores and added 2,754 evaluations. Both shortlist runs filled 150 openings. These are local synthetic results, not measurements of LLM quality or latency.</figcaption>
+    </figure>
+    <div class="callout warm"><p><strong>Shortlist stability has a boundary.</strong> These two runs were stable within their evaluated graphs. When checked against the full fictional preference lists, they still had 3,121 and 1,596 blocking pairs, respectively. Expanding a shortlist can help, but it does not certify that every desirable pair has been found.</p></div>
+    <p>Roth reports that boundary with each result: which participants were active, which candidates were considered, and whether the preferences were human, delegated, or synthetic.</p>
+  </section>
+
+  <section id="results">
+    <h2><span class="chapter">09 · Interpretation</span>Look beyond the number of matches</h2>
+    <p>A useful outcome explains who matched, who did not, and how the assignments relate to each side's preferences. Here is a compact reading of the complete 12-student example:</p>
+    <div class="table-wrap"><table><thead><tr><th scope="col">Measure</th><th scope="col">Students</th><th scope="col">Internship openings</th></tr></thead><tbody>
+      <tr><th scope="row">Matched</th><td>10 of 12</td><td>10 of 10</td></tr>
+      <tr><th scope="row">Assigned their first choice</th><td>1 of 12</td><td>5 of 10</td></tr>
+      <tr><th scope="row">Assigned a top-three choice</th><td>4 of 12</td><td>10 of 10</td></tr>
+      <tr><th scope="row">Mean assigned-partner rank, among matched participants</th><td>3.9</td><td>1.6</td></tr>
+    </tbody><caption>Students propose in this run. Preference lists are fictional and cover all eligible candidates; there are no blocking pairs under those lists. Top-choice rates include unmatched participants in their denominators.</caption></table></div>
+    <p>These statistics describe different things. Filling every opening does not mean every student received a highly ranked internship. Comparing the reverse proposing orientation helps reveal how the mechanism affects the allocation.</p>
+    <div class="two-col">
+      <div class="card"><h3>Understand preferences</h3><p>Inspect concentrated first-choice demand, mutual top-three interest, ranking agreement on shared candidates, and how often each candidate was evaluated.</p></div>
+      <div class="card"><h3>Understand coverage</h3><p>Check response rates, unresolved candidates, excluded nonrespondents, and the scope of the blocking-pair verification.</p></div>
+    </div>
+    <p>Ranks are ordinal. A first-to-second-choice difference does not have a common value across people, and an LLM score is not automatically comparable across participants. Roth does not present these numbers as a measure of total welfare.</p>
+    <h3>Keep the outcome reproducible</h3>
+    <p>Each run retains its preference snapshot, proposing side, assignments, and proposal trace. Local history under <code>.roth/</code> preserves earlier revisions. Exports include an organizer report, match and preference files, and individual summaries that reveal only the assigned partner's public profile.</p>
+  </section>
+
+  <section id="reference">
+    <h2><span class="chapter">10 · At your desk</span>The workflow reference</h2>
+    <p>Use <code>roth guide</code> to discover the workflow and <code>roth next</code> to inspect the next step for a project. The CLI returns structured output for an assistant; this guide explains the decisions behind those commands.</p>
+    <div class="table-wrap"><table class="reference"><thead><tr><th scope="col">You want to…</th><th scope="col">Start here</th></tr></thead><tbody>
+      <tr><td>Run the local example</td><td><code>roth demo internship-demo</code></td></tr>
+      <tr><td>Inspect a project's progress</td><td><code>roth --project study next</code></td></tr>
+      <tr><td>Build personalized surveys</td><td><code>roth --project study field build --help</code></td></tr>
+      <tr><td>Plan delegated evaluations</td><td><code>roth --project study score plan --help</code></td></tr>
+      <tr><td>Check preference predictions</td><td><code>roth --project study benchmark build --help</code></td></tr>
+      <tr><td>Freeze the active preferences</td><td><code>roth --project study preferences freeze --name main</code></td></tr>
+      <tr><td>Compute assignments</td><td><code>roth --project study match --snapshot main --name main</code></td></tr>
+      <tr><td>Verify a saved project</td><td><code>roth --project study validate</code></td></tr>
+    </tbody></table></div>
+    <p>For exact input schemas and the full fielding sequence, continue with the <a href="contracts.md">data contracts</a> and <a href="delegation.md">delegation and benchmark walkthrough</a>.</p>
+    <p class="small muted">This page describes Roth 0.1.0. Matching, survey construction, and native EDSL response imports are implemented. Real recruitment and real-model preference quality require a pilot in the intended market.</p>
+  </section>
+  <footer><p><strong>Roth</strong> · Two-sided matching with Expected Parrot · Python 3.11+ · MIT</p><a href="#content">Back to the top</a><a href="contracts.md">Data contracts</a><a href="delegation.md">Delegation walkthrough</a><a href="https://www.expectedparrot.com/">Expected Parrot</a></footer>
+</article></main>
+</body>
+</html>

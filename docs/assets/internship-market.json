@@ -1,0 +1,393 @@
+{
+  "name": "Fictional internship placement",
+  "side_labels": {
+    "left": "Students",
+    "right": "Internships"
+  },
+  "synthetic": true,
+  "participants": [
+    {
+      "id": "s001",
+      "side": "left",
+      "name": "Alex 1",
+      "profile": {
+        "skills": "Python and statistics",
+        "coursework": "Data analysis",
+        "project": "Completed a data analysis team project",
+        "availability": "June–August",
+        "location": "Boston"
+      },
+      "preferences": "I want data analysis experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-1"
+      }
+    },
+    {
+      "id": "s002",
+      "side": "left",
+      "name": "Blair 2",
+      "profile": {
+        "skills": "Python and web development",
+        "coursework": "Software development",
+        "project": "Completed a software development team project",
+        "availability": "June–August",
+        "location": "Remote"
+      },
+      "preferences": "I want software development experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-2"
+      }
+    },
+    {
+      "id": "s003",
+      "side": "left",
+      "name": "Casey 3",
+      "profile": {
+        "skills": "Writing and economics",
+        "coursework": "Policy research",
+        "project": "Completed a policy research team project",
+        "availability": "June–August",
+        "location": "Remote"
+      },
+      "preferences": "I want policy research experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-3"
+      }
+    },
+    {
+      "id": "s004",
+      "side": "left",
+      "name": "Devon 4",
+      "profile": {
+        "skills": "Design and user research",
+        "coursework": "Design",
+        "project": "Completed a design team project",
+        "availability": "June–August",
+        "location": "Boston"
+      },
+      "preferences": "I want design experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-4"
+      }
+    },
+    {
+      "id": "s005",
+      "side": "left",
+      "name": "Emery 5",
+      "profile": {
+        "skills": "Python and environmental science",
+        "coursework": "Climate research",
+        "project": "Completed a climate research team project",
+        "availability": "June–August",
+        "location": "Remote"
+      },
+      "preferences": "I want climate research experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-5"
+      }
+    },
+    {
+      "id": "s006",
+      "side": "left",
+      "name": "Finley 6",
+      "profile": {
+        "skills": "Python and statistics",
+        "coursework": "Data analysis",
+        "project": "Completed a data analysis team project",
+        "availability": "June–August",
+        "location": "Remote"
+      },
+      "preferences": "I want data analysis experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-6"
+      }
+    },
+    {
+      "id": "s007",
+      "side": "left",
+      "name": "Gray 7",
+      "profile": {
+        "skills": "Python and web development",
+        "coursework": "Software development",
+        "project": "Completed a software development team project",
+        "availability": "June–August",
+        "location": "Boston"
+      },
+      "preferences": "I want software development experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-7"
+      }
+    },
+    {
+      "id": "s008",
+      "side": "left",
+      "name": "Harper 8",
+      "profile": {
+        "skills": "Writing and economics",
+        "coursework": "Policy research",
+        "project": "Completed a policy research team project",
+        "availability": "June–August",
+        "location": "Remote"
+      },
+      "preferences": "I want policy research experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-8"
+      }
+    },
+    {
+      "id": "s009",
+      "side": "left",
+      "name": "Indigo 9",
+      "profile": {
+        "skills": "Design and user research",
+        "coursework": "Design",
+        "project": "Completed a design team project",
+        "availability": "June–August",
+        "location": "Remote"
+      },
+      "preferences": "I want design experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-9"
+      }
+    },
+    {
+      "id": "s010",
+      "side": "left",
+      "name": "Jules 10",
+      "profile": {
+        "skills": "Python and environmental science",
+        "coursework": "Climate research",
+        "project": "Completed a climate research team project",
+        "availability": "June–August",
+        "location": "Boston"
+      },
+      "preferences": "I want climate research experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-10"
+      }
+    },
+    {
+      "id": "s011",
+      "side": "left",
+      "name": "Kai 11",
+      "profile": {
+        "skills": "Python and statistics",
+        "coursework": "Data analysis",
+        "project": "Completed a data analysis team project",
+        "availability": "June–August",
+        "location": "Remote"
+      },
+      "preferences": "I want data analysis experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-11"
+      }
+    },
+    {
+      "id": "s012",
+      "side": "left",
+      "name": "Lane 12",
+      "profile": {
+        "skills": "Python and web development",
+        "coursework": "Software development",
+        "project": "Completed a software development team project",
+        "availability": "June–August",
+        "location": "Remote"
+      },
+      "preferences": "I want software development experience and strong mentoring. I prefer remote work and value learning over pay.",
+      "contact": {
+        "respondent_id": "student-12"
+      }
+    },
+    {
+      "id": "i001",
+      "side": "right",
+      "name": "Data analysis — Fictional Lab 1",
+      "profile": {
+        "work": "Data analysis",
+        "preferred_skills": "Python and statistics",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Boston",
+        "pay_per_hour_usd": 20,
+        "mentoring": "Weekly guidance"
+      },
+      "preferences": "Seek Python and statistics. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-1"
+      }
+    },
+    {
+      "id": "i002",
+      "side": "right",
+      "name": "Software development — Fictional Lab 2",
+      "profile": {
+        "work": "Software development",
+        "preferred_skills": "Python and web development",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Remote",
+        "pay_per_hour_usd": 22,
+        "mentoring": "Daily guidance"
+      },
+      "preferences": "Seek Python and web development. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-2"
+      }
+    },
+    {
+      "id": "i003",
+      "side": "right",
+      "name": "Policy research — Fictional Lab 3",
+      "profile": {
+        "work": "Policy research",
+        "preferred_skills": "Writing and economics",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Boston",
+        "pay_per_hour_usd": 24,
+        "mentoring": "Weekly guidance"
+      },
+      "preferences": "Seek Writing and economics. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-3"
+      }
+    },
+    {
+      "id": "i004",
+      "side": "right",
+      "name": "Design — Fictional Lab 4",
+      "profile": {
+        "work": "Design",
+        "preferred_skills": "Design and user research",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Remote",
+        "pay_per_hour_usd": 26,
+        "mentoring": "Daily guidance"
+      },
+      "preferences": "Seek Design and user research. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-4"
+      }
+    },
+    {
+      "id": "i005",
+      "side": "right",
+      "name": "Climate research — Fictional Lab 5",
+      "profile": {
+        "work": "Climate research",
+        "preferred_skills": "Python and environmental science",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Boston",
+        "pay_per_hour_usd": 28,
+        "mentoring": "Weekly guidance"
+      },
+      "preferences": "Seek Python and environmental science. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-5"
+      }
+    },
+    {
+      "id": "i006",
+      "side": "right",
+      "name": "Data analysis — Fictional Lab 6",
+      "profile": {
+        "work": "Data analysis",
+        "preferred_skills": "Python and statistics",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Remote",
+        "pay_per_hour_usd": 30,
+        "mentoring": "Daily guidance"
+      },
+      "preferences": "Seek Python and statistics. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-6"
+      }
+    },
+    {
+      "id": "i007",
+      "side": "right",
+      "name": "Software development — Fictional Lab 7",
+      "profile": {
+        "work": "Software development",
+        "preferred_skills": "Python and web development",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Boston",
+        "pay_per_hour_usd": 20,
+        "mentoring": "Weekly guidance"
+      },
+      "preferences": "Seek Python and web development. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-7"
+      }
+    },
+    {
+      "id": "i008",
+      "side": "right",
+      "name": "Policy research — Fictional Lab 8",
+      "profile": {
+        "work": "Policy research",
+        "preferred_skills": "Writing and economics",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Remote",
+        "pay_per_hour_usd": 22,
+        "mentoring": "Daily guidance"
+      },
+      "preferences": "Seek Writing and economics. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-8"
+      }
+    },
+    {
+      "id": "i009",
+      "side": "right",
+      "name": "Design — Fictional Lab 9",
+      "profile": {
+        "work": "Design",
+        "preferred_skills": "Design and user research",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Boston",
+        "pay_per_hour_usd": 24,
+        "mentoring": "Weekly guidance"
+      },
+      "preferences": "Seek Design and user research. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-9"
+      }
+    },
+    {
+      "id": "i010",
+      "side": "right",
+      "name": "Climate research — Fictional Lab 10",
+      "profile": {
+        "work": "Climate research",
+        "preferred_skills": "Python and environmental science",
+        "dates": "June–August",
+        "hours_per_week": 30,
+        "location": "Remote",
+        "pay_per_hour_usd": 26,
+        "mentoring": "Daily guidance"
+      },
+      "preferences": "Seek Python and environmental science. Value practical project experience and willingness to learn. Must be available June–August.",
+      "contact": {
+        "respondent_id": "employer-representative-10"
+      }
+    }
+  ],
+  "config": {
+    "proposing_side": "left",
+    "delegation": "delegated",
+    "side_policies": {},
+    "unknown_policy": "exclude",
+    "benchmark_policy": "advisory",
+    "benchmark_min_accuracy": 0.8,
+    "benchmark_min_answers": 5,
+    "deadline": null
+  },
+  "schema_version": "1.0"
+}

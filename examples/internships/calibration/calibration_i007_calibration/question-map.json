@@ -1,0 +1,93 @@
+{
+  "id": "calibration_i007_calibration",
+  "participant_id": "i007",
+  "questions": [
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_i007_q1_choice",
+      "question_text": "For Software development — Fictional Lab 7, compare these options.\nA: Blair 2 [s002]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}\n\nB: Gray 7 [s007]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}",
+      "question_options": [
+        "Strongly prefer A",
+        "Somewhat prefer A",
+        "Indifferent",
+        "Somewhat prefer B",
+        "Strongly prefer B",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_i007_q1_a",
+      "question_text": "Would you accept option A rather than remain unmatched?",
+      "question_options": [
+        "Acceptable",
+        "Unacceptable",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_i007_q1_b",
+      "question_text": "Would you accept option B rather than remain unmatched?",
+      "question_options": [
+        "Acceptable",
+        "Unacceptable",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "free_text",
+      "question_name": "calibration_i007_q1_why",
+      "question_text": "Explain the tradeoff, or enter 'No explanation'."
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_i007_q3_choice",
+      "question_text": "For Software development — Fictional Lab 7, compare these options.\nA: Alex 1 [s001]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Data analysis\",\n  \"location\": \"Boston\",\n  \"project\": \"Completed a data analysis team project\",\n  \"skills\": \"Python and statistics\"\n}\n\nB: Lane 12 [s012]\n{\n  \"availability\": \"June–August\",\n  \"coursework\": \"Software development\",\n  \"location\": \"Remote\",\n  \"project\": \"Completed a software development team project\",\n  \"skills\": \"Python and web development\"\n}",
+      "question_options": [
+        "Strongly prefer A",
+        "Somewhat prefer A",
+        "Indifferent",
+        "Somewhat prefer B",
+        "Strongly prefer B",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_i007_q3_a",
+      "question_text": "Would you accept option A rather than remain unmatched?",
+      "question_options": [
+        "Acceptable",
+        "Unacceptable",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "multiple_choice",
+      "question_name": "calibration_i007_q3_b",
+      "question_text": "Would you accept option B rather than remain unmatched?",
+      "question_options": [
+        "Acceptable",
+        "Unacceptable",
+        "Insufficient information"
+      ]
+    },
+    {
+      "kind": "free_text",
+      "question_name": "calibration_i007_q3_why",
+      "question_text": "Explain the tradeoff, or enter 'No explanation'."
+    }
+  ],
+  "question_ids": [
+    "calibration_i007_q1",
+    "calibration_i007_q3"
+  ],
+  "split": "calibration",
+  "candidates": [
+    "s001",
+    "s002",
+    "s007",
+    "s012"
+  ]
+}

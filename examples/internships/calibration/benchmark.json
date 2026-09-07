@@ -1,0 +1,718 @@
+{
+  "name": "calibration",
+  "market_hash": "f113aa1f22189a7c1cca8f504c31766302cd4ca84b57495d19330632593978a5",
+  "questions": [
+    {
+      "id": "calibration_i001_q1",
+      "participant_id": "i001",
+      "a": "s011",
+      "b": "s002",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i001_q2",
+      "participant_id": "i001",
+      "a": "s001",
+      "b": "s002",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i001_q3",
+      "participant_id": "i001",
+      "a": "s002",
+      "b": "s006",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i001_q4",
+      "participant_id": "i001",
+      "a": "s011",
+      "b": "s001",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i002_q1",
+      "participant_id": "i002",
+      "a": "s002",
+      "b": "s001",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i002_q2",
+      "participant_id": "i002",
+      "a": "s002",
+      "b": "s004",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i002_q3",
+      "participant_id": "i002",
+      "a": "s006",
+      "b": "s002",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i002_q4",
+      "participant_id": "i002",
+      "a": "s002",
+      "b": "s011",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i003_q1",
+      "participant_id": "i003",
+      "a": "s003",
+      "b": "s001",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i003_q2",
+      "participant_id": "i003",
+      "a": "s003",
+      "b": "s008",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i003_q3",
+      "participant_id": "i003",
+      "a": "s008",
+      "b": "s002",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i003_q4",
+      "participant_id": "i003",
+      "a": "s002",
+      "b": "s003",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i004_q1",
+      "participant_id": "i004",
+      "a": "s010",
+      "b": "s005",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i004_q2",
+      "participant_id": "i004",
+      "a": "s011",
+      "b": "s007",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i004_q3",
+      "participant_id": "i004",
+      "a": "s006",
+      "b": "s010",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i004_q4",
+      "participant_id": "i004",
+      "a": "s009",
+      "b": "s003",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i005_q1",
+      "participant_id": "i005",
+      "a": "s010",
+      "b": "s002",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i005_q2",
+      "participant_id": "i005",
+      "a": "s005",
+      "b": "s001",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i005_q3",
+      "participant_id": "i005",
+      "a": "s002",
+      "b": "s001",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i005_q4",
+      "participant_id": "i005",
+      "a": "s002",
+      "b": "s005",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i006_q1",
+      "participant_id": "i006",
+      "a": "s002",
+      "b": "s009",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i006_q2",
+      "participant_id": "i006",
+      "a": "s011",
+      "b": "s002",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i006_q3",
+      "participant_id": "i006",
+      "a": "s001",
+      "b": "s004",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i006_q4",
+      "participant_id": "i006",
+      "a": "s001",
+      "b": "s012",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i007_q1",
+      "participant_id": "i007",
+      "a": "s002",
+      "b": "s007",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i007_q2",
+      "participant_id": "i007",
+      "a": "s007",
+      "b": "s001",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i007_q3",
+      "participant_id": "i007",
+      "a": "s001",
+      "b": "s012",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i007_q4",
+      "participant_id": "i007",
+      "a": "s002",
+      "b": "s012",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i008_q1",
+      "participant_id": "i008",
+      "a": "s003",
+      "b": "s010",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i008_q2",
+      "participant_id": "i008",
+      "a": "s008",
+      "b": "s001",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i008_q3",
+      "participant_id": "i008",
+      "a": "s010",
+      "b": "s005",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i008_q4",
+      "participant_id": "i008",
+      "a": "s001",
+      "b": "s003",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i009_q1",
+      "participant_id": "i009",
+      "a": "s003",
+      "b": "s009",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i009_q2",
+      "participant_id": "i009",
+      "a": "s004",
+      "b": "s003",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i009_q3",
+      "participant_id": "i009",
+      "a": "s009",
+      "b": "s004",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i009_q4",
+      "participant_id": "i009",
+      "a": "s005",
+      "b": "s004",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i010_q1",
+      "participant_id": "i010",
+      "a": "s008",
+      "b": "s003",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i010_q2",
+      "participant_id": "i010",
+      "a": "s003",
+      "b": "s005",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_i010_q3",
+      "participant_id": "i010",
+      "a": "s003",
+      "b": "s010",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_i010_q4",
+      "participant_id": "i010",
+      "a": "s002",
+      "b": "s001",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s001_q1",
+      "participant_id": "s001",
+      "a": "i008",
+      "b": "i007",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s001_q2",
+      "participant_id": "s001",
+      "a": "i001",
+      "b": "i004",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s001_q3",
+      "participant_id": "s001",
+      "a": "i002",
+      "b": "i003",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s001_q4",
+      "participant_id": "s001",
+      "a": "i001",
+      "b": "i006",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s002_q1",
+      "participant_id": "s002",
+      "a": "i008",
+      "b": "i002",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s002_q2",
+      "participant_id": "s002",
+      "a": "i001",
+      "b": "i006",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s002_q3",
+      "participant_id": "s002",
+      "a": "i005",
+      "b": "i001",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s002_q4",
+      "participant_id": "s002",
+      "a": "i004",
+      "b": "i007",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s003_q1",
+      "participant_id": "s003",
+      "a": "i004",
+      "b": "i010",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s003_q2",
+      "participant_id": "s003",
+      "a": "i003",
+      "b": "i004",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s003_q3",
+      "participant_id": "s003",
+      "a": "i008",
+      "b": "i004",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s003_q4",
+      "participant_id": "s003",
+      "a": "i003",
+      "b": "i010",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s004_q1",
+      "participant_id": "s004",
+      "a": "i006",
+      "b": "i008",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s004_q2",
+      "participant_id": "s004",
+      "a": "i002",
+      "b": "i008",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s004_q3",
+      "participant_id": "s004",
+      "a": "i009",
+      "b": "i008",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s004_q4",
+      "participant_id": "s004",
+      "a": "i009",
+      "b": "i004",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s005_q1",
+      "participant_id": "s005",
+      "a": "i008",
+      "b": "i004",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s005_q2",
+      "participant_id": "s005",
+      "a": "i005",
+      "b": "i008",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s005_q3",
+      "participant_id": "s005",
+      "a": "i008",
+      "b": "i009",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s005_q4",
+      "participant_id": "s005",
+      "a": "i008",
+      "b": "i010",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s006_q1",
+      "participant_id": "s006",
+      "a": "i001",
+      "b": "i006",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s006_q2",
+      "participant_id": "s006",
+      "a": "i006",
+      "b": "i002",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s006_q3",
+      "participant_id": "s006",
+      "a": "i004",
+      "b": "i006",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s006_q4",
+      "participant_id": "s006",
+      "a": "i004",
+      "b": "i002",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s007_q1",
+      "participant_id": "s007",
+      "a": "i006",
+      "b": "i004",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s007_q2",
+      "participant_id": "s007",
+      "a": "i007",
+      "b": "i004",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s007_q3",
+      "participant_id": "s007",
+      "a": "i007",
+      "b": "i002",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s007_q4",
+      "participant_id": "s007",
+      "a": "i007",
+      "b": "i006",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s008_q1",
+      "participant_id": "s008",
+      "a": "i004",
+      "b": "i003",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s008_q2",
+      "participant_id": "s008",
+      "a": "i004",
+      "b": "i008",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s008_q3",
+      "participant_id": "s008",
+      "a": "i003",
+      "b": "i010",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s008_q4",
+      "participant_id": "s008",
+      "a": "i008",
+      "b": "i003",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s009_q1",
+      "participant_id": "s009",
+      "a": "i004",
+      "b": "i006",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s009_q2",
+      "participant_id": "s009",
+      "a": "i009",
+      "b": "i006",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s009_q3",
+      "participant_id": "s009",
+      "a": "i002",
+      "b": "i004",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s009_q4",
+      "participant_id": "s009",
+      "a": "i008",
+      "b": "i004",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s010_q1",
+      "participant_id": "s010",
+      "a": "i005",
+      "b": "i004",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s010_q2",
+      "participant_id": "s010",
+      "a": "i004",
+      "b": "i008",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s010_q3",
+      "participant_id": "s010",
+      "a": "i005",
+      "b": "i010",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s010_q4",
+      "participant_id": "s010",
+      "a": "i004",
+      "b": "i010",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s011_q1",
+      "participant_id": "s011",
+      "a": "i004",
+      "b": "i006",
+      "selection": "representative",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s011_q2",
+      "participant_id": "s011",
+      "a": "i002",
+      "b": "i001",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s011_q3",
+      "participant_id": "s011",
+      "a": "i004",
+      "b": "i001",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s011_q4",
+      "participant_id": "s011",
+      "a": "i006",
+      "b": "i001",
+      "selection": "diagnostic",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s012_q1",
+      "participant_id": "s012",
+      "a": "i006",
+      "b": "i002",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s012_q2",
+      "participant_id": "s012",
+      "a": "i007",
+      "b": "i004",
+      "selection": "representative",
+      "split": "evaluation"
+    },
+    {
+      "id": "calibration_s012_q3",
+      "participant_id": "s012",
+      "a": "i002",
+      "b": "i007",
+      "selection": "diagnostic",
+      "split": "calibration"
+    },
+    {
+      "id": "calibration_s012_q4",
+      "participant_id": "s012",
+      "a": "i002",
+      "b": "i004",
+      "selection": "representative",
+      "split": "evaluation"
+    }
+  ],
+  "answers": {},
+  "prediction_order": [
+    "baseline"
+  ],
+  "seed": 17,
+  "retired": false,
+  "selection_score_hash": "de07bd3ee3c7091e8643f3672426ce3dcf7e119c4ebd780503178fc6712f142e",
+  "source": "human"
+}
