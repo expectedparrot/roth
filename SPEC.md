@@ -1,6 +1,6 @@
 # Roth — working specification
 
-Status: initial specification, implemented as Roth 0.1.0 on 2026-09-07.
+Status: implemented through Roth 0.3.0 on 2026-09-07; the initial design and subsequent extensions are recorded below.
 See `README.md`, `roth guide`, and `docs/` for the implemented commands and contracts.
 The package name follows the current
 directory. One-to-one matching for the initial release, deferring many-to-one
@@ -318,7 +318,57 @@ respondent sees their intended candidates and their answers return to the correc
 4. Whether restricted-market stability is sufficient, or exhaustive coverage is
    required for a particular application.
 
-## Background
+## Joint team/project extension — implemented in 0.2
+
+Students may rank both projects and potential teammates. The organizer sets a
+target team size and whether smaller/larger teams are allowed, with explicit
+bounds. Each student is assigned once and each project hosts at most one team.
+This is a separate optimization workflow, not many-to-one deferred acceptance.
+
+The agreed first mechanism converts strict, possibly partial rankings to Borda
+scores and solves team formation and project assignment jointly as a MILP.
+Project IDs label teams, eliminating anonymous group-slot symmetry. Pairwise
+co-membership products are linearized exactly. The mechanism first minimizes
+absolute deviation from the target team size, then maximizes the weighted sum
+of normalized project and teammate Borda scores. Directed teammate scores are
+retained and both directions contribute to the aggregate objective.
+
+Unlisted candidates earn zero points under the declared scoring policy, while
+remaining distinct from explicit project exclusions and teammate incompatibilities.
+Every student needs a completed submission; hard constraints are never relaxed
+silently. Optional SciPy/HiGHS execution reports bounds, solver limits, and whether
+optimality was established. Each export freezes the input files, scoring rules,
+assignments, and a human-readable matrix report. A fictional classroom example
+and exhaustive small-market verification accompany the implementation.
+
+Strategy-proofness, HZ-style prices or lotteries, point budgets, fairness floors,
+skill coverage, repeated projects, and team-specific Humanize fielding are not
+part of this first extension. See [the full formulation](docs/teams.md).
+
+## Agent intake and next-step guidance
+
+`roth agent next` is the shared, read-only entry point for a calling agent.
+Before a project exists it provides structural routing rules and questions:
+two-sided one-to-one or many-to-one matching versus joint team/project optimization.
+Many-to-many, roommate, and other unsupported structures are not silently transformed into
+supported ones. The agent uses the user's description and prior answers, then
+records the selected scenario and collection method through flags and input files.
+
+For existing inputs, guidance validates schemas and resumes the applicable
+workflow: ranking imports, human surveys and screening, delegated scoring,
+required confirmations, freeze/match/report, or the team solver. It returns
+explanations, unresolved questions, and exact command arrays with mutation and
+network/authorization metadata. It never executes commands, sends questions,
+launches inference, or changes files. Each response can include a rerun command
+that preserves the intended inputs and newly selected report path.
+
+Team reports are checked against normalized input hashes and independently
+recomputed assignments/scores; solver limits remain explicit. One-to-one
+guidance checks freeze prerequisites on an in-memory state copy. Existing
+reports, submissions, and organizer policy decisions remain authoritative until
+an explicit revision is made. See [the interface contract](docs/agent.md).
+
+## Background sources
 
 - [Roth's Nobel lecture](https://www.nobelprize.org/uploads/2018/06/roth-lecture.pdf)
   describes deferred acceptance, stability, and the significance of the proposing side.
@@ -327,3 +377,21 @@ respondent sees their intended candidates and their answers return to the correc
 - Local integration references inspected: `../green/green/docs_content/codegen.md`,
   `../edsl/edsl/jobs/jobs.py`, `../edsl/edsl/cli_commands/humanize.py`, and
   `../edsl/edsl/coop/coop_humanize_notifications.py`.
+
+## Many-to-one extension (0.3.0)
+
+The previously deferred capacity extension is implemented. Participant capacity
+is a nonnegative integer, default one; at most one side may have capacities
+above one. Zero closes a position. Deferred acceptance works in either proposing
+orientation without synthetic slot IDs. Preferences are strict individual
+rankings interpreted responsively, with unacceptable/unknown edges retained
+under the existing contracts. No minimum fill, group complementarities, couples,
+or many-to-many behavior is implied.
+
+Frozen snapshots include capacities. Independent verification checks quotas,
+mutual acceptability, duplicate edges, and blocking pairs against a vacancy or a
+lower-ranked incumbent. Reports retain every partner, expose vacancies separately
+from unmatched participants, and show both directional ranks in a matches matrix.
+The mentorship example has 30 fictional employees and 10 mentors with capacity
+three. Existing human/delegated collection and agent guidance share this mode.
+See [the guide](docs/many-to-one.md) for commands and API details.

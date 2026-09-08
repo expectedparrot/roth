@@ -1,0 +1,27 @@
+{
+  "participant_id": "e025",
+  "partners": [
+    {
+      "id": "m005",
+      "name": "Fictional Mentor 5",
+      "profile": {
+        "topic": "Research",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      }
+    }
+  ],
+  "capacity": 1,
+  "unfilled_slots": 0,
+  "run": "main",
+  "reason": null,
+  "partner": {
+    "id": "m005",
+    "name": "Fictional Mentor 5",
+    "profile": {
+      "topic": "Research",
+      "role": "Mentor",
+      "availability": "One meeting every two weeks"
+    }
+  }
+}

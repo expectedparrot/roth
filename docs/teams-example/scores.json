@@ -1,0 +1,146 @@
+{
+  "s01": {
+    "projects": {
+      "climate": 4,
+      "housing": 3,
+      "transit": 2
+    },
+    "teammates": {
+      "s02": 10,
+      "s03": 9,
+      "s05": 8
+    }
+  },
+  "s02": {
+    "projects": {
+      "housing": 4,
+      "climate": 3,
+      "food": 2
+    },
+    "teammates": {
+      "s01": 10,
+      "s03": 9,
+      "s06": 8
+    }
+  },
+  "s03": {
+    "projects": {
+      "transit": 4,
+      "housing": 3,
+      "library": 2
+    },
+    "teammates": {
+      "s01": 10,
+      "s02": 9,
+      "s07": 8
+    }
+  },
+  "s04": {
+    "projects": {
+      "housing": 4,
+      "food": 3,
+      "climate": 2
+    },
+    "teammates": {
+      "s05": 10,
+      "s06": 9,
+      "s08": 8
+    }
+  },
+  "s05": {
+    "projects": {
+      "food": 4,
+      "housing": 3,
+      "library": 2
+    },
+    "teammates": {
+      "s04": 10,
+      "s06": 9,
+      "s09": 8
+    }
+  },
+  "s06": {
+    "projects": {
+      "climate": 4,
+      "transit": 3,
+      "housing": 2
+    },
+    "teammates": {
+      "s04": 10,
+      "s05": 9,
+      "s10": 8
+    }
+  },
+  "s07": {
+    "projects": {
+      "transit": 4,
+      "library": 3,
+      "food": 2
+    },
+    "teammates": {
+      "s08": 10,
+      "s09": 9,
+      "s11": 8
+    }
+  },
+  "s08": {
+    "projects": {
+      "library": 4,
+      "transit": 3,
+      "climate": 2
+    },
+    "teammates": {
+      "s07": 10,
+      "s09": 9,
+      "s12": 8
+    }
+  },
+  "s09": {
+    "projects": {
+      "food": 4,
+      "transit": 3,
+      "housing": 2
+    },
+    "teammates": {
+      "s07": 10,
+      "s08": 9,
+      "s01": 8
+    }
+  },
+  "s10": {
+    "projects": {
+      "food": 4,
+      "climate": 3,
+      "library": 2
+    },
+    "teammates": {
+      "s11": 10,
+      "s12": 9,
+      "s02": 8
+    }
+  },
+  "s11": {
+    "projects": {
+      "climate": 4,
+      "food": 3,
+      "transit": 2
+    },
+    "teammates": {
+      "s10": 10,
+      "s12": 9,
+      "s03": 8
+    }
+  },
+  "s12": {
+    "projects": {
+      "library": 4,
+      "food": 3,
+      "housing": 2
+    },
+    "teammates": {
+      "s10": 10,
+      "s11": 9,
+      "s04": 8
+    }
+  }
+}

@@ -68,10 +68,12 @@ def test_complete_policy_and_invalid_preferences(state):
             validate_preferences(state["market"], [{**rows[0], **bad}])
 
 
-def test_one_slot_and_contact_separation(state):
+def test_capacity_scope_and_contact_separation(state):
     bad = copy.deepcopy(state["market"])
     bad["participants"][0]["capacity"] = 2
-    with pytest.raises(RothError, match="one-to-one"):
+    assert validate_market(bad)["participants"][0]["capacity"] == 2
+    bad["participants"][-1]["capacity"] = 2
+    with pytest.raises(RothError, match="Many-to-many"):
         validate_market(bad)
     bad = copy.deepcopy(state["market"])
     bad["participants"][0]["profile"]["email"] = "private@example.invalid"

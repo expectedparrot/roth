@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 from .analysis import preference_statistics
 from .common import digest, identifier, require
-from .market import eligible, participants, policy, validate_preferences
+from .market import capacities, eligible, participants, policy, validate_preferences
 from .matching import deferred_acceptance
 
 
@@ -147,7 +147,8 @@ def run_matching(state, snapshot_name, name, side=None, compare=True):
             c for c in row["ranking"] if c in active
         ]
     side = side or market["config"]["proposing_side"]
-    result = deferred_acceptance(left, right, side)
+    quotas = capacities(market, active)
+    result = deferred_acceptance(left, right, side, quotas)
     result.update(
         {
             "name": name,
@@ -165,7 +166,7 @@ def run_matching(state, snapshot_name, name, side=None, compare=True):
     )
     if compare:
         reverse = deferred_acceptance(
-            left, right, "right" if side == "left" else "left"
+            left, right, "right" if side == "left" else "left", quotas
         )
         result["comparison"] = {
             "proposing_side": reverse["proposing_side"],

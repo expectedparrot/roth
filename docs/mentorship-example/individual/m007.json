@@ -1,0 +1,36 @@
+{
+  "participant_id": "m007",
+  "partners": [
+    {
+      "id": "e002",
+      "name": "Fictional Employee 2",
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      }
+    },
+    {
+      "id": "e017",
+      "name": "Fictional Employee 17",
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      }
+    },
+    {
+      "id": "e027",
+      "name": "Fictional Employee 27",
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      }
+    }
+  ],
+  "capacity": 3,
+  "unfilled_slots": 0,
+  "run": "main",
+  "reason": null
+}

@@ -143,6 +143,8 @@ def build_plan(
                 "participant_id": pid,
                 "candidate_id": candidate,
                 "instructions": people[pid]["preferences"],
+                "capacity": people[pid].get("capacity", 1),
+                "capacity_rule": "Evaluate each individual independently of other partners; acceptable means preferable to leaving an available slot empty. Capacity is an upper bound, not a ranking-length limit.",
                 "participant": public_profile(people[pid]),
                 "candidate": public_profile(people[candidate]),
                 "rubric": RUBRIC,

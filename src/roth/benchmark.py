@@ -96,6 +96,10 @@ def build_benchmark(state, name, output, scores, pairs=6, seed=17, native=True):
             }
             questions.append(q)
             text = f"For {people[pid]['name']}, compare these options.\nA: {profile_text(people[a])}\n\nB: {profile_text(people[b])}"
+            outside = "remain unmatched"
+            if people[pid].get("capacity", 1) != 1:
+                text += f"\nYour capacity is {people[pid]['capacity']}. Compare these individuals independently of your other partners, for an available slot."
+                outside = "leave an additional slot empty"
             qdescriptors.extend(
                 [
                     {
@@ -107,13 +111,13 @@ def build_benchmark(state, name, output, scores, pairs=6, seed=17, native=True):
                     {
                         "kind": "multiple_choice",
                         "question_name": qid + "_a",
-                        "question_text": "Would you accept option A rather than remain unmatched?",
+                        "question_text": f"Would you accept option A rather than {outside}?",
                         "question_options": ACCEPTABILITY,
                     },
                     {
                         "kind": "multiple_choice",
                         "question_name": qid + "_b",
-                        "question_text": "Would you accept option B rather than remain unmatched?",
+                        "question_text": f"Would you accept option B rather than {outside}?",
                         "question_options": ACCEPTABILITY,
                     },
                     {

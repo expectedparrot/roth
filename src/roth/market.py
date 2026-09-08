@@ -33,7 +33,10 @@ def validate_market(raw):
         require(pid not in ids, f"Duplicate participant: {pid}")
         ids.add(pid)
         require(person.get("side") in ("left", "right"), f"Invalid side for {pid}")
-        require(person.get("capacity", 1) == 1, "Only one-to-one matching is supported")
+        require(
+            type(person.get("capacity", 1)) is int and person.get("capacity", 1) >= 0,
+            f"Capacity must be a nonnegative integer for {pid}",
+        )
         require(
             isinstance(person.get("name"), str) and person["name"].strip(),
             f"Missing name for {pid}",
@@ -56,6 +59,13 @@ def validate_market(raw):
             "Keep email, contact, and private preferences outside public profile",
         )
     require(ids, "Market has no participants")
+    from .matching import validate_capacities
+
+    validate_capacities(
+        {p["id"] for p in market["participants"] if p["side"] == "left"},
+        {p["id"] for p in market["participants"] if p["side"] == "right"},
+        capacities(market),
+    )
     config = {**DEFAULTS, **market.get("config", {})}
     require(not set(config) - set(DEFAULTS), "Unknown market configuration key")
     require(config["proposing_side"] in ("left", "right"), "Invalid proposing side")
@@ -118,6 +128,14 @@ def validate_market(raw):
 
 def participants(market):
     return {p["id"]: p for p in market["participants"]}
+
+
+def capacities(market, active=None):
+    return {
+        p["id"]: p.get("capacity", 1)
+        for p in market["participants"]
+        if active is None or p["id"] in active
+    }
 
 
 def eligible(market):
@@ -216,6 +234,13 @@ def load_side(path, side):
         with path.open(newline="") as handle:
             rows = list(csv.DictReader(handle))
         for row in rows:
+            if row.get("capacity", "") == "":
+                row.pop("capacity", None)
+            else:
+                try:
+                    row["capacity"] = int(row["capacity"])
+                except ValueError:
+                    require(False, "CSV capacity must be an integer")
             for key in ("profile", "contact"):
                 if row.get(key):
                     import json

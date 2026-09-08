@@ -19,7 +19,10 @@ def rate(numerator, denominator):
 def preference_statistics(market, preferences, active=None, matches=None):
     index, graph = participants(market), eligible(market)
     active = set(active if active is not None else index)
-    partner = {a: b for edge in (matches or []) for a, b in (edge, edge[::-1])}
+    partners = {p: [] for p in active}
+    for a, b in matches or []:
+        partners[a].append(b)
+        partners[b].append(a)
     report = {}
     for side in ("left", "right"):
         ids = sorted(p for p in active if index[p]["side"] == side)
@@ -33,11 +36,19 @@ def preference_statistics(market, preferences, active=None, matches=None):
         exposure = Counter(
             c for p in respondents for c in preferences[p]["evaluated"] if c in active
         )
-        ranks = {
-            p: orders[p].index(partner[p]) + 1
+        all_ranks = {
+            p: sorted(orders[p].index(c) + 1 for c in partners[p] if c in orders[p])
             for p in respondents
-            if p in partner and partner[p] in orders[p]
+            if partners[p]
         }
+        ranks = {
+            p: rs[0]
+            for p, rs in all_ranks.items()
+            if index[p].get("capacity", 1) <= 1 and rs
+        }
+        flat_ranks = [r for rs in all_ranks.values() for r in rs]
+        slots = sum(index[p].get("capacity", 1) for p in ids)
+        filled = sum(len(partners[p]) for p in ids)
         common, agree = 0, 0
         # Bound diagnostic work independently of market size.
         rng = random.Random(17)
@@ -93,11 +104,23 @@ def preference_statistics(market, preferences, active=None, matches=None):
                 "candidate_sampling_used": sampled_candidates,
                 "seed": 17,
             },
-            "match_rate": rate(sum(p in partner for p in ids), len(ids)),
+            "match_rate": rate(sum(bool(partners[p]) for p in ids), len(ids)),
+            "capacity": slots,
+            "filled_slots": filled,
+            "unfilled_slots": slots - filled,
+            "slot_fill_rate": rate(filled, slots),
+            "assigned_counts": {p: len(partners[p]) for p in ids},
+            "assigned_partner_rank_lists": all_ranks,
             "assigned_partner_ranks": ranks,
-            "mean_assigned_rank_among_matched": mean(ranks.values()) if ranks else None,
-            "top_1_assignment": rate(sum(r == 1 for r in ranks.values()), len(ids)),
-            "top_3_assignment": rate(sum(r <= 3 for r in ranks.values()), len(ids)),
+            "mean_assigned_rank_among_matched": mean(flat_ranks)
+            if flat_ranks
+            else None,
+            "top_1_assignment": rate(
+                sum(1 in rs for rs in all_ranks.values()), len(ids)
+            ),
+            "top_3_assignment": rate(
+                sum(any(r <= 3 for r in rs) for rs in all_ranks.values()), len(ids)
+            ),
             "sources": dict(Counter(preferences[p]["source"] for p in respondents)),
         }
     mutual = []
@@ -114,5 +137,6 @@ def preference_statistics(market, preferences, active=None, matches=None):
         "by_side": report,
         "mutual_top_3": mutual,
         "rank_scope": "submitted lists within the active cohort; not full-market ranks",
+        "outcome_denominators": "match_rate and top_k_assignment count participants with at least one qualifying partner; slot_fill_rate counts filled capacity. Mean assigned rank counts each assignment. assigned_partner_ranks is the legacy scalar field for unit-capacity participants; rank_lists includes all assignments.",
         "note": "Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views.",
     }

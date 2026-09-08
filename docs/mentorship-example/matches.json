@@ -1,0 +1,2226 @@
+{
+  "matches": [
+    [
+      "e001",
+      "m001"
+    ],
+    [
+      "e002",
+      "m007"
+    ],
+    [
+      "e003",
+      "m003"
+    ],
+    [
+      "e004",
+      "m009"
+    ],
+    [
+      "e005",
+      "m005"
+    ],
+    [
+      "e006",
+      "m001"
+    ],
+    [
+      "e007",
+      "m002"
+    ],
+    [
+      "e008",
+      "m003"
+    ],
+    [
+      "e009",
+      "m009"
+    ],
+    [
+      "e010",
+      "m005"
+    ],
+    [
+      "e011",
+      "m006"
+    ],
+    [
+      "e012",
+      "m002"
+    ],
+    [
+      "e013",
+      "m008"
+    ],
+    [
+      "e014",
+      "m004"
+    ],
+    [
+      "e015",
+      "m010"
+    ],
+    [
+      "e016",
+      "m006"
+    ],
+    [
+      "e017",
+      "m007"
+    ],
+    [
+      "e018",
+      "m003"
+    ],
+    [
+      "e019",
+      "m009"
+    ],
+    [
+      "e020",
+      "m010"
+    ],
+    [
+      "e021",
+      "m006"
+    ],
+    [
+      "e022",
+      "m002"
+    ],
+    [
+      "e023",
+      "m008"
+    ],
+    [
+      "e024",
+      "m004"
+    ],
+    [
+      "e025",
+      "m005"
+    ],
+    [
+      "e026",
+      "m001"
+    ],
+    [
+      "e027",
+      "m007"
+    ],
+    [
+      "e028",
+      "m008"
+    ],
+    [
+      "e029",
+      "m004"
+    ],
+    [
+      "e030",
+      "m010"
+    ]
+  ],
+  "unmatched": {},
+  "proposing_side": "left",
+  "trace": [
+    {
+      "proposer": "e001",
+      "receiver": "m006",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e002",
+      "receiver": "m007",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e003",
+      "receiver": "m003",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e004",
+      "receiver": "m009",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e005",
+      "receiver": "m005",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e006",
+      "receiver": "m001",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e007",
+      "receiver": "m002",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e008",
+      "receiver": "m003",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e009",
+      "receiver": "m004",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e010",
+      "receiver": "m005",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e011",
+      "receiver": "m006",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e012",
+      "receiver": "m002",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e013",
+      "receiver": "m003",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e014",
+      "receiver": "m004",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e015",
+      "receiver": "m010",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e016",
+      "receiver": "m006",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e017",
+      "receiver": "m007",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e018",
+      "receiver": "m003",
+      "accepted": true,
+      "displaced": "e013"
+    },
+    {
+      "proposer": "e019",
+      "receiver": "m009",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e020",
+      "receiver": "m005",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e021",
+      "receiver": "m006",
+      "accepted": true,
+      "displaced": "e001"
+    },
+    {
+      "proposer": "e022",
+      "receiver": "m002",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e023",
+      "receiver": "m008",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e024",
+      "receiver": "m004",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e025",
+      "receiver": "m005",
+      "accepted": true,
+      "displaced": "e020"
+    },
+    {
+      "proposer": "e026",
+      "receiver": "m006",
+      "accepted": false,
+      "displaced": null
+    },
+    {
+      "proposer": "e027",
+      "receiver": "m007",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e028",
+      "receiver": "m008",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e029",
+      "receiver": "m004",
+      "accepted": true,
+      "displaced": "e009"
+    },
+    {
+      "proposer": "e030",
+      "receiver": "m010",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e013",
+      "receiver": "m008",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e001",
+      "receiver": "m001",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e020",
+      "receiver": "m010",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e026",
+      "receiver": "m001",
+      "accepted": true,
+      "displaced": null
+    },
+    {
+      "proposer": "e009",
+      "receiver": "m009",
+      "accepted": true,
+      "displaced": null
+    }
+  ],
+  "verification": {
+    "feasible": true,
+    "stable": true,
+    "errors": [],
+    "blocking_pairs": []
+  },
+  "capacities": {
+    "e001": 1,
+    "e002": 1,
+    "e003": 1,
+    "e004": 1,
+    "e005": 1,
+    "e006": 1,
+    "e007": 1,
+    "e008": 1,
+    "e009": 1,
+    "e010": 1,
+    "e011": 1,
+    "e012": 1,
+    "e013": 1,
+    "e014": 1,
+    "e015": 1,
+    "e016": 1,
+    "e017": 1,
+    "e018": 1,
+    "e019": 1,
+    "e020": 1,
+    "e021": 1,
+    "e022": 1,
+    "e023": 1,
+    "e024": 1,
+    "e025": 1,
+    "e026": 1,
+    "e027": 1,
+    "e028": 1,
+    "e029": 1,
+    "e030": 1,
+    "m001": 3,
+    "m002": 3,
+    "m003": 3,
+    "m004": 3,
+    "m005": 3,
+    "m006": 3,
+    "m007": 3,
+    "m008": 3,
+    "m009": 3,
+    "m010": 3
+  },
+  "vacancies": {
+    "e001": 0,
+    "e002": 0,
+    "e003": 0,
+    "e004": 0,
+    "e005": 0,
+    "e006": 0,
+    "e007": 0,
+    "e008": 0,
+    "e009": 0,
+    "e010": 0,
+    "e011": 0,
+    "e012": 0,
+    "e013": 0,
+    "e014": 0,
+    "e015": 0,
+    "e016": 0,
+    "e017": 0,
+    "e018": 0,
+    "e019": 0,
+    "e020": 0,
+    "e021": 0,
+    "e022": 0,
+    "e023": 0,
+    "e024": 0,
+    "e025": 0,
+    "e026": 0,
+    "e027": 0,
+    "e028": 0,
+    "e029": 0,
+    "e030": 0,
+    "m001": 0,
+    "m002": 0,
+    "m003": 0,
+    "m004": 0,
+    "m005": 0,
+    "m006": 0,
+    "m007": 0,
+    "m008": 0,
+    "m009": 0,
+    "m010": 0
+  },
+  "name": "main",
+  "snapshot": "main",
+  "snapshot_hash": "31f808d9dcddf9663fe54e2fd56ad870f73c9da55aa47cf995b7bf8805554403",
+  "scope": {
+    "coverage": "complete_for_active_cohort",
+    "cohort_scope": "all_participants",
+    "preference_sources": [
+      "synthetic"
+    ]
+  },
+  "benchmarks": {},
+  "statistics": {
+    "by_side": {
+      "left": {
+        "participants": 30,
+        "completion": {
+          "numerator": 30,
+          "denominator": 30,
+          "rate": 1.0
+        },
+        "evaluation_coverage": {
+          "numerator": 300,
+          "denominator": 300,
+          "rate": 1.0
+        },
+        "decision_coverage": {
+          "numerator": 300,
+          "denominator": 300,
+          "rate": 1.0
+        },
+        "unresolved_directions": 0,
+        "explicit_rejections": 0,
+        "list_lengths": {
+          "e001": 10,
+          "e002": 10,
+          "e003": 10,
+          "e004": 10,
+          "e005": 10,
+          "e006": 10,
+          "e007": 10,
+          "e008": 10,
+          "e009": 10,
+          "e010": 10,
+          "e011": 10,
+          "e012": 10,
+          "e013": 10,
+          "e014": 10,
+          "e015": 10,
+          "e016": 10,
+          "e017": 10,
+          "e018": 10,
+          "e019": 10,
+          "e020": 10,
+          "e021": 10,
+          "e022": 10,
+          "e023": 10,
+          "e024": 10,
+          "e025": 10,
+          "e026": 10,
+          "e027": 10,
+          "e028": 10,
+          "e029": 10,
+          "e030": 10
+        },
+        "first_choice_demand": {
+          "m001": 1,
+          "m002": 3,
+          "m003": 4,
+          "m004": 4,
+          "m005": 4,
+          "m006": 5,
+          "m007": 3,
+          "m008": 2,
+          "m009": 2,
+          "m010": 2
+        },
+        "top_3_demand": {
+          "m001": 12,
+          "m002": 10,
+          "m003": 7,
+          "m004": 8,
+          "m005": 7,
+          "m006": 7,
+          "m007": 10,
+          "m008": 10,
+          "m009": 8,
+          "m010": 11
+        },
+        "evaluated_exposure": {
+          "m001": 30,
+          "m002": 30,
+          "m003": 30,
+          "m004": 30,
+          "m005": 30,
+          "m006": 30,
+          "m007": 30,
+          "m008": 30,
+          "m009": 30,
+          "m010": 30
+        },
+        "top_3_per_evaluation": {
+          "m001": {
+            "numerator": 12,
+            "denominator": 30,
+            "rate": 0.4
+          },
+          "m002": {
+            "numerator": 10,
+            "denominator": 30,
+            "rate": 0.3333333333333333
+          },
+          "m003": {
+            "numerator": 7,
+            "denominator": 30,
+            "rate": 0.23333333333333334
+          },
+          "m004": {
+            "numerator": 8,
+            "denominator": 30,
+            "rate": 0.26666666666666666
+          },
+          "m005": {
+            "numerator": 7,
+            "denominator": 30,
+            "rate": 0.23333333333333334
+          },
+          "m006": {
+            "numerator": 7,
+            "denominator": 30,
+            "rate": 0.23333333333333334
+          },
+          "m007": {
+            "numerator": 10,
+            "denominator": 30,
+            "rate": 0.3333333333333333
+          },
+          "m008": {
+            "numerator": 10,
+            "denominator": 30,
+            "rate": 0.3333333333333333
+          },
+          "m009": {
+            "numerator": 8,
+            "denominator": 30,
+            "rate": 0.26666666666666666
+          },
+          "m010": {
+            "numerator": 11,
+            "denominator": 30,
+            "rate": 0.36666666666666664
+          }
+        },
+        "first_choice_hhi": 0.11555555555555555,
+        "common_candidate_order_agreement": {
+          "numerator": 9669,
+          "denominator": 19575,
+          "rate": 0.4939463601532567
+        },
+        "order_agreement_sampling": {
+          "respondents": 30,
+          "respondent_population": 30,
+          "max_shared_candidates_per_pair": 20,
+          "candidate_sampling_used": false,
+          "seed": 17
+        },
+        "match_rate": {
+          "numerator": 30,
+          "denominator": 30,
+          "rate": 1.0
+        },
+        "capacity": 30,
+        "filled_slots": 30,
+        "unfilled_slots": 0,
+        "slot_fill_rate": {
+          "numerator": 30,
+          "denominator": 30,
+          "rate": 1.0
+        },
+        "assigned_counts": {
+          "e001": 1,
+          "e002": 1,
+          "e003": 1,
+          "e004": 1,
+          "e005": 1,
+          "e006": 1,
+          "e007": 1,
+          "e008": 1,
+          "e009": 1,
+          "e010": 1,
+          "e011": 1,
+          "e012": 1,
+          "e013": 1,
+          "e014": 1,
+          "e015": 1,
+          "e016": 1,
+          "e017": 1,
+          "e018": 1,
+          "e019": 1,
+          "e020": 1,
+          "e021": 1,
+          "e022": 1,
+          "e023": 1,
+          "e024": 1,
+          "e025": 1,
+          "e026": 1,
+          "e027": 1,
+          "e028": 1,
+          "e029": 1,
+          "e030": 1
+        },
+        "assigned_partner_rank_lists": {
+          "e001": [
+            2
+          ],
+          "e002": [
+            1
+          ],
+          "e003": [
+            1
+          ],
+          "e004": [
+            1
+          ],
+          "e005": [
+            1
+          ],
+          "e006": [
+            1
+          ],
+          "e007": [
+            1
+          ],
+          "e008": [
+            1
+          ],
+          "e009": [
+            2
+          ],
+          "e010": [
+            1
+          ],
+          "e011": [
+            1
+          ],
+          "e012": [
+            1
+          ],
+          "e013": [
+            2
+          ],
+          "e014": [
+            1
+          ],
+          "e015": [
+            1
+          ],
+          "e016": [
+            1
+          ],
+          "e017": [
+            1
+          ],
+          "e018": [
+            1
+          ],
+          "e019": [
+            1
+          ],
+          "e020": [
+            2
+          ],
+          "e021": [
+            1
+          ],
+          "e022": [
+            1
+          ],
+          "e023": [
+            1
+          ],
+          "e024": [
+            1
+          ],
+          "e025": [
+            1
+          ],
+          "e026": [
+            2
+          ],
+          "e027": [
+            1
+          ],
+          "e028": [
+            1
+          ],
+          "e029": [
+            1
+          ],
+          "e030": [
+            1
+          ]
+        },
+        "assigned_partner_ranks": {
+          "e001": 2,
+          "e002": 1,
+          "e003": 1,
+          "e004": 1,
+          "e005": 1,
+          "e006": 1,
+          "e007": 1,
+          "e008": 1,
+          "e009": 2,
+          "e010": 1,
+          "e011": 1,
+          "e012": 1,
+          "e013": 2,
+          "e014": 1,
+          "e015": 1,
+          "e016": 1,
+          "e017": 1,
+          "e018": 1,
+          "e019": 1,
+          "e020": 2,
+          "e021": 1,
+          "e022": 1,
+          "e023": 1,
+          "e024": 1,
+          "e025": 1,
+          "e026": 2,
+          "e027": 1,
+          "e028": 1,
+          "e029": 1,
+          "e030": 1
+        },
+        "mean_assigned_rank_among_matched": 1.1666666666666667,
+        "top_1_assignment": {
+          "numerator": 25,
+          "denominator": 30,
+          "rate": 0.8333333333333334
+        },
+        "top_3_assignment": {
+          "numerator": 30,
+          "denominator": 30,
+          "rate": 1.0
+        },
+        "sources": {
+          "synthetic": 30
+        }
+      },
+      "right": {
+        "participants": 10,
+        "completion": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1.0
+        },
+        "evaluation_coverage": {
+          "numerator": 300,
+          "denominator": 300,
+          "rate": 1.0
+        },
+        "decision_coverage": {
+          "numerator": 300,
+          "denominator": 300,
+          "rate": 1.0
+        },
+        "unresolved_directions": 0,
+        "explicit_rejections": 0,
+        "list_lengths": {
+          "m001": 30,
+          "m002": 30,
+          "m003": 30,
+          "m004": 30,
+          "m005": 30,
+          "m006": 30,
+          "m007": 30,
+          "m008": 30,
+          "m009": 30,
+          "m010": 30
+        },
+        "first_choice_demand": {
+          "e004": 2,
+          "e005": 1,
+          "e011": 1,
+          "e018": 2,
+          "e021": 1,
+          "e022": 1,
+          "e027": 1,
+          "e030": 1
+        },
+        "top_3_demand": {
+          "e002": 1,
+          "e004": 2,
+          "e005": 1,
+          "e006": 1,
+          "e007": 1,
+          "e008": 1,
+          "e010": 1,
+          "e011": 2,
+          "e012": 1,
+          "e014": 1,
+          "e015": 1,
+          "e016": 1,
+          "e018": 2,
+          "e019": 2,
+          "e020": 1,
+          "e021": 1,
+          "e022": 2,
+          "e023": 2,
+          "e025": 1,
+          "e026": 1,
+          "e027": 1,
+          "e028": 1,
+          "e029": 1,
+          "e030": 1
+        },
+        "evaluated_exposure": {
+          "e001": 10,
+          "e002": 10,
+          "e003": 10,
+          "e004": 10,
+          "e005": 10,
+          "e006": 10,
+          "e007": 10,
+          "e008": 10,
+          "e009": 10,
+          "e010": 10,
+          "e011": 10,
+          "e012": 10,
+          "e013": 10,
+          "e014": 10,
+          "e015": 10,
+          "e016": 10,
+          "e017": 10,
+          "e018": 10,
+          "e019": 10,
+          "e020": 10,
+          "e021": 10,
+          "e022": 10,
+          "e023": 10,
+          "e024": 10,
+          "e025": 10,
+          "e026": 10,
+          "e027": 10,
+          "e028": 10,
+          "e029": 10,
+          "e030": 10
+        },
+        "top_3_per_evaluation": {
+          "e001": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "e002": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e003": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "e004": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "e005": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e006": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e007": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e008": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e009": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "e010": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e011": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "e012": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e013": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "e014": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e015": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e016": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e017": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "e018": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "e019": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "e020": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e021": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e022": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "e023": {
+            "numerator": 2,
+            "denominator": 10,
+            "rate": 0.2
+          },
+          "e024": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "e025": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e026": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e027": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e028": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e029": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "e030": {
+            "numerator": 1,
+            "denominator": 10,
+            "rate": 0.1
+          }
+        },
+        "first_choice_hhi": 0.14000000000000004,
+        "common_candidate_order_agreement": {
+          "numerator": 4255,
+          "denominator": 8550,
+          "rate": 0.4976608187134503
+        },
+        "order_agreement_sampling": {
+          "respondents": 10,
+          "respondent_population": 10,
+          "max_shared_candidates_per_pair": 20,
+          "candidate_sampling_used": true,
+          "seed": 17
+        },
+        "match_rate": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1.0
+        },
+        "capacity": 30,
+        "filled_slots": 30,
+        "unfilled_slots": 0,
+        "slot_fill_rate": {
+          "numerator": 30,
+          "denominator": 30,
+          "rate": 1.0
+        },
+        "assigned_counts": {
+          "m001": 3,
+          "m002": 3,
+          "m003": 3,
+          "m004": 3,
+          "m005": 3,
+          "m006": 3,
+          "m007": 3,
+          "m008": 3,
+          "m009": 3,
+          "m010": 3
+        },
+        "assigned_partner_rank_lists": {
+          "m001": [
+            2,
+            3,
+            4
+          ],
+          "m002": [
+            2,
+            3,
+            6
+          ],
+          "m003": [
+            1,
+            2,
+            4
+          ],
+          "m004": [
+            2,
+            4,
+            5
+          ],
+          "m005": [
+            1,
+            2,
+            3
+          ],
+          "m006": [
+            1,
+            2,
+            3
+          ],
+          "m007": [
+            2,
+            4,
+            6
+          ],
+          "m008": [
+            2,
+            3,
+            5
+          ],
+          "m009": [
+            1,
+            2,
+            5
+          ],
+          "m010": [
+            1,
+            2,
+            3
+          ]
+        },
+        "assigned_partner_ranks": {},
+        "mean_assigned_rank_among_matched": 2.8666666666666667,
+        "top_1_assignment": {
+          "numerator": 5,
+          "denominator": 10,
+          "rate": 0.5
+        },
+        "top_3_assignment": {
+          "numerator": 10,
+          "denominator": 10,
+          "rate": 1.0
+        },
+        "sources": {
+          "synthetic": 10
+        }
+      }
+    },
+    "mutual_top_3": [
+      [
+        "e002",
+        "m007"
+      ],
+      [
+        "e004",
+        "m009"
+      ],
+      [
+        "e004",
+        "m004"
+      ],
+      [
+        "e005",
+        "m005"
+      ],
+      [
+        "e006",
+        "m001"
+      ],
+      [
+        "e007",
+        "m002"
+      ],
+      [
+        "e008",
+        "m003"
+      ],
+      [
+        "e010",
+        "m005"
+      ],
+      [
+        "e011",
+        "m006"
+      ],
+      [
+        "e011",
+        "m001"
+      ],
+      [
+        "e012",
+        "m007"
+      ],
+      [
+        "e014",
+        "m009"
+      ],
+      [
+        "e015",
+        "m010"
+      ],
+      [
+        "e016",
+        "m006"
+      ],
+      [
+        "e018",
+        "m003"
+      ],
+      [
+        "e018",
+        "m008"
+      ],
+      [
+        "e019",
+        "m009"
+      ],
+      [
+        "e019",
+        "m004"
+      ],
+      [
+        "e020",
+        "m010"
+      ],
+      [
+        "e021",
+        "m006"
+      ],
+      [
+        "e022",
+        "m002"
+      ],
+      [
+        "e022",
+        "m007"
+      ],
+      [
+        "e023",
+        "m008"
+      ],
+      [
+        "e023",
+        "m003"
+      ],
+      [
+        "e025",
+        "m005"
+      ],
+      [
+        "e026",
+        "m001"
+      ],
+      [
+        "e027",
+        "m002"
+      ],
+      [
+        "e028",
+        "m008"
+      ],
+      [
+        "e029",
+        "m004"
+      ],
+      [
+        "e030",
+        "m010"
+      ]
+    ],
+    "rank_scope": "submitted lists within the active cohort; not full-market ranks",
+    "outcome_denominators": "match_rate and top_k_assignment count participants with at least one qualifying partner; slot_fill_rate counts filled capacity. Mean assigned rank counts each assignment. assigned_partner_ranks is the legacy scalar field for unit-capacity participants; rank_lists includes all assignments.",
+    "note": "Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views."
+  },
+  "comparison": {
+    "proposing_side": "right",
+    "matches": [
+      [
+        "e001",
+        "m001"
+      ],
+      [
+        "e002",
+        "m007"
+      ],
+      [
+        "e003",
+        "m003"
+      ],
+      [
+        "e004",
+        "m009"
+      ],
+      [
+        "e005",
+        "m005"
+      ],
+      [
+        "e006",
+        "m001"
+      ],
+      [
+        "e007",
+        "m002"
+      ],
+      [
+        "e008",
+        "m003"
+      ],
+      [
+        "e009",
+        "m009"
+      ],
+      [
+        "e010",
+        "m005"
+      ],
+      [
+        "e011",
+        "m006"
+      ],
+      [
+        "e012",
+        "m007"
+      ],
+      [
+        "e013",
+        "m008"
+      ],
+      [
+        "e014",
+        "m004"
+      ],
+      [
+        "e015",
+        "m010"
+      ],
+      [
+        "e016",
+        "m006"
+      ],
+      [
+        "e017",
+        "m007"
+      ],
+      [
+        "e018",
+        "m003"
+      ],
+      [
+        "e019",
+        "m009"
+      ],
+      [
+        "e020",
+        "m010"
+      ],
+      [
+        "e021",
+        "m006"
+      ],
+      [
+        "e022",
+        "m002"
+      ],
+      [
+        "e023",
+        "m008"
+      ],
+      [
+        "e024",
+        "m004"
+      ],
+      [
+        "e025",
+        "m005"
+      ],
+      [
+        "e026",
+        "m001"
+      ],
+      [
+        "e027",
+        "m002"
+      ],
+      [
+        "e028",
+        "m008"
+      ],
+      [
+        "e029",
+        "m004"
+      ],
+      [
+        "e030",
+        "m010"
+      ]
+    ],
+    "changed_pairs": [
+      [
+        "e012",
+        "m002"
+      ],
+      [
+        "e012",
+        "m007"
+      ],
+      [
+        "e027",
+        "m002"
+      ],
+      [
+        "e027",
+        "m007"
+      ]
+    ],
+    "statistics": {
+      "by_side": {
+        "left": {
+          "participants": 30,
+          "completion": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "evaluation_coverage": {
+            "numerator": 300,
+            "denominator": 300,
+            "rate": 1.0
+          },
+          "decision_coverage": {
+            "numerator": 300,
+            "denominator": 300,
+            "rate": 1.0
+          },
+          "unresolved_directions": 0,
+          "explicit_rejections": 0,
+          "list_lengths": {
+            "e001": 10,
+            "e002": 10,
+            "e003": 10,
+            "e004": 10,
+            "e005": 10,
+            "e006": 10,
+            "e007": 10,
+            "e008": 10,
+            "e009": 10,
+            "e010": 10,
+            "e011": 10,
+            "e012": 10,
+            "e013": 10,
+            "e014": 10,
+            "e015": 10,
+            "e016": 10,
+            "e017": 10,
+            "e018": 10,
+            "e019": 10,
+            "e020": 10,
+            "e021": 10,
+            "e022": 10,
+            "e023": 10,
+            "e024": 10,
+            "e025": 10,
+            "e026": 10,
+            "e027": 10,
+            "e028": 10,
+            "e029": 10,
+            "e030": 10
+          },
+          "first_choice_demand": {
+            "m001": 1,
+            "m002": 3,
+            "m003": 4,
+            "m004": 4,
+            "m005": 4,
+            "m006": 5,
+            "m007": 3,
+            "m008": 2,
+            "m009": 2,
+            "m010": 2
+          },
+          "top_3_demand": {
+            "m001": 12,
+            "m002": 10,
+            "m003": 7,
+            "m004": 8,
+            "m005": 7,
+            "m006": 7,
+            "m007": 10,
+            "m008": 10,
+            "m009": 8,
+            "m010": 11
+          },
+          "evaluated_exposure": {
+            "m001": 30,
+            "m002": 30,
+            "m003": 30,
+            "m004": 30,
+            "m005": 30,
+            "m006": 30,
+            "m007": 30,
+            "m008": 30,
+            "m009": 30,
+            "m010": 30
+          },
+          "top_3_per_evaluation": {
+            "m001": {
+              "numerator": 12,
+              "denominator": 30,
+              "rate": 0.4
+            },
+            "m002": {
+              "numerator": 10,
+              "denominator": 30,
+              "rate": 0.3333333333333333
+            },
+            "m003": {
+              "numerator": 7,
+              "denominator": 30,
+              "rate": 0.23333333333333334
+            },
+            "m004": {
+              "numerator": 8,
+              "denominator": 30,
+              "rate": 0.26666666666666666
+            },
+            "m005": {
+              "numerator": 7,
+              "denominator": 30,
+              "rate": 0.23333333333333334
+            },
+            "m006": {
+              "numerator": 7,
+              "denominator": 30,
+              "rate": 0.23333333333333334
+            },
+            "m007": {
+              "numerator": 10,
+              "denominator": 30,
+              "rate": 0.3333333333333333
+            },
+            "m008": {
+              "numerator": 10,
+              "denominator": 30,
+              "rate": 0.3333333333333333
+            },
+            "m009": {
+              "numerator": 8,
+              "denominator": 30,
+              "rate": 0.26666666666666666
+            },
+            "m010": {
+              "numerator": 11,
+              "denominator": 30,
+              "rate": 0.36666666666666664
+            }
+          },
+          "first_choice_hhi": 0.11555555555555555,
+          "common_candidate_order_agreement": {
+            "numerator": 9669,
+            "denominator": 19575,
+            "rate": 0.4939463601532567
+          },
+          "order_agreement_sampling": {
+            "respondents": 30,
+            "respondent_population": 30,
+            "max_shared_candidates_per_pair": 20,
+            "candidate_sampling_used": false,
+            "seed": 17
+          },
+          "match_rate": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "capacity": 30,
+          "filled_slots": 30,
+          "unfilled_slots": 0,
+          "slot_fill_rate": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "assigned_counts": {
+            "e001": 1,
+            "e002": 1,
+            "e003": 1,
+            "e004": 1,
+            "e005": 1,
+            "e006": 1,
+            "e007": 1,
+            "e008": 1,
+            "e009": 1,
+            "e010": 1,
+            "e011": 1,
+            "e012": 1,
+            "e013": 1,
+            "e014": 1,
+            "e015": 1,
+            "e016": 1,
+            "e017": 1,
+            "e018": 1,
+            "e019": 1,
+            "e020": 1,
+            "e021": 1,
+            "e022": 1,
+            "e023": 1,
+            "e024": 1,
+            "e025": 1,
+            "e026": 1,
+            "e027": 1,
+            "e028": 1,
+            "e029": 1,
+            "e030": 1
+          },
+          "assigned_partner_rank_lists": {
+            "e001": [
+              2
+            ],
+            "e002": [
+              1
+            ],
+            "e003": [
+              1
+            ],
+            "e004": [
+              1
+            ],
+            "e005": [
+              1
+            ],
+            "e006": [
+              1
+            ],
+            "e007": [
+              1
+            ],
+            "e008": [
+              1
+            ],
+            "e009": [
+              2
+            ],
+            "e010": [
+              1
+            ],
+            "e011": [
+              1
+            ],
+            "e012": [
+              2
+            ],
+            "e013": [
+              2
+            ],
+            "e014": [
+              1
+            ],
+            "e015": [
+              1
+            ],
+            "e016": [
+              1
+            ],
+            "e017": [
+              1
+            ],
+            "e018": [
+              1
+            ],
+            "e019": [
+              1
+            ],
+            "e020": [
+              2
+            ],
+            "e021": [
+              1
+            ],
+            "e022": [
+              1
+            ],
+            "e023": [
+              1
+            ],
+            "e024": [
+              1
+            ],
+            "e025": [
+              1
+            ],
+            "e026": [
+              2
+            ],
+            "e027": [
+              2
+            ],
+            "e028": [
+              1
+            ],
+            "e029": [
+              1
+            ],
+            "e030": [
+              1
+            ]
+          },
+          "assigned_partner_ranks": {
+            "e001": 2,
+            "e002": 1,
+            "e003": 1,
+            "e004": 1,
+            "e005": 1,
+            "e006": 1,
+            "e007": 1,
+            "e008": 1,
+            "e009": 2,
+            "e010": 1,
+            "e011": 1,
+            "e012": 2,
+            "e013": 2,
+            "e014": 1,
+            "e015": 1,
+            "e016": 1,
+            "e017": 1,
+            "e018": 1,
+            "e019": 1,
+            "e020": 2,
+            "e021": 1,
+            "e022": 1,
+            "e023": 1,
+            "e024": 1,
+            "e025": 1,
+            "e026": 2,
+            "e027": 2,
+            "e028": 1,
+            "e029": 1,
+            "e030": 1
+          },
+          "mean_assigned_rank_among_matched": 1.2333333333333334,
+          "top_1_assignment": {
+            "numerator": 23,
+            "denominator": 30,
+            "rate": 0.7666666666666667
+          },
+          "top_3_assignment": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "sources": {
+            "synthetic": 30
+          }
+        },
+        "right": {
+          "participants": 10,
+          "completion": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "evaluation_coverage": {
+            "numerator": 300,
+            "denominator": 300,
+            "rate": 1.0
+          },
+          "decision_coverage": {
+            "numerator": 300,
+            "denominator": 300,
+            "rate": 1.0
+          },
+          "unresolved_directions": 0,
+          "explicit_rejections": 0,
+          "list_lengths": {
+            "m001": 30,
+            "m002": 30,
+            "m003": 30,
+            "m004": 30,
+            "m005": 30,
+            "m006": 30,
+            "m007": 30,
+            "m008": 30,
+            "m009": 30,
+            "m010": 30
+          },
+          "first_choice_demand": {
+            "e004": 2,
+            "e005": 1,
+            "e011": 1,
+            "e018": 2,
+            "e021": 1,
+            "e022": 1,
+            "e027": 1,
+            "e030": 1
+          },
+          "top_3_demand": {
+            "e002": 1,
+            "e004": 2,
+            "e005": 1,
+            "e006": 1,
+            "e007": 1,
+            "e008": 1,
+            "e010": 1,
+            "e011": 2,
+            "e012": 1,
+            "e014": 1,
+            "e015": 1,
+            "e016": 1,
+            "e018": 2,
+            "e019": 2,
+            "e020": 1,
+            "e021": 1,
+            "e022": 2,
+            "e023": 2,
+            "e025": 1,
+            "e026": 1,
+            "e027": 1,
+            "e028": 1,
+            "e029": 1,
+            "e030": 1
+          },
+          "evaluated_exposure": {
+            "e001": 10,
+            "e002": 10,
+            "e003": 10,
+            "e004": 10,
+            "e005": 10,
+            "e006": 10,
+            "e007": 10,
+            "e008": 10,
+            "e009": 10,
+            "e010": 10,
+            "e011": 10,
+            "e012": 10,
+            "e013": 10,
+            "e014": 10,
+            "e015": 10,
+            "e016": 10,
+            "e017": 10,
+            "e018": 10,
+            "e019": 10,
+            "e020": 10,
+            "e021": 10,
+            "e022": 10,
+            "e023": 10,
+            "e024": 10,
+            "e025": 10,
+            "e026": 10,
+            "e027": 10,
+            "e028": 10,
+            "e029": 10,
+            "e030": 10
+          },
+          "top_3_per_evaluation": {
+            "e001": {
+              "numerator": 0,
+              "denominator": 10,
+              "rate": 0.0
+            },
+            "e002": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e003": {
+              "numerator": 0,
+              "denominator": 10,
+              "rate": 0.0
+            },
+            "e004": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "e005": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e006": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e007": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e008": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e009": {
+              "numerator": 0,
+              "denominator": 10,
+              "rate": 0.0
+            },
+            "e010": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e011": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "e012": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e013": {
+              "numerator": 0,
+              "denominator": 10,
+              "rate": 0.0
+            },
+            "e014": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e015": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e016": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e017": {
+              "numerator": 0,
+              "denominator": 10,
+              "rate": 0.0
+            },
+            "e018": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "e019": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "e020": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e021": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e022": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "e023": {
+              "numerator": 2,
+              "denominator": 10,
+              "rate": 0.2
+            },
+            "e024": {
+              "numerator": 0,
+              "denominator": 10,
+              "rate": 0.0
+            },
+            "e025": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e026": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e027": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e028": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e029": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            },
+            "e030": {
+              "numerator": 1,
+              "denominator": 10,
+              "rate": 0.1
+            }
+          },
+          "first_choice_hhi": 0.14000000000000004,
+          "common_candidate_order_agreement": {
+            "numerator": 4255,
+            "denominator": 8550,
+            "rate": 0.4976608187134503
+          },
+          "order_agreement_sampling": {
+            "respondents": 10,
+            "respondent_population": 10,
+            "max_shared_candidates_per_pair": 20,
+            "candidate_sampling_used": true,
+            "seed": 17
+          },
+          "match_rate": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "capacity": 30,
+          "filled_slots": 30,
+          "unfilled_slots": 0,
+          "slot_fill_rate": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "assigned_counts": {
+            "m001": 3,
+            "m002": 3,
+            "m003": 3,
+            "m004": 3,
+            "m005": 3,
+            "m006": 3,
+            "m007": 3,
+            "m008": 3,
+            "m009": 3,
+            "m010": 3
+          },
+          "assigned_partner_rank_lists": {
+            "m001": [
+              2,
+              3,
+              4
+            ],
+            "m002": [
+              1,
+              2,
+              3
+            ],
+            "m003": [
+              1,
+              2,
+              4
+            ],
+            "m004": [
+              2,
+              4,
+              5
+            ],
+            "m005": [
+              1,
+              2,
+              3
+            ],
+            "m006": [
+              1,
+              2,
+              3
+            ],
+            "m007": [
+              2,
+              3,
+              4
+            ],
+            "m008": [
+              2,
+              3,
+              5
+            ],
+            "m009": [
+              1,
+              2,
+              5
+            ],
+            "m010": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assigned_partner_ranks": {},
+          "mean_assigned_rank_among_matched": 2.6,
+          "top_1_assignment": {
+            "numerator": 6,
+            "denominator": 10,
+            "rate": 0.6
+          },
+          "top_3_assignment": {
+            "numerator": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "sources": {
+            "synthetic": 10
+          }
+        }
+      },
+      "mutual_top_3": [
+        [
+          "e002",
+          "m007"
+        ],
+        [
+          "e004",
+          "m009"
+        ],
+        [
+          "e004",
+          "m004"
+        ],
+        [
+          "e005",
+          "m005"
+        ],
+        [
+          "e006",
+          "m001"
+        ],
+        [
+          "e007",
+          "m002"
+        ],
+        [
+          "e008",
+          "m003"
+        ],
+        [
+          "e010",
+          "m005"
+        ],
+        [
+          "e011",
+          "m006"
+        ],
+        [
+          "e011",
+          "m001"
+        ],
+        [
+          "e012",
+          "m007"
+        ],
+        [
+          "e014",
+          "m009"
+        ],
+        [
+          "e015",
+          "m010"
+        ],
+        [
+          "e016",
+          "m006"
+        ],
+        [
+          "e018",
+          "m003"
+        ],
+        [
+          "e018",
+          "m008"
+        ],
+        [
+          "e019",
+          "m009"
+        ],
+        [
+          "e019",
+          "m004"
+        ],
+        [
+          "e020",
+          "m010"
+        ],
+        [
+          "e021",
+          "m006"
+        ],
+        [
+          "e022",
+          "m002"
+        ],
+        [
+          "e022",
+          "m007"
+        ],
+        [
+          "e023",
+          "m008"
+        ],
+        [
+          "e023",
+          "m003"
+        ],
+        [
+          "e025",
+          "m005"
+        ],
+        [
+          "e026",
+          "m001"
+        ],
+        [
+          "e027",
+          "m002"
+        ],
+        [
+          "e028",
+          "m008"
+        ],
+        [
+          "e029",
+          "m004"
+        ],
+        [
+          "e030",
+          "m010"
+        ]
+      ],
+      "rank_scope": "submitted lists within the active cohort; not full-market ranks",
+      "outcome_denominators": "match_rate and top_k_assignment count participants with at least one qualifying partner; slot_fill_rate counts filled capacity. Mean assigned rank counts each assignment. assigned_partner_ranks is the legacy scalar field for unit-capacity participants; rank_lists includes all assignments.",
+      "note": "Ordinal ranks and model scores are not cardinal welfare. Exposure is evaluated exposure, not measured page views."
+    }
+  }
+}

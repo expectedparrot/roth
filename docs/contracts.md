@@ -1,8 +1,8 @@
 # Data contracts
 
 All IDs are stable strings matching `[A-Za-z0-9][A-Za-z0-9_-]{0,95}`. Left and
-right IDs are globally disjoint. Display names need not be unique. Capacity is
-exactly one. Core imports reject malformed input rather than silently repairing it.
+right IDs are globally disjoint. Display names need not be unique. Capacity defaults to one and must be a nonnegative integer. Only one side may
+have capacities above one; zero means a closed position. Core imports reject malformed input rather than silently repairing it.
 
 ## Market JSON
 
@@ -40,8 +40,12 @@ exactly one. Core imports reject malformed input rather than silently repairing 
 
 Example addresses above cannot receive real invitations. Keep private instructions
 and contact fields outside `profile`; only the public profile is shown to others.
-A representative may have multiple distinct internship-opening IDs, each with its
-own survey and one slot.
+Use one participant ID and one ranking per mentor or program, with `capacity: 3`
+for up to three partners. Rankings evaluate individuals independently of other
+partners; every ranked candidate is preferred to leaving an available slot empty.
+A ranking may be longer than capacity. Capacities are upper bounds, not minimum
+fill requirements. Distinct openings with different preferences may still have
+separate IDs.
 
 `eligible_pairs`, if supplied, is an explicit list of `[left_id, right_id]` edges;
 otherwise all cross-side pairs are eligible. `excluded_pairs` removes explicit
@@ -68,7 +72,7 @@ Organizer policies:
 snapshots remain unchanged. Prepared fielding and scoring plans are version-bound;
 rebuild them after a policy change.
 
-CSV side imports use `id,name,profile,preferences,contact`, with JSON strings in
+CSV side imports use `id,name,profile,preferences,contact` plus optional integer `capacity`, with JSON strings in
 `profile` and `contact`. The CLI supplies `side`. EDSL AgentList imports use the
 agent name as fallback ID/name and traits for the remaining fields. Market JSON
 supports explicit eligibility edges; two-file import uses full cross-side eligibility.
@@ -160,3 +164,22 @@ exclusive file lock; an event appears only after its state object is durable.
 CLI failures do not commit partial state. Generated artifacts remain reviewable
 outside `.roth/`; incomplete failed builds may leave unregistered output directories,
 which Roth does not overwrite or silently clean up.
+
+## Capacity-aware matching outputs
+
+`matches` remains a list of `[left_id, right_id]` pairs. An ID on the capacity
+side may appear in several distinct pairs. Runs also include `capacities` and
+`vacancies` for every active participant. `unmatched` contains only participants
+with zero assignments; a partly filled mentor appears in vacancies instead.
+
+Individual exports use `partners`, a list of assigned public profiles. The old
+`partner` scalar is retained only for capacity-zero/one participants; it is not
+present for multi-slot participants. No partner ranking, private instructions,
+or contact details are included.
+
+Statistics distinguish participant `match_rate` (at least one partner) from
+`slot_fill_rate` (assignments divided by capacity). `assigned_partner_rank_lists`
+contains all ranks per matched respondent. Legacy `assigned_partner_ranks`
+contains scalar ranks only for unit-capacity respondents. Mean assigned rank
+weights each assignment equally; top-1/top-3 assignment rates count participants
+with at least one such partner. Ranks remain ordinal and list-relative.

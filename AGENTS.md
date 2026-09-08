@@ -1,8 +1,22 @@
 # Working on Roth
 
-Roth is an agent-friendly CLI for one-to-one matching. Many-to-one is deferred.
-Use `roth guide`, `roth next`, and `roth capabilities` to discover the workflow.
+Roth is an agent-friendly CLI for one-to-one and many-to-one stable matching.
+Capacities are nonnegative integer upper bounds, default one, with at most one
+side above one. Use responsive individual rankings and preserve every assigned
+partner in reports; vacancies and unmatched participants are distinct.
+Start with `roth agent next` to identify the scenario and elicit missing inputs.
+Use `roth --project STUDY agent next` after each action; follow `data.rerun`
+when custom paths are supplied. `roth guide` and `roth capabilities` provide
+the full workflow and supported features. Reuse existing user answers and
+never force an unsupported scenario into another mechanism.
 Keep the core matching engine independent of EDSL and network access.
+
+The separate `roth teams` mode jointly assigns students to teams and projects
+using Borda rankings and optional SciPy/HiGHS integer optimization. It uses
+explicit input files and immutable output directories, not the stable-matching
+market store. Keep hard exclusions distinct from unranked zero-score options.
+Verify assignments and scores independently; report solver limits honestly.
+This mode does not claim stability or strategy-proofness.
 
 Development checks:
 

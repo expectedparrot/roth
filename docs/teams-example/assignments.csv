@@ -1,0 +1,13 @@
+student_id,student,project_id,project,project_rank,project_borda,teammate_borda,combined_score
+s01,Alex,climate,Campus climate dashboard,1,4,19,0.975
+s02,Blair,climate,Campus climate dashboard,2,3,19,0.85
+s03,Casey,climate,Campus climate dashboard,,0,19,0.475
+s04,Devon,housing,Student housing survey,1,4,19,0.975
+s05,Emery,housing,Student housing survey,2,3,19,0.85
+s06,Finley,housing,Student housing survey,3,2,19,0.725
+s07,Gray,transit,Accessible campus transport,1,4,19,0.975
+s08,Harper,transit,Accessible campus transport,2,3,19,0.85
+s09,Indigo,transit,Accessible campus transport,2,3,19,0.85
+s10,Jules,food,Food waste reduction,1,4,19,0.975
+s11,Kai,food,Food waste reduction,2,3,19,0.85
+s12,Lane,food,Food waste reduction,2,3,19,0.85

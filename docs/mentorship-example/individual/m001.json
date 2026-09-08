@@ -1,0 +1,36 @@
+{
+  "participant_id": "m001",
+  "partners": [
+    {
+      "id": "e001",
+      "name": "Fictional Employee 1",
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      }
+    },
+    {
+      "id": "e006",
+      "name": "Fictional Employee 6",
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      }
+    },
+    {
+      "id": "e026",
+      "name": "Fictional Employee 26",
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      }
+    }
+  ],
+  "capacity": 3,
+  "unfilled_slots": 0,
+  "run": "main",
+  "reason": null
+}

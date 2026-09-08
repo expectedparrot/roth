@@ -1,0 +1,621 @@
+{
+  "name": "Fictional employee mentorship",
+  "synthetic": true,
+  "side_labels": {
+    "left": "Employees",
+    "right": "Mentors"
+  },
+  "participants": [
+    {
+      "id": "e001",
+      "name": "Fictional Employee 1",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in data science and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e001"
+      }
+    },
+    {
+      "id": "e002",
+      "name": "Fictional Employee 2",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in engineering and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e002"
+      }
+    },
+    {
+      "id": "e003",
+      "name": "Fictional Employee 3",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Product",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in product and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e003"
+      }
+    },
+    {
+      "id": "e004",
+      "name": "Fictional Employee 4",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Operations",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in operations and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e004"
+      }
+    },
+    {
+      "id": "e005",
+      "name": "Fictional Employee 5",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Research",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in research and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e005"
+      }
+    },
+    {
+      "id": "e006",
+      "name": "Fictional Employee 6",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in data science and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e006"
+      }
+    },
+    {
+      "id": "e007",
+      "name": "Fictional Employee 7",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in engineering and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e007"
+      }
+    },
+    {
+      "id": "e008",
+      "name": "Fictional Employee 8",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Product",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in product and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e008"
+      }
+    },
+    {
+      "id": "e009",
+      "name": "Fictional Employee 9",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Operations",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in operations and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e009"
+      }
+    },
+    {
+      "id": "e010",
+      "name": "Fictional Employee 10",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Research",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in research and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e010"
+      }
+    },
+    {
+      "id": "e011",
+      "name": "Fictional Employee 11",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in data science and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e011"
+      }
+    },
+    {
+      "id": "e012",
+      "name": "Fictional Employee 12",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in engineering and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e012"
+      }
+    },
+    {
+      "id": "e013",
+      "name": "Fictional Employee 13",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Product",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in product and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e013"
+      }
+    },
+    {
+      "id": "e014",
+      "name": "Fictional Employee 14",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Operations",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in operations and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e014"
+      }
+    },
+    {
+      "id": "e015",
+      "name": "Fictional Employee 15",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Research",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in research and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e015"
+      }
+    },
+    {
+      "id": "e016",
+      "name": "Fictional Employee 16",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in data science and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e016"
+      }
+    },
+    {
+      "id": "e017",
+      "name": "Fictional Employee 17",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in engineering and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e017"
+      }
+    },
+    {
+      "id": "e018",
+      "name": "Fictional Employee 18",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Product",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in product and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e018"
+      }
+    },
+    {
+      "id": "e019",
+      "name": "Fictional Employee 19",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Operations",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in operations and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e019"
+      }
+    },
+    {
+      "id": "e020",
+      "name": "Fictional Employee 20",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Research",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in research and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e020"
+      }
+    },
+    {
+      "id": "e021",
+      "name": "Fictional Employee 21",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in data science and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e021"
+      }
+    },
+    {
+      "id": "e022",
+      "name": "Fictional Employee 22",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in engineering and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e022"
+      }
+    },
+    {
+      "id": "e023",
+      "name": "Fictional Employee 23",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Product",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in product and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e023"
+      }
+    },
+    {
+      "id": "e024",
+      "name": "Fictional Employee 24",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Operations",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in operations and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e024"
+      }
+    },
+    {
+      "id": "e025",
+      "name": "Fictional Employee 25",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Research",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in research and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e025"
+      }
+    },
+    {
+      "id": "e026",
+      "name": "Fictional Employee 26",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Data science",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in data science and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e026"
+      }
+    },
+    {
+      "id": "e027",
+      "name": "Fictional Employee 27",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Engineering",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in engineering and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e027"
+      }
+    },
+    {
+      "id": "e028",
+      "name": "Fictional Employee 28",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Product",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in product and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e028"
+      }
+    },
+    {
+      "id": "e029",
+      "name": "Fictional Employee 29",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Operations",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in operations and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e029"
+      }
+    },
+    {
+      "id": "e030",
+      "name": "Fictional Employee 30",
+      "side": "left",
+      "capacity": 1,
+      "profile": {
+        "topic": "Research",
+        "role": "Employee",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in research and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-e030"
+      }
+    },
+    {
+      "id": "m001",
+      "name": "Fictional Mentor 1",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Data science",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in data science and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m001"
+      }
+    },
+    {
+      "id": "m002",
+      "name": "Fictional Mentor 2",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Engineering",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in engineering and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m002"
+      }
+    },
+    {
+      "id": "m003",
+      "name": "Fictional Mentor 3",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Product",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in product and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m003"
+      }
+    },
+    {
+      "id": "m004",
+      "name": "Fictional Mentor 4",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Operations",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in operations and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m004"
+      }
+    },
+    {
+      "id": "m005",
+      "name": "Fictional Mentor 5",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Research",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in research and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m005"
+      }
+    },
+    {
+      "id": "m006",
+      "name": "Fictional Mentor 6",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Data science",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in data science and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m006"
+      }
+    },
+    {
+      "id": "m007",
+      "name": "Fictional Mentor 7",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Engineering",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in engineering and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m007"
+      }
+    },
+    {
+      "id": "m008",
+      "name": "Fictional Mentor 8",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Product",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in product and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m008"
+      }
+    },
+    {
+      "id": "m009",
+      "name": "Fictional Mentor 9",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Operations",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in operations and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m009"
+      }
+    },
+    {
+      "id": "m010",
+      "name": "Fictional Mentor 10",
+      "side": "right",
+      "capacity": 3,
+      "profile": {
+        "topic": "Research",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      },
+      "preferences": "I value shared interests in research and a regular meeting schedule. Evaluate each partner independently.",
+      "contact": {
+        "respondent_id": "fictional-m010"
+      }
+    }
+  ],
+  "config": {
+    "proposing_side": "left",
+    "delegation": "direct",
+    "side_policies": {},
+    "unknown_policy": "exclude",
+    "benchmark_policy": "advisory",
+    "benchmark_min_accuracy": 0.8,
+    "benchmark_min_answers": 5,
+    "deadline": null
+  },
+  "schema_version": "1.0"
+}

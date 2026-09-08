@@ -1,0 +1,27 @@
+{
+  "participant_id": "e021",
+  "partners": [
+    {
+      "id": "m006",
+      "name": "Fictional Mentor 6",
+      "profile": {
+        "topic": "Data science",
+        "role": "Mentor",
+        "availability": "One meeting every two weeks"
+      }
+    }
+  ],
+  "capacity": 1,
+  "unfilled_slots": 0,
+  "run": "main",
+  "reason": null,
+  "partner": {
+    "id": "m006",
+    "name": "Fictional Mentor 6",
+    "profile": {
+      "topic": "Data science",
+      "role": "Mentor",
+      "availability": "One meeting every two weeks"
+    }
+  }
+}

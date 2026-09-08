@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn how Roth collects two-sided preferences, checks delegated choices, and matches students with internships using deferred acceptance.">
+  <meta name="description" content="Roth collects preferences, computes stable matches, and jointly forms student teams and assigns projects with integer programming.">
   <title>Roth | Two-sided matching with Expected Parrot</title>
   <style>
     :root{--green:#428a5f;--dark:#214d35;--light:#edf7f1;--ink:#17251d;--muted:#59685e;--paper:#f5f7f5;--rule:#dfe7e1;--amber:#9b621c;--sidebar:270px;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
@@ -42,13 +42,15 @@
     <div class="nav-label">Interpret</div>
     <a href="#large-markets">08 · Handle larger markets</a>
     <a href="#results">09 · Read the results</a>
-    <a href="#reference">10 · Workflow reference</a>
+    <a href="#teams">10 · Form teams and assign projects</a>
+    <a href="#many-to-one">11 · Match with capacities</a>
+    <a href="#reference">12 · Workflow reference</a>
   </nav>
-  <div class="edition">Roth 0.1.0 · Python 3.11+<br>One-to-one matching · MIT license</div>
+  <div class="edition">Roth 0.3.0 · Python 3.11+<br>Stable matching and team optimization<br>MIT license</div>
 </aside>
 <details class="mobile-nav">
   <summary>Roth · Guide contents</summary>
-  <nav aria-label="Mobile contents"><a href="#overview">Overview</a><a href="#example">Example</a><a href="#matching">Matching</a><a href="#start">Get started</a><a href="#humans">Human surveys</a><a href="#delegation">Delegation</a><a href="#benchmark">Benchmark</a><a href="#large-markets">Large markets</a><a href="#results">Results</a><a href="#reference">Reference</a></nav>
+  <nav aria-label="Mobile contents"><a href="#overview">Overview</a><a href="#example">Example</a><a href="#matching">Matching</a><a href="#start">Get started</a><a href="#humans">Human surveys</a><a href="#delegation">Delegation</a><a href="#benchmark">Benchmark</a><a href="#large-markets">Large markets</a><a href="#results">Results</a><a href="#teams">Teams and projects</a><a href="#many-to-one">Capacities</a><a href="#reference">Reference</a></nav>
 </details>
 <main id="content"><article>
   <header class="hero">
@@ -56,6 +58,7 @@
     <h1>Matching that listens<br>to both sides.</h1>
     <p class="lede">Students have preferences over internships. Employers have preferences over students. Roth collects both, then uses deferred acceptance to turn those preferences into a stable set of assignments.</p>
     <p>Use direct rankings from people, or let an LLM rank candidates from their preference descriptions. An optional A-versus-B survey checks how well the model understands what each person wants.</p>
+    <p>Need to form groups as well? The <a href="#teams">team-and-project mode</a> jointly chooses student teams and their projects using ranked preferences and integer programming.</p>
     <div class="meta"><span>Human surveys through EDSL Humanize</span><span>Organizer-controlled delegation</span><span>Reproducible matching</span></div>
     <div class="actions"><a class="button primary" href="#start">Try the internship example →</a><a class="button secondary" href="#overview">Explore the workflow</a></div>
     <figure class="matching-figure">
@@ -89,6 +92,14 @@
       <div class="card"><span class="tag">Delegated preferences</span><h3>People describe what matters.</h3><p>An LLM evaluates candidates using each participant's instructions. The organizer decides whether those rankings can be used directly or require confirmation.</p><a href="#delegation">See the delegated workflow →</a></div>
     </div>
     <p>The two sides can use different collection methods. They still meet at the same matching engine, with a saved record of where each preference came from.</p>
+    <h3 id="agent-next">Start a coding agent with the right question</h3>
+    <pre><code><span class="program">roth</span> agent next</code></pre>
+    <p>This read-only entry point helps the calling agent identify the scenario before choosing a method. Two distinct sides with one partner each use deferred acceptance. Forming student teams and assigning each team its own project uses joint integer optimization. Many-to-one capacities use the same deferred-acceptance workflow with individual rankings. Many-to-many capacities, roommate matching, and repeated projects require other formulations.</p>
+    <pre><code><span class="program">roth</span> --project study agent next --scenario one-to-one
+<span class="program">roth</span> --project mentorship agent next --scenario many-to-one
+<span class="program">roth</span> --project classroom agent next --scenario teams</code></pre>
+    <p>In a fresh directory, the response gives questions about rosters, preferences, and organizer rules. With existing files or saved state, it explains the next applicable step and returns exact command arguments. The agent resolves only missing questions, follows the relevant commands within your authorization, and runs the returned <code>data.rerun</code> command after each stage.</p>
+    <p>The guide distinguishes existing ranking files, human surveys, delegated scoring, required confirmations, and completed reports. Team results are checked against their input hash and independently recomputed scores; changed inputs get a new output directory. <a href="agent.md">Read the agent guidance contract →</a></p>
   </section>
 
   <section id="example">
@@ -335,7 +346,7 @@
     </ol>
     <p>Someone can remain unmatched because they ran out of acceptable partners. An opening can also remain empty. Roth never forces a match that either side rejected.</p>
     <div class="callout"><p><strong>The proposing side matters.</strong> In the standard strict one-to-one model, proposers receive their best outcome among stable matchings. The organizer selects that side before fielding; Roth also computes the reverse orientation by default so the difference is visible.</p></div>
-    <p class="small muted">For the economic background, see <a href="https://www.nobelprize.org/uploads/2018/06/roth-lecture.pdf">Alvin Roth's Nobel lecture on market design</a>. Roth 0.1.0 supports strict one-to-one rankings; many-to-one matching with capacities is planned for a later release.</p>
+    <p class="small muted">For the economic background, see <a href="https://www.nobelprize.org/uploads/2018/06/roth-lecture.pdf">Alvin Roth's Nobel lecture on market design</a>. Roth supports strict one-to-one and many-to-one rankings with responsive preferences; see the <a href="#many-to-one">capacity example</a>.</p>
   </section>
 
   <section id="start">
@@ -499,11 +510,63 @@ python -m pip install -e .</code></pre>
     <p>Each run retains its preference snapshot, proposing side, assignments, and proposal trace. Local history under <code>.roth/</code> preserves earlier revisions. Exports include an organizer report, match and preference files, and individual summaries that reveal only the assigned partner's public profile.</p>
   </section>
 
+  <section id="teams">
+    <h2><span class="chapter">10 · A different assignment problem</span>Form teams and assign their projects together</h2>
+    <p class="intro">Students care about both the project and the people they will work with. Roth can take both sets of rankings and solve the team formation and project assignment jointly.</p>
+    <p>The organizer sets a target team size, whether smaller or larger teams are allowed, and the weight on teammate preferences. Each student joins one team. Each used project hosts one team. The solver first minimizes deviation from the target size, then maximizes the total weighted Borda score.</p>
+    <div class="callout"><p><strong>This mode uses integer optimization.</strong> It returns a feasible assignment and states whether optimality was proved. It makes no stability or strategy-proofness guarantee. The one-to-one deferred-acceptance workflow above remains available separately.</p></div>
+    <h3>Start with the actual ranking files</h3>
+    <pre><code>python -m pip install -e '.[teams]'
+<span class="program">roth</span> teams example classroom
+<span class="program">roth</span> teams validate classroom/market.json \
+  --preferences classroom/preferences.json
+<span class="program">roth</span> teams solve classroom/market.json \
+  --preferences classroom/preferences.json \
+  --output classroom/report --time-limit 60</code></pre>
+    <p><code>teams example</code> writes inputs without solving. The <a href="teams-example/market.json">market file</a> defines 12 students, five projects, a target size of three, and allowed sizes of two through four. The <a href="teams-example/preferences.json">preference file</a> contains each student's project and teammate rankings, plus explicit exclusions. All rankings in this example are hand-built fictional inputs.</p>
+    <p>For five projects, first through fifth place earns 4, 3, 2, 1, and 0 Borda points. For eleven potential teammates, first place earns 10 points. Unlisted options earn zero, but remain distinguishable from exclusions. The category scores are normalized using the full option counts and target team size before applying the organizer's weight.</p>
+    <h3>A concrete outcome, including its compromises</h3>
+    <p>With equal project and teammate weights, the optimum forms four teams of three. Alex, Blair, and Casey work on the campus climate dashboard; Devon, Emery, and Finley study housing; Gray, Harper, and Indigo work on transport; Jules, Kai, and Lane tackle food waste. The library project is unused.</p>
+    <p><strong>Casey receives an unranked project.</strong> Climate earns Casey zero project points, but their team includes both top-ranked teammates. That is an allowed outcome under this aggregate objective, and the report makes it visible. An explicit project exclusion would prohibit the assignment.</p>
+    <div class="actions"><a class="button primary" href="teams-example/index.html">Open the full team report and matrices →</a><a class="button secondary" href="teams.md">Read the formulation and input contract</a></div>
+    <h3>What changes when we change the weight?</h3>
+    <div class="table-wrap"><table><thead><tr><th scope="col">Weight on teammates</th><th scope="col">First-choice project</th><th scope="col">At least one ranked teammate</th><th scope="col">Unranked project</th></tr></thead><tbody>
+      <tr><th scope="row">0% · projects only</th><td>10 / 12</td><td>5 / 12</td><td>0 / 12</td></tr>
+      <tr><th scope="row">25%</th><td>7 / 12</td><td>10 / 12</td><td>0 / 12</td></tr>
+      <tr><th scope="row">50% · equal weights</th><td>4 / 12</td><td>12 / 12</td><td>1 / 12</td></tr>
+    </tbody></table></div>
+    <p class="small muted">These are actual solved variants of the same synthetic inputs, each with four teams of three. The table describes the saved optima; tied solutions can have different individual assignments. <a href="teams-example/sensitivity.json">Inspect the runs</a>, or reproduce them with <code>python scripts/team_sensitivity.py --output new-sensitivity.json</code>.</p>
+    <p>This mode uses file inputs and frozen report directories, independently of the stable-matching project store. SciPy/HiGHS is an optional local solver dependency. Team-specific Humanize fielding, skill constraints, and repeated projects remain future extensions.</p>
+  </section>
+
+  <section id="many-to-one">
+    <h2><span class="chapter">11 · Several partners, one ranking</span>Employees and mentors</h2>
+    <p>Many mentors can work with more than one employee. Keep one mentor ID and one ranking, and give that mentor a <code>capacity</code>. Roth assigns each employee at most one mentor and each mentor up to their capacity. Either side may propose.</p>
+    <div class="table-wrap"><table><thead><tr><th>Example inputs</th><th>Rule</th></tr></thead><tbody>
+      <tr><td>30 fictional employees</td><td>At most one mentor each</td></tr>
+      <tr><td>10 fictional mentors</td><td>At most three employees each</td></tr>
+      <tr><td>Two sets of explicit rankings</td><td>All candidates acceptable in this fixture; shared topics ranked first</td></tr>
+    </tbody></table></div>
+    <p>The preferences are supplied explicitly. <a href="mentorship-example/market.json">Inspect the roster and capacities</a> and <a href="mentorship-example/preferences.json">each person's ranked list</a>, then import them before matching:</p>
+    <pre><code><span class="program">roth</span> example mentorship mentorship-demo
+<span class="program">roth</span> --project mentorship-demo preferences import mentorship-demo/preferences.json
+<span class="program">roth</span> --project mentorship-demo preferences freeze --name main
+<span class="program">roth</span> --project mentorship-demo match --snapshot main --name main
+<span class="program">roth</span> --project mentorship-demo report --run main --output mentorship-demo/report</code></pre>
+    <p>The fixture fills all 30 slots. <a href="mentorship-example/index.html">Open the worked report</a> to see every assigned mentee, mentor capacity utilization, and the matrix of both sides' rankings with matches marked. The JSON output records vacancies separately from people with no assignment.</p>
+    <div class="callout"><p><strong>Rank individuals, including fallback choices.</strong> A mentor with three slots can rank all 30 candidates. They prefer any acceptable person to leaving a slot empty, and their preference between two people must not depend on who else they receive. Requirements such as “these two together” or “at least two or none” need another formulation.</p></div>
+    <p>Capacity defaults to one, accepts zero for a closed position, and can exceed one on at most one side. It is an upper bound; unmatched people and vacant slots are allowed. The algorithm retains the best acceptable proposals up to capacity and replaces a lower-ranked incumbent when a better proposal arrives. The verifier checks both capacity violations and blocking pairs.</p>
+    <p>Human surveys, model delegation, and confirmation use the same workflow. With 30 candidates per mentor, start human elicitation with screening before a cross-batch ranking. <code>roth --project mentorship-demo agent next --collection human</code> provides guidance. This example's synthetic rankings bypass human fielding explicitly.</p>
+    <p>For more detail, see the <a href="many-to-one.md">many-to-one guide and Python API</a>. The standard vacancy and replacement rule is illustrated in <a href="https://www.nrmp.org/intro-to-the-match/how-matching-algorithm-works/">NRMP's matching explanation</a>.</p>
+  </section>
+
   <section id="reference">
-    <h2><span class="chapter">10 · At your desk</span>The workflow reference</h2>
-    <p>Use <code>roth guide</code> to discover the workflow and <code>roth next</code> to inspect the next step for a project. The CLI returns structured output for an assistant; this guide explains the decisions behind those commands.</p>
+    <h2><span class="chapter">12 · At your desk</span>The workflow reference</h2>
+    <p>Start with <code>roth agent next</code> to identify the scenario and current stage. Use <code>roth guide</code> for the full workflow. The CLI returns structured output for an assistant; this guide explains the decisions behind those commands.</p>
     <div class="table-wrap"><table class="reference"><thead><tr><th scope="col">You want to…</th><th scope="col">Start here</th></tr></thead><tbody>
+      <tr><td>Create the mentorship example</td><td><code>roth example mentorship mentorship-demo</code></td></tr>
       <tr><td>Run the local example</td><td><code>roth demo internship-demo</code></td></tr>
+      <tr><td>Identify the scenario and next step</td><td><code>roth agent next</code></td></tr>
       <tr><td>Inspect a project's progress</td><td><code>roth --project study next</code></td></tr>
       <tr><td>Build personalized surveys</td><td><code>roth --project study field build --help</code></td></tr>
       <tr><td>Plan delegated evaluations</td><td><code>roth --project study score plan --help</code></td></tr>
@@ -511,9 +574,10 @@ python -m pip install -e .</code></pre>
       <tr><td>Freeze the active preferences</td><td><code>roth --project study preferences freeze --name main</code></td></tr>
       <tr><td>Compute assignments</td><td><code>roth --project study match --snapshot main --name main</code></td></tr>
       <tr><td>Verify a saved project</td><td><code>roth --project study validate</code></td></tr>
+      <tr><td>Form teams and assign projects</td><td><code>roth teams solve --help</code></td></tr>
     </tbody></table></div>
     <p>For exact input schemas and the full fielding sequence, continue with the <a href="contracts.md">data contracts</a> and <a href="delegation.md">delegation and benchmark walkthrough</a>.</p>
-    <p class="small muted">This page describes Roth 0.1.0. Matching, survey construction, and native EDSL response imports are implemented. Real recruitment and real-model preference quality require a pilot in the intended market.</p>
+    <p class="small muted">This page describes Roth 0.3.0. Stable matching, joint team optimization, and the shared one-to-one/many-to-one survey workflow are implemented. Real recruitment and real-model preference quality require a pilot in the intended market.</p>
   </section>
   <footer><p><strong>Roth</strong> · Two-sided matching with Expected Parrot · Python 3.11+ · MIT</p><a href="#content">Back to the top</a><a href="contracts.md">Data contracts</a><a href="delegation.md">Delegation walkthrough</a><a href="https://www.expectedparrot.com/">Expected Parrot</a></footer>
 </article></main>

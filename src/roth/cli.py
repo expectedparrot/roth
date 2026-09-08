@@ -21,11 +21,72 @@ class Parser(argparse.ArgumentParser):
 def parser():
     p = Parser(
         prog="roth",
-        description="Two-sided preference collection and one-to-one stable matching",
+        description="Preference collection, stable matching, and joint team/project optimization",
     )
-    p.add_argument("--project", default=".", help="Directory containing .roth")
+    p.add_argument(
+        "--project",
+        default=".",
+        help="Study directory for saved state or agent input discovery",
+    )
     p.add_argument("--human", action="store_true", help="Pretty human-readable output")
     sub = p.add_subparsers(dest="command", required=True)
+    agent = sub.add_parser(
+        "agent", help="Guidance for the calling agent, from intake to results"
+    ).add_subparsers(dest="action", required=True)
+    agent_next = agent.add_parser(
+        "next",
+        help="Identify the matching scenario and explain the next applicable step",
+    )
+    agent_next.add_argument(
+        "--scenario",
+        choices=["auto", "one-to-one", "teams", "many-to-one", "roommates", "other"],
+        default="auto",
+    )
+    agent_next.add_argument(
+        "--market", help="Market JSON; defaults to PROJECT/market.json"
+    )
+    agent_next.add_argument(
+        "--preferences", help="Preference JSON; defaults to PROJECT/preferences.json"
+    )
+    agent_next.add_argument(
+        "--output",
+        help="Team report directory to inspect or create; defaults to PROJECT/report",
+    )
+    agent_next.add_argument(
+        "--collection",
+        choices=["rankings", "human", "delegated"],
+        help="How remaining preferences will be supplied",
+    )
+    teams = sub.add_parser(
+        "teams", help="Joint team formation and project assignment from Borda rankings"
+    ).add_subparsers(dest="action", required=True)
+    team_example = teams.add_parser(
+        "example", help="Write fictional classroom inputs without solving"
+    )
+    team_example.add_argument("directory")
+    for action in ("validate", "solve"):
+        command = teams.add_parser(action)
+        command.add_argument(
+            "market",
+            help="Team market JSON (students, projects, organizer configuration)",
+        )
+        command.add_argument(
+            "--preferences",
+            required=True,
+            help="Student project and teammate rankings JSON",
+        )
+        if action == "solve":
+            command.add_argument(
+                "--output",
+                required=True,
+                help="New output directory for frozen inputs and report",
+            )
+            command.add_argument(
+                "--time-limit",
+                type=float,
+                default=60,
+                help="Total solver time limit in seconds",
+            )
     for name in ("version", "capabilities", "guide", "status", "next", "validate"):
         sub.add_parser(name)
     init = sub.add_parser(
@@ -41,6 +102,13 @@ def parser():
     create.add_argument("directory")
     create.add_argument("--students", type=int, default=12)
     create.add_argument("--internships", type=int, default=10)
+    mentor = ex.add_parser(
+        "mentorship", help="Create a fictional many-to-one mentorship project"
+    )
+    mentor.add_argument("directory")
+    mentor.add_argument("--employees", type=int, default=30)
+    mentor.add_argument("--mentors", type=int, default=10)
+    mentor.add_argument("--capacity", type=int, default=3)
     for name in ("scores", "benchmark"):
         q = ex.add_parser(name, help="Write explicitly synthetic local fixture answers")
         q.add_argument("--name", required=True, help="Score plan or benchmark name")
@@ -155,6 +223,8 @@ def parser():
 
 def guide():
     return {
+        "start_here": "roth agent next",
+        "agent_intake": "Identify the structure with the user, then use agent next --scenario one-to-one, many-to-one, or teams. Inspect existing project/input files and rerun after every action. Many-to-many, roommate matching, and nonresponsive group preferences must not be silently reinterpreted.",
         "workflow": [
             "roth example create internship-demo",
             "roth --project internship-demo preferences import internship-demo/preferences.json",
@@ -162,6 +232,30 @@ def guide():
             "roth --project internship-demo match --snapshot main --name main",
             "roth --project internship-demo report --run main --output internship-demo/report",
         ],
+        "many_to_one": {
+            "workflow": [
+                "roth example mentorship mentorship-demo",
+                "roth --project mentorship-demo agent next",
+                "roth --project mentorship-demo preferences import mentorship-demo/preferences.json",
+                "roth --project mentorship-demo preferences freeze --name main",
+                "roth --project mentorship-demo match --snapshot main --name main",
+                "roth --project mentorship-demo report --run main --output mentorship-demo/report",
+            ],
+            "capacity": "Set participant.capacity to a nonnegative integer, default one; at most one side exceeds one. Zero means closed; capacities are upper bounds.",
+            "preferences": "Strict rankings of individuals, responsive to individual replacements; no group complementarities. Rank all acceptable candidates, not just the number of slots.",
+            "collection": "The same human, delegated, and confirmation workflows apply. Screen long lists before requesting a cross-batch ranking.",
+        },
+        "teams": {
+            "workflow": [
+                "roth teams example classroom",
+                "roth teams validate classroom/market.json --preferences classroom/preferences.json",
+                "roth teams solve classroom/market.json --preferences classroom/preferences.json --output classroom/report",
+            ],
+            "solver_extra": "teams (SciPy/HiGHS)",
+            "inputs": "Separate file-based mode; --project and the one-to-one .roth store are not used",
+            "objective": "Minimize target team-size deviation, then maximize weighted Borda scores jointly over teams and projects",
+            "scope": "One team per project; completed partial rankings are supported. No team-specific Humanize or delegated scoring integration yet.",
+        },
         "human_fielding": "field build → inspect preview and handoff.json → externally create Humanize survey → field register → authorize email delivery → externally retrieve Results → field import --edsl → preferences freeze",
         "delegated": "Organizer configure delegation → collect preference instructions → score plan → inspect jobs/cost → external ep run → score import → optional benchmark → score apply → optional confirmation field → preferences freeze → match",
         "benchmark": "benchmark build freezes baseline predictions → import calibration answers only → score plan --calibration → score import → benchmark predict --label revised → import held-out answers → benchmark report → score apply",
@@ -180,16 +274,22 @@ def guide():
     }
 
 
-def create_example(directory, students=12, internships=10, run=False):
-    from .example import internship_example
+def create_example(
+    directory, students=12, internships=10, run=False, *, mentorship=False, capacity=3
+):
+    from .example import internship_example, mentorship_example
     from .workflow import ingest_preferences, freeze, run_matching
     from .report import export_report
 
     require(students > 0 and internships > 0, "Example sizes must be positive")
     root = Path(directory)
     require(not root.exists(), "Example directory already exists")
+    market, preferences = (
+        mentorship_example(students, internships, capacity)
+        if mentorship
+        else internship_example(students, internships)
+    )
     root.mkdir(parents=True)
-    market, preferences = internship_example(students, internships)
     write_json(root / "market.json", market)
     write_json(root / "preferences.json", preferences)
     store = Store(root)
@@ -204,8 +304,8 @@ def create_example(directory, students=12, internships=10, run=False):
         store.commit(state, "example.create", {"synthetic": True})
     result = {
         "project": str(root.resolve()),
-        "students": students,
-        "internships": internships,
+        "employees" if mentorship else "students": students,
+        "mentors" if mentorship else "internships": internships,
         "synthetic": True,
     }
     if run:
@@ -223,6 +323,45 @@ def create_example(directory, students=12, internships=10, run=False):
             )
             store.commit(state, "field.build", {"name": "preview"})
     return result
+
+
+def team_command(args):
+    from .teams import score_tables, solve_teams, validate_team_inputs
+
+    if args.action == "example":
+        from .team_example import classroom_example
+
+        root = Path(args.directory)
+        require(not root.exists(), "Example directory already exists")
+        market, preferences = classroom_example()
+        market, preferences = validate_team_inputs(market, preferences)
+        root.mkdir(parents=True)
+        return {
+            "market": write_json(root / "market.json", market),
+            "preferences": write_json(root / "preferences.json", preferences),
+            "synthetic": True,
+            "solved": False,
+        }
+    raw_market, raw_preferences = read_json(args.market), read_json(args.preferences)
+    market, preferences = validate_team_inputs(raw_market, raw_preferences)
+    if args.action == "validate":
+        return {
+            "valid": True,
+            "students": len(market["students"]),
+            "projects": len(market["projects"]),
+            "config": market["config"],
+            "scores": score_tables(market, preferences),
+            "note": "Schema and rankings validated; feasibility requires solving.",
+        }
+    require(not Path(args.output).exists(), "Output directory already exists")
+    result = solve_teams(market, preferences, time_limit=args.time_limit)
+    from .team_report import export_team_report
+
+    exports = export_team_report(market, preferences, result, args.output)
+    # Preserve original submitted files as well as the normalized input snapshot.
+    write_json(Path(args.output) / "submitted-market.json", raw_market)
+    write_json(Path(args.output) / "submitted-preferences.json", raw_preferences)
+    return {**result, **exports}
 
 
 def dispatch(args, state):
@@ -261,7 +400,7 @@ def dispatch(args, state):
         return status(state), False
     if command == "validate":
         from .matching import verify_matching
-        from .market import participants, validate_preferences
+        from .market import capacities, participants, validate_preferences
 
         validate_market(state["market"])
         validate_preferences(state["market"], list(state["preferences"].values()))
@@ -284,9 +423,12 @@ def dispatch(args, state):
                 for side in ("left", "right")
             }
             require(
-                verify_matching(sides["left"], sides["right"], run["matches"])[
-                    "stable"
-                ],
+                verify_matching(
+                    sides["left"],
+                    sides["right"],
+                    run["matches"],
+                    capacities(snapshot["market"], snapshot["active"]),
+                )["stable"],
                 "Saved matching fails verification",
             )
         return {
@@ -525,8 +667,15 @@ def main(argv=None):
             data = {"version": __version__, "schema_version": "1.0"}
         elif args.command == "capabilities":
             data = {
+                "agent_next": True,
+                "agent_scenario_routing": ["one-to-one", "many-to-one", "teams"],
                 "one_to_one": True,
-                "many_to_one": False,
+                "many_to_one": True,
+                "capacity_scope": "Nonnegative integers, default one; at most one side exceeds one. Responsive individual rankings; either proposing side.",
+                "many_to_many": False,
+                "joint_team_project_optimization": True,
+                "team_solver_extra": "teams",
+                "team_humanize_surveys": False,
                 "direct_surveys": True,
                 "humanize_handoff": True,
                 "delegated_scoring": True,
@@ -538,10 +687,34 @@ def main(argv=None):
             }
         elif args.command == "guide":
             data = guide()
+        elif args.command == "agent" or (
+            args.command == "next" and not (Path(args.project) / ".roth").is_dir()
+        ):
+            from .agent import next_guidance
+
+            data = next_guidance(
+                args.project,
+                scenario=getattr(args, "scenario", "auto"),
+                market_path=getattr(args, "market", None),
+                preferences_path=getattr(args, "preferences", None),
+                output=getattr(args, "output", None),
+                collection=getattr(args, "collection", None),
+            )
+        elif args.command == "teams":
+            with redirect_stdout(io.StringIO()):
+                data = team_command(args)
         elif args.command == "demo":
             data = create_example(args.directory, run=True)
         elif args.command == "example" and args.action == "create":
             data = create_example(args.directory, args.students, args.internships)
+        elif args.command == "example" and args.action == "mentorship":
+            data = create_example(
+                args.directory,
+                args.employees,
+                args.mentors,
+                mentorship=True,
+                capacity=args.capacity,
+            )
         else:
             store = Store(args.project)
             with store.lock(create=args.command == "init"):
@@ -554,7 +727,7 @@ def main(argv=None):
                         " ".join([args.command, getattr(args, "action", "")]),
                         {"argv": argv},
                     )
-        next_steps = []
+        next_steps = data.get("actions", []) if isinstance(data, dict) else []
         if (
             isinstance(data, dict)
             and isinstance(data.get("next"), list)

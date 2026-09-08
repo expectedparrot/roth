@@ -1,4 +1,4 @@
-# roth — two-sided preference collection and stable matching
+# roth — stable matching and joint team/project assignment
 <!-- id: roth/roth -->
 
 <p align="center">
@@ -6,13 +6,17 @@
 </p>
 
 Roth collects preferences on two sides of a market and computes auditable,
-one-to-one stable matches. The included example assigns students to individual
+one-to-one or many-to-one stable matches. The internship example assigns students to individual
 internship openings. An organizer controls direct ranking, delegated LLM
 preferences, and whether participants must confirm inferred rankings.
 
 The Python matching engine and local example need no network or third-party
 runtime dependencies. Human fielding and model scoring use optional native EDSL
 artifacts, with execution through `ep`.
+
+Roth also forms student teams and assigns their projects jointly, using ranked
+teammate and project preferences converted to Borda scores. This separate mode
+uses integer programming with an optional local solver.
 
 Roth can:
 
@@ -55,40 +59,48 @@ For development from a checkout, use `python -m pip install -e '.[test,fielding]
 ## Copy and paste into a coding agent
 
 ```text
-Set up Roth and help me organize a one-to-one matching process between
-students and internship openings.
+Set up Roth and help me with my matching or team-assignment problem.
 
 Install Roth in an isolated Python 3.11+ tool environment. If uv is missing,
 install it with `python -m pip install --upgrade uv` first:
 
 uv tool install --python 3.11 --with-executables-from edsl \
-  "roth[fielding] @ git+https://github.com/expectedparrot/roth.git@main"
+  "roth[fielding,teams] @ git+https://github.com/expectedparrot/roth.git@main"
 
 Check the available interfaces:
 
 roth version
 roth capabilities
-roth guide
+roth agent next
 ep --help
 
-Start with the fictional example and show me its preference inputs before
-matching:
+Use the intake questions to identify the structure of my problem, reusing
+answers already in our conversation. Do not pick a method just because I
+mention students, internships, or mentors.
 
-roth example create internship-study
-roth --project internship-study preferences import internship-study/preferences.json
-roth --project internship-study preferences show
-roth --project internship-study preferences freeze --name main
-roth --project internship-study match --snapshot main --name main
-roth --project internship-study report --run main --output internship-study/report
-roth --project internship-study validate
+For two distinct sides with at most one partner each, use:
+roth --project STUDY agent next --scenario one-to-one
 
-Explain who matched, both sides' ranks of their assigned partner, and why
-anyone remained unmatched. Keep the example visibly labeled as synthetic.
+For one side accepting several partners under fixed capacities, use:
+roth --project STUDY agent next --scenario many-to-one
 
-For my own market, help me define participant profiles, eligibility,
-unacceptable choices, the proposing side, and organizer-controlled delegation
-before collecting preferences. Use `roth --project PROJECT next` to guide
-each stage. Preserve preference revisions and frozen matching snapshots.
+For forming student teams and assigning each team a distinct project, use:
+roth --project STUDY agent next --scenario teams
+
+Help me define the participant lists, preferences, and organizer rules. Ask
+only for missing decisions. Follow the guidance's applicable next_steps within
+my authorization, then run its returned data.rerun command. For existing
+files or projects, let agent next inspect progress before proposing new work.
+
+If I need many-to-many capacities, roommate matching, repeated projects, or another
+unsupported structure, explain the limitation rather than silently converting
+it into a different problem. Use synthetic examples only as labeled demos;
+never substitute them for missing real preferences.
+
+Finish by showing me the inputs, assignments, preference statistics, and any
+unmatched participants, unfilled slots, or assignment compromises. Explain stability scope
+for deferred acceptance and solver optimality/limits for team optimization.
+Preserve previous submissions, snapshots, and reports.
 
 Review generated surveys and scoring plans with me before sending real
 invitations or making paid model calls. Let ep manage authentication.
@@ -96,25 +108,65 @@ invitations or making paid model calls. Let ep manage authentication.
 
 ## When to use this
 
-Use Roth when two sides need to rank one another and each participant can
-receive at most one partner: students and individual internship openings,
-mentoring pairs, or other one-to-one assignments. Participants may prefer
-remaining unmatched to some options. Many-to-one capacities are planned for
-a later release.
+Use the stable matching workflow when two sides rank one another: students and
+internships, employees and mentors, or students and faculty advisers. Each person
+on one side gets at most one partner; participants on the other side may accept
+several. Either side may propose. Participants can reject options and slots can
+remain vacant. Capacity is an upper bound, not a required fill level.
+
+Many-to-one matching assumes **responsive preferences**: a mentor ranks individual
+mentees independently of who else is assigned. Couples, minimum staffing levels,
+and preferences over combinations need a different formulation.
 
 The organizer supplies stable participant IDs, public profiles, eligibility
 rules, and either explicit rankings or natural-language preference instructions.
-Contact information is needed only for human recruitment. Each internship
-opening represents one slot, with its own employer-side ranking.
+Contact information is needed only for human recruitment. Each mentor or program
+has one ID, one ranking, and a `capacity`; omitted capacity defaults to one.
+
+## Many-to-one example: employees and mentors
+
+The fictional example has **30 employees and 10 mentors, each with capacity 3**.
+Both sides supply explicit synthetic rankings. Inspect the input files, then
+import and freeze them before matching:
+
+```bash
+roth example mentorship mentorship-demo
+roth --project mentorship-demo agent next
+roth --project mentorship-demo preferences import mentorship-demo/preferences.json
+roth --project mentorship-demo preferences freeze --name main
+roth --project mentorship-demo match --snapshot main --name main
+roth --project mentorship-demo report --run main --output mentorship-demo/report
+```
+
+`example mentorship` only creates the study and input files. It does not import
+preferences or run matching. Use `--employees`, `--mentors`, and `--capacity` to
+change the example sizes. No solver dependency or network is needed.
+
+[Open the worked mentorship report](docs/mentorship-example/index.html) for the
+rankings/matches matrix, all assigned partners, and capacity utilization.
+See the [many-to-one guide](docs/many-to-one.md) for the Python API and assumptions.
 
 ## Agent workflow
 
 ```bash
+roth agent next
+roth --project classroom agent next --scenario teams
+roth --project mentorship-demo agent next --scenario many-to-one
+roth --project internship-demo agent next
 roth guide
-roth --project internship-demo next
-roth --project internship-demo status
-roth --project internship-demo validate
 ```
+
+`agent next` is a read-only guide for the calling agent. In a new directory it
+provides scenario-selection questions; with a market or saved project it
+identifies the next stage and returns an explanation, missing decisions, and
+executable command arguments. It distinguishes existing rankings, human surveys,
+delegated scoring, required confirmations, and team optimization. It never
+executes its recommended actions. See the [agent guidance contract](docs/agent.md).
+
+For custom paths, pass `--market`, `--preferences`, and (for teams) `--output`
+after `agent next`. Use `--collection rankings`, `human`, or `delegated` to
+record how remaining preferences will be supplied. `data.rerun` preserves those
+choices and follows any newly selected report directory.
 
 Commands emit one versioned JSON envelope with `status`, `data`, `errors`, and
 `next_steps`. Failures exit nonzero. `--human` opts into indented data. Global
@@ -125,6 +177,36 @@ Roth builds reviewable execution packages. It never automatically runs inference
 publishes a survey, or sends invitations. `handoff.json` contains explicit `ep`
 argument arrays; inspect the instrument, recipients, and cost before external
 execution. Let EDSL manage authentication.
+
+## Form teams and assign projects together
+
+**[Open the worked team-assignment report](https://expectedparrot.github.io/roth/teams-example/)**
+to see all input rankings, Borda scores, the realized teams, and both preference
+matrices. The fictional example has 12 students and five projects; the joint
+optimum forms four teams of three and leaves one project unused.
+
+From a source checkout:
+
+```bash
+python -m pip install -e '.[teams]'
+roth teams example classroom
+roth teams validate classroom/market.json --preferences classroom/preferences.json
+roth teams solve classroom/market.json --preferences classroom/preferences.json \
+  --output classroom/report --time-limit 60
+```
+
+`teams example` writes inputs without solving. Students may provide partial,
+strict rankings of projects and teammates. Unlisted options earn zero points;
+explicit exclusions remain hard constraints. Every student needs a completed
+submission. The organizer sets target size, permission and bounds for smaller
+or larger teams, and the weight on teammate preferences.
+
+The SciPy/HiGHS integer program minimizes deviation from target team size, then
+maximizes the combined normalized Borda score. Each project takes at most one
+team. The report preserves the inputs and records optimality or solver limits.
+This mode uses explicit files and new output directories, independently of
+`--project` and the stable-matching store. Team-specific Humanize fielding
+is not yet implemented. See the [formulation and data contract](docs/teams.md).
 
 ## Direct preferences and matching
 

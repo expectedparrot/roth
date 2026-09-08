@@ -103,6 +103,8 @@ def build_field(
             package_id = f"{name}_{pid}_{batch + 1}"
             questions = []
             header = f"Preference survey for {people[pid]['name']}. Organizer policy: {policy(market, pid)}.\n"
+            if people[pid].get("capacity", 1) != 1:
+                header += f"You may receive up to {people[pid]['capacity']} partners. Rank individuals independently of your other partners, and include all acceptable candidates, not just your top few. 'Remain unmatched' marks the cutoff for leaving an additional slot empty.\n"
             if kind == "instructions":
                 questions.append(
                     {
