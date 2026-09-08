@@ -1,0 +1,17 @@
+{
+  "name": "too-few-projects",
+  "changes": {
+    "name": "too-few-projects",
+    "close_projects": [
+      "climate",
+      "housing",
+      "transit"
+    ]
+  },
+  "proposing_side": null,
+  "status": "infeasible",
+  "error": {
+    "code": "INFEASIBLE",
+    "message": "Cannot place 12 students into available projects with teams of 3–3; change size bounds or open project count"
+  }
+}

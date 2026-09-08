@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0",
+  "mode": "teams",
+  "method": "joint_borda_milp",
+  "input_hash": "2773e2d2614ed42c780a4303eb853825657271fdb337462fb4c855afa7446b71",
+  "preference_sources": [
+    "synthetic"
+  ],
+  "config": {
+    "target_size": 3,
+    "allow_smaller": false,
+    "allow_larger": false,
+    "min_size": 3,
+    "max_size": 3,
+    "social_weight": 0.25
+  },
+  "assignments": {
+    "s01": "housing",
+    "s02": "housing",
+    "s03": "housing",
+    "s04": "food",
+    "s05": "food",
+    "s06": "climate",
+    "s07": "library",
+    "s08": "library",
+    "s09": "food",
+    "s10": "climate",
+    "s11": "climate",
+    "s12": "library"
+  },
+  "valid": true,
+  "teams": [
+    {
+      "project_id": "climate",
+      "students": [
+        "s06",
+        "s10",
+        "s11"
+      ]
+    },
+    {
+      "project_id": "housing",
+      "students": [
+        "s01",
+        "s02",
+        "s03"
+      ]
+    },
+    {
+      "project_id": "food",
+      "students": [
+        "s04",
+        "s05",
+        "s09"
+      ]
+    },
+    {
+      "project_id": "library",
+      "students": [
+        "s07",
+        "s08",
+        "s12"
+      ]
+    }
+  ],
+  "unused_projects": [
+    "transit"
+  ],
+  "students": [
+    {
+      "student_id": "s01",
+      "project_id": "housing",
+      "teammates": [
+        "s02",
+        "s03"
+      ],
+      "project_rank": 2,
+      "project_borda": 3,
+      "teammate_borda": 19,
+      "project_score": 0.75,
+      "social_score": 0.95,
+      "combined_score": 0.8,
+      "ranked_teammates_received": 2
+    },
+    {
+      "student_id": "s02",
+      "project_id": "housing",
+      "teammates": [
+        "s01",
+        "s03"
+      ],
+      "project_rank": 1,
+      "project_borda": 4,
+      "teammate_borda": 19,
+      "project_score": 1.0,
+      "social_score": 0.95,
+      "combined_score": 0.9875,
+      "ranked_teammates_received": 2
+    },
+    {
+      "student_id": "s03",
+      "project_id": "housing",
+      "teammates": [
+        "s01",
+        "s02"
+      ],
+      "project_rank": 2,
+      "project_borda": 3,
+      "teammate_borda": 19,
+      "project_score": 0.75,
+      "social_score": 0.95,
+      "combined_score": 0.8,
+      "ranked_teammates_received": 2
+    },
+    {
+      "student_id": "s04",
+      "project_id": "food",
+      "teammates": [
+        "s05",
+        "s09"
+      ],
+      "project_rank": 2,
+      "project_borda": 3,
+      "teammate_borda": 10,
+      "project_score": 0.75,
+      "social_score": 0.5,
+      "combined_score": 0.6875,
+      "ranked_teammates_received": 1
+    },
+    {
+      "student_id": "s05",
+      "project_id": "food",
+      "teammates": [
+        "s04",
+        "s09"
+      ],
+      "project_rank": 1,
+      "project_borda": 4,
+      "teammate_borda": 18,
+      "project_score": 1.0,
+      "social_score": 0.9,
+      "combined_score": 0.975,
+      "ranked_teammates_received": 2
+    },
+    {
+      "student_id": "s06",
+      "project_id": "climate",
+      "teammates": [
+        "s10",
+        "s11"
+      ],
+      "project_rank": 1,
+      "project_borda": 4,
+      "teammate_borda": 8,
+      "project_score": 1.0,
+      "social_score": 0.4,
+      "combined_score": 0.85,
+      "ranked_teammates_received": 1
+    },
+    {
+      "student_id": "s07",
+      "project_id": "library",
+      "teammates": [
+        "s08",
+        "s12"
+      ],
+      "project_rank": 2,
+      "project_borda": 3,
+      "teammate_borda": 10,
+      "project_score": 0.75,
+      "social_score": 0.5,
+      "combined_score": 0.6875,
+      "ranked_teammates_received": 1
+    },
+    {
+      "student_id": "s08",
+      "project_id": "library",
+      "teammates": [
+        "s07",
+        "s12"
+      ],
+      "project_rank": 1,
+      "project_borda": 4,
+      "teammate_borda": 18,
+      "project_score": 1.0,
+      "social_score": 0.9,
+      "combined_score": 0.975,
+      "ranked_teammates_received": 2
+    },
+    {
+      "student_id": "s09",
+      "project_id": "food",
+      "teammates": [
+        "s04",
+        "s05"
+      ],
+      "project_rank": 1,
+      "project_borda": 4,
+      "teammate_borda": 0,
+      "project_score": 1.0,
+      "social_score": 0.0,
+      "combined_score": 0.75,
+      "ranked_teammates_received": 0
+    },
+    {
+      "student_id": "s10",
+      "project_id": "climate",
+      "teammates": [
+        "s06",
+        "s11"
+      ],
+      "project_rank": 2,
+      "project_borda": 3,
+      "teammate_borda": 10,
+      "project_score": 0.75,
+      "social_score": 0.5,
+      "combined_score": 0.6875,
+      "ranked_teammates_received": 1
+    },
+    {
+      "student_id": "s11",
+      "project_id": "climate",
+      "teammates": [
+        "s06",
+        "s10"
+      ],
+      "project_rank": 1,
+      "project_borda": 4,
+      "teammate_borda": 10,
+      "project_score": 1.0,
+      "social_score": 0.5,
+      "combined_score": 0.875,
+      "ranked_teammates_received": 1
+    },
+    {
+      "student_id": "s12",
+      "project_id": "library",
+      "teammates": [
+        "s07",
+        "s08"
+      ],
+      "project_rank": 1,
+      "project_borda": 4,
+      "teammate_borda": 0,
+      "project_score": 1.0,
+      "social_score": 0.0,
+      "combined_score": 0.75,
+      "ranked_teammates_received": 0
+    }
+  ],
+  "size_deviation": 0,
+  "total_score": 9.825,
+  "statistics": {
+    "students": 12,
+    "teams": 4,
+    "project_first_choices": 7,
+    "project_top_three": 12,
+    "unranked_project_assignments": 0,
+    "students_with_ranked_teammate": 10,
+    "minimum_individual_score": 0.6875,
+    "mean_project_score": 0.8958333333333334,
+    "mean_social_score": 0.5875
+  },
+  "solution_status": "optimal",
+  "solver": {
+    "name": "HiGHS via scipy.optimize.milp",
+    "scipy_version": "1.17.1",
+    "time_limit_seconds": 60,
+    "elapsed_seconds": 0.07604662500671111,
+    "variables": 190,
+    "constraints": 398,
+    "phases": {
+      "team_size": {
+        "status_code": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "optimal": true,
+        "objective": 0.0,
+        "dual_bound": 0.0,
+        "relative_gap": 0.0
+      },
+      "preferences": {
+        "status_code": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "optimal": true,
+        "objective": -9.825,
+        "dual_bound": -9.825,
+        "relative_gap": 0.0
+      }
+    }
+  },
+  "scoring": {
+    "borda": "M-rank over the full option universe; singleton gets 1",
+    "unlisted": "0 points; retained as unranked, allowed unless explicitly excluded",
+    "project_divisor": 4,
+    "social_divisor": 20,
+    "objective_order": [
+      "minimize total absolute team-size deviation",
+      "maximize weighted Borda score"
+    ],
+    "guarantees": "Feasibility checked independently. No stability or strategy-proofness guarantee."
+  }
+}

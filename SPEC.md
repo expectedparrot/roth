@@ -434,3 +434,19 @@ Agent guidance routes human collection ahead of canned fixture files and resumes
 solving only after a completed export. An offline native pilot covers all 84
 survey packages in the team and review fixtures; no live invitations were sent.
 A real-cohort usability and hosted-delivery pilot remains pending cohort inputs.
+
+## Organizer comparisons extension (0.6.0)
+
+`roth compare` branches named organizer changes from a saved stable, team, or
+review report. Every branch preserves the cohort, rankings, preference sources,
+and declared conflicts. Supported changes are stable capacities/proposing side,
+team size/weight configuration and project closures, and reviewer workloads and
+submission coverage. Closed team projects remain in the Borda option universe.
+
+Assignment/rank/score verification precedes comparison. Each outcome is evaluated
+on the baseline scoring scale, separately from scenario objectives. Stable
+partner-set comparisons use ordinal rank-vector dominance; mixed vectors remain
+incomparable. Changed review workload is never labeled a preference gain merely
+because total score rises. Reports retain solver statuses, infeasible branches,
+input/result hashes, before/after assignments, and a participant CSV. No branch
+is automatically adopted or delivered. See docs/comparisons.md.

@@ -71,6 +71,14 @@ def validate_team_market(market):
         max_size=high,
         social_weight=weight,
     )
+    closed = market.get("closed_projects", [])
+    require(
+        isinstance(closed, list)
+        and all(isinstance(p, str) for p in closed)
+        and len(closed) == len(set(closed))
+        and set(closed) <= {p["id"] for p in market["projects"]},
+        "closed_projects must contain unique known project IDs",
+    )
     return market
 
 
@@ -178,6 +186,11 @@ def evaluate_assignment(market, preferences, assignments):
         "Unknown assigned project",
         "INVALID_SOLUTION",
     )
+    require(
+        not set(assignments.values()) & set(market.get("closed_projects", [])),
+        "Assignment uses a closed project",
+        "INVALID_SOLUTION",
+    )
     config = market["config"]
     teams = {p: [i for i in students if assignments[i] == p] for p in projects}
     teams = {p: members for p, members in teams.items() if members}
@@ -277,8 +290,9 @@ def solve_teams(market, preferences, time_limit=60):
     config = market["config"]
     low, high, target = config["min_size"], config["max_size"], config["target_size"]
     require(
-        math.ceil(n / high) <= min(m, n // low),
-        f"Cannot place {n} students into at most {m} teams of {low}–{high}; change size bounds or project count",
+        math.ceil(n / high)
+        <= min(m - len(market.get("closed_projects", [])), n // low),
+        f"Cannot place {n} students into available projects with teams of {low}–{high}; change size bounds or open project count",
         "INFEASIBLE",
     )
     scores = score_tables(market, preferences)
@@ -297,7 +311,10 @@ def solve_teams(market, preferences, time_limit=60):
         (i, p): variable(
             -(1 - weight) * scores[i]["projects"].get(p, 0) / max(1, m - 1),
             True,
-            0 if p in pref[i]["unacceptable_projects"] else 1,
+            0
+            if p in pref[i]["unacceptable_projects"]
+            or p in market.get("closed_projects", [])
+            else 1,
         )
         for i in students
         for p in projects

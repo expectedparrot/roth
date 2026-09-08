@@ -19,6 +19,7 @@ def export_report(state, run_name, output):
     write_json(directory / "matches.json", run)
     write_json(directory / "preferences.json", snapshot["preferences"])
     write_json(directory / "market.json", snapshot["market"])
+    write_json(directory / "snapshot.json", snapshot)
     with (directory / "matches.csv").open("x", newline="") as handle:
         writer = csv.writer(handle)
         writer.writerow(["left_id", "left_name", "right_id", "right_name"])

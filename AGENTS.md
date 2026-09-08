@@ -11,6 +11,14 @@ the full workflow and supported features. Reuse existing user answers and
 never force an unsupported scenario into another mechanism.
 Keep the core matching engine independent of EDSL and network access.
 
+Use `roth compare BASELINE_REPORT --scenarios SCENARIOS.json --output NEW_REPORT`
+for organizer what-if analysis across stable, team, and review modes. Keep the
+baseline cohort and preference records fixed. Gains/losses use baseline ranks
+and score scales; a changed review workload is not a preference gain. Team
+closures preserve the option universe and ranks. Show infeasibility and solver
+limits explicitly. Never adopt a scenario or deliver assignments automatically.
+See docs/comparisons.md for supported changes and interpretation.
+
 The separate `roth teams` mode jointly assigns students to teams and projects
 using Borda rankings and optional SciPy/HiGHS integer optimization. It uses
 explicit input files and immutable output directories, not the stable-matching

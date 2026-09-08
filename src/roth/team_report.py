@@ -105,8 +105,11 @@ def export_team_report(market, preferences, result, output):
                 )
                 if category == "teammates":
                     rejected = rejected or i in rows[j]["incompatible_teammates"]
+                closed = category == "projects" and j in market.get("closed_projects", [])
                 if rejected:
                     value = "×"
+                if closed:
+                    value += " (closed)"
                 selected = result["assignments"][i] == (
                     j if category == "projects" else result["assignments"][j]
                 )
@@ -158,7 +161,7 @@ def export_team_report(market, preferences, result, output):
 <p><strong>Student score = {1 - config["social_weight"]:g} × normalized project score + {config["social_weight"]:g} × normalized teammate score.</strong> Both directions of a teammate preference contribute. Scores are declared preference measures, not interpersonal cardinal welfare.</p>
 <p>The organizer requests teams of {config["target_size"]}, allowing {config["min_size"]}–{config["max_size"]}. First the integer program minimizes total absolute deviation from the target among used teams. It then maximizes total student score while preserving that minimum deviation. Every stage assigns students and projects jointly.</p>
 <h2 id="results">Realized teams and projects</h2><div class="cards">{team_cards}</div>
-<p>Unused projects: {names(result["unused_projects"])}. Total size deviation: {result["size_deviation"]}. Total weighted score: {result["total_score"]:.3f}.</p>
+<p>Unused projects: {names(result["unused_projects"])}. Closed projects: {names(market.get("closed_projects", []))}. Total size deviation: {result["size_deviation"]}. Total weighted score: {result["total_score"]:.3f}.</p>
 <p><strong>{stats["project_first_choices"]}/{stats["students"]}</strong> students get their first-choice project; <strong>{stats["project_top_three"]}/{stats["students"]}</strong> get a top-three project; <strong>{stats["students_with_ranked_teammate"]}/{stats["students"]}</strong> receive at least one ranked teammate. {stats["unranked_project_assignments"]} students receive an unranked project.</p>
 <p>Matrix cells show ranks (1 is best). Green cells labeled ASSIGNED or TEAM show realized outcomes. A dot means unranked; × means excluded; — is the diagonal. Read teammate rows directionally: Alex's rank of Blair may differ from Blair's rank of Alex.</p>
 {"".join(matrices)}

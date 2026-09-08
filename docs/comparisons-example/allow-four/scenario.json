@@ -1,0 +1,526 @@
+{
+  "name": "allow-four",
+  "changes": {
+    "name": "allow-four",
+    "config": {
+      "allow_larger": true,
+      "max_size": 4
+    }
+  },
+  "proposing_side": null,
+  "status": "optimal",
+  "reused_baseline": false,
+  "comparison": {
+    "participants": [
+      {
+        "participant_id": "s01",
+        "name": "Alex",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "climate"
+          ],
+          "teammates": [
+            "s02",
+            "s03"
+          ],
+          "load": 2,
+          "ranks": [
+            1
+          ],
+          "project_score": 1.0,
+          "social_score": 0.95,
+          "score": 0.975
+        },
+        "after": {
+          "assigned": [
+            "climate"
+          ],
+          "teammates": [
+            "s02",
+            "s03"
+          ],
+          "load": 2,
+          "ranks": [
+            1
+          ],
+          "project_score": 1.0,
+          "social_score": 0.95,
+          "score": 0.975
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s02",
+        "name": "Blair",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "climate"
+          ],
+          "teammates": [
+            "s01",
+            "s03"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "after": {
+          "assigned": [
+            "climate"
+          ],
+          "teammates": [
+            "s01",
+            "s03"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s03",
+        "name": "Casey",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "climate"
+          ],
+          "teammates": [
+            "s01",
+            "s02"
+          ],
+          "load": 2,
+          "ranks": [
+            null
+          ],
+          "project_score": 0.0,
+          "social_score": 0.95,
+          "score": 0.475
+        },
+        "after": {
+          "assigned": [
+            "climate"
+          ],
+          "teammates": [
+            "s01",
+            "s02"
+          ],
+          "load": 2,
+          "ranks": [
+            null
+          ],
+          "project_score": 0.0,
+          "social_score": 0.95,
+          "score": 0.475
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s04",
+        "name": "Devon",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "housing"
+          ],
+          "teammates": [
+            "s05",
+            "s06"
+          ],
+          "load": 2,
+          "ranks": [
+            1
+          ],
+          "project_score": 1.0,
+          "social_score": 0.95,
+          "score": 0.975
+        },
+        "after": {
+          "assigned": [
+            "housing"
+          ],
+          "teammates": [
+            "s05",
+            "s06"
+          ],
+          "load": 2,
+          "ranks": [
+            1
+          ],
+          "project_score": 1.0,
+          "social_score": 0.95,
+          "score": 0.975
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s05",
+        "name": "Emery",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "housing"
+          ],
+          "teammates": [
+            "s04",
+            "s06"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "after": {
+          "assigned": [
+            "housing"
+          ],
+          "teammates": [
+            "s04",
+            "s06"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s06",
+        "name": "Finley",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "housing"
+          ],
+          "teammates": [
+            "s04",
+            "s05"
+          ],
+          "load": 2,
+          "ranks": [
+            3
+          ],
+          "project_score": 0.5,
+          "social_score": 0.95,
+          "score": 0.725
+        },
+        "after": {
+          "assigned": [
+            "housing"
+          ],
+          "teammates": [
+            "s04",
+            "s05"
+          ],
+          "load": 2,
+          "ranks": [
+            3
+          ],
+          "project_score": 0.5,
+          "social_score": 0.95,
+          "score": 0.725
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s07",
+        "name": "Gray",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "transit"
+          ],
+          "teammates": [
+            "s08",
+            "s09"
+          ],
+          "load": 2,
+          "ranks": [
+            1
+          ],
+          "project_score": 1.0,
+          "social_score": 0.95,
+          "score": 0.975
+        },
+        "after": {
+          "assigned": [
+            "transit"
+          ],
+          "teammates": [
+            "s08",
+            "s09"
+          ],
+          "load": 2,
+          "ranks": [
+            1
+          ],
+          "project_score": 1.0,
+          "social_score": 0.95,
+          "score": 0.975
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s08",
+        "name": "Harper",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "transit"
+          ],
+          "teammates": [
+            "s07",
+            "s09"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "after": {
+          "assigned": [
+            "transit"
+          ],
+          "teammates": [
+            "s07",
+            "s09"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s09",
+        "name": "Indigo",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "transit"
+          ],
+          "teammates": [
+            "s07",
+            "s08"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "after": {
+          "assigned": [
+            "transit"
+          ],
+          "teammates": [
+            "s07",
+            "s08"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s10",
+        "name": "Jules",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "food"
+          ],
+          "teammates": [
+            "s11",
+            "s12"
+          ],
+          "load": 2,
+          "ranks": [
+            1
+          ],
+          "project_score": 1.0,
+          "social_score": 0.95,
+          "score": 0.975
+        },
+        "after": {
+          "assigned": [
+            "food"
+          ],
+          "teammates": [
+            "s11",
+            "s12"
+          ],
+          "load": 2,
+          "ranks": [
+            1
+          ],
+          "project_score": 1.0,
+          "social_score": 0.95,
+          "score": 0.975
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s11",
+        "name": "Kai",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "food"
+          ],
+          "teammates": [
+            "s10",
+            "s12"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "after": {
+          "assigned": [
+            "food"
+          ],
+          "teammates": [
+            "s10",
+            "s12"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      },
+      {
+        "participant_id": "s12",
+        "name": "Lane",
+        "side": null,
+        "changed": false,
+        "before": {
+          "assigned": [
+            "food"
+          ],
+          "teammates": [
+            "s10",
+            "s11"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "after": {
+          "assigned": [
+            "food"
+          ],
+          "teammates": [
+            "s10",
+            "s11"
+          ],
+          "load": 2,
+          "ranks": [
+            2
+          ],
+          "project_score": 0.75,
+          "social_score": 0.95,
+          "score": 0.85
+        },
+        "added": [],
+        "removed": [],
+        "preference_change": "equal",
+        "score_delta": 0.0
+      }
+    ],
+    "counts": {
+      "equal": 12
+    },
+    "changed_participants": 0,
+    "unchanged_participants": 12
+  }
+}

@@ -20,6 +20,12 @@ uses integer programming with an optional local solver. A separate peer-review
 mode assigns submissions to reviewers with required coverage, workload limits,
 and authorship/team conflicts.
 
+Organizers can compare alternative capacities, team sizes, project closures,
+and review workloads against a saved run. Roth shows assignment changes and
+individual preference outcomes while preserving the original inputs.
+See the [what-if comparison guide](docs/comparisons.md) and
+[worked example](docs/comparisons-example/index.html).
+
 Roth can:
 
 - collect strict rankings and unacceptable options from both sides through

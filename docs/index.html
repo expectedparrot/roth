@@ -46,9 +46,10 @@
     <a href="#many-to-one">11 · Match with capacities</a>
     <a href="#reviews">12 · Assign peer reviews</a>
     <a href="#human-optimization">Human team/review surveys</a>
+    <a href="#comparisons">Organizer what-if comparisons</a>
     <a href="#reference">13 · Workflow reference</a>
   </nav>
-  <div class="edition">Roth 0.5.0 · Python 3.11+<br>Stable matching and team optimization<br>MIT license</div>
+  <div class="edition">Roth 0.6.0 · Python 3.11+<br>Stable matching and team optimization<br>MIT license</div>
 </aside>
 <details class="mobile-nav">
   <summary>Roth · Guide contents</summary>
@@ -612,7 +613,33 @@ python -m pip install -e .</code></pre>
     <p>Inspect the <a href="collection-example/teams/assessment-preview.html">team assessment preview</a>, <a href="collection-example/reviews/assessment-preview.html">review assessment preview</a>, and <a href="collection.md">complete collection workflow</a>. Publication and delivery use explicit, reviewable <code>ep humanize</code> handoffs. Collection files contain private contacts and individual answers.</p>
   </section>
 
-  <section id="reference">
+  <section id="comparisons">
+  <h2>Compare organizer what-if scenarios</h2>
+  <p>Use a saved matching, team, or review report as the baseline. Change capacities,
+  team sizes, available projects, or review workloads and inspect who receives
+  different assignments and whose preference outcomes rise or fall.</p>
+  <pre><code>roth compare classroom/report --scenarios scenarios.json --output classroom/comparison</code></pre>
+  <p>For the classroom team example, a scenario file can contain:</p>
+  <pre><code>[
+  {"name": "allow-four", "config": {"allow_larger": true, "max_size": 4}},
+  {"name": "close-climate", "close_projects": ["climate"]},
+  {"name": "project-priority", "config": {"social_weight": 0.25}}
+]</code></pre>
+  <p>Every scenario branches from the same original run. The static report shows a
+  before/after assignment matrix, teammate changes, original ranks, individual
+  score changes, workloads, and solver statuses. Frozen preferences and the
+  baseline scoring scale make the comparison interpretable. Closing a project
+  preserves its original rank; a larger review workload is labeled separately
+  from a preference gain.</p>
+  <div class="callout"><p>Allowing teams of four does not require them: the solver
+  still prioritizes the organizer's target size. Equal-score optima may change
+  assignments even when a rule change does not require it. Scores describe the
+  allocation objective, not measured welfare.</p></div>
+  <p><a href="comparisons-example/index.html">Inspect the synthetic comparison report</a>
+  · <a href="comparisons.md">Inputs, commands, and interpretation</a></p>
+</section>
+
+<section id="reference">
     <h2><span class="chapter">13 · At your desk</span>The workflow reference</h2>
     <p>Start with <code>roth agent next</code> to identify the scenario and current stage. Use <code>roth guide</code> for the full workflow. The CLI returns structured output for an assistant; this guide explains the decisions behind those commands.</p>
     <div class="table-wrap"><table class="reference"><thead><tr><th scope="col">You want to…</th><th scope="col">Start here</th></tr></thead><tbody>
@@ -630,7 +657,7 @@ python -m pip install -e .</code></pre>
       <tr><td>Form teams and assign projects</td><td><code>roth teams solve --help</code></td></tr>
     </tbody></table></div>
     <p>For exact input schemas and the full fielding sequence, continue with the <a href="contracts.md">data contracts</a> and <a href="delegation.md">delegation and benchmark walkthrough</a>.</p>
-    <p class="small muted">This page describes Roth 0.5.0. Stable matching, joint team optimization, peer-review assignment, and the shared one-to-one/many-to-one survey workflow are implemented. Real recruitment and real-model preference quality require a pilot in the intended market.</p>
+    <p class="small muted">This page describes Roth 0.6.0. Stable matching, joint team optimization, peer-review assignment, and the shared one-to-one/many-to-one survey workflow are implemented. Real recruitment and real-model preference quality require a pilot in the intended market.</p>
   </section>
   <footer><p><strong>Roth</strong> · Two-sided matching with Expected Parrot · Python 3.11+ · MIT</p><a href="#content">Back to the top</a><a href="contracts.md">Data contracts</a><a href="delegation.md">Delegation walkthrough</a><a href="https://www.expectedparrot.com/">Expected Parrot</a></footer>
 </article></main>

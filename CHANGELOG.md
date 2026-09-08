@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.0 — 2026-09-08
+
+- `roth compare` branches organizer scenarios from verified stable, team, and
+  review reports, preserving the baseline and frozen preferences.
+- Capacity/proposer changes, team size/weight changes and project closures,
+  and per-reviewer workload/per-submission coverage overrides.
+- Static reports and CSVs show assignment churn, original ranks, teammate
+  changes, and individual outcomes on a fixed baseline scoring scale. Review
+  workload changes and ordinal set comparisons avoid invented welfare claims.
+- Independent result verification, per-scenario infeasibility and solver-limit
+  handling, hashed artifacts, agent guidance, and a synthetic worked example.
+- Team markets support closed projects without deleting or reranking options;
+  stable report exports now include the complete hashed preference snapshot.
+
 ## 0.5.0 — 2026-09-07
 
 - Native Humanize collection for teams and reviews: batched option assessment,

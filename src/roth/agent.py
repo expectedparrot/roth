@@ -88,6 +88,13 @@ def fresh_path(path):
 
 
 def _response(scenario, phase, instruction, *, questions=(), actions=(), **details):
+    if phase == "review_results" and details.get("report"):
+        details["what_if"] = {
+            "instruction": "If the organizer wants policy comparisons, record named changes in a scenarios JSON array, then use roth compare against this saved report. Keep the baseline and preferences fixed. Explain assignment churn, individual gains/losses on the baseline score scale, workload changes, and infeasible scenarios. Do not adopt a scenario automatically.",
+            "baseline": str(Path(details["report"]).parent),
+            "command_template": "roth compare BASELINE_REPORT --scenarios SCENARIOS.json --output NEW_COMPARISON_REPORT",
+            "documentation": "docs/comparisons.md",
+        }
     return {
         "scenario": scenario,
         "phase": phase,

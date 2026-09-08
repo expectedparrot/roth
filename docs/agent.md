@@ -1,5 +1,12 @@
 # Guidance for the agent using Roth
 
+After a completed report, `agent next` includes optional `what_if` guidance.
+Identify the organizer's baseline and named rule changes, write a scenarios JSON
+array, and use `roth compare BASELINE_REPORT --scenarios FILE --output NEW_REPORT`.
+Explain individual assignment changes, baseline-scale scores/ranks, review
+workloads, and infeasible scenarios. Preserve the baseline and do not adopt or
+deliver a scenario automatically. See [the comparison guide](comparisons.md).
+
 Start with:
 
 ```bash

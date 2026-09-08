@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "name": "Fictional student teams and projects",
+  "synthetic": true,
+  "students": [
+    {
+      "id": "s01",
+      "name": "Alex"
+    },
+    {
+      "id": "s02",
+      "name": "Blair"
+    },
+    {
+      "id": "s03",
+      "name": "Casey"
+    },
+    {
+      "id": "s04",
+      "name": "Devon"
+    },
+    {
+      "id": "s05",
+      "name": "Emery"
+    },
+    {
+      "id": "s06",
+      "name": "Finley"
+    },
+    {
+      "id": "s07",
+      "name": "Gray"
+    },
+    {
+      "id": "s08",
+      "name": "Harper"
+    },
+    {
+      "id": "s09",
+      "name": "Indigo"
+    },
+    {
+      "id": "s10",
+      "name": "Jules"
+    },
+    {
+      "id": "s11",
+      "name": "Kai"
+    },
+    {
+      "id": "s12",
+      "name": "Lane"
+    }
+  ],
+  "projects": [
+    {
+      "id": "climate",
+      "name": "Campus climate dashboard"
+    },
+    {
+      "id": "housing",
+      "name": "Student housing survey"
+    },
+    {
+      "id": "transit",
+      "name": "Accessible campus transport"
+    },
+    {
+      "id": "food",
+      "name": "Food waste reduction"
+    },
+    {
+      "id": "library",
+      "name": "Library discovery tool"
+    }
+  ],
+  "config": {
+    "target_size": 3,
+    "allow_smaller": false,
+    "allow_larger": false,
+    "min_size": 3,
+    "max_size": 3,
+    "social_weight": 0.5
+  },
+  "closed_projects": [
+    "climate",
+    "housing",
+    "transit"
+  ]
+}

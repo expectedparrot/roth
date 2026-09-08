@@ -30,6 +30,21 @@ def parser():
     )
     p.add_argument("--human", action="store_true", help="Pretty human-readable output")
     sub = p.add_subparsers(dest="command", required=True)
+    compare = sub.add_parser(
+        "compare", help="Compare organizer what-if scenarios against a saved report"
+    )
+    compare.add_argument(
+        "baseline", help="Existing stable/team/review report directory"
+    )
+    compare.add_argument(
+        "--scenarios", required=True, help="JSON array of named organizer changes"
+    )
+    compare.add_argument(
+        "--output", required=True, help="New comparison report directory"
+    )
+    compare.add_argument(
+        "--time-limit", type=float, default=60, help="Solver seconds per scenario"
+    )
     agent = sub.add_parser(
         "agent", help="Guidance for the calling agent, from intake to results"
     ).add_subparsers(dest="action", required=True)
@@ -336,6 +351,13 @@ def collection_command(args):
 def guide():
     return {
         "start_here": "roth agent next",
+        "organizer_comparisons": {
+            "command": "roth compare BASELINE_REPORT --scenarios scenarios.json --output NEW_COMPARISON_REPORT",
+            "modes": ["stable", "teams", "reviews"],
+            "changes": "Stable: capacities/proposing_side. Teams: config/close_projects. Reviews: reviewer_bounds/reviews_required.",
+            "interpretation": "Every scenario branches from the saved baseline. Preferences and comparison score scales stay fixed. Inspect who changes, individual scores/ranks, workloads, and solver status; score gains are not measured welfare.",
+            "scope": "Local planning only; does not adopt a scenario, overwrite a run, recollect preferences, call models, or send assignments.",
+        },
         "agent_intake": "Identify the structure with the user, then use agent next --scenario one-to-one, many-to-one, teams, or reviews. Review assignment uses exact coverage and workload bounds. Inspect existing project/input files and rerun after every action. Unsupported stable many-to-many, roommate matching, and group-dependent preferences must not be silently reinterpreted.",
         "reviews": {
             "workflow": [
@@ -834,6 +856,7 @@ def main(argv=None):
             data = {"version": __version__, "schema_version": "1.0"}
         elif args.command == "capabilities":
             data = {
+                "organizer_comparisons": ["stable", "teams", "reviews"],
                 "agent_next": True,
                 "agent_scenario_routing": [
                     "one-to-one",
@@ -863,6 +886,16 @@ def main(argv=None):
             }
         elif args.command == "guide":
             data = guide()
+        elif args.command == "compare":
+            from .comparison import compare_reports
+
+            with redirect_stdout(io.StringIO()):
+                data = compare_reports(
+                    args.baseline,
+                    read_json(args.scenarios),
+                    args.output,
+                    args.time_limit,
+                )
         elif args.command == "agent" or (
             args.command == "next" and not (Path(args.project) / ".roth").is_dir()
         ):

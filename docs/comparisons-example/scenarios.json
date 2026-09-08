@@ -1,0 +1,37 @@
+[
+  {
+    "name": "allow-four",
+    "config": {
+      "allow_larger": true,
+      "max_size": 4
+    }
+  },
+  {
+    "name": "target-four",
+    "config": {
+      "target_size": 4,
+      "min_size": 4,
+      "max_size": 4
+    }
+  },
+  {
+    "name": "close-climate",
+    "close_projects": [
+      "climate"
+    ]
+  },
+  {
+    "name": "project-priority",
+    "config": {
+      "social_weight": 0.25
+    }
+  },
+  {
+    "name": "too-few-projects",
+    "close_projects": [
+      "climate",
+      "housing",
+      "transit"
+    ]
+  }
+]

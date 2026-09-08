@@ -2,5 +2,5 @@
 
 from .matching import deferred_acceptance, verify_matching
 
-__version__ = "0.5.0"
+__version__ = "0.6.0"
 __all__ = ["deferred_acceptance", "verify_matching"]
