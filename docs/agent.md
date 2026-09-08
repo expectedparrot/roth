@@ -17,6 +17,7 @@ The calling agent interprets the conversation and reuses decisions already made.
 | Scenario | When it applies | Roth mechanism |
 |---|---|---|
 | `one-to-one` | Two distinct sides rank one another; each participant receives at most one partner | Deferred acceptance |
+| `reviews` | Multiple reviews per person and multiple reviewers per submission, with coverage and conflicts | Binary assignment score optimization |
 | `teams` | Form teams from one roster and assign each team its own project; students rank projects and teammates | Joint Borda integer optimization |
 | `many-to-one` | One side can accept several partners under fixed capacities; the other gets at most one | Deferred acceptance with responsive preferences |
 | `roommates` | Pair people from a single pool, without a distinct second side | Unsupported |
@@ -33,6 +34,7 @@ After identifying the scenario, continue with one of:
 roth --project study agent next --scenario one-to-one
 roth --project mentorship agent next --scenario many-to-one
 roth --project classroom agent next --scenario teams
+roth --project classroom-reviews agent next --scenario reviews
 ```
 
 The default `--scenario auto` reads an existing market definition or the
@@ -77,8 +79,8 @@ permissions and bounds, the social weight, and hard exclusions. Collect each
 student's project and teammate rankings in the [team input format](teams.md).
 Unlisted options earn zero Borda points under that mode's declared policy;
 they are not automatic exclusions. Missing submissions remain missing.
-Team-specific Humanize and delegated scoring integration are not implemented,
-and the guide does not direct team inputs into the one-to-one fielding workflow.
+Team Humanize collection uses `teams field` with `--collection human`; delegated
+team scoring remains unimplemented. Team inputs are not sent into one-to-one fielding.
 
 ## Use existing files and results
 
@@ -147,3 +149,38 @@ For team optimization, show team membership, project ranks, received teammate
 preferences, unranked project assignments, and solver status. Explain the
 organizer's size-first Borda objective and who bears its compromises. This
 mechanism has no stability or strategy-proofness guarantee.
+
+## Review assignment guidance
+
+`--scenario reviews` gathers reviewers, submissions and their author IDs, declared
+teams, coverage requirements, workload bounds, and the scoring choice. It detects
+review inputs from `reviewers`/`submissions` or `mode: reviews`. All authors use
+the roster's ID namespace; nonreviewing authors can have zero workload bounds.
+
+Use completed rankings (`scoring: borda`), explicit scores (`scores`), or deliberate
+constraints-only allocation (`none`). Unranked/unscored options score zero and
+remain assignable. Conflicts and explicit unacceptable options are forbidden.
+Native reviewer surveys use `reviews field` through `--collection human`.
+Delegated review scoring remains unimplemented.
+
+Guidance runs necessary feasibility checks and asks for organizer revisions if
+counts cannot fit. After a solve it independently checks assignments, scores,
+loads, coverage, and saved input hashes. Changed inputs select a fresh directory.
+A feasible result without proof of optimality is left for an explicit accept/retry
+decision. See [the review guide](reviews.md) for the full contract.
+
+## Human collection for optimization modes
+
+With `--collection human`, `agent next` prepares native team/review surveys even
+when a canned preferences.json exists. It resumes a collection under PROJECT/field
+(or `--field-dir`), checks the frozen market and contact map, tracks missing
+assessments, requests cross-batch ranks, and exports solver-ready preferences
+with provenance. Reuse `data.rerun`; it preserves the field and contact paths.
+
+Completed exported preferences take precedence over old fixture inputs. Revisions
+select fresh files and invalidate obsolete rankings. No-preference/insufficient
+information maps to zero score, while hard exclusions remain forbidden. Overlong
+selected lists require respondent revision or an explicit larger ranking budget.
+`--collection rankings` explicitly bypasses collection to use supplied files.
+JSON-only previews cannot be published to Humanize without a new native build.
+See [collection.md](collection.md) for identity, source, and response contracts.

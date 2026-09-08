@@ -234,7 +234,7 @@ def test_team_collection_and_validation_guidance(tmp_path):
     write_json(tmp_path / "market.json", market)
     data = next_guidance(tmp_path)
     assert data["scenario"] == "teams" and data["phase"] == "collect_preferences"
-    assert "not implemented" in data["collection"]
+    assert "--collection human" in data["collection"]
     assert (
         next_guidance(tmp_path, collection="delegated")["phase"]
         == "unsupported_collection"

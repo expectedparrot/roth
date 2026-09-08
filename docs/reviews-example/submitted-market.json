@@ -1,0 +1,215 @@
+{
+  "mode": "reviews",
+  "name": "Fictional classroom peer review",
+  "synthetic": true,
+  "reviewers": [
+    {
+      "id": "s01",
+      "name": "Fictional Student 1",
+      "team": "t1",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s02",
+      "name": "Fictional Student 2",
+      "team": "t1",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s03",
+      "name": "Fictional Student 3",
+      "team": "t1",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s04",
+      "name": "Fictional Student 4",
+      "team": "t2",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s05",
+      "name": "Fictional Student 5",
+      "team": "t2",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s06",
+      "name": "Fictional Student 6",
+      "team": "t2",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s07",
+      "name": "Fictional Student 7",
+      "team": "t3",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s08",
+      "name": "Fictional Student 8",
+      "team": "t3",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s09",
+      "name": "Fictional Student 9",
+      "team": "t3",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s10",
+      "name": "Fictional Student 10",
+      "team": "t4",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s11",
+      "name": "Fictional Student 11",
+      "team": "t4",
+      "min_reviews": 3,
+      "max_reviews": 3
+    },
+    {
+      "id": "s12",
+      "name": "Fictional Student 12",
+      "team": "t4",
+      "min_reviews": 3,
+      "max_reviews": 3
+    }
+  ],
+  "submissions": [
+    {
+      "id": "p01",
+      "title": "Climate essay 1",
+      "authors": [
+        "s01"
+      ],
+      "description": "A fictional classroom essay about climate.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p02",
+      "title": "Education essay 2",
+      "authors": [
+        "s02"
+      ],
+      "description": "A fictional classroom essay about education.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p03",
+      "title": "Labor essay 3",
+      "authors": [
+        "s03"
+      ],
+      "description": "A fictional classroom essay about labor.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p04",
+      "title": "Technology essay 4",
+      "authors": [
+        "s04"
+      ],
+      "description": "A fictional classroom essay about technology.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p05",
+      "title": "Climate essay 5",
+      "authors": [
+        "s05"
+      ],
+      "description": "A fictional classroom essay about climate.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p06",
+      "title": "Education essay 6",
+      "authors": [
+        "s06"
+      ],
+      "description": "A fictional classroom essay about education.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p07",
+      "title": "Labor essay 7",
+      "authors": [
+        "s07"
+      ],
+      "description": "A fictional classroom essay about labor.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p08",
+      "title": "Technology essay 8",
+      "authors": [
+        "s08"
+      ],
+      "description": "A fictional classroom essay about technology.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p09",
+      "title": "Climate essay 9",
+      "authors": [
+        "s09"
+      ],
+      "description": "A fictional classroom essay about climate.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p10",
+      "title": "Education essay 10",
+      "authors": [
+        "s10"
+      ],
+      "description": "A fictional classroom essay about education.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p11",
+      "title": "Labor essay 11",
+      "authors": [
+        "s11"
+      ],
+      "description": "A fictional classroom essay about labor.",
+      "reviews_required": 3
+    },
+    {
+      "id": "p12",
+      "title": "Technology essay 12",
+      "authors": [
+        "s12"
+      ],
+      "description": "A fictional classroom essay about technology.",
+      "reviews_required": 3
+    }
+  ],
+  "config": {
+    "min_reviews": 3,
+    "max_reviews": 3,
+    "reviews_per_submission": 3,
+    "scoring": "borda",
+    "exclude_teammates": true
+  },
+  "excluded_pairs": [
+    [
+      "s01",
+      "p04"
+    ]
+  ],
+  "schema_version": "1.0"
+}

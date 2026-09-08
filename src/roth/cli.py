@@ -21,7 +21,7 @@ class Parser(argparse.ArgumentParser):
 def parser():
     p = Parser(
         prog="roth",
-        description="Preference collection, stable matching, and joint team/project optimization",
+        description="Stable matching, team/project optimization, and peer-review assignment",
     )
     p.add_argument(
         "--project",
@@ -39,7 +39,15 @@ def parser():
     )
     agent_next.add_argument(
         "--scenario",
-        choices=["auto", "one-to-one", "teams", "many-to-one", "roommates", "other"],
+        choices=[
+            "auto",
+            "one-to-one",
+            "teams",
+            "many-to-one",
+            "reviews",
+            "roommates",
+            "other",
+        ],
         default="auto",
     )
     agent_next.add_argument(
@@ -50,12 +58,20 @@ def parser():
     )
     agent_next.add_argument(
         "--output",
-        help="Team report directory to inspect or create; defaults to PROJECT/report",
+        help="Team/review report directory to inspect or create; defaults to PROJECT/report",
     )
     agent_next.add_argument(
         "--collection",
         choices=["rankings", "human", "delegated"],
         help="How remaining preferences will be supplied",
+    )
+    agent_next.add_argument(
+        "--field-dir",
+        help="Team/review human collection directory; default PROJECT/field",
+    )
+    agent_next.add_argument(
+        "--contacts",
+        help="Private respondent-ID contact map for team/review Humanize handoffs",
     )
     teams = sub.add_parser(
         "teams", help="Joint team formation and project assignment from Borda rankings"
@@ -64,6 +80,7 @@ def parser():
         "example", help="Write fictional classroom inputs without solving"
     )
     team_example.add_argument("directory")
+    add_collection_commands(teams)
     for action in ("validate", "solve"):
         command = teams.add_parser(action)
         command.add_argument(
@@ -87,6 +104,25 @@ def parser():
                 default=60,
                 help="Total solver time limit in seconds",
             )
+    reviews = sub.add_parser(
+        "reviews", help="Peer-review assignment with workloads and conflicts"
+    ).add_subparsers(dest="action", required=True)
+    reviews.add_parser(
+        "example", help="Write fictional classroom review inputs"
+    ).add_argument("directory")
+    add_collection_commands(reviews)
+    for verb in ("validate", "solve"):
+        command = reviews.add_parser(verb)
+        command.add_argument(
+            "market", help="Review market JSON with reviewers and submissions"
+        )
+        command.add_argument(
+            "--preferences",
+            help="Review rankings or scores JSON; omit only for scoring=none",
+        )
+        if verb == "solve":
+            command.add_argument("--output", required=True, help="New report directory")
+            command.add_argument("--time-limit", type=float, default=60)
     for name in ("version", "capabilities", "guide", "status", "next", "validate"):
         sub.add_parser(name)
     init = sub.add_parser(
@@ -221,10 +257,98 @@ def parser():
     return p
 
 
+def add_collection_commands(parent):
+    field = parent.add_parser(
+        "field", help="Human preference surveys for this optimization mode"
+    ).add_subparsers(dest="field_action", required=True)
+    build = field.add_parser("build")
+    build.add_argument("market")
+    build.add_argument("--output", required=True)
+    build.add_argument("--contacts")
+    build.add_argument("--batch-size", type=int, default=10)
+    build.add_argument("--max-options", type=int, default=15)
+    build.add_argument(
+        "--json-only",
+        action="store_true",
+        help="Offline JSON preview without native EDSL artifacts",
+    )
+    for verb in ("status", "rank", "import", "export", "register"):
+        command = field.add_parser(verb)
+        command.add_argument("directory")
+        if verb == "rank":
+            command.add_argument("--max-options", type=int)
+        elif verb == "import":
+            command.add_argument("input")
+            command.add_argument("--edsl", action="store_true")
+            command.add_argument("--replace", action="store_true")
+            command.add_argument(
+                "--source", choices=["human", "synthetic"], default="human"
+            )
+        elif verb == "export":
+            command.add_argument("--output", required=True)
+        elif verb == "register":
+            command.add_argument("--package", required=True)
+            command.add_argument("--uuid", required=True)
+            command.add_argument("--delivery")
+
+
+def collection_command(args):
+    from .collection import (
+        build_collection,
+        build_rankings,
+        collection_status,
+        export_preferences,
+        import_responses,
+        load_collection,
+        register_collection,
+    )
+
+    if args.field_action == "build":
+        return build_collection(
+            args.command,
+            read_json(args.market),
+            args.output,
+            read_json(args.contacts) if args.contacts else None,
+            args.batch_size,
+            args.max_options,
+            not args.json_only,
+        )
+    _, _, collection = load_collection(args.directory, args.command)
+    if args.field_action == "status":
+        return collection_status(args.directory, args.command)
+    if args.field_action == "rank":
+        return build_rankings(args.directory, args.max_options)
+    if args.field_action == "register":
+        return register_collection(
+            args.directory, args.package, args.uuid, args.delivery
+        )
+    if args.field_action == "export":
+        return export_preferences(args.directory, args.output)
+    if args.edsl:
+        from .edsl_bridge import field_results
+
+        rows = field_results(args.input, collection["packages"])
+    else:
+        rows = read_json(args.input)
+    return import_responses(args.directory, rows, args.replace, args.source)
+
+
 def guide():
     return {
         "start_here": "roth agent next",
-        "agent_intake": "Identify the structure with the user, then use agent next --scenario one-to-one, many-to-one, or teams. Inspect existing project/input files and rerun after every action. Many-to-many, roommate matching, and nonresponsive group preferences must not be silently reinterpreted.",
+        "agent_intake": "Identify the structure with the user, then use agent next --scenario one-to-one, many-to-one, teams, or reviews. Review assignment uses exact coverage and workload bounds. Inspect existing project/input files and rerun after every action. Unsupported stable many-to-many, roommate matching, and group-dependent preferences must not be silently reinterpreted.",
+        "reviews": {
+            "workflow": [
+                "roth reviews example classroom-reviews",
+                "roth --project classroom-reviews agent next",
+                "roth reviews validate classroom-reviews/market.json --preferences classroom-reviews/preferences.json",
+                "roth reviews solve classroom-reviews/market.json --preferences classroom-reviews/preferences.json --output classroom-reviews/report",
+            ],
+            "solver_extra": "reviews (SciPy/HiGHS; already available with teams)",
+            "scope": "File-based assignment optimization. Exact submission coverage, bounded reviewer workloads, self-review and teammate exclusions, and explicit conflicts. No stability or strategy-proofness guarantee.",
+            "preferences": "Completed partial Borda rankings or explicit 0–100 scores; omitted eligible options score zero and remain assignable, unlike hard conflicts. scoring=none permits constraints-only allocation with empty preferences.",
+            "collection": "Explicit files or reviews field build/import/rank/export with native Humanize handoffs. Delegated review scoring remains unimplemented.",
+        },
         "workflow": [
             "roth example create internship-demo",
             "roth --project internship-demo preferences import internship-demo/preferences.json",
@@ -254,8 +378,9 @@ def guide():
             "solver_extra": "teams (SciPy/HiGHS)",
             "inputs": "Separate file-based mode; --project and the one-to-one .roth store are not used",
             "objective": "Minimize target team-size deviation, then maximize weighted Borda scores jointly over teams and projects",
-            "scope": "One team per project; completed partial rankings are supported. No team-specific Humanize or delegated scoring integration yet.",
+            "scope": "One team per project; completed partial rankings are supported. Native Humanize collection is available through teams field; delegated team scoring remains unimplemented.",
         },
+        "optimization_human_fielding": "teams/reviews field build → inspect previews/handoffs → externally create/register/invite → field import --edsl → field rank (if needed) → externally collect rank responses → field import --edsl → field export → solve. Human sources are preserved; --source synthetic is restricted to synthetic markets.",
         "human_fielding": "field build → inspect preview and handoff.json → externally create Humanize survey → field register → authorize email delivery → externally retrieve Results → field import --edsl → preferences freeze",
         "delegated": "Organizer configure delegation → collect preference instructions → score plan → inspect jobs/cost → external ep run → score import → optional benchmark → score apply → optional confirmation field → preferences freeze → match",
         "benchmark": "benchmark build freezes baseline predictions → import calibration answers only → score plan --calibration → score import → benchmark predict --label revised → import held-out answers → benchmark report → score apply",
@@ -362,6 +487,48 @@ def team_command(args):
     write_json(Path(args.output) / "submitted-market.json", raw_market)
     write_json(Path(args.output) / "submitted-preferences.json", raw_preferences)
     return {**result, **exports}
+
+
+def review_command(args):
+    from .reviews import (
+        review_feasibility,
+        review_scores,
+        solve_reviews,
+        validate_review_inputs,
+    )
+
+    if args.action == "example":
+        from .review_example import review_example
+
+        root = Path(args.directory)
+        require(not root.exists(), "Example directory already exists")
+        market, preferences = review_example()
+        root.mkdir(parents=True)
+        return {
+            "market": write_json(root / "market.json", market),
+            "preferences": write_json(root / "preferences.json", preferences),
+            "synthetic": True,
+            "solved": False,
+        }
+    raw_market = read_json(args.market)
+    raw_preferences = read_json(args.preferences) if args.preferences else []
+    market, preferences = validate_review_inputs(raw_market, raw_preferences)
+    if args.action == "validate":
+        return {
+            "valid": True,
+            "config": market["config"],
+            "checks": review_feasibility(market, preferences),
+            "scores": review_scores(market, preferences),
+            "note": "Schema validated; necessary count checks do not prove joint feasibility.",
+        }
+    require(not Path(args.output).exists(), "Output directory already exists")
+    result = solve_reviews(market, preferences, time_limit=args.time_limit)
+    from .review_report import export_review_report
+
+    return {
+        **result,
+        **export_review_report(raw_market, raw_preferences, result, args.output),
+    }
 
 
 def dispatch(args, state):
@@ -668,14 +835,23 @@ def main(argv=None):
         elif args.command == "capabilities":
             data = {
                 "agent_next": True,
-                "agent_scenario_routing": ["one-to-one", "many-to-one", "teams"],
+                "agent_scenario_routing": [
+                    "one-to-one",
+                    "many-to-one",
+                    "teams",
+                    "reviews",
+                ],
+                "peer_review_assignment": True,
+                "review_solver_extra": "reviews (SciPy/HiGHS; also included in teams)",
+                "review_humanize_surveys": True,
+                "review_delegated_scoring": False,
                 "one_to_one": True,
                 "many_to_one": True,
                 "capacity_scope": "Nonnegative integers, default one; at most one side exceeds one. Responsive individual rankings; either proposing side.",
                 "many_to_many": False,
                 "joint_team_project_optimization": True,
                 "team_solver_extra": "teams",
-                "team_humanize_surveys": False,
+                "team_humanize_surveys": True,
                 "direct_surveys": True,
                 "humanize_handoff": True,
                 "delegated_scoring": True,
@@ -699,7 +875,15 @@ def main(argv=None):
                 preferences_path=getattr(args, "preferences", None),
                 output=getattr(args, "output", None),
                 collection=getattr(args, "collection", None),
+                field_dir=getattr(args, "field_dir", None),
+                contacts_path=getattr(args, "contacts", None),
             )
+        elif args.command in {"teams", "reviews"} and args.action == "field":
+            with redirect_stdout(io.StringIO()):
+                data = collection_command(args)
+        elif args.command == "reviews":
+            with redirect_stdout(io.StringIO()):
+                data = review_command(args)
         elif args.command == "teams":
             with redirect_stdout(io.StringIO()):
                 data = team_command(args)

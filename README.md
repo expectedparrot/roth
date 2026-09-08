@@ -1,4 +1,4 @@
-# roth — stable matching and joint team/project assignment
+# roth — matching, teams, and peer-review assignment
 <!-- id: roth/roth -->
 
 <p align="center">
@@ -16,7 +16,9 @@ artifacts, with execution through `ep`.
 
 Roth also forms student teams and assigns their projects jointly, using ranked
 teammate and project preferences converted to Borda scores. This separate mode
-uses integer programming with an optional local solver.
+uses integer programming with an optional local solver. A separate peer-review
+mode assigns submissions to reviewers with required coverage, workload limits,
+and authorship/team conflicts.
 
 Roth can:
 
@@ -65,7 +67,7 @@ Install Roth in an isolated Python 3.11+ tool environment. If uv is missing,
 install it with `python -m pip install --upgrade uv` first:
 
 uv tool install --python 3.11 --with-executables-from edsl \
-  "roth[fielding,teams] @ git+https://github.com/expectedparrot/roth.git@main"
+  "roth[fielding,teams,reviews] @ git+https://github.com/expectedparrot/roth.git@main"
 
 Check the available interfaces:
 
@@ -87,12 +89,15 @@ roth --project STUDY agent next --scenario many-to-one
 For forming student teams and assigning each team a distinct project, use:
 roth --project STUDY agent next --scenario teams
 
+For assigning several reviews per person and several reviewers per submission:
+roth --project STUDY agent next --scenario reviews
+
 Help me define the participant lists, preferences, and organizer rules. Ask
 only for missing decisions. Follow the guidance's applicable next_steps within
 my authorization, then run its returned data.rerun command. For existing
 files or projects, let agent next inspect progress before proposing new work.
 
-If I need many-to-many capacities, roommate matching, repeated projects, or another
+If I need stable many-to-many matching, roommate matching, repeated projects, or another
 unsupported structure, explain the limitation rather than silently converting
 it into a different problem. Use synthetic examples only as labeled demos;
 never substitute them for missing real preferences.
@@ -146,11 +151,37 @@ change the example sizes. No solver dependency or network is needed.
 rankings/matches matrix, all assigned partners, and capacity utilization.
 See the [many-to-one guide](docs/many-to-one.md) for the Python API and assumptions.
 
+## Peer-review example
+
+Give each of 12 fictional students three essays to review, and each essay three
+reviewers. Self-review, review of a teammate's essay, and declared conflicts are
+forbidden. Rank submissions or supply expertise scores; the optimizer maximizes
+assignment quality within the hard coverage and workload rules.
+
+```bash
+python -m pip install -e '.[reviews]'
+roth reviews example classroom-reviews
+roth --project classroom-reviews agent next
+roth reviews solve classroom-reviews/market.json --preferences classroom-reviews/preferences.json --output classroom-reviews/report
+```
+
+The install command is for a local checkout; the `reviews` extra uses the same
+SciPy/HiGHS dependency as `teams`. `reviews example` writes synthetic inputs without
+solving. The worked example makes 36 assignments, with 29 in the reviewer's top
+three. [Open the ranking/assignment matrix](docs/reviews-example/index.html) or
+read the [review-assignment contract and formulation](docs/reviews.md).
+
+Unranked or unscored eligible submissions receive zero objective score and may
+still be assigned; explicit conflicts remain forbidden. Wider workload bounds
+permit unequal loads. This mode does not claim stability or strategy-proofness.
+Humanize surveys are available through `reviews field`; delegated review scoring remains future work.
+
 ## Agent workflow
 
 ```bash
 roth agent next
 roth --project classroom agent next --scenario teams
+roth --project classroom-reviews agent next --scenario reviews
 roth --project mentorship-demo agent next --scenario many-to-one
 roth --project internship-demo agent next
 roth guide
@@ -160,10 +191,10 @@ roth guide
 provides scenario-selection questions; with a market or saved project it
 identifies the next stage and returns an explanation, missing decisions, and
 executable command arguments. It distinguishes existing rankings, human surveys,
-delegated scoring, required confirmations, and team optimization. It never
+delegated scoring, required confirmations, team optimization, and review assignment. It never
 executes its recommended actions. See the [agent guidance contract](docs/agent.md).
 
-For custom paths, pass `--market`, `--preferences`, and (for teams) `--output`
+For custom paths, pass `--market`, `--preferences`, and (for teams/reviews) `--output`
 after `agent next`. Use `--collection rankings`, `human`, or `delegated` to
 record how remaining preferences will be supplied. `data.rerun` preserves those
 choices and follows any newly selected report directory.
@@ -205,8 +236,7 @@ The SciPy/HiGHS integer program minimizes deviation from target team size, then
 maximizes the combined normalized Borda score. Each project takes at most one
 team. The report preserves the inputs and records optimality or solver limits.
 This mode uses explicit files and new output directories, independently of
-`--project` and the stable-matching store. Team-specific Humanize fielding
-is not yet implemented. See the [formulation and data contract](docs/teams.md).
+`--project` and the stable-matching store. Use `teams field` for Humanize assessment and ranking surveys. See the [formulation and data contract](docs/teams.md).
 
 ## Direct preferences and matching
 
@@ -236,6 +266,28 @@ preferences; they are excluded from the matching graph unless the organizer
 requires complete evaluation. Reports state the cohort, coverage, and preference
 source. Stability refers to this frozen graph and its submitted or inferred
 preferences, not unobserved human preferences.
+
+## Human surveys for teams and peer review
+
+Both optimization modes can collect preferences through personalized Humanize
+surveys, with assessment batches followed by a cross-batch ranking of selected
+options. Review expertise mode instead collects 0–100 ratings in increments of 10.
+Private contact maps stay separate from the solver inputs.
+
+```bash
+roth --project classroom agent next --scenario teams --collection human --contacts contacts.json
+roth --project classroom-reviews agent next --scenario reviews --collection human --contacts contacts.json
+```
+
+The agent guides survey construction, response tracking, ranking, preference
+export, and solving. `--collection human` prioritizes collection over any canned
+synthetic preference file. A completed export gets a new filename; prior inputs
+and responses are preserved.
+
+[Read the collection workflow](docs/collection.md) and [inspect the synthetic
+pilot previews](docs/collection-example/index.html). The offline pilot exercises
+native EDSL survey/Results round trips and both solvers; it sends no invitations.
+Live Humanize delivery and participant usability still need a real cohort pilot.
 
 ## Humanize surveys and invitations
 

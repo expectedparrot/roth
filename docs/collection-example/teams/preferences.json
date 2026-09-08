@@ -1,0 +1,210 @@
+[
+  {
+    "student_id": "s01",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [
+      "library"
+    ],
+    "projects": [
+      "climate",
+      "housing",
+      "transit"
+    ],
+    "incompatible_teammates": [
+      "s12"
+    ],
+    "teammates": [
+      "s02",
+      "s03",
+      "s05"
+    ]
+  },
+  {
+    "student_id": "s02",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "housing",
+      "climate",
+      "food"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s01",
+      "s03",
+      "s06"
+    ]
+  },
+  {
+    "student_id": "s03",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "transit",
+      "housing",
+      "library"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s01",
+      "s02",
+      "s07"
+    ]
+  },
+  {
+    "student_id": "s04",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "housing",
+      "food",
+      "climate"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s05",
+      "s06",
+      "s08"
+    ]
+  },
+  {
+    "student_id": "s05",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "food",
+      "housing",
+      "library"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s04",
+      "s06",
+      "s09"
+    ]
+  },
+  {
+    "student_id": "s06",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "climate",
+      "transit",
+      "housing"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s04",
+      "s05",
+      "s10"
+    ]
+  },
+  {
+    "student_id": "s07",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "transit",
+      "library",
+      "food"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s08",
+      "s09",
+      "s11"
+    ]
+  },
+  {
+    "student_id": "s08",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "library",
+      "transit",
+      "climate"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s07",
+      "s09",
+      "s12"
+    ]
+  },
+  {
+    "student_id": "s09",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "food",
+      "transit",
+      "housing"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s07",
+      "s08",
+      "s01"
+    ]
+  },
+  {
+    "student_id": "s10",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "food",
+      "climate",
+      "library"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s11",
+      "s12",
+      "s02"
+    ]
+  },
+  {
+    "student_id": "s11",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "climate",
+      "food",
+      "transit"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s10",
+      "s12",
+      "s03"
+    ]
+  },
+  {
+    "student_id": "s12",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable_projects": [],
+    "projects": [
+      "library",
+      "food",
+      "housing"
+    ],
+    "incompatible_teammates": [],
+    "teammates": [
+      "s10",
+      "s11",
+      "s04"
+    ]
+  }
+]

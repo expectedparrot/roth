@@ -215,7 +215,7 @@ def build_field(
     }
 
 
-def write_field_artifacts(field, people, output, native):
+def write_field_artifacts(field, people, output, native, register_command=None):
     directory = Path(output)
     directory.mkdir(parents=True, exist_ok=False)
     handoffs, previews = [], []
@@ -247,12 +247,17 @@ def write_field_artifacts(field, people, output, native):
                 "package_id": package_id,
                 "native_built": native,
                 "create": args,
-                "register": [
-                    "roth",
-                    "field",
-                    "register",
-                    "--field",
-                    field["name"],
+                "register": (
+                    register_command
+                    or [
+                        "roth",
+                        "field",
+                        "register",
+                        "--field",
+                        field["name"],
+                    ]
+                )
+                + [
                     "--package",
                     package_id,
                     "--uuid",

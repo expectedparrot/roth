@@ -183,3 +183,19 @@ contains all ranks per matched respondent. Legacy `assigned_partner_ranks`
 contains scalar ranks only for unit-capacity respondents. Mean assigned rank
 weights each assignment equally; top-1/top-3 assignment rates count participants
 with at least one such partner. Ranks remain ordinal and list-relative.
+
+## Peer-review allocation
+
+`roth reviews` has a separate [market, preference, and result contract](reviews.md).
+It takes reviewers and authored submissions, requires exact review coverage,
+and enforces workload bounds and conflicts. Do not pass review inputs to the
+stable-matching store or reuse its omission semantics: in review optimization,
+unranked/unscored eligible options remain assignable with zero objective score.
+
+## Human team/review collection
+
+The [collection contract](collection.md) defines personalized assessment/ranking
+packages, bound Results imports, private contacts, source labels, and immutable
+preference exports. The solver inputs keep their existing schemas; provenance
+and unresolved/no-preference decisions remain in companion files and collection
+history. A collection has its own .roth directory and is not a stable market.

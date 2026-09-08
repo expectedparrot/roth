@@ -10,3 +10,4 @@ include examples/internships/report/index.html
 include examples/internships/surveys/preview.html
 
 recursive-include examples/mentorship *.json
+recursive-include examples/reviews *.json

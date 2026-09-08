@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.5.0 — 2026-09-07
+
+- Native Humanize collection for teams and reviews: batched option assessment,
+  cross-batch ranking, and review expertise ratings.
+- Private contact maps, respondent/package bindings, append-only response history,
+  explicit revisions, stale-ranking protection, and source-preserving exports.
+- `agent next --collection human` intake through exported preferences and solving,
+  with contact/market revision checks and missing-response guidance.
+- An offline synthetic pilot exercising native EDSL round trips for all 84 survey
+  packages and both solvers. Hosted recruitment still awaits a real cohort pilot.
+
+## 0.4.0 — 2026-09-07
+
+- Peer-review assignment with exact submission coverage, reviewer workload bounds,
+  authorship/team exclusions, explicit conflicts, and individual unacceptable options.
+- Borda rankings, explicit 0–100 scores, or constraints-only allocation using
+  optional SciPy/HiGHS; independent assignment and score verification.
+- File-based `roth reviews` commands, a 12-student classroom example, frozen inputs,
+  workload/coverage reports, and ranking/assignment matrices.
+- `agent next --scenario reviews` intake, feasibility guidance, and saved-result
+  verification; exhaustive small-instance and solver-limit regression tests.
+
+This is additive score optimization. Review-specific Humanize collection and
+native delegated scoring are not implemented.
+
 ## 0.3.0 — 2026-09-07
 
 - Many-to-one deferred acceptance with capacities on either side and either

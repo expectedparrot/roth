@@ -1,6 +1,6 @@
 # Roth — working specification
 
-Status: implemented through Roth 0.3.0 on 2026-09-07; the initial design and subsequent extensions are recorded below.
+Status: implemented through Roth 0.5.0 on 2026-09-07; the initial design and subsequent extensions are recorded below.
 See `README.md`, `roth guide`, and `docs/` for the implemented commands and contracts.
 The package name follows the current
 directory. One-to-one matching for the initial release, deferring many-to-one
@@ -395,3 +395,42 @@ from unmatched participants, and show both directional ranks in a matches matrix
 The mentorship example has 30 fictional employees and 10 mentors with capacity
 three. Existing human/delegated collection and agent guidance share this mode.
 See [the guide](docs/many-to-one.md) for commands and API details.
+
+## Peer-review assignment extension (0.4.0)
+
+A separate `roth reviews` workflow assigns multiple submissions to reviewers and
+multiple reviewers to submissions. Binary edge variables enforce exact review
+coverage, reviewer minimum/maximum workloads, and self-review, teammate, explicit
+conflict, and individual unacceptable exclusions. The objective sums normalized
+Borda or explicit 0–100 expertise/preference scores; a constraints-only mode is
+also available. No stability or strategy-proofness guarantee is made.
+
+Authorship and teams are declared explicitly. Partial completed records leave
+zero-score options assignable, while missing records are errors. Count checks
+are necessary but do not establish joint feasibility. SciPy/HiGHS solves the MILP;
+a separate evaluator verifies all assignments and scores. Infeasibility, solver
+limits with an incumbent, and limits without an incumbent are distinguished.
+Reports freeze original and normalized inputs and include coverage, workload,
+and ranking/assignment matrices. Agent guidance routes intake through result
+verification. Review-specific Humanize and delegated scoring are future work.
+
+The canned example has 12 students and 12 individually authored essays, with
+existing teams of three. Each student gives and each essay receives three
+reviews. See [the full contract and formulation](docs/reviews.md).
+
+## Human optimization collection extension (0.5.0)
+
+`teams field` and `reviews field` prepare native EDSL Humanize survey handoffs,
+track imported answers, and export the existing solver preference schemas.
+Assessments use option batches with a choice between ranking/score, no preference
+or insufficient information, and a hard exclusion. Selected Borda options receive
+a cross-batch ranking; expertise surveys use ten-point increments. Missing answers
+block completion. Assessment revisions invalidate prior rankings.
+
+A private append-only collection history preserves questionnaire identity, raw
+responses, explicit revisions, Humanize registrations, and export provenance.
+Synthetic imports require a synthetic market and retain their source label.
+Agent guidance routes human collection ahead of canned fixture files and resumes
+solving only after a completed export. An offline native pilot covers all 84
+survey packages in the team and review fixtures; no live invitations were sent.
+A real-cohort usability and hosted-delivery pilot remains pending cohort inputs.

@@ -18,6 +18,18 @@ market store. Keep hard exclusions distinct from unranked zero-score options.
 Verify assignments and scores independently; report solver limits honestly.
 This mode does not claim stability or strategy-proofness.
 
+The file-based `roth reviews` mode optimizes reviewer/submission assignments with
+exact review coverage and workload bounds. Authorship, team membership, and
+explicit conflicts define hard exclusions. Partial rankings or scores leave
+zero-score eligible options assignable; missing records remain incomplete.
+Verify assignments and scores independently and preserve original inputs.
+Team/review Humanize collection lives in collection.py, with a private append-only
+.roth history inside each field directory. Keep batch assessments separate from
+cross-batch ranks. Preserve no-preference/unknown, hard exclusions, and missing
+responses; never promote synthetic fixture answers to human sources. Assessment
+revisions invalidate old ranking rounds. Native delivery remains explicit ep
+handoff; delegated team/review scoring is not implemented.
+
 Development checks:
 
 ```bash

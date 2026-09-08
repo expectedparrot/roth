@@ -1,0 +1,586 @@
+{
+  "schema_version": "1.0",
+  "mode": "reviews",
+  "method": "additive_review_assignment_milp",
+  "input_hash": "51b3ff39e1ecea3a095a1dfdfc7b47e176d1a3bbb611ba1070529f3d4cb92906",
+  "solution_status": "optimal",
+  "assignments": [
+    [
+      "s01",
+      "p05"
+    ],
+    [
+      "s01",
+      "p09"
+    ],
+    [
+      "s01",
+      "p12"
+    ],
+    [
+      "s02",
+      "p06"
+    ],
+    [
+      "s02",
+      "p10"
+    ],
+    [
+      "s02",
+      "p11"
+    ],
+    [
+      "s03",
+      "p07"
+    ],
+    [
+      "s03",
+      "p08"
+    ],
+    [
+      "s03",
+      "p11"
+    ],
+    [
+      "s04",
+      "p08"
+    ],
+    [
+      "s04",
+      "p09"
+    ],
+    [
+      "s04",
+      "p12"
+    ],
+    [
+      "s05",
+      "p01"
+    ],
+    [
+      "s05",
+      "p02"
+    ],
+    [
+      "s05",
+      "p09"
+    ],
+    [
+      "s06",
+      "p02"
+    ],
+    [
+      "s06",
+      "p07"
+    ],
+    [
+      "s06",
+      "p10"
+    ],
+    [
+      "s07",
+      "p03"
+    ],
+    [
+      "s07",
+      "p06"
+    ],
+    [
+      "s07",
+      "p11"
+    ],
+    [
+      "s08",
+      "p03"
+    ],
+    [
+      "s08",
+      "p04"
+    ],
+    [
+      "s08",
+      "p12"
+    ],
+    [
+      "s09",
+      "p01"
+    ],
+    [
+      "s09",
+      "p05"
+    ],
+    [
+      "s09",
+      "p10"
+    ],
+    [
+      "s10",
+      "p02"
+    ],
+    [
+      "s10",
+      "p05"
+    ],
+    [
+      "s10",
+      "p06"
+    ],
+    [
+      "s11",
+      "p03"
+    ],
+    [
+      "s11",
+      "p04"
+    ],
+    [
+      "s11",
+      "p07"
+    ],
+    [
+      "s12",
+      "p01"
+    ],
+    [
+      "s12",
+      "p04"
+    ],
+    [
+      "s12",
+      "p08"
+    ]
+  ],
+  "valid": true,
+  "total_score": 30.19642857142857,
+  "reviewers": {
+    "s01": [
+      "p05",
+      "p09",
+      "p12"
+    ],
+    "s02": [
+      "p06",
+      "p10",
+      "p11"
+    ],
+    "s03": [
+      "p07",
+      "p08",
+      "p11"
+    ],
+    "s04": [
+      "p08",
+      "p09",
+      "p12"
+    ],
+    "s05": [
+      "p01",
+      "p02",
+      "p09"
+    ],
+    "s06": [
+      "p02",
+      "p07",
+      "p10"
+    ],
+    "s07": [
+      "p03",
+      "p06",
+      "p11"
+    ],
+    "s08": [
+      "p03",
+      "p04",
+      "p12"
+    ],
+    "s09": [
+      "p01",
+      "p05",
+      "p10"
+    ],
+    "s10": [
+      "p02",
+      "p05",
+      "p06"
+    ],
+    "s11": [
+      "p03",
+      "p04",
+      "p07"
+    ],
+    "s12": [
+      "p01",
+      "p04",
+      "p08"
+    ]
+  },
+  "submissions": {
+    "p01": [
+      "s05",
+      "s09",
+      "s12"
+    ],
+    "p02": [
+      "s05",
+      "s06",
+      "s10"
+    ],
+    "p03": [
+      "s07",
+      "s08",
+      "s11"
+    ],
+    "p04": [
+      "s08",
+      "s11",
+      "s12"
+    ],
+    "p05": [
+      "s01",
+      "s09",
+      "s10"
+    ],
+    "p06": [
+      "s02",
+      "s07",
+      "s10"
+    ],
+    "p07": [
+      "s03",
+      "s06",
+      "s11"
+    ],
+    "p08": [
+      "s03",
+      "s04",
+      "s12"
+    ],
+    "p09": [
+      "s01",
+      "s04",
+      "s05"
+    ],
+    "p10": [
+      "s02",
+      "s06",
+      "s09"
+    ],
+    "p11": [
+      "s02",
+      "s03",
+      "s07"
+    ],
+    "p12": [
+      "s01",
+      "s04",
+      "s08"
+    ]
+  },
+  "outcomes": [
+    {
+      "reviewer_id": "s01",
+      "submission_id": "p05",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s01",
+      "submission_id": "p09",
+      "rank": 2,
+      "score": 0.8571428571428571,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s01",
+      "submission_id": "p12",
+      "rank": 3,
+      "score": 0.7142857142857143,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s02",
+      "submission_id": "p06",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s02",
+      "submission_id": "p10",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s02",
+      "submission_id": "p11",
+      "rank": 5,
+      "score": 0.5,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s03",
+      "submission_id": "p07",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s03",
+      "submission_id": "p08",
+      "rank": 3,
+      "score": 0.75,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s03",
+      "submission_id": "p11",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s04",
+      "submission_id": "p08",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s04",
+      "submission_id": "p09",
+      "rank": 4,
+      "score": 0.625,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s04",
+      "submission_id": "p12",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s05",
+      "submission_id": "p01",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s05",
+      "submission_id": "p02",
+      "rank": 3,
+      "score": 0.75,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s05",
+      "submission_id": "p09",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s06",
+      "submission_id": "p02",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s06",
+      "submission_id": "p07",
+      "rank": 4,
+      "score": 0.625,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s06",
+      "submission_id": "p10",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s07",
+      "submission_id": "p03",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s07",
+      "submission_id": "p06",
+      "rank": 4,
+      "score": 0.625,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s07",
+      "submission_id": "p11",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s08",
+      "submission_id": "p03",
+      "rank": 4,
+      "score": 0.625,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s08",
+      "submission_id": "p04",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s08",
+      "submission_id": "p12",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s09",
+      "submission_id": "p01",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s09",
+      "submission_id": "p05",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s09",
+      "submission_id": "p10",
+      "rank": 3,
+      "score": 0.75,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s10",
+      "submission_id": "p02",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s10",
+      "submission_id": "p05",
+      "rank": 3,
+      "score": 0.75,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s10",
+      "submission_id": "p06",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s11",
+      "submission_id": "p03",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s11",
+      "submission_id": "p04",
+      "rank": 4,
+      "score": 0.625,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s11",
+      "submission_id": "p07",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s12",
+      "submission_id": "p01",
+      "rank": 6,
+      "score": 0.375,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s12",
+      "submission_id": "p04",
+      "rank": 1,
+      "score": 1.0,
+      "expressed_preference": true
+    },
+    {
+      "reviewer_id": "s12",
+      "submission_id": "p08",
+      "rank": 2,
+      "score": 0.875,
+      "expressed_preference": true
+    }
+  ],
+  "statistics": {
+    "assignments": 36,
+    "reviewers": 12,
+    "submissions": 12,
+    "reviewer_loads": {
+      "s01": 3,
+      "s02": 3,
+      "s03": 3,
+      "s04": 3,
+      "s05": 3,
+      "s06": 3,
+      "s07": 3,
+      "s08": 3,
+      "s09": 3,
+      "s10": 3,
+      "s11": 3,
+      "s12": 3
+    },
+    "submission_coverage": {
+      "p01": 3,
+      "p02": 3,
+      "p03": 3,
+      "p04": 3,
+      "p05": 3,
+      "p06": 3,
+      "p07": 3,
+      "p08": 3,
+      "p09": 3,
+      "p10": 3,
+      "p11": 3,
+      "p12": 3
+    },
+    "min_reviewer_load": 3,
+    "max_reviewer_load": 3,
+    "top_three_assignments": 29,
+    "assignments_without_expressed_preference": 0,
+    "mean_assignment_score": 0.8387896825396824
+  },
+  "solver": {
+    "name": "SciPy/HiGHS",
+    "scipy_version": "1.17.1",
+    "status_code": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "optimal": true,
+    "score_upper_bound": 30.196428571428573,
+    "relative_gap": 0.0,
+    "time_limit_seconds": 60
+  },
+  "scoring": "borda",
+  "sources": [
+    "synthetic"
+  ],
+  "note": "Coverage and workloads are hard constraints. Unranked/unscored eligible edges score zero and may be assigned; exclusions are forbidden. No stability or strategy-proofness claim. Equal-score optima can differ."
+}

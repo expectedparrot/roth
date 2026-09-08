@@ -3,8 +3,8 @@
 Roth 0.2 adds a separate `roth teams` workflow. Students rank projects and
 potential teammates. A mixed-integer linear program chooses team membership
 and projects together. Each student receives one assignment; each used project
-hosts one team. Repeated projects and team-specific Humanize surveys are not
-implemented in this mode.
+hosts one team. Repeated projects are not implemented. Humanize preference surveys are available
+through `teams field`; see the [collection workflow](collection.md).
 
 The [worked classroom report](teams-example/index.html) shows every input list,
 the actual assignments, a project ranking matrix, and a directional teammate

@@ -44,13 +44,15 @@
     <a href="#results">09 · Read the results</a>
     <a href="#teams">10 · Form teams and assign projects</a>
     <a href="#many-to-one">11 · Match with capacities</a>
-    <a href="#reference">12 · Workflow reference</a>
+    <a href="#reviews">12 · Assign peer reviews</a>
+    <a href="#human-optimization">Human team/review surveys</a>
+    <a href="#reference">13 · Workflow reference</a>
   </nav>
-  <div class="edition">Roth 0.3.0 · Python 3.11+<br>Stable matching and team optimization<br>MIT license</div>
+  <div class="edition">Roth 0.5.0 · Python 3.11+<br>Stable matching and team optimization<br>MIT license</div>
 </aside>
 <details class="mobile-nav">
   <summary>Roth · Guide contents</summary>
-  <nav aria-label="Mobile contents"><a href="#overview">Overview</a><a href="#example">Example</a><a href="#matching">Matching</a><a href="#start">Get started</a><a href="#humans">Human surveys</a><a href="#delegation">Delegation</a><a href="#benchmark">Benchmark</a><a href="#large-markets">Large markets</a><a href="#results">Results</a><a href="#teams">Teams and projects</a><a href="#many-to-one">Capacities</a><a href="#reference">Reference</a></nav>
+  <nav aria-label="Mobile contents"><a href="#overview">Overview</a><a href="#example">Example</a><a href="#matching">Matching</a><a href="#start">Get started</a><a href="#humans">Human surveys</a><a href="#delegation">Delegation</a><a href="#benchmark">Benchmark</a><a href="#large-markets">Large markets</a><a href="#results">Results</a><a href="#teams">Teams and projects</a><a href="#many-to-one">Capacities</a><a href="#reviews">Peer reviews</a><a href="#reference">Reference</a></nav>
 </details>
 <main id="content"><article>
   <header class="hero">
@@ -59,6 +61,7 @@
     <p class="lede">Students have preferences over internships. Employers have preferences over students. Roth collects both, then uses deferred acceptance to turn those preferences into a stable set of assignments.</p>
     <p>Use direct rankings from people, or let an LLM rank candidates from their preference descriptions. An optional A-versus-B survey checks how well the model understands what each person wants.</p>
     <p>Need to form groups as well? The <a href="#teams">team-and-project mode</a> jointly chooses student teams and their projects using ranked preferences and integer programming.</p>
+    <p>For classroom essays or internal proposals, <a href="#reviews">peer-review assignment</a> gives each submission enough reviewers while enforcing workloads and conflicts.</p>
     <div class="meta"><span>Human surveys through EDSL Humanize</span><span>Organizer-controlled delegation</span><span>Reproducible matching</span></div>
     <div class="actions"><a class="button primary" href="#start">Try the internship example →</a><a class="button secondary" href="#overview">Explore the workflow</a></div>
     <figure class="matching-figure">
@@ -94,7 +97,7 @@
     <p>The two sides can use different collection methods. They still meet at the same matching engine, with a saved record of where each preference came from.</p>
     <h3 id="agent-next">Start a coding agent with the right question</h3>
     <pre><code><span class="program">roth</span> agent next</code></pre>
-    <p>This read-only entry point helps the calling agent identify the scenario before choosing a method. Two distinct sides with one partner each use deferred acceptance. Forming student teams and assigning each team its own project uses joint integer optimization. Many-to-one capacities use the same deferred-acceptance workflow with individual rankings. Many-to-many capacities, roommate matching, and repeated projects require other formulations.</p>
+    <p>This read-only entry point helps the calling agent identify the scenario before choosing a method. Two distinct sides with one partner each use deferred acceptance. Forming student teams and assigning each team its own project uses joint integer optimization. Many-to-one capacities use the same deferred-acceptance workflow with individual rankings. Reviewer/submission assignment uses <a href="#reviews">coverage and workload optimization</a>. General stable many-to-many matching, roommate matching, and repeated projects require other formulations.</p>
     <pre><code><span class="program">roth</span> --project study agent next --scenario one-to-one
 <span class="program">roth</span> --project mentorship agent next --scenario many-to-one
 <span class="program">roth</span> --project classroom agent next --scenario teams</code></pre>
@@ -536,7 +539,7 @@ python -m pip install -e .</code></pre>
       <tr><th scope="row">50% · equal weights</th><td>4 / 12</td><td>12 / 12</td><td>1 / 12</td></tr>
     </tbody></table></div>
     <p class="small muted">These are actual solved variants of the same synthetic inputs, each with four teams of three. The table describes the saved optima; tied solutions can have different individual assignments. <a href="teams-example/sensitivity.json">Inspect the runs</a>, or reproduce them with <code>python scripts/team_sensitivity.py --output new-sensitivity.json</code>.</p>
-    <p>This mode uses file inputs and frozen report directories, independently of the stable-matching project store. SciPy/HiGHS is an optional local solver dependency. Team-specific Humanize fielding, skill constraints, and repeated projects remain future extensions.</p>
+    <p>This mode uses file inputs and frozen report directories, independently of the stable-matching project store. SciPy/HiGHS is an optional local solver dependency. Humanize assessment and ranking surveys are available through <code>teams field</code>. Skill constraints and repeated projects remain future extensions.</p>
   </section>
 
   <section id="many-to-one">
@@ -560,8 +563,57 @@ python -m pip install -e .</code></pre>
     <p>For more detail, see the <a href="many-to-one.md">many-to-one guide and Python API</a>. The standard vacancy and replacement rule is illustrated in <a href="https://www.nrmp.org/intro-to-the-match/how-matching-algorithm-works/">NRMP's matching explanation</a>.</p>
   </section>
 
+  <section id="reviews">
+    <h2><span class="chapter">12 · Reviews with coverage</span>Who reviews whose work?</h2>
+    <p>A class has 12 individually authored essays. Each student should review three essays, and each essay should receive three reviews. Students cannot review their own work or an essay by a member of their existing team. Roth enforces those rules and chooses assignments using reviewer preferences.</p>
+    <div class="table-wrap"><table><thead><tr><th>Rule</th><th>Worked example</th></tr></thead><tbody>
+      <tr><td>Reviewer workload</td><td>Exactly three essays per student</td></tr>
+      <tr><td>Submission coverage</td><td>Exactly three distinct reviewers per essay</td></tr>
+      <tr><td>Hard exclusions</td><td>Self-review, teammate review, an organizer conflict, and an unacceptable option</td></tr>
+      <tr><td>Objective</td><td>Maximize normalized Borda points from the submitted rankings</td></tr>
+    </tbody></table></div>
+    <p>There are two explicit files: <a href="reviews-example/submitted-market.json">reviewers, authorship, teams, and rules</a>, and <a href="reviews-example/submitted-preferences.json">completed preference records</a>. This is Student 1's actual record in the fictional fixture:</p>
+    <pre><code>{
+  &quot;reviewer_id&quot;: &quot;s01&quot;,
+  &quot;ranking&quot;: [
+    &quot;p05&quot;,
+    &quot;p09&quot;,
+    &quot;p12&quot;,
+    &quot;p08&quot;,
+    &quot;p10&quot;,
+    &quot;p06&quot;,
+    &quot;p07&quot;,
+    &quot;p11&quot;
+  ],
+  &quot;unacceptable&quot;: [],
+  &quot;complete&quot;: true,
+  &quot;source&quot;: &quot;synthetic&quot;
+}</code></pre>
+    <p>The solver reads that preference file through <code>--preferences</code>. The example does not infer preferences or send surveys:</p>
+    <pre><code>python -m pip install -e '.[reviews]'
+<span class="program">roth</span> reviews example classroom-reviews
+<span class="program">roth</span> reviews validate classroom-reviews/market.json --preferences classroom-reviews/preferences.json
+<span class="program">roth</span> reviews solve classroom-reviews/market.json --preferences classroom-reviews/preferences.json --output classroom-reviews/report</code></pre>
+    <p>The installation command is for a checkout. The optional <code>reviews</code> extra uses SciPy/HiGHS, the same solver dependency as team assignment.</p>
+    <p><a href="reviews-example/index.html">Open the worked report and assignment matrix</a>: it contains 36 reviews, every requested count is met, and 29 assignments are in the reviewer's top three. Each matrix row shows a student's rankings; columns show essays; green checkmarks show realized assignments. Forbidden edges are marked ×.</p>
+    <div class="callout"><p><strong>Counts and conflicts are hard constraints.</strong> Unranked eligible options score zero and may be assigned, while explicit conflicts cannot be assigned. A missing preference record is incomplete input. If the rules cannot all be met, Roth reports infeasibility and leaves the decision about revisions to the organizer.</p></div>
+    <p>Organizers can set different workload bounds and review counts, use explicit 0–100 expertise scores, or deliberately request a feasible allocation without a preference objective. Wider workload bounds allow unequal loads. A time-limited feasible result is labeled separately from a proven optimum.</p>
+    <p>This mode uses file inputs, immutable report directories, and an independent assignment verifier. It makes no stability or strategy-proofness claim. Humanize assessment, ranking, and expertise surveys are available through <code>reviews field</code>; delegated review scoring remains future work. <code>roth --project classroom-reviews agent next</code> guides the calling agent through inputs, solving, and result review. See the <a href="reviews.md">full data contract and formulation</a>.</p>
+  </section>
+
+  <section id="human-optimization">
+    <h2>Collect human team and review preferences</h2>
+    <p>Start from the market roster and a private contact map. Roth builds personalized Humanize packages, tracks returned responses, and exports the completed preferences into the existing solver workflow. The agent can lead the process:</p>
+    <pre><code><span class="program">roth</span> --project classroom agent next --scenario teams --collection human --contacts contacts.json
+<span class="program">roth</span> --project classroom-reviews agent next --scenario reviews --collection human --contacts contacts.json</code></pre>
+    <p>First, respondents assess options in manageable batches: select for ranking, state no preference/insufficient information, or declare a hard exclusion. Then they rank the selected options across batches. Review expertise surveys instead use 0–100 ratings in increments of 10. Missing responses block export; revising assessments invalidates old rankings.</p>
+    <div class="callout"><p><strong>No preference is not an exclusion.</strong> These optimization modes may assign unranked or unscored eligible options at zero preference score. A hard exclusion forbids the assignment. The survey explains this distinction and the export preserves it.</p></div>
+    <p>The <a href="collection-example/index.html">offline synthetic pilot</a> exercised native EDSL survey/Results round trips for all 84 packages: 60 for team preferences and 24 for peer review. Both resulting optimizations reached proven optima. No real participants were recruited, no invitations were sent, and no model inference was run. A real cohort pilot remains pending.</p>
+    <p>Inspect the <a href="collection-example/teams/assessment-preview.html">team assessment preview</a>, <a href="collection-example/reviews/assessment-preview.html">review assessment preview</a>, and <a href="collection.md">complete collection workflow</a>. Publication and delivery use explicit, reviewable <code>ep humanize</code> handoffs. Collection files contain private contacts and individual answers.</p>
+  </section>
+
   <section id="reference">
-    <h2><span class="chapter">12 · At your desk</span>The workflow reference</h2>
+    <h2><span class="chapter">13 · At your desk</span>The workflow reference</h2>
     <p>Start with <code>roth agent next</code> to identify the scenario and current stage. Use <code>roth guide</code> for the full workflow. The CLI returns structured output for an assistant; this guide explains the decisions behind those commands.</p>
     <div class="table-wrap"><table class="reference"><thead><tr><th scope="col">You want to…</th><th scope="col">Start here</th></tr></thead><tbody>
       <tr><td>Create the mentorship example</td><td><code>roth example mentorship mentorship-demo</code></td></tr>
@@ -574,10 +626,11 @@ python -m pip install -e .</code></pre>
       <tr><td>Freeze the active preferences</td><td><code>roth --project study preferences freeze --name main</code></td></tr>
       <tr><td>Compute assignments</td><td><code>roth --project study match --snapshot main --name main</code></td></tr>
       <tr><td>Verify a saved project</td><td><code>roth --project study validate</code></td></tr>
+      <tr><td>Assign peer reviews</td><td><code>roth reviews solve --help</code></td></tr>
       <tr><td>Form teams and assign projects</td><td><code>roth teams solve --help</code></td></tr>
     </tbody></table></div>
     <p>For exact input schemas and the full fielding sequence, continue with the <a href="contracts.md">data contracts</a> and <a href="delegation.md">delegation and benchmark walkthrough</a>.</p>
-    <p class="small muted">This page describes Roth 0.3.0. Stable matching, joint team optimization, and the shared one-to-one/many-to-one survey workflow are implemented. Real recruitment and real-model preference quality require a pilot in the intended market.</p>
+    <p class="small muted">This page describes Roth 0.5.0. Stable matching, joint team optimization, peer-review assignment, and the shared one-to-one/many-to-one survey workflow are implemented. Real recruitment and real-model preference quality require a pilot in the intended market.</p>
   </section>
   <footer><p><strong>Roth</strong> · Two-sided matching with Expected Parrot · Python 3.11+ · MIT</p><a href="#content">Back to the top</a><a href="contracts.md">Data contracts</a><a href="delegation.md">Delegation walkthrough</a><a href="https://www.expectedparrot.com/">Expected Parrot</a></footer>
 </article></main>

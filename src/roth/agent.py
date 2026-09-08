@@ -15,6 +15,13 @@ from .common import RothError, digest, read_json
 
 SCENARIOS = [
     {
+        "id": "reviews",
+        "supported": True,
+        "when": "Assign several submissions to each reviewer and several reviewers to each submission, with authorship/conflicts and workload rules.",
+        "examples": ["classroom peer review", "internal proposal review"],
+        "method": "Binary assignment optimization with exact review coverage and bounded workloads; Borda rankings or explicit scores.",
+    },
+    {
         "id": "one-to-one",
         "supported": True,
         "when": "Two distinct sides rank each other; each participant receives at most one partner.",
@@ -95,6 +102,10 @@ def _response(scenario, phase, instruction, *, questions=(), actions=(), **detai
 def _shape(market):
     if not isinstance(market, dict):
         return None
+    if market.get("mode") == "reviews" or (
+        "reviewers" in market and "submissions" in market
+    ):
+        return "reviews"
     if "students" in market and "projects" in market:
         return "teams"
     if "participants" in market:
@@ -114,6 +125,8 @@ def next_guidance(
     preferences_path=None,
     output=None,
     collection=None,
+    field_dir=None,
+    contacts_path=None,
 ):
     root = Path(project).resolve()
     explicit_market = market_path is not None
@@ -125,6 +138,8 @@ def next_guidance(
         else root / "preferences.json"
     )
     output = Path(output).resolve() if output else root / "report"
+    field_dir = Path(field_dir).resolve() if field_dir else root / "field"
+    contacts_path = Path(contacts_path).resolve() if contacts_path else None
     market = read_json(market_path) if market_path.is_file() else None
     state = None
     if (root / ".roth").is_dir():
@@ -154,7 +169,7 @@ def next_guidance(
             questions=[
                 question(
                     "structure",
-                    "Are we matching two distinct sides one-to-one, forming teams and assigning projects, or handling capacities/another structure?",
+                    "Are we matching two distinct sides, forming teams and assigning projects, assigning reviewers to submissions, or handling another structure?",
                     [s["id"] for s in SCENARIOS],
                 ),
                 question(
@@ -168,10 +183,10 @@ def next_guidance(
                     ["roth", "--project", root, "agent", "next", "--scenario", s],
                     "Continue after identifying the scenario",
                 )
-                for s in ("one-to-one", "many-to-one", "teams")
+                for s in ("one-to-one", "many-to-one", "teams", "reviews")
             ],
         )
-    if scenario not in {"one-to-one", "many-to-one", "teams"}:
+    if scenario not in {"one-to-one", "many-to-one", "teams", "reviews"}:
         return _response(
             scenario,
             "unsupported_scenario",
@@ -179,7 +194,33 @@ def next_guidance(
             supported=False,
             scenario_rules=SCENARIOS,
         )
-    if scenario == "teams":
+    data = None
+    collecting = (
+        scenario in {"teams", "reviews"}
+        and market is not None
+        and (
+            collection == "human"
+            or (
+                (field_dir / ".roth").is_dir()
+                and collection not in {"rankings", "delegated"}
+            )
+        )
+    )
+    if collecting:
+        from .agent_collection import collection_guidance
+
+        data, preferences_path = collection_guidance(
+            scenario, market, market_path, preferences_path, field_dir, contacts_path
+        )
+    if data is not None:
+        pass
+    elif scenario == "reviews":
+        from .agent_reviews import review_guidance
+
+        data = review_guidance(
+            market, market_path, preferences_path, output, collection
+        )
+    elif scenario == "teams":
         data = _teams(market, market_path, preferences_path, output, collection)
     else:
         data = _stable_market(
@@ -204,10 +245,17 @@ def next_guidance(
         "--output",
         str(data.get("next_output", output)),
     ]
-    if explicit_market or scenario == "teams":
+    if explicit_market or scenario in {"teams", "reviews"}:
         data["rerun"] += ["--market", str(market_path)]
-    if explicit_preferences or scenario == "teams":
-        data["rerun"] += ["--preferences", str(preferences_path)]
+    if explicit_preferences or scenario in {"teams", "reviews"}:
+        data["rerun"] += [
+            "--preferences",
+            str(data.get("next_preferences", preferences_path)),
+        ]
+    if scenario in {"teams", "reviews"}:
+        data["rerun"] += ["--field-dir", str(field_dir)]
+        if contacts_path:
+            data["rerun"] += ["--contacts", str(contacts_path)]
     if collection:
         data["rerun"] += ["--collection", collection]
     if scenario == "many-to-one":
@@ -293,7 +341,7 @@ def _teams(market, market_path, preferences_path, output, collection):
                     "source",
                 ],
             },
-            collection="Collect through a suitable survey or directly and convert responses to this JSON contract. Team-specific Humanize generation is not implemented; do not use two-sided field build for team inputs.",
+            collection="Collect through a suitable survey or directly and convert responses to this JSON contract. Use agent next --collection human for native team assessment/ranking surveys, or import explicit records.",
             scoring="Partial and empty completed rankings are permitted. Unranked options score zero but remain distinct from hard exclusions. An incompatibility from either student prohibits pairing.",
             participants=[p["id"] for p in market["students"]],
         )

@@ -1,0 +1,206 @@
+[
+  {
+    "reviewer_id": "s01",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p05",
+      "p09",
+      "p12",
+      "p08",
+      "p10",
+      "p06",
+      "p07",
+      "p11"
+    ]
+  },
+  {
+    "reviewer_id": "s02",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [
+      "p12"
+    ],
+    "ranking": [
+      "p06",
+      "p10",
+      "p05",
+      "p04",
+      "p11",
+      "p09",
+      "p07",
+      "p08"
+    ]
+  },
+  {
+    "reviewer_id": "s03",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p07",
+      "p11",
+      "p08",
+      "p04",
+      "p10",
+      "p12",
+      "p09",
+      "p05",
+      "p06"
+    ]
+  },
+  {
+    "reviewer_id": "s04",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p08",
+      "p12",
+      "p10",
+      "p09",
+      "p11",
+      "p03",
+      "p07",
+      "p01",
+      "p02"
+    ]
+  },
+  {
+    "reviewer_id": "s05",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p01",
+      "p09",
+      "p02",
+      "p12",
+      "p07",
+      "p10",
+      "p08",
+      "p03",
+      "p11"
+    ]
+  },
+  {
+    "reviewer_id": "s06",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p02",
+      "p10",
+      "p08",
+      "p07",
+      "p09",
+      "p11",
+      "p12",
+      "p01",
+      "p03"
+    ]
+  },
+  {
+    "reviewer_id": "s07",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p11",
+      "p03",
+      "p05",
+      "p06",
+      "p12",
+      "p02",
+      "p04",
+      "p01",
+      "p10"
+    ]
+  },
+  {
+    "reviewer_id": "s08",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p04",
+      "p12",
+      "p02",
+      "p03",
+      "p11",
+      "p05",
+      "p06",
+      "p01",
+      "p10"
+    ]
+  },
+  {
+    "reviewer_id": "s09",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p05",
+      "p01",
+      "p10",
+      "p12",
+      "p11",
+      "p06",
+      "p04",
+      "p03",
+      "p02"
+    ]
+  },
+  {
+    "reviewer_id": "s10",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p02",
+      "p06",
+      "p05",
+      "p07",
+      "p03",
+      "p04",
+      "p08",
+      "p01",
+      "p09"
+    ]
+  },
+  {
+    "reviewer_id": "s11",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p03",
+      "p07",
+      "p05",
+      "p04",
+      "p09",
+      "p08",
+      "p06",
+      "p01",
+      "p02"
+    ]
+  },
+  {
+    "reviewer_id": "s12",
+    "complete": true,
+    "source": "synthetic",
+    "unacceptable": [],
+    "ranking": [
+      "p04",
+      "p08",
+      "p06",
+      "p03",
+      "p02",
+      "p01",
+      "p05",
+      "p07",
+      "p09"
+    ]
+  }
+]
